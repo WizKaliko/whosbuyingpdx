@@ -1,5 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Who's Buying PDX</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Donors to Portland's business-backed candidates also fund Republicans. A private citizen project.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
@@ -270,30 +273,78 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--ink-2);display:grid;ga
 .dl-score p{margin:0 0 10px;font-size:15.5px}.dl-score a{font-family:var(--f-data);font-size:12px;color:var(--ink-2);white-space:nowrap}
 .dl-good{color:var(--peacock)}.dl-bad{color:var(--gop)}
 .dl-close{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,2.2vw,26px);line-height:1.3;max-width:44ch;margin:0}
+
+/* ---- hub layout + mobile header (2026-10-18) ---- */
+.logo a{text-decoration:none}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;font:700 14px var(--f-body);padding:8px 14px;border:1.5px solid var(--ink);border-radius:999px}
+.menu summary::-webkit-details-marker{display:none}
+.menu[open] summary{background:var(--ink);color:var(--paper)}
+.menu nav{position:absolute;right:0;top:calc(100% + 8px);z-index:20;background:var(--paper);border:1.5px solid var(--ink);min-width:220px;display:grid;padding:6px 0;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.menu nav a{padding:11px 18px;text-decoration:none;font-weight:600;font-size:16px}
+.menu nav a[aria-current]{color:var(--gop)}
+nav.toc a[aria-current]{color:var(--ink)}
+h1 .nw{white-space:nowrap}
+.cgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}
+.cg{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;align-items:center;text-decoration:none;color:inherit}
+.cg-ph{width:96px;aspect-ratio:4/5;border-radius:8px;background:var(--paper-2) center/cover no-repeat;border:1px solid var(--rule)}
+.cg h3{font-size:22px;line-height:1.1}
+.cg .race{font-family:var(--f-data);font-size:11.5px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em;display:block;margin-top:4px}
+.cg p{margin:8px 0 0;font-size:14.5px;color:var(--ink-2);line-height:1.4}
+.cg p b{color:var(--gop);font-family:var(--f-display);font-size:20px}
+.cg .wildtag{color:var(--slate);font-weight:700}
+.cg:hover h3{text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.deep{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.dcard{display:grid;gap:10px;align-content:start;padding:22px 20px 20px;border:1px solid var(--rule);background:var(--paper-2);text-decoration:none;color:inherit;border-top:3px solid var(--ink)}
+.dcard h3{font-size:clamp(22px,2.2vw,27px);line-height:1.08}
+.dcard p{margin:0;font-size:15.5px;color:var(--ink-2);line-height:1.5}
+.dcard .go{font:700 14px var(--f-body);color:var(--gop);margin-top:4px}
+.dcard:hover{border-top-color:var(--gop)}
+.dcard.wide{grid-column:1/-1}
+.pnext{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-block:48px 8px}
+.pnext a{display:grid;gap:6px;padding:20px;border:1px solid var(--rule);text-decoration:none;background:var(--paper-2)}
+.pnext a.nx{text-align:right}
+.pnext b{font-family:var(--f-display);font-size:24px}
+.page-top{padding-top:8px}
+section.ch:first-child{padding-top:24px}
+@media (max-width:860px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.deep{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){
+  header.mast{flex-wrap:nowrap;padding-block:12px}
+  .logo{font-size:21px}
+  nav.toc{display:none}
+  .menu{display:block}
+  .band-in{justify-items:center;text-align:center;padding:40px 18px 36px;gap:14px}
+  .band .eyebrow{justify-self:center;font-size:10.5px}
+  h1{font-size:clamp(30px,10vw,60px);line-height:.98}
+  .sub-h{font-size:21px}
+  .hero-p{font-size:16.5px;line-height:1.6;max-width:34ch}
+  .hero{padding-top:20px}
+  .legend{flex-direction:column;align-items:flex-start;gap:6px;font-size:13px}
+  .cgrid{grid-template-columns:1fr;gap:18px}
+  .cg{grid-template-columns:76px minmax(0,1fr)}.cg-ph{width:76px}
+  .deep{grid-template-columns:1fr;gap:12px}
+  .pnext{grid-template-columns:1fr}
+  .pnext a.nx{text-align:left}
+}
 </style>
-
-
+</head><body>
 <div class="wrap">
   <header class="mast">
-    <div class="logo">Who's Buying <span>PDX</span>?</div>
-    <nav class="toc" aria-label="Sections">
-      <a href="#why">Why</a><a href="#slate">The candidates</a><a href="#donors">The donors</a><a href="#votes">The votes</a><a href="#story">The story</a><a href="#economics">The economics</a><a href="#doom">The doom loop</a><a href="#receipts">Receipts</a>
-    </nav>
+    <div class="logo"><a href="./">Who's Buying <span>PDX</span>?</a></div>
+    <nav class="toc" aria-label="Sections"><a href="index.html#slate">The candidates</a><a href="why.html">Why it matters</a><a href="donors.html">The donors</a><a href="votes.html">The votes</a><a href="story.html">The story</a><a href="economics.html">The economics</a><a href="doom.html">The doom loop</a><a href="receipts.html">Receipts</a></nav>
+    <details class="menu"><summary>Menu</summary><nav aria-label="Sections"><a href="./">Home</a><a href="index.html#slate">The candidates</a><a href="why.html">Why it matters</a><a href="donors.html">The donors</a><a href="votes.html">The votes</a><a href="story.html">The story</a><a href="economics.html">The economics</a><a href="doom.html">The doom loop</a><a href="receipts.html">Receipts</a></nav></details>
   </header>
-
 </div>
-
 <div class="band"><div class="band-in">
   <span class="eyebrow">Portland &amp; Multnomah County · Nov 3, 2026</span>
-  <h1>Partners <span class="r">Against</span> Progress</h1>
+  <h1><span class="nw">Partners <span class="r">Against</span></span> Progress</h1>
   <p class="sub-h">They aren't Republicans. Some of their donors are.</p>
-  <p class="hero-p">These races carry no party label. But 125 individual donors to six of Portland's business-backed candidates have also written checks to Republicans like Christine Drazan. Among the individual donors of the four progressive candidates we checked, we&nbsp;found&nbsp;<b>none</b>.</p>
+  <p class="hero-p">125 individual donors to six of Portland's business-backed candidates also gave to Republicans like Christine Drazan. Among the progressive candidates' donors, we&nbsp;found&nbsp;<b>none</b>.</p>
 </div></div>
-
 <div class="wrap">
   <div class="hero">
     <div class="web-box">
-      <svg id="web" viewBox="0 0 1080 600" role="img" aria-labelledby="web-t web-d">
+      <svg id="web" viewBox="0 0 1120 600" role="img" aria-labelledby="web-t web-d">
         <title id="web-t">Donors to Portland's conservative candidates who also gave to Republican campaigns, 2006–2026</title>
         <desc id="web-d">125 individual donors connect six of Portland's conservative candidates to Republican campaigns from 2006 to 2026: Christine Drazan, Knute Buehler, Chris Dudley and other Republicans. Many also gave to other Portland conservatives: Rene Gonzalez, Nathan Vasquez and Vadim Mozyrsky. 56 gave to more than one of the six.</desc>
       </svg>
@@ -303,8 +354,8 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--ink-2);display:grid;ga
         <span><i class="ln" style="border-color:var(--slate)"></i>Gave to the conservative candidate</span>
         <span><i class="ln" style="border-color:var(--gop)"></i>Gave to a Republican campaign, 2006–2026 (thicker = more money)</span>
         <span><i class="ln" style="border-color:var(--lean)"></i>Also gave to another Portland conservative</span>
-        <span>Each middle dot is one donor (grouped by last name and address, so family members at one address may share a dot). Gifts matched by street address, by ZIP and employer, or by hand review of the filing record</span>
       </div>
+      <details class="cap-d"><summary>How to read this</summary><span class="cap">Each middle dot is one donor (grouped by last name and address, so family members at one address may share a dot). Gifts matched by street address, by ZIP and employer, or by hand review of the filing record.</span></details>
     </div>
 
     <div class="stats">
@@ -313,280 +364,25 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--ink-2);display:grid;ga
       <div class="stat"><b style="color:var(--peacock)">0</b><span>individual donors like that among the four progressive candidates we checked</span></div>
     </div>
   </div>
+  </div>
 </div>
-
 <div class="line"><div class="wrap">
   <p>We know these candidates are Democrats. <em>That's the problem.</em></p>
   <span>Republicans can't win a council seat in Portland, so they don't need to. Conservative Democrats can tell the Republican story about this city, with some Republican donors behind them, and lend it local credibility.</span>
 </div></div>
 
 <div class="wrap">
-  <!-- 0 WHY -->
-  <section class="ch" id="why">
-    <div class="ch-head"><span class="ch-no">Why it matters</span><h2>The real primary is on your city ballot.</h2></div>
-    <div class="ladder">
-      <div class="rung"><span class="tag">The state</span><p>Oregon is effectively a one-party state. Its Democratic primaries are rarely real contests: insiders usually beat outsiders.</p></div>
-      <div class="rung"><span class="tag">The fight</span><p>So the fight over the party's direction plays out in nonpartisan city and county races, with no party label on the ballot.</p></div>
-      <div class="rung"><span class="tag">The money</span><p>One side is Portland's conservative candidates: business-backed Democrats whose politics have made them a magnet for Republican donors, people who have written checks to <b>Christine Drazan</b>, Knute Buehler and other Portland conservatives.</p></div>
-      <div class="rung hot"><span class="tag">The contrast</span><p>The four progressive candidates' individual donors who did the same: zero.</p></div>
-    </div>
-
-    <div class="defn">
-      <div class="defn-head"><span class="eyebrow">Definition</span><h3>What we mean by &ldquo;Portland conservative&rdquo;</h3>
-        <p>Not Republican. In Portland, it's a set of choices that keep showing up when the City Council splits down the middle.</p></div>
-      <div class="defn-row"><p class="vs"><b>Police money</b><span><i>over</i> police accountability</span></p><p class="ev">Tried to move $10M out of the police accountability office that 82% of voters created. <a href="#votes">May 19, 2026 · failed 6–6</a></p></div>
-      <div class="defn-row"><p class="vs"><b>Arena subsidies</b><span><i>over</i> city services</span></p><p class="ev">$120M up front for the Blazers' arena, plus up to $275M for upkeep. Weeks earlier, a no on restoring 55 city jobs. <a href="#votes">July–Aug 2026</a></p></div>
-      <div class="defn-row"><p class="vs"><b>An oil terminal</b><span><i>over</i> climate commitments</span></p><p class="ev">Kept the Zenith Energy terminal's franchise alive in a 6–6 tie the mayor broke. <a href="#votes">Sept 23, 2026</a></p></div>
-      <div class="defn-note"><span class="eyebrow">Whose votes these are</span>
-        <p><b>Clark and Zimmerman</b> side with the conservative bloc on about 95% of split votes.</p>
-        <p><b>Novick is the wild card.</b> He breaks with them on police masking and ID rules and some other policing votes, but sides with them too often when the money is on the table. <a href="#wildcard">Conservative donors are finding him.</a></p>
-        <p><b>Brim-Edwards</b> voted for $101.6M in county money for the same arena.</p>
-        <p><b>Arnold</b> has no votes yet. He's a sitting Portland police officer who says the city "has fewer sworn officers than peer cities" and makes police staffing a priority. In 2021 he used force in 18 incidents, the most of the 465 officers who reported force that year; in 16, the bureau listed the person as transient. He tied for fifth in 2023. <a href="https://public.tableau.com/app/profile/ctrl.alt.defund.pdx/viz/PPBUseofForceYearlyAnalysis/UseofForceAnalysis" target="_blank" rel="noopener">Ctrl-Alt-Defund analysis of Police Bureau data</a>. His donors have the highest Republican and conservative rate of any candidate we checked: 44%.</p>
-        <p><b>Torres</b> has no record in office yet. She's backed by the Chamber's committees.</p></div>
-    </div>
-  </section>
-
-  <!-- 1 THE SLATE -->
   <section class="ch" id="slate">
-    <div class="ch-head"><span class="ch-no">1 · The candidates</span><h2>Separate campaigns, overlapping backers.</h2>
+    <div class="ch-head"><span class="ch-no">The candidates</span><h2>Separate campaigns, overlapping backers.</h2>
       <p class="lede">The Portland Metro Chamber's political committees, and allied groups like Go Portland Go, tell voters which candidates to rank. These are separate campaigns, loosely aligned, in races with no party labels.</p></div>
-    <div class="cards">
-      <div class="card"><span class="race">Council District 3</span><h3><a href="profiles/torres.html" style="text-decoration:none">Kellie Torres <span aria-hidden="true" style="color:var(--gop)">→</span></a></h3><div class="chips"><span class="chip">Unity PAC</span><span class="chip">United for Portland #1</span><span class="chip">Go Portland Go</span><span class="chip">Mayor Wilson</span></div></div>
-      <div class="card"><span class="race">Council District 3 · incumbent</span><h3><a href="profiles/novick.html" style="text-decoration:none">Steve Novick <span aria-hidden="true" style="color:var(--gop)">→</span></a></h3><div class="chips"><span class="chip">Unity PAC</span><span class="chip">United for Portland #2</span><span class="chip">Go Portland Go</span><span class="chip">Mayor Wilson</span></div><span class="race" style="text-transform:none;letter-spacing:0">The wild card: sides with the conservatives on 66% of split votes, mostly on money.</span></div>
-      <div class="card"><span class="race">County Chair</span><h3><a href="profiles/brimedwards.html" style="text-decoration:none">Julia Brim-Edwards <span aria-hidden="true" style="color:var(--gop)">→</span></a></h3><div class="chips"><span class="chip">Unity PAC</span><span class="chip">United for Portland, only pick</span><span class="chip">"fix multCo" billboards</span></div></div>
-      <div class="card"><span class="race">Council District 4 · incumbent</span><h3><a href="profiles/zimmerman.html" style="text-decoration:none">Eric Zimmerman <span aria-hidden="true" style="color:var(--gop)">→</span></a></h3><div class="chips"><span class="chip">Unity PAC</span><span class="chip">United for Portland #1</span><span class="chip">Go Portland Go</span><span class="chip">Mayor Wilson</span></div></div>
-      <div class="card"><span class="race">Council District 4 · incumbent</span><h3><a href="profiles/clark.html" style="text-decoration:none">Olivia Clark <span aria-hidden="true" style="color:var(--gop)">→</span></a></h3><div class="chips"><span class="chip">Unity PAC</span><span class="chip">United for Portland #2</span><span class="chip">Go Portland Go</span><span class="chip">Mayor Wilson</span></div></div>
-      <div class="card"><span class="race">Council District 4</span><h3><a href="profiles/arnold.html" style="text-decoration:none">Eli Arnold <span aria-hidden="true" style="color:var(--gop)">→</span></a></h3><div class="chips"><span class="chip">Go Portland Go</span></div><span class="race" style="text-transform:none;letter-spacing:0">Sitting Portland police officer; most uses of force of any officer in 2021, per Ctrl-Alt-Defund's analysis of bureau data. His donors have the highest Republican and conservative rate we found: 44%.</span></div>
-    </div>
-    <span class="cap">Sources: WWeek, Oct 8, 2026 (Unity PAC); unitedforportland.org/endorsements; Portland Mercury, Sept 24 and Oct 15, 2026 (Go Portland Go, billboards); OPB, Oct 7, 2026, and Hoodline, Aug 2026 (Mayor Wilson).</span>
-
-    <div class="two">
-      <div class="figure">
-        <div class="flow" role="group" aria-label="Money into and out of the Chamber's PAC">
-          <div class="fl-col"><span class="fl-h">Money in</span>
-            <div class="fl-row"><div class="fl-lab"><b>United for Portland</b><small>the Chamber's political arm</small></div><div class="fl-track"><i class="fl-in" style="width:40.5%"></i><span>$676K</span></div></div>
-            <div class="fl-row"><div class="fl-lab"><b>Realtors PAC</b><small>Portland Metro Assn. of Realtors</small></div><div class="fl-track"><i class="fl-in" style="width:20.1%"></i><span>$335K</span></div></div>
-            <div class="fl-row"><div class="fl-lab"><b>Jeff Swickard</b><small>developer, Sept 2026</small></div><div class="fl-track"><i class="fl-in" style="width:9.0%"></i><span>$150K</span></div></div>
-            <div class="fl-row"><div class="fl-lab"><b>Alliance PAC</b></div><div class="fl-track"><i class="fl-in" style="width:6.0%"></i><span>$100K</span></div></div>
-          </div>
-          <div class="fl-hub"><span class="fl-arrow" aria-hidden="true">→</span><div class="fl-box"><b>Chamber PAC</b><small>United for Portland Action Fund</small><em>~$1.9M raised</em></div><span class="fl-arrow" aria-hidden="true">→</span></div>
-          <div class="fl-col"><span class="fl-h">Money out</span>
-            <div class="fl-row"><div class="fl-lab"><b>Coalition for Portland's Future</b><small>total spent, all cycles</small></div><div class="fl-track"><i class="fl-out" style="width:72.0%"></i><span>$1.2M</span></div></div>
-            <div class="fl-row"><div class="fl-lab"><b>"DitchMitch" billboards</b><small>against Mitch Green, via goPDX</small></div><div class="fl-track"><i class="fl-out" style="width:4.5%"></i><span>about $75K</span></div></div>
-            <div class="fl-row"><div class="fl-lab"><b>"fix multCo" billboards</b><small>for Brim-Edwards, via goPDX</small></div><div class="fl-track"><i class="fl-out" style="width:4.5%"></i><span>about $75K</span></div></div>
-          </div>
-        </div>
-        <details class="cap-d"><summary>Sources and method</summary><span class="cap">All bars on one scale. PAC totals are cumulative through Apr 27, 2026 and may cover more than one election cycle (BallotBase, republishing state filings). Swickard's gift and the billboard money are September 2026 (WWeek; Portland Mercury).</span></details>
-      </div>
-      <div class="prose">
-        <h3>Who's buying</h3>
-        <p>Much of their outside support runs through one pipe: the <b>United for Portland Action Fund</b>, the Chamber's PAC. Realtors' and developers' money goes in. It comes out as the Coalition for Portland's Future and as billboard committees with neighborhood-sounding names.</p>
-        <p>A complaint filed Oct 5 says the billboard setup hid where the money came from. That's an allegation; no one has ruled on it.</p>
-      </div>
-    </div>
+    <div class="cgrid"><a class="cg" href="profiles/torres.html"><span class="cg-ph" style="background-image:url(img/torres.jpg)" role="img" aria-label="Kellie Torres"></span><span><h3>Kellie Torres <span aria-hidden="true" style="color:var(--gop)">→</span></h3><span class="race">Council D3</span><p><b>39%</b> of donors also gave to Republicans or Portland conservatives</p></span></a><a class="cg" href="profiles/novick.html"><span class="cg-ph" style="background-image:url(img/novick.jpg)" role="img" aria-label="Steve Novick"></span><span><h3>Steve Novick <span aria-hidden="true" style="color:var(--gop)">→</span></h3><span class="race">Council D3 · incumbent</span><p><span class="wildtag">The wild card.</span> <b>19%</b> of donors also gave to Republicans or Portland conservatives</p></span></a><a class="cg" href="profiles/brimedwards.html"><span class="cg-ph" style="background-image:url(img/brimedwards.jpg)" role="img" aria-label="Julia Brim-Edwards"></span><span><h3>Julia Brim-Edwards <span aria-hidden="true" style="color:var(--gop)">→</span></h3><span class="race">County Chair</span><p><b>35%</b> of donors also gave to Republicans or Portland conservatives</p></span></a><a class="cg" href="profiles/zimmerman.html"><span class="cg-ph" style="background-image:url(img/zimmerman.jpg)" role="img" aria-label="Eric Zimmerman"></span><span><h3>Eric Zimmerman <span aria-hidden="true" style="color:var(--gop)">→</span></h3><span class="race">Council D4 · incumbent</span><p><b>43%</b> of donors also gave to Republicans or Portland conservatives</p></span></a><a class="cg" href="profiles/clark.html"><span class="cg-ph" style="background-image:url(img/clark.jpg)" role="img" aria-label="Olivia Clark"></span><span><h3>Olivia Clark <span aria-hidden="true" style="color:var(--gop)">→</span></h3><span class="race">Council D4 · incumbent</span><p><b>29%</b> of donors also gave to Republicans or Portland conservatives</p></span></a><a class="cg" href="profiles/arnold.html"><span class="cg-ph" style="background-image:url(img/arnold.jpg)" role="img" aria-label="Eli Arnold"></span><span><h3>Eli Arnold <span aria-hidden="true" style="color:var(--gop)">→</span></h3><span class="race">Council D4</span><p><b>44%</b> of donors also gave to Republicans or Portland conservatives</p></span></a></div>
+    <span class="cap">Share of each candidate's individual donors since 2023 who have also given to Republican campaigns or to Gonzalez, Vasquez or Mozyrsky. Source: ORESTAR, Oct 17, 2026. <a href="donors.html">How we counted</a></span>
   </section>
-
-  <!-- 2 THE DONORS -->
-  <section class="ch" id="donors">
-    <div class="ch-head"><span class="ch-no">2 · The donors</span><h2>Their donors include Republican and conservative money.</h2>
-      <p class="lede">We checked every itemized individual donor to ten candidates against up to 20 years of contributors to 18 Republican campaigns and three other Portland conservatives (Gonzalez, Vasquez, Mozyrsky). A gift counts only when its own street address (same street, quadrant and city or ZIP), or ZIP code and employer, matches the donor's. Some matches were confirmed by hand from filing records instead: 12 of the 125 people with Republican gifts, including 11 of Torres's 31.</p></div>
-    <div class="cmp" aria-label="Share of each candidate's donors who also gave to Republicans or other Portland conservatives">
-      <h3>Where each candidate's donors also give</h3>
-      <div class="stk-lg"><span><i class="sR"></i>Republican campaigns</span><span><i class="sO"></i>Gonzalez, Vasquez or Mozyrsky</span><span><i class="sG"></i>Only the aligned campaigns</span><span>% = red + orange</span></div>
-      <div class="cmp-grp">Business-backed candidates</div>
-      <div class="stk-row"><span class="cmp-name">Eli Arnold<small>239 individual donors</small></span><span class="stk"><i class="sR" style="width:14.6%" title="35 Republican"></i><i class="sO" style="width:28.9%" title="69 Gonzalez, Vasquez or Mozyrsky"></i><i class="sG" style="width:10.5%" title="25 aligned campaigns"></i></span><span class="cmp-val">44%</span></div>
-      <div class="stk-row"><span class="cmp-name">Eric Zimmerman<small>288 individual donors</small></span><span class="stk"><i class="sR" style="width:12.2%" title="35 Republican"></i><i class="sO" style="width:30.9%" title="89 Gonzalez, Vasquez or Mozyrsky"></i><i class="sG" style="width:24.0%" title="69 aligned campaigns"></i></span><span class="cmp-val">43%</span></div>
-      <div class="stk-row"><span class="cmp-name">Kellie Torres<small>219 individual donors</small></span><span class="stk"><i class="sR" style="width:14.2%" title="31 Republican"></i><i class="sO" style="width:25.1%" title="55 Gonzalez, Vasquez or Mozyrsky"></i><i class="sG" style="width:18.3%" title="40 aligned campaigns"></i></span><span class="cmp-val">39%</span></div>
-      <div class="stk-row"><span class="cmp-name">Julia Brim-Edwards<small>489 individual donors</small></span><span class="stk"><i class="sR" style="width:14.9%" title="73 Republican"></i><i class="sO" style="width:20.0%" title="98 Gonzalez, Vasquez or Mozyrsky"></i><i class="sG" style="width:11.7%" title="57 aligned campaigns"></i></span><span class="cmp-val">35%</span></div>
-      <div class="stk-row"><span class="cmp-name">Olivia Clark<small>320 individual donors</small></span><span class="stk"><i class="sR" style="width:10.3%" title="33 Republican"></i><i class="sO" style="width:18.8%" title="60 Gonzalez, Vasquez or Mozyrsky"></i><i class="sG" style="width:20.3%" title="65 aligned campaigns"></i></span><span class="cmp-val">29%</span></div>
-      <div class="cmp-grp">The wild card</div>
-      <div class="stk-row"><span class="cmp-name">Steve Novick<small>334 individual donors · <a href="#wildcard">his new donors jumped</a></small></span><span class="stk"><i class="sR" style="width:7.2%" title="24 Republican"></i><i class="sO" style="width:11.4%" title="38 Gonzalez, Vasquez or Mozyrsky"></i><i class="sG" style="width:16.2%" title="54 aligned campaigns"></i></span><span class="cmp-val">19%</span></div>
-      <div class="cmp-grp">Progressive candidates</div>
-      <div class="stk-row"><span class="cmp-name">Mitch Green<small>227 individual donors</small></span><span class="stk stk-none"><span class="lg">No Republican or Gonzalez/Vasquez/Mozyrsky donors found</span><span class="sm">None found</span></span><span class="cmp-val">0%</span></div>
-      <div class="stk-row"><span class="cmp-name">Shannon Singleton<small>172 individual donors</small></span><span class="stk stk-none"><span class="lg">No Republican or Gonzalez/Vasquez/Mozyrsky donors found</span><span class="sm">None found</span></span><span class="cmp-val">0%</span></div>
-      <div class="stk-row"><span class="cmp-name">Angelita Morillo<small>203 individual donors</small></span><span class="stk stk-none"><span class="lg">No Republican or Gonzalez/Vasquez/Mozyrsky donors found</span><span class="sm">None found</span></span><span class="cmp-val">0%</span></div>
-      <div class="stk-row"><span class="cmp-name">Tiffany Koyama Lane<small>269 individual donors</small></span><span class="stk stk-none"><span class="lg">No Republican or Gonzalez/Vasquez/Mozyrsky donors found</span><span class="sm">None found</span></span><span class="cmp-val">0%</span></div>
-      <details class="cap-d"><summary>Sources and method</summary><span class="cap">Individual donors since Jan 2023; each counted once, in the first color that applies (red, then orange, then gold). Gold shows donors shared with the other five; it isn't drawn for the progressive candidates. Republican campaigns 2006–2026: Drazan, Buehler, Dudley (2010, 2026), Alley, Pierce, Richardson, Linthicum, Thatcher, Boquist, Starr, Hicks, Bangs, Scharf, Helfrich; and since 2024, Lathrop, the Oregon Republican Party and Bring Balance to Salem. Other Portland conservatives: Gonzalez, Vasquez, Mozyrsky. Aligned campaigns: the other five business-backed candidates. Unions and PACs are left out because many give to every candidate. Source: ORESTAR exports, Oct 17, 2026.</span></details>
-    </div>
-    <div class="two">
-      <div class="figure">
-        <svg id="gopbars" viewBox="0 0 520 270" role="img" aria-labelledby="gb-t"><title id="gb-t">Which Republican campaigns their donors fund</title></svg>
-        <span class="cap">The 125 people from the network above, by where else they gave. A person can appear in more than one row.</span>
-      </div>
-      <div class="prose">
-        <p><b>It isn't old history.</b> 54 of the 125 have given to a Republican since 2024, and 39 gave to Christine Drazan.</p>
-        <p><b>56 of them gave to more than one of the six.</b> Separate campaigns, shared donors.</p>
-        <p><b>Same city, same ballot, different donors.</b> Run the same test on the four progressive candidates (Morillo, Koyama Lane, Green, Singleton) and the count is zero.</p>
-      </div>
-    </div>
-    <div class="wc" id="wildcard">
-      <div class="wc-top"><div class="pc-wrap"><figure class="pcard" aria-label="Steve Novick as a wild card">
-        <span class="pc-i tl">W<b>♦</b></span><span class="pc-i br">W<b>♦</b></span>
-        <div class="pc-photo" style="background-image:url(img/novick.jpg);background-position:center 40%" role="img" aria-label="Steve Novick, official City of Portland portrait"></div>
-        <figcaption>Wild card</figcaption></figure><small class="pc-credit">Photo: City of Portland</small></div>
-      <div class="wc-head"><span class="eyebrow">The wild card</span><h3>Steve Novick's votes haven't moved right. His new donors lean that way.</h3>
-        <p>On the council record, Novick hasn't drifted right. But the people who gave to him for the first time in 2025–26 were more than three times as likely to have backed Republicans or Portland conservatives as the people who first gave in his 2023–24 campaign. We can't say why: 2025–26 is also when the Chamber's committees and Go Portland Go endorsed him.</p></div></div>
-      <div class="wc-cols">
-        <div class="wc-col"><span class="fl-h">His votes: share of split votes with the conservative bloc</span>
-          <div class="wc-row"><span class="wc-l">2025<small>13 of 16 votes</small></span><span class="wc-t"><i style="width:81%;background:var(--ink-2)"></i></span><b>81%</b></div>
-          <div class="wc-row"><span class="wc-l">2026<small>39 of 63 votes</small></span><span class="wc-t"><i style="width:62%;background:var(--ink-2)"></i></span><b>62%</b></div>
-          <p class="wc-k">Not a move to the right. 2025 had few split votes, so read the drop with care.</p></div>
-        <div class="wc-col"><span class="fl-h">His first-time donors who had given to Republicans or Portland conservatives</span>
-          <div class="wc-row"><span class="wc-l">First gave 2023–24<small>8 of 105</small></span><span class="wc-t"><i style="width:8%;background:var(--gop);opacity:.55"></i></span><b>8%</b></div>
-          <div class="wc-row"><span class="wc-l">First gave 2025–26<small>25 of 103</small></span><span class="wc-t"><i style="width:24%;background:var(--gop)"></i></span><b>24%</b></div>
-          <p class="wc-k">About triple, and unlikely to be chance (p ≈ 0.001).</p></div>
-      </div>
-      <details class="cap-d"><summary>Sources and method</summary><span class="cap">Votes: bloc splits on the City Council, 2025 through Oct 15, 2026 (see The votes). Donors: individual donors to Novick since Jan 2023, grouped by their first gift to any Novick campaign since 2011, matched by the same method as above. Counting Republican donors alone, it's 3% to 9%, a rise that could be chance. Donors who first backed him before 2023, in his earlier career, were 23%. For comparison, 29% of Clark's donors and 43% of Zimmerman's have given to Republicans or Portland conservatives; among progressive candidates, none have.</span></details>
-    </div>
-  </section>
-
-  <!-- 3 THE VOTES -->
-  <section class="ch" id="votes">
-    <div class="ch-head"><span class="ch-no">3 · The votes</span><h2>When the council splits, they split together.</h2>
-      <p class="lede">The council's closest votes come down to six progressives against six business-backed members. Six of the twelve are on your ballot now: three from each side.</p></div>
-    <div class="two">
-      <div class="figure">
-        <svg class="chamber" id="chamber" viewBox="-70 0 660 300" role="img" aria-labelledby="ch-t"><title id="ch-t">The council split 6 to 6 on moving $10 million out of the police accountability office</title></svg>
-        <div class="ch-list" aria-hidden="true"><div><b style="color:var(--peacock)">No</b><span><u>Morillo</u>, <u>Koyama Lane</u>, <u>Green</u>, Avalos, Kanal, Dunphy</span></div><div><b style="color:var(--slate)">Yes</b><span>Pirtle-Guiney, Ryan, <u>Novick</u>, <u>Clark</u>, <u>Zimmerman</u>, Smith</span></div><small>Underlined and outlined: on your Nov 3 ballot</small></div>
-        <details class="cap-d"><summary>Sources and method</summary><span class="cap">May 2026 budget amendment: move $10M from the voter-created police accountability office (Measure 26-217, 82% yes) to police and fire. Failed 6–6. Outlined seats are on the Nov 3 ballot. Source: Portland Mercury, May 19–20, 2026.</span></details>
-      </div>
-      <div class="figure">
-        <div class="cmp" aria-label="How often each incumbent sided with the business bloc when the council split">
-          <h3>Sided with the business bloc</h3>
-          <div class="cmp-row"><span class="cmp-name">Olivia Clark<small>74 of 77 split votes</small></span><span class="cmp-bar"><i class="gold" style="width:69.1%"></i></span><span class="cmp-val">96%</span></div>
-          <div class="cmp-row"><span class="cmp-name">Eric Zimmerman<small>73 of 77 split votes</small></span><span class="cmp-bar"><i class="gold" style="width:68.4%"></i></span><span class="cmp-val">95%</span></div>
-          <div class="cmp-row"><span class="cmp-name">Steve Novick<small>52 of 79 · 18 of 18 on homelessness, labor and housing</small></span><span class="cmp-bar"><i class="gold" style="width:47.5%"></i></span><span class="cmp-val">66%</span></div>
-        </div>
-        <details class="cap-d"><summary>Sources and method</summary><span class="cap">2025–26 roll calls where the progressives voted as a bloc (at least five of six, all the same way) and at least four of the six business-bloc members voted the other way (79 votes). Sources: portland.gov council agendas and votes; Portland Mercury budget coverage, May 2026; two May 2025 votes from Recalibrate Portland.</span></details>
-      </div>
-    </div>
-    <div class="rcpts">
-      <h3>The votes that matter</h3>
-      <div class="rcpt"><time>May 19, 2026</time><p><b>Tried to take $10M from the voter-created police accountability office</b> for police and fire. Clark led it, Novick co-sponsored, Zimmerman voted yes.</p><span class="tl">Failed 6–6</span></div>
-      <div class="rcpt"><time>May 20, 2026</time><p><b>Kept more than $5M in clean-energy fund money shifted to homelessness programs.</b> All three voted against reversing it.</p><span class="tl">Reversal failed 6–6</span></div>
-      <div class="rcpt"><time>July 22, 2026</time><p><b>Voted down restoring 55 city jobs</b> ("Save Our Services"). All three voted no.</p><span class="tl">Failed 6–7, mayor's tie-break</span></div>
-      <div class="rcpt"><time>Aug 12, 2026</time><p><b>Moda Center: $120M up front, up to $275M more for upkeep.</b> All three voted against Green's amendment rewriting the rent terms.</p><span class="tl">Passed 8–4</span></div>
-      <div class="rcpt"><time>Sept 23, 2026</time><p><b>Zenith oil terminal franchise transfer.</b> All three voted yes; all six progressives voted no.</p><span class="tl">6–6, mayor's tie-break</span></div>
-      <p class="cap">To be fair: Novick votes with the progressives on policing and civil liberties. He voted for the ordinance barring officers, federal agents included, from wearing masks and requiring visible ID, which Clark and Zimmerman opposed.</p>
-    </div>
-  </section>
-
-  <!-- 4 THE STORY -->
-  <section class="ch" id="story">
-    <div class="ch-head"><span class="ch-no">4 · The story</span><h2>Same story, two stages.</h2>
-      <p class="lede">Christine Drazan's case statewide: Portland is failing under Democrats, and they'll raise your taxes. The committees backing Portland's conservative candidates tell the same story, with Democratic names on it.</p></div>
-    <div class="pairs" role="table" aria-label="Republican statewide message compared with the message from committees backing Portland's conservative candidates">
-      <div class="pair-head" role="row"><span role="columnheader" class="ph-gop">Oregon Republicans, statewide</span><span aria-hidden="true"></span><span role="columnheader" class="ph-slate">Their backers' committees, in Portland</span></div>
-      <div class="pair" role="row">
-        <div class="side gop" role="cell"><span class="theme">Portland is in decline</span><p>Drazan, at a downtown Portland press event, promises to <q>stop accepting failure.</q></p><a class="src" href="https://www.opb.org/article/2026/08/25/christine-drazan-heads-to-downtown-portland-to-promise-voters-better-days-ahead/" target="_blank" rel="noopener">OPB · Aug 25, 2026</a></div>
-        <div class="eq" aria-hidden="true">=</div>
-        <div class="side slate" role="cell"><span class="theme">Portland is in decline</span><p>Go Portland Go's main funder sends newsletters with satirical AI-made images of a city in decline, largely blaming the four DSA councilors.</p><a class="src" href="https://www.portlandmercury.com/election-2026/money-talks-it-also-lies/" target="_blank" rel="noopener">Portland Mercury · Oct 15, 2026</a></div>
-      </div>
-      <div class="pair" role="row">
-        <div class="side gop" role="cell"><span class="theme">The far left</span><p>The Oregon GOP calls the Working Families Party, which canvasses with the progressive councilors, a <q>far left group.</q></p><a class="src" href="https://oregon.gop/2026/08/kotek-touts-endorsement-from-radical-group-that-wants-to-hike-taxes-defund-the-police/" target="_blank" rel="noopener">Oregon GOP · Aug 22, 2026</a></div>
-        <div class="eq" aria-hidden="true">=</div>
-        <div class="side slate" role="cell"><span class="theme">The far left</span><p>Chamber PAC director Doug Moore told Willamette Week the goal was to <q>stop DSA from taking over the council,</q> as the Mercury reported.</p><a class="src" href="https://www.portlandmercury.com/news/will-billboard-attacks-be-enough-to-oust-portlands-progressives/" target="_blank" rel="noopener">Portland Mercury · Sept 24, 2026</a></div>
-      </div>
-      <div class="pair" role="row">
-        <div class="side gop" role="cell"><span class="theme">They'll raise your taxes</span><p>Drazan: the governor's answer to every problem <q>is a new tax.</q></p><a class="src" href="https://www.opb.org/article/2026/10/13/kotek-drazan-square-off-in-final-debate-of-governors-race/" target="_blank" rel="noopener">OPB, final debate · Oct 13, 2026</a></div>
-        <div class="eq" aria-hidden="true">=</div>
-        <div class="side slate" role="cell"><span class="theme">They'll raise your taxes</span><p>Chamber-funded billboards tell voters a progressive councilor voted to raise their taxes.</p><a class="src" href="https://www.portlandmercury.com/news/will-billboard-attacks-be-enough-to-oust-portlands-progressives/" target="_blank" rel="noopener">Portland Mercury · Sept 24, 2026</a></div>
-      </div>
-    </div>
-    <p class="lede">When Portland's own Democratic establishment says the city's progressive leaders are a radical takeover, that message doesn't stay in Portland. It can become evidence for the case Drazan is making against Democrats everywhere else in Oregon.</p>
-  </section>
-
-  <!-- 5 THE ECONOMICS -->
-  <section class="ch" id="economics">
-    <div class="ch-head"><span class="ch-no">5 · The economics</span><h2>An old theory with a Portland address.</h2>
-      <p class="lede">The Chamber's agenda follows the same theory as trickle-down economics: keep taxes low at the top and prosperity spreads to everyone. That idea has been tested for 50 years.</p></div>
-
-    <div class="ec-quotes">
-      <figure><q>New or increased taxes are unpopular with voters and will only dig our region into a deeper hole.</q><figcaption>Portland Metro Chamber, 2026 regional policy agenda · <a href="https://portlandmetrochamber.com/?p=6070" target="_blank" rel="noopener">source</a></figcaption></figure>
-      <figure><q>strongly opposed to any further tax increases</q><figcaption>Chamber CEO Andrew Hoan, 2026 state legislative agenda · <a href="https://portlandmetrochamber.com/?p=6064" target="_blank" rel="noopener">source</a></figcaption></figure>
-      <figure><q>tax avoidance is a primary driver for those leaving the county.</q><figcaption>Chamber statement on its Preschool for All testimony, 2024, citing ECONorthwest data · <a href="https://portlandmetrochamber.com/resources/chamber-supports-delay-of-preschool-for-all-tax-increase/" target="_blank" rel="noopener">source</a></figcaption></figure>
-    </div>
-
-    <div class="two">
-      <div class="figure">
-        <h3>Who gets the gains</h3>
-        <p class="ec-sub">Share of U.S. pre-tax income going to the top 1%</p>
-        <div class="ec-bars" role="img" aria-label="Top 1 percent income share: about 24 percent in the late 1920s, about 9 percent in the 1970s, 27.6 percent in 2021, a record">
-          <div class="ec-b"><span>Late 1920s</span><i style="width:87%"></i><b>~24%</b></div>
-          <div class="ec-b"><span>1970s</span><i style="width:33%"></i><b>~9%</b></div>
-          <div class="ec-b hot"><span>2021</span><i style="width:100%"></i><b>27.6%</b></div>
-        </div>
-        <span class="cap">Top 1% share of pre-tax income including capital gains (Piketty–Saez series, from 1913). 2021 set the record (23.6% in 2022), above the peak on the eve of the Great Depression. Source: Emmanuel Saez, UC Berkeley, <a href="https://eml.berkeley.edu/~saez/saez-UStopincomes-2022.pdf" target="_blank" rel="noopener">2024 update</a>. The top 1% also holds 32.5% of U.S. wealth, the most since Fed tracking began in 1989 (<a href="https://fred.stlouisfed.org/series/WFRBST01134" target="_blank" rel="noopener">Federal Reserve</a>). In Oregon, the top 1% took about 14% of income in 2023, nearly as much as the bottom half (Oregon Center for Public Policy, from state revenue data, <a href="https://www.ocpp.org/2025/12/09/income-inequality-in-oregon/" target="_blank" rel="noopener">source</a>).</span>
-      </div>
-      <div class="prose ec-ev">
-        <h3>What the research found</h3>
-        <p><b>50 years, 18 countries.</b> Major tax cuts for the rich raised the top 1%'s share of income, with no significant effect on growth or unemployment. <a href="https://researchonline.lse.ac.uk/id/eprint/107919" target="_blank" rel="noopener">London School of Economics</a></p>
-        <p><b>Since 1945 in the U.S.</b> Lower top tax rates tracked with income concentration, not growth. <a href="https://www.everycrsreport.com/reports/R42729.html" target="_blank" rel="noopener">Congressional Research Service</a></p>
-        <p><b>Kansas, 2012.</b> Deep cuts didn't beat neighboring states' growth; schools and roads were cut, and a Republican legislature reversed most of the cuts in 2017. <a href="https://www.brookings.edu/articles/the-kansas-tax-cut-experiment/" target="_blank" rel="noopener">Brookings</a></p>
-        <p><b>The 2017 federal tax cut.</b> Gains went mostly to owners and top earners. Wages rose about $750 per worker, against $4,000 or more promised. Investment rose (about 11% at exposed firms), but typical workers saw little. <a href="https://www.aeaweb.org/research/chart/corporate-tax-growth-earnings" target="_blank" rel="noopener">AEA</a> · <a href="https://news.harvard.edu/gazette/story/2024/09/raise-corporate-tax-rates-no-cut-them-maybe-take-a-look-first/" target="_blank" rel="noopener">Harvard Gazette</a></p>
-      </div>
-    </div>
-
-    <div class="ec-flight">
-      <div class="ec-claim"><span class="eyebrow">The Chamber says</span><p class="ec-big">"Portland has lost approximately $1 billion in taxable income annually since 2020."</p><a class="src" href="https://portlandmetrochamber.com/?p=6070" target="_blank" rel="noopener">2026 regional policy agenda</a></div>
-      <div class="ec-data"><span class="eyebrow">What the data shows</span>
-        <p><b>High-earning households grew.</b> Census survey data show Multnomah households earning $500,000+ rose from about 2,500 in 2019 to about 7,700 in 2024 (small samples). <a href="https://www.pdx.edu/economics/sites/economics.web.wdt.pdx.edu/files/2026-07/Affluent_Households_Multnomah_County_updated2_MPH.pdf" target="_blank" rel="noopener">Portland State University</a></p>
-        <p><b>Green's office: the leavers' income jump tracked pandemic market gains.</b> An analysis by Councilor Mitch Green's senior policy analyst, released ahead of a county vote, tied it to investment gains seen nationwide, including in Seattle, which has no state income tax. <a href="https://www.portland.gov/council/districts/4/mitch-green/documents/illusion-preschool-tax-flight/download" target="_blank" rel="noopener">Green's office</a></p>
-        <p><b>Millionaires rarely move for taxes.</b> <a href="https://taxpolicycenter.org/taxvox/do-high-state-taxes-drive-away-millionaires-not-really" target="_blank" rel="noopener">Tax Policy Center</a></p>
-        <p><b>The honest caveat.</b> An independent 2026 working paper did find some extra departures after Preschool for All, costing about 8.5% of its revenue (the authors' estimate; not yet peer reviewed). Some people left; the revenue effect was modest. <a href="https://www.reed.edu/newsroom/press-releases/2026/reed-college-economist-co-authors-study-on-migration-effects-of-multnomah-county-preschool-for-all-tax.html" target="_blank" rel="noopener">Reed College</a></p>
-      </div>
-    </div>
-    <p class="ec-fair">To be fair: the Chamber backs some public spending, including the parks levy (<a href="https://portlandmetrochamber.com/resources/portland-metro-chamber-and-city-come-to-an-agreement-on-parks-levy-rate/" target="_blank" rel="noopener">Chamber</a>) and, as a top 2026 priority, public money for the Moda Center renovation (<a href="https://portlandmetrochamber.com/?p=6064" target="_blank" rel="noopener">Chamber</a>). It doesn't use the words "trickle-down"; that's our description of an agenda built on cutting and capping taxes at the top. Inequality has many causes, and tax policy is one that research ties to it.</p>
-  </section>
-
-  <!-- 6 THE DOOM LOOP -->
-  <section class="ch" id="doom">
-    <div class="ch-head"><span class="ch-no">6 · The doom loop</span><h2>Portland isn't failing. It's recovering unevenly.</h2>
-      <p class="lede">The Portland Metro Chamber gave the city its scariest phrase, and the groups funding the committees behind these candidates keep telling the same story of decline. Even Mayor Wilson pushed back, urging "boom loop thinking" <a class="src" href="https://www.wweek.com/news/2025/12/24/first-rolled-out-in-february-the-term-doom-loop-roiled-portland-in-2025/" target="_blank" rel="noopener">WWeek</a>.</p></div>
-
-    <div class="ec-quotes dl-quotes">
-      <figure><q>an urban doom loop</q><figcaption>Portland Metro Chamber, 2025 State of the Economy report · <a href="https://portlandmetrochamber.com/resources/2025-state-of-the-economy/" target="_blank" rel="noopener">source</a></figcaption></figure>
-      <figure><q>We are in an economic emergency.</q><figcaption>Chamber CEO Andrew Hoan, Feb 2026 · <a href="https://portlandmetrochamber.com/resources/andrew-hoan-portlands-economic-reality-requires-decisive-action/" target="_blank" rel="noopener">source</a></figcaption></figure>
-      <figure><q>…whether we move forward or spiral further into decline.</q><figcaption>Partnership for Progress (now Go Portland Go's main funder), press release, May 2025 · <a href="https://portlandtribune.com/2025/05/21/lobbying-ramps-up-as-city-council-considers-portland-budget/" target="_blank" rel="noopener">Portland Tribune</a></figcaption></figure>
-    </div>
-    <p class="ec-fair" style="margin-top:-8px">Partnership for Progress's newsletters have featured what the Mercury calls "satirical, AI-generated images that spin narratives of Portland in decline" (<a href="https://www.portlandmercury.com/election-2026/money-talks-it-also-lies/" target="_blank" rel="noopener">Mercury</a>).</p>
-
-    <div class="two">
-      <div class="figure">
-        <h3>Homicides in Portland</h3>
-        <p class="ec-sub">Down by half from the 2022 peak, and still falling in 2026</p>
-        <div class="dl-chart" role="img" aria-label="Portland homicides: 36 in 2019, 55 in 2020, 92 in 2021, 101 in 2022, 77 in 2023, 71 in 2024, 52 in 2025"><div class="dl-col"><b>36</b><i style="height:36%"></i><span>2019</span></div><div class="dl-col"><b>55</b><i style="height:54%"></i><span>2020</span></div><div class="dl-col"><b>92</b><i style="height:91%"></i><span>2021</span></div><div class="dl-col"><b>101</b><i style="height:100%"></i><span>2022</span></div><div class="dl-col"><b>77</b><i style="height:76%"></i><span>2023</span></div><div class="dl-col"><b>71</b><i style="height:70%"></i><span>2024</span></div><div class="dl-col hot"><b>52</b><i style="height:51%"></i><span>2025</span></div></div>
-        <span class="cap">2019–2024: Oregonian count (<a href="https://datawrapper.dwcdn.net/M1srS/1" target="_blank" rel="noopener">source</a>); 2025: Portland gun violence reduction annual report (<a href="https://multco.us/file/2025-annual-report_portland-gun-violence-reduction-strategy.pdf/download" target="_blank" rel="noopener">source</a>). First half of 2026: 13, against 18 a year earlier (<a href="https://majorcitieschiefs.com/wp-content/uploads/2026/08/MCCA-Violent-Crime-Report-2026-and-2025-Midyear.pdf" target="_blank" rel="noopener">Major Cities Chiefs Association</a>). The city's report counts 2019 as 30 and 2024 as about 68; counts differ by definition. Still above 2019. Crime fell nationwide too, so no one politician owns the drop.</span>
-      </div>
-      <div class="dl-score">
-        <div><span class="eyebrow dl-good">Better than the doom story says</span>
-          <p><b>Homicides</b> 101 in 2022 → 52 in 2025.</p>
-          <p><b>Car thefts</b> down about two-thirds from the 2022 peak. <a href="https://www.portland.gov/police/news/2025/12/11/stolen-vehicle-operations-continue-reduce-car-theft-earn-awards" target="_blank" rel="noopener">PPB</a></p>
-          <p><b>Downtown foot traffic</b> 81% of 2019 levels in August 2026, the best month since 2020, according to Placer.ai data in a Downtown Portland Clean &amp; Safe report. <a href="https://www.axios.com/local/portland/2026/09/23/downtown-foot-traffic-pandemic-recovery" target="_blank" rel="noopener">Axios</a></p>
-          <p><b>Population</b> edged up in 2025 (+0.2%), though it's still below 2020. <a href="https://www.opb.org/article/2025/12/30/portlands-suburbs-grew-the-most-as-oregons-population-grew-modestly-in-2025/" target="_blank" rel="noopener">OPB</a></p>
-          <p><b>Overdose deaths</b> in Oregon down about 25% last year. <a href="https://www.axios.com/local/portland/2026/05/19/overdose-deaths-fall-in-oregon-for-second-year-in-a-row" target="_blank" rel="noopener">Axios</a></p></div>
-        <div><span class="eyebrow dl-bad">Still hurting, and worth saying</span>
-          <p><b>Empty offices</b> about a third of downtown office space is vacant (34.7%, CBRE, late 2025); the national rate is about 20% (Cushman &amp; Wakefield). <a href="https://www.axios.com/local/portland/2026/01/14/suburban-office-leasing-thrive-as-downtown-portland-struggles" target="_blank" rel="noopener">Axios</a> · <a href="https://irei.com/news/cushman-wakefield-u-s-office-recovery-broadens-as-vacancy-declines-across-more-than-half-of-u-s-markets/" target="_blank" rel="noopener">IREI</a></p>
-          <p><b>Jobs</b> one of only two big U.S. metros to lose jobs in the year to June 2026, across the whole region, not just the city. <a href="https://www.bls.gov/opub/ted/2026/employment-up-in-10-large-metro-areas-down-in-2-over-year-ended-june-2026.htm" target="_blank" rel="noopener">BLS</a></p>
-          <p><b>Housing permits</b> sharply down. <a href="https://www.opb.org/article/2026/03/03/portland-claims-new-housing-program-works-but-data-inconclusive/" target="_blank" rel="noopener">OPB</a></p>
-          <p><b>Homelessness</b> the county's one-night count rose 67% from 2023 to 2025. Better counting explains much of that, but the number likely didn't fall. <a href="https://katu.com/news/politics/governor-kotek-holds-press-conference-with-reporters-monday-point-in-time-homeless-homelessness-rising-portland-oregon-multnomah" target="_blank" rel="noopener">KATU</a> · <a href="https://www.wweek.com/news/2025/11/06/metro-area-homelessness-persists-despite-13-billion-raised-since-2021-point-in-time-count-shows/" target="_blank" rel="noopener">WWeek</a></p></div>
-      </div>
-    </div>
-    <p class="dl-close">Those are real problems to solve. They aren't proof that Portland is failing, and they aren't an argument for handing the city to the people selling the doom.</p>
-  </section>
-
-  <!-- RECEIPTS -->
-  <section class="ch" id="receipts">
-    <div class="ch-head"><span class="ch-no">Receipts</span><h2>Check our work.</h2>
-      <p class="lede">Every number traces to a public record. If we got something wrong, tell us and we'll correct it, with the date.</p></div>
-    <div class="method">
-      <div><h3>Where it comes from</h3><p>Oregon's ORESTAR campaign-finance filings, Portland's council voting records, and news coverage linked at each claim.</p></div>
-      <div><h3>What counts</h3><p>A person counts if they gave to the candidate and, since 2006, to one of 18 Republican campaigns or party committees, and the street address, or ZIP and employer, match. The same test runs on every candidate shown.</p></div>
-      <div><h3>What we don't claim</h3><p>The candidates are Democrats. Republicans aren't funding or endorsing them as a party, and many prominent Democrats back them. When we call them conservative, we mean where they stand in Portland politics, judged by their votes, their backers and their message, not their party registration.</p></div>
-    </div>
+  <section class="ch" id="deeper">
+    <div class="ch-head"><span class="ch-no">Go deeper</span><h2>The full case, one piece at a time.</h2></div>
+    <div class="deep"><a class="dcard" href="why.html"><span class="eyebrow">Why it matters</span><h3>The real primary is on your city ballot.</h3><p>In a one-party state, the fight over Oregon's direction happens in nonpartisan city races. Plus: what we mean by "Portland conservative."</p><span class="go">Read →</span></a><a class="dcard" href="donors.html"><span class="eyebrow">The donors</span><h3>Who funds them, and where else that money goes.</h3><p>Arnold 44%. Zimmerman 43%. Torres 39%. The four progressive candidates: 0%. And why Novick is the wild card.</p><span class="go">Read →</span></a><a class="dcard" href="votes.html"><span class="eyebrow">The votes</span><h3>When the council splits, they split together.</h3><p>Clark sided with the business bloc on 96% of split votes, Zimmerman 95%. The five votes that matter.</p><span class="go">Read →</span></a><a class="dcard" href="story.html"><span class="eyebrow">The story</span><h3>Same story, two stages.</h3><p>Christine Drazan's statewide message about Portland, told by Portland committees with Democratic names on it.</p><span class="go">Read →</span></a><a class="dcard" href="economics.html"><span class="eyebrow">The economics</span><h3>An old theory with a Portland address.</h3><p>The top 1% now takes a bigger share of income than on the eve of the Great Depression. What the Chamber's tax story leaves out.</p><span class="go">Read →</span></a><a class="dcard" href="doom.html"><span class="eyebrow">The doom loop</span><h3>Portland isn't failing. It's recovering unevenly.</h3><p>Homicides: 101 in 2022, 52 in 2025. The data behind the decline story, good and bad.</p><span class="go">Read →</span></a><a class="dcard wide" href="receipts.html"><span class="eyebrow">Receipts</span><h3>Check our work.</h3><p>Every number traces to a public record. How we counted, and what we don't claim.</p><span class="go">Read →</span></a></div>
   </section>
 </div>
-
 <section class="act">
   <div class="wrap">
     <h2>Your ballot is already here.</h2>
@@ -601,137 +397,6 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--ink-2);display:grid;ga
   <span>Corrections are posted here with the date.</span>
 </footer></div>
 
-<script>
-(function(){
-  const NS='http://www.w3.org/2000/svg';
-  const el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e};
-  const css=v=>`var(--${v})`;
-  const txt=(p,x,y,s,o)=>{const t=el('text',Object.assign({x,y},o),p);t.textContent=s;return t};
 
-  /* ---------- HERO WEB ---------- */
-  // Individual donors to the six candidates whose own gifts to Republican campaigns (2006–2026) match their address, or ZIP+employer.
-  // Deduplicated by last name + street. c = candidates; g = $ by target: D Drazan, K Buehler, U Dudley, X other Republicans, O Gonzalez/Vasquez/Mozyrsky. Amounts deduplicated by transaction ID and rounded (to $250 under $1,000, else to $1,000) so no single donor is identifiable.
-  const D=[["N",{"K":15000,"O":109000}],["ABCNZ",{"O":109000,"K":12000}],["AN",{"K":41000,"U":24000,"O":2000,"D":1000,"X":250}],["BCT",{"X":65000}],["B",{"D":11000,"X":12000,"K":12000,"U":16000,"O":4000}],["B",{"X":21000,"K":10000,"U":20000,"O":3000}],["NZ",{"X":12000,"O":41000}],["BC",{"O":21000,"K":25000}],["B",{"D":10000,"K":25000,"O":5000}],["A",{"D":500,"K":34000,"X":2000,"O":1000}],["TZ",{"D":30000,"X":1000,"K":2000,"U":3000}],["B",{"D":8000,"X":16000,"O":11000}],["BNTZ",{"D":5000,"X":4000,"U":10000,"O":7000}],["NTZ",{"X":2000,"O":500,"K":20000}],["T",{"D":7000,"X":4000,"K":2000,"U":2000,"O":5000}],["B",{"D":15000,"X":1000,"O":2000}],["T",{"D":10000,"O":5000}],["T",{"K":15000}],["B",{"K":12000,"O":500}],["B",{"K":12000}],["AZ",{"D":3000,"X":5000,"K":2000,"O":2000}],["CTZ",{"O":3000,"X":8000}],["ABCZ",{"D":4000,"K":500,"O":6000}],["B",{"U":10000,"O":250}],["BCN",{"K":7000,"O":3000}],["B",{"U":10000}],["ABZ",{"K":8000,"X":500,"O":1000}],["BZ",{"D":750,"U":5000,"O":2000}],["BCTZ",{"D":2000,"K":1000,"X":1000,"O":3000}],["ABCT",{"X":2000,"O":3000,"K":2000}],["B",{"X":2000,"K":3000,"O":2000}],["B",{"D":5000,"O":2000}],["AB",{"U":5000,"O":2000}],["AB",{"D":500,"O":6000}],["BZ",{"K":5000,"X":250,"O":1000}],["T",{"K":5000,"O":1000}],["B",{"K":1000,"O":5000}],["C",{"U":6000}],["TZ",{"K":5000}],["T",{"U":5000}],["BN",{"K":5000}],["B",{"O":3000,"U":2000}],["BCZ",{"K":1000,"O":4000}],["BCNTZ",{"D":250,"K":1000,"X":2000,"O":1000}],["NT",{"K":2000,"X":1000,"O":1000}],["ABNZ",{"X":2000,"O":2000}],["AB",{"K":1000,"O":3000}],["CZ",{"D":1000,"K":2000,"X":1000}],["ABCNTZ",{"K":3000,"O":500}],["B",{"D":1000,"K":1000,"U":250,"X":750,"O":250}],["BZ",{"X":2000,"K":750,"O":500}],["BTZ",{"X":3000}],["BCTZ",{"K":2000,"O":1000}],["T",{"K":2000,"O":1000}],["N",{"X":3000}],["N",{"K":1000,"O":2000}],["B",{"K":3000}],["C",{"K":1000,"O":2000}],["BNT",{"O":2000,"D":500}],["BCZ",{"K":500,"O":2000}],["B",{"D":500,"O":2000}],["ABCNZ",{"X":250,"O":2000}],["B",{"K":2000,"O":250}],["BC",{"X":250,"O":2000}],["BT",{"U":1000,"O":1000}],["N",{"K":2000}],["B",{"U":2000}],["B",{"X":1000,"O":1000}],["CZ",{"K":2000}],["C",{"K":2000}],["A",{"D":250,"X":1000,"O":750}],["BNTZ",{"K":1000,"O":750}],["A",{"D":250,"K":750,"X":250,"O":500}],["A",{"X":500,"O":1000}],["A",{"D":250,"K":250,"X":500,"O":500}],["A",{"K":500,"O":1000}],["BCT",{"X":500,"O":750}],["BCNTZ",{"O":250,"U":1000}],["N",{"K":1000,"X":250}],["BC",{"D":250,"K":500,"U":500}],["C",{"D":750,"O":500}],["A",{"X":1000,"O":250}],["BT",{"K":500,"O":500}],["TZ",{"U":1000}],["T",{"X":1000}],["B",{"D":1000}],["B",{"X":1000}],["AZ",{"K":250,"O":750}],["AC",{"D":250,"O":750}],["T",{"K":500,"O":250}],["ABZ",{"X":250,"O":500}],["B",{"X":500,"O":250}],["B",{"D":500,"O":250}],["ACZ",{"D":250,"O":500}],["A",{"K":250,"O":500}],["A",{"X":500,"O":250}],["NTZ",{"X":500}],["ABCNTZ",{"X":250,"O":250}],["B",{"K":500}],["B",{"K":500}],["BC",{"K":500}],["Z",{"K":250,"O":250}],["C",{"K":250,"O":250}],["A",{"X":250,"O":250}],["A",{"U":500}],["A",{"X":500}],["BCTZ",{"K":250}],["BCNTZ",{"X":250}],["BT",{"D":250}],["T",{"X":250}],["ABCN",{"X":250}],["N",{"X":250}],["BN",{"D":250}],["B",{"D":250}],["B",{"D":250}],["B",{"X":250}],["B",{"D":250}],["B",{"X":250}],["ACZ",{"D":250}],["Z",{"K":250}],["C",{"X":250}],["C",{"X":250}],["A",{"D":250}],["A",{"D":250}],["A",{"D":250}]];
-  const svg=document.getElementById('web');
-  const C={T:['Kellie Torres','Council D3'],N:['Steve Novick','Council D3'],B:['Julia Brim-Edwards','County Chair'],Z:['Eric Zimmerman','Council D4'],C:['Olivia Clark','Council D4'],A:['Eli Arnold','Council D4']};
-  const corder=['T','N','B','Z','C','A'];corder.forEach((k,i)=>C[k].y=70+i*92);
-  const G={D:{label:'Christine Drazan',sub:'2018–2026 races',y:70,col:'gop'},K:{label:'Knute Buehler',sub:'2011–2018 races',y:175,col:'gop'},U:{label:'Chris Dudley',sub:'governor 2010, 2026',y:280,col:'gop'},X:{label:'Other Republicans',sub:'statewide, legislature, party',y:385,col:'gop'},O:{label:'Other Portland conservatives',sub:'Gonzalez, Vasquez, Mozyrsky',y:510,col:'lean'}};
-  const cx=260,gx=790,mx=520;
-  // order donors by average y of their candidates so lines stay tidy
-  const pts=D.map(d=>{const ys=[...d[0]].map(k=>C[k].y);return {d,avg:ys.reduce((a,b)=>a+b,0)/ys.length}}).sort((a,b)=>a.avg-b.avg);
-  pts.forEach((p,i)=>{const col=i%4,row=Math.floor(i/4),rows=Math.ceil(pts.length/4);p.y=40+row*(520/(rows-1));p.x=mx-48+col*32});
-  const maxA=Math.max(...D.map(d=>Math.max(...Object.values(d[1]))));
-  const eg=el('g',{fill:'none'},svg),ng=el('g',{},svg);
-  const NAMES={T:'Torres',N:'Novick',B:'Brim-Edwards',Z:'Zimmerman',C:'Clark',A:'Arnold'};
-  const TN={D:'Christine Drazan',K:'Knute Buehler',U:'Chris Dudley',X:'other Republicans',O:'Gonzalez, Vasquez or Mozyrsky'};
-  const byCand={};corder.forEach(k=>byCand[k]=[]);
-  pts.forEach((p,i)=>{
-    p.edges=[];
-    [...p.d[0]].forEach(k=>{const c=C[k];byCand[k].push(p);
-      const e=el('path',{d:`M${cx+14},${c.y} C${cx+140},${c.y} ${p.x-140},${p.y} ${p.x},${p.y}`,class:'e ein',pathLength:1,stroke:css('slate'),'stroke-width':1.3,'stroke-opacity':.5},eg);
-      e.dataset.d0=(0.05+i*0.012).toFixed(3)+'s';e.style.setProperty('--d',e.dataset.d0);e.dataset.c=k;p.edges.push(e);});
-    Object.entries(p.d[1]).forEach(([k,a])=>{const t=G[k];const w=0.9+5*Math.sqrt(a/maxA);
-      const e=el('path',{d:`M${p.x},${p.y} C${p.x+150},${p.y} ${gx-150},${t.y} ${gx-14},${t.y}`,class:'e eout',pathLength:1,stroke:css(t.col),'stroke-width':w.toFixed(2),'stroke-opacity':.6},eg);
-      e.dataset.d0=(0.9+i*0.012).toFixed(3)+'s';e.style.setProperty('--d',e.dataset.d0);p.edges.push(e);});
-  });
-  pts.forEach(p=>{const tot=Object.values(p.d[1]).reduce((s,v)=>s+v,0);p.tot=tot;
-    p.dot=el('circle',{cx:p.x,cy:p.y,r:(3.5+6*Math.sqrt(tot/maxA)).toFixed(1),class:'dn',fill:p.d[0].length>1?css('ink'):css('ink-2'),stroke:css('paper'),'stroke-width':1.5,tabindex:0},ng);
-    const hit=el('circle',{cx:p.x,cy:p.y,r:11,fill:'transparent',class:'hit'},ng);
-    const show=ev=>tip(p,ev);hit.addEventListener('mouseenter',show);hit.addEventListener('click',ev=>{ev.stopPropagation();show(ev)});hit.addEventListener('mouseleave',hideTip);});
-  corder.forEach(k=>{const c=C[k];const g=el('g',{class:'cand',tabindex:0,role:'button','aria-label':'Trace donors of '+c[0]},ng);
-    el('rect',{x:cx-230,y:c.y-24,width:260,height:52,fill:'transparent'},g);
-    el('circle',{cx,cy:c.y,r:12,fill:css('slate')},g);
-    txt(g,cx-22,c.y+2,c[0],{'text-anchor':'end','font-family':'var(--f-display)','font-weight':700,'font-size':20,fill:css('ink')});
-    txt(g,cx-22,c.y+19,c[1],{'text-anchor':'end','font-family':'var(--f-data)','font-size':12,fill:css('ink-2')});
-    const go=ev=>{ev.stopPropagation();focus(k)};g.addEventListener('click',go);g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();go(ev)}});
-    C[k].g=g;});
-  Object.entries(G).forEach(([tk,t])=>{const g=el('g',{class:'cand tgt',tabindex:0,role:'button','aria-label':'Trace donors of '+t.label},ng);
-    el('rect',{x:gx-24,y:t.y-24,width:290,height:52,fill:'transparent'},g);
-    el('circle',{cx:gx,cy:t.y,r:14,fill:css(t.col)},g);
-    txt(g,gx+26,t.y+2,t.label,{'font-family':'var(--f-display)','font-weight':700,'font-size':20,fill:css('ink')});
-    txt(g,gx+26,t.y+20,t.sub,{'font-family':'var(--f-data)','font-size':12,fill:css('ink-2')});
-    const go=ev=>{ev.stopPropagation();focusT(tk)};g.addEventListener('click',go);g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();go(ev)}});
-    t.g=g;});
-  // tag outgoing edges with their target
-  pts.forEach(p=>{let i=0;p.edges.forEach(e=>{if(e.classList.contains('eout')){e.dataset.t=Object.keys(p.d[1])[i++]}})});
-  // animation + focus
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const restore=()=>allE.forEach(e=>{e.style.setProperty('--d',e.dataset.d0);e.classList.remove('rev')});
-  const replay=els=>{if(reduce)return;els.forEach(e=>{e.classList.remove('draw');void e.getBoundingClientRect();e.classList.add('draw')})};
-  const status=document.getElementById('web-status');let cur=null;
-  const allE=[...svg.querySelectorAll('path.e')];
-  const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){replay(allE);io.disconnect()}},{threshold:.25});io.observe(svg);
-  function focus(k){
-    if(cur===k){reset();return}
-    cur=k;svg.classList.add('focus');
-    allE.forEach(e=>e.classList.remove('on'));pts.forEach(p=>p.dot.classList.remove('on'));corder.forEach(j=>C[j].g.classList.toggle('on',j===k));Object.values(G).forEach(t=>t.g.classList.remove('on'));
-    const ps=byCand[k],on=[];
-    ps.forEach(p=>{p.dot.classList.add('on');p.edges.forEach(e=>{if(!e.classList.contains('ein')||e.dataset.c===k){e.classList.add('on');on.push(e)}})});
-    restore();replay(on);
-    const RN={T:[31,219,7],N:[24,334,3],B:[73,489,23],Z:[35,288,9],C:[33,320,9],A:[35,239,14]}[k];
-    status.innerHTML=`<b>${C[k][0]}:</b> ${RN[0]} of ${RN[1]} individual donors also gave to Republican campaigns, ${RN[2]} of them to Christine Drazan. Highlighted dots are donors or households. <button type="button" class="web-reset">Show all six</button>`;
-    status.querySelector('button').onclick=reset;
-  }
-  function focusT(tk){
-    const key='t:'+tk;if(cur===key){reset();return}
-    cur=key;svg.classList.add('focus');
-    allE.forEach(e=>e.classList.remove('on'));pts.forEach(p=>p.dot.classList.remove('on'));
-    corder.forEach(j=>C[j].g.classList.remove('on'));Object.entries(G).forEach(([j,t])=>t.g.classList.toggle('on',j===tk));
-    const ps=pts.filter(p=>tk in p.d[1]),on=[],per={};
-    ps.forEach(p=>{p.dot.classList.add('on');[...p.d[0]].forEach(c=>{per[c]=(per[c]||0)+1;C[c].g.classList.add('on')});
-      p.edges.forEach(e=>{if(e.classList.contains('ein')||e.dataset.t===tk){e.classList.add('on');on.push(e)}})});
-    on.forEach(e=>{e.classList.add('rev');e.style.setProperty('--d',e.classList.contains('eout')?'0s':'0.7s')});
-    replay(on);
-    const PT={"D":{"T":7,"N":3,"B":23,"Z":9,"C":9,"A":14},"K":{"T":15,"N":11,"B":34,"Z":19,"C":17,"A":13},"U":{"T":6,"N":3,"B":12,"Z":5,"C":3,"A":2},"X":{"T":16,"N":14,"B":30,"Z":18,"C":13,"A":18},"O":{"T":73,"N":52,"B":145,"Z":110,"C":78,"A":95}}[tk];
-    const br=corder.slice().sort((a,b)=>PT[b]-PT[a]).map(c=>`${NAMES[c]} ${PT[c]}`).join(' · ');
-    status.innerHTML=`<b>${G[tk].label}:</b> ${ps.length} of the 125 people shown also gave here. Individual donors who did, by candidate: ${br}. <button type="button" class="web-reset">Show all</button>`;
-    status.querySelector('button').onclick=reset;
-  }
-  function reset(){cur=null;svg.classList.remove('focus');allE.forEach(e=>e.classList.remove('on'));pts.forEach(p=>p.dot.classList.remove('on'));corder.forEach(j=>C[j].g.classList.remove('on'));Object.values(G).forEach(t=>t.g.classList.remove('on'));restore();
-    status.innerHTML='Tap any name on either side to trace the donors. Hover or tap a dot for what that donor gave.';replay(allE);}
-  svg.addEventListener('click',()=>{if(cur)reset();hideTip()});
-  // tooltip (no names)
-  const tipEl=document.getElementById('web-tip');
-  function money(v){return v>=1000?'$'+Math.round(v/1000).toLocaleString()+'K':'$'+v}
-  function tip(p,ev){
-    const cands=[...p.d[0]].map(k=>NAMES[k]).join(', ');
-    const tg=Object.entries(p.d[1]).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${TN[k]} (${money(v)})`).join(', ');
-    tipEl.innerHTML=`<span class="tt-h">One donor or household</span><span><b>Gave to:</b> ${cands}</span><span><b>Also gave to:</b> ${tg}</span><small>Amounts rounded. Names withheld.</small>`;
-    const box=svg.getBoundingClientRect(),wb=svg.parentElement.getBoundingClientRect();
-    const sx=box.width/1080,x=box.left-wb.left+p.x*sx,y=box.top-wb.top+p.y*sx;
-    tipEl.style.left=Math.min(Math.max(8,x-140),wb.width-288)+'px';tipEl.style.top=(y+14)+'px';tipEl.hidden=false;}
-  function hideTip(){tipEl.hidden=true}
-  txt(ng,mx,22,'125 PEOPLE',{'text-anchor':'middle','font-family':'var(--f-data)','font-size':13,'font-weight':600,fill:css('ink-2'),'letter-spacing':'2'});
-
-  /* ---------- CURRENT GOP BARS ---------- */
-  const gb=document.getElementById('gopbars');
-  const cnt={D:0,K:0,U:0,X:0,O:0};D.forEach(d=>Object.keys(d[1]).forEach(k=>cnt[k]++));
-  const rows=[['K','Knute Buehler','2011–2018 races'],['X','Other Republicans','statewide, legislature, party'],['D','Christine Drazan','2018–2026 races'],['U','Chris Dudley','governor, 2010 and 2026'],['O','Gonzalez, Vasquez or Mozyrsky','Portland council and auditor races']];
-  const mxv=Math.max(...Object.values(cnt)),bx=210,bw=260;
-  rows.forEach((r,i)=>{const y=14+i*50,w=bw*cnt[r[0]]/mxv;
-    txt(gb,0,y+12,r[1],{'font-size':14,'font-weight':600,fill:css('ink')});
-    txt(gb,0,y+28,r[2],{'font-family':'var(--f-data)','font-size':11,fill:css('ink-2')});
-    el('rect',{x:bx,y,width:w.toFixed(1),height:24,fill:css(r[0]==='O'?'lean':'gop')},gb);
-    txt(gb,bx+w+8,y+17,cnt[r[0]],{'font-family':'var(--f-data)','font-size':14,'font-weight':600,fill:css('ink')});
-  });
-
-  /* ---------- CHAMBER ---------- */
-  const ch=document.getElementById('chamber');
-  const yes=['Pirtle-Guiney','Ryan','Novick','Clark','Zimmerman','Smith'];
-  const no=['Morillo','Koyama Lane','Green','Avalos','Kanal','Dunphy'];
-  const onBallot=new Set(['Novick','Clark','Zimmerman','Morillo','Koyama Lane','Green']);
-  const seats=[...no,...yes],R=180,ccx=260,ccy=250;
-  seats.forEach((n,i)=>{const a=Math.PI-(i+0.5)*Math.PI/12,x=ccx+R*Math.cos(a),y=ccy-R*Math.sin(a),isYes=i>=6;
-    el('circle',{cx:x.toFixed(1),cy:y.toFixed(1),r:17,fill:isYes?css('slate'):css('peacock'),stroke:onBallot.has(n)?css('ink'):'none','stroke-width':3.5},ch);
-    const lx=ccx+(R+30)*Math.cos(a),ly=ccy-(R+30)*Math.sin(a);
-    txt(ch,lx.toFixed(1),(ly+4).toFixed(1),n,{'text-anchor':Math.cos(a)>0.02?'start':'end','class':'nm'});
-  });
-  txt(ch,ccx-95,ccy+28,'6 NO',{'text-anchor':'middle','font-family':'var(--f-display)','font-weight':800,'font-size':30,fill:css('peacock')});
-  if(matchMedia('(max-width:640px)').matches){ch.setAttribute('viewBox','55 40 410 250');}
-  txt(ch,ccx+95,ccy+28,'6 YES',{'text-anchor':'middle','font-family':'var(--f-display)','font-weight':800,'font-size':30,fill:css('slate')});
-
-  /* ---------- SHARE ---------- */
-  const b=document.getElementById('share'),m=document.getElementById('share-msg');
-  b.addEventListener('click',()=>{const u='https://whosbuyingpdx.com';navigator.clipboard.writeText(u).then(()=>{m.textContent='Link copied.'}).catch(()=>{m.textContent=u})});
-})();
-</script>
+<script src="app.js"></script>
+</body></html>
