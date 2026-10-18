@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The donors · Who's Buying PDX</title>
+<meta name="description" content="Donors to Portland's business-backed candidates also fund Republicans. A private citizen project.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Who's Buying PDX">
+<meta property="og:title" content="Partners Against Progress"><meta property="og:description" content="They aren't Republicans. Some of their donors are. 129 donors to Portland's business-backed candidates also gave to Republicans. Among the progressive councilors running against them: zero.">
+<meta property="og:image" content="https://whosbuyingpdx.com/toolkit/og.png?v=receipt"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Partners Against Progress. They aren't Republicans. Some of their donors are. whosbuyingpdx.com">
+<meta property="og:url" content="https://whosbuyingpdx.com/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://whosbuyingpdx.com/toolkit/og.png?v=receipt">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101417'/%3E%3Ctext x='32' y='46' font-family='Georgia' font-weight='900' font-size='40' text-anchor='middle' fill='%23EF5168'%3E%3F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&family=Martian+Mono:wdth,wght@75..112.5,400..600&display=swap">
+<style>
+/* Layout: one long scroll, four short chapters. Each chapter = one sentence + one graphic.
+   Two colors carry meaning everywhere: gold = the conservative candidates, red = Republican campaigns.
+   Teal appears only for the progressive caucus on the council chart. */
+:root{
+  --paper:#EDEFEA; --paper-2:#E2E5DF; --ink:#13171D; --ink-2:#4B545C; --rule:#BCC3C1;
+  --gop:#C8213A; --slate:#B07F14; --peacock:#147A74; --lean:#D9741C;
+  --gop-wash:rgba(200,33,58,.09); --slate-wash:rgba(176,127,20,.12);
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-data:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#101417; --paper-2:#181D21; --ink:#E6E9E4; --ink-2:#A4ADB1; --rule:#38424A;
+  --gop:#EF5168; --slate:#D9A73E; --peacock:#3CB3A9; --lean:#F0A04B;
+  --gop-wash:rgba(239,81,104,.13); --slate-wash:rgba(217,167,62,.13); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#101417; --paper-2:#181D21; --ink:#E6E9E4; --ink-2:#A4ADB1; --rule:#38424A;
+  --gop:#EF5168; --slate:#D9A73E; --peacock:#3CB3A9; --lean:#F0A04B;
+  --gop-wash:rgba(239,81,104,.13); --slate-wash:rgba(217,167,62,.13); color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55}
+.wrap{max-width:1060px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-decoration-color:var(--rule);text-underline-offset:3px}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--gop);outline-offset:3px}
+.draft{background:var(--slate-wash);border-bottom:1px solid var(--rule);font-family:var(--f-data);font-size:12.5px}
+.draft .wrap{padding-block:8px}
+header.mast{padding-block:18px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-family:var(--f-display);font-weight:900;font-size:26px}
+.logo span{color:var(--gop)}
+nav.toc{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;font-weight:600}
+nav.toc a{text-decoration:none;color:var(--ink-2)}
+nav.toc a:hover{color:var(--ink)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1;margin:0;letter-spacing:-.015em}
+h1{font-size:clamp(46px,8.4vw,128px);font-weight:800;letter-spacing:-.02em;word-spacing:.08em;line-height:.95}
+h1 .r{color:var(--gop);font-style:italic}
+h2{font-size:clamp(32px,4.6vw,54px);font-weight:800}
+h3{font-size:23px;font-weight:700}
+.ladder{display:grid;gap:0;max-width:820px;border-top:1px solid var(--rule);margin-top:6px}
+.rung{display:grid;grid-template-columns:130px minmax(0,1fr);gap:20px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.rung .tag{font-family:var(--f-data);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.rung p{margin:0;font-size:clamp(17px,1.9vw,20px);line-height:1.45;max-width:60ch}
+.rung.hot p{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,2.6vw,30px);line-height:1.05;color:var(--peacock)}
+.rung.hot .tag{color:var(--peacock)}
+@media (max-width:600px){.rung{grid-template-columns:1fr;gap:4px}}
+.sub-h{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,3vw,38px);line-height:1.1;margin:0;color:var(--ink-2);letter-spacing:-.01em}
+.lede{font-size:clamp(18px,2.1vw,21px);max-width:60ch;color:var(--ink-2);margin:0}
+.lede b{color:var(--ink)}
+.eyebrow{font-family:var(--f-data);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.band{background:var(--paper-2);border-block:1px solid var(--rule)}
+.band-in{max-width:1400px;margin:0 auto;padding:clamp(40px,7vw,96px) max(16px,4vw);display:grid;gap:clamp(14px,2vw,24px);justify-items:center;text-align:center}
+.band .eyebrow{justify-self:center}
+.hero-p{font-size:clamp(18px,1.6vw,21px);line-height:1.75;max-width:58ch;margin:clamp(8px,1.2vw,16px) 0 0;letter-spacing:.005em;text-wrap:pretty}
+.hero-p b{color:var(--peacock)}
+@media (max-width:700px){.band-in{justify-items:start;text-align:left}.band .eyebrow{justify-self:start}}
+.defn{border:2px solid var(--ink);padding:clamp(18px,3vw,32px);display:grid;gap:0;margin-top:8px;background:var(--paper)}
+.defn-head{display:grid;gap:8px;padding-bottom:16px}
+.defn-head h3{font-size:clamp(24px,3vw,34px)}
+.defn-head p{margin:0;color:var(--ink-2);max-width:60ch}
+.defn-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 40px;padding:20px 0;border-top:1px solid var(--rule);align-items:start}
+.vs{margin:0;font-family:var(--f-display);line-height:1.1;letter-spacing:-.01em;display:grid;gap:4px}
+.vs b{font-weight:800;font-size:clamp(26px,3vw,36px)}.vs span{font-weight:600;font-size:clamp(18px,2vw,23px);color:var(--ink-2)}
+.vs i{font-style:italic;font-weight:500;color:var(--gop)}
+.ev{margin:0;font-size:16px;line-height:1.6;padding-top:6px}
+.ev a{display:block;font-family:var(--f-data);font-size:12.5px;color:var(--ink-2);margin-top:2px}
+.defn-note{padding-top:18px;border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 40px;font-size:15px;color:var(--ink-2)}
+.defn-note .eyebrow{grid-column:1/-1}.defn-note p{margin:0;line-height:1.55}.defn-note b{color:var(--ink)}
+@media (max-width:700px){.defn-note{grid-template-columns:1fr}}
+@media (max-width:700px){.defn-row{grid-template-columns:1fr}}
+.wc{border-top:3px solid var(--ink);padding-top:16px;display:grid;gap:18px;margin-top:12px}
+.wc-head{display:grid;gap:8px}.wc-head h3{font-size:clamp(24px,3vw,34px);max-width:26ch}.wc-head p{margin:0;max-width:64ch;color:var(--ink-2)}
+.wc-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 40px}
+.wc-col{display:grid;gap:12px;align-content:start}
+.wc-row{display:grid;grid-template-columns:150px minmax(0,1fr) 48px;gap:12px;align-items:center}
+.wc-l{font-weight:600;font-size:14.5px;line-height:1.2}.wc-l small{display:block;font-weight:400;font-size:12px;color:var(--ink-2)}
+.wc-t{height:22px;background:var(--paper-2)}.wc-t i{display:block;height:100%}
+.wc-row b{font-family:var(--f-data);font-size:15px;font-variant-numeric:tabular-nums;text-align:right}
+.wc-k{margin:0;font-size:14.5px}
+@media (max-width:760px){.wc-cols{grid-template-columns:1fr}.wc-row{grid-template-columns:118px minmax(0,1fr) 44px}}
+.stk-none{display:flex;align-items:center;padding:0 12px;font-family:var(--f-data);font-size:12.5px;color:var(--ink-2);background:transparent;border:1px dashed var(--rule)}
+.hero{padding-block:28px 0;display:grid;gap:20px}
+.web-box{border-top:3px solid var(--ink);padding-top:12px;display:grid;gap:10px}
+.web-box svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-2);align-items:center}
+.ln{display:inline-block;width:22px;height:0;border-top:3px solid;margin-right:6px;vertical-align:middle}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.stat{padding:16px 16px 18px 0;display:grid;gap:4px;align-content:start}
+.stat+.stat{border-left:1px solid var(--rule);padding-left:16px}
+.stat b{font-family:var(--f-display);font-size:clamp(42px,6vw,64px);line-height:.9;font-weight:900;font-variant-numeric:tabular-nums}
+.stat span{font-size:15px;color:var(--ink-2);max-width:32ch}
+@media (max-width:640px){.stats{grid-template-columns:1fr}.stat+.stat{border-left:0;border-top:1px solid var(--rule);padding-left:0}}
+section.ch{padding-block:56px 8px;display:grid;gap:24px}
+.ch-head{display:grid;gap:12px;border-top:3px solid var(--ink);padding-top:16px}
+.ch-no{font-family:var(--f-data);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.two{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.prose p{margin:0 0 14px;max-width:60ch}
+.figure{display:grid;gap:10px;min-width:0}
+.figure svg{width:100%;height:auto;display:block}
+.cap{font-size:12.5px;color:var(--ink-2);font-family:var(--f-data);line-height:1.5}
+.scroll-x{overflow-x:auto}
+/* the line */
+.line{background:var(--ink);color:var(--paper);margin-top:40px}
+.line .wrap{padding-block:44px;display:grid;gap:14px}
+.line p{margin:0;font-family:var(--f-display);font-weight:800;font-size:clamp(28px,4.2vw,48px);line-height:1;max-width:22ch;text-wrap:balance}
+.line p em{font-style:normal;color:var(--gop)}
+.line span{font-size:16px;max-width:62ch;opacity:.85}
+/* slate cards */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--rule)}
+@media (max-width:820px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.cards{grid-template-columns:1fr}}
+.card{padding:16px 16px 18px 0;border-bottom:1px solid var(--rule);display:grid;gap:8px;align-content:start}
+.card h3{font-size:26px}
+.card .race{font-family:var(--f-data);font-size:12px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12.5px;font-weight:600;padding:3px 8px;border:1.5px solid var(--slate);color:var(--ink);background:var(--slate-wash);border-radius:2px}
+/* money flow */
+.flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:14px;align-items:center}
+.fl-col{display:grid;gap:12px;min-width:0}
+.fl-h{font-family:var(--f-data);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--rule);padding-bottom:4px}
+.fl-row{display:grid;gap:4px}
+.fl-lab b{font-size:14.5px;display:block;line-height:1.2}.fl-lab small{font-size:12px;color:var(--ink-2)}
+.fl-track{display:flex;align-items:center;gap:8px;height:16px;min-width:0}
+.fl-track i{display:block;height:100%;flex:none;max-width:calc(100% - 90px)}.fl-in{background:var(--slate)}.fl-out{background:var(--slate);opacity:.6}
+.fl-track span{font-family:var(--f-data);font-size:13px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.fl-hub{display:flex;align-items:center;gap:8px}
+.fl-box{border:2px solid var(--ink);padding:12px 14px;display:grid;gap:3px;text-align:center;max-width:160px}
+.fl-box b{font-family:var(--f-display);font-weight:800;font-size:22px;line-height:1}
+.fl-box small{font-size:11.5px;color:var(--ink-2)}.fl-box em{font-style:normal;font-family:var(--f-data);font-size:13px;font-weight:600}
+.fl-arrow{font-size:26px;color:var(--ink-2)}
+.flow+.cap{display:block;margin-top:16px}
+@media (max-width:820px){.flow{grid-template-columns:1fr}.fl-hub{flex-direction:column;gap:4px}.fl-arrow{transform:rotate(90deg)}}
+/* compare bars */
+.cmp{display:grid;gap:12px}
+.cmp-row{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 64px;gap:14px;align-items:center}
+.cmp-name{font-weight:700;font-size:15px}.cmp-name small{display:block;font-weight:400;font-family:var(--f-data);font-size:11.5px;color:var(--ink-2)}
+.cmp-bar{height:22px;background:var(--paper-2);position:relative}.cmp-bar i{position:absolute;inset:0 auto 0 0;background:var(--gop)}
+.cmp-val{font-family:var(--f-data);font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+.cmp-bar i.gold{background:var(--slate)}
+.rcpts{display:grid;gap:0;border-top:2px solid var(--ink);padding-top:12px}
+.rcpts h3{margin-bottom:6px}
+.rcpt{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:16px;padding:12px 0;border-bottom:1px dashed var(--rule);align-items:baseline}
+.rcpt time{font-family:var(--f-data);font-size:12.5px;color:var(--ink-2)}
+.rcpt p{margin:0;font-size:15.5px}
+.tl{font-family:var(--f-data);font-size:12.5px;white-space:nowrap;text-align:right}
+@media (max-width:640px){.rcpt{grid-template-columns:1fr;gap:4px}.tl{text-align:left}}
+.rcpts .cap{margin-top:10px}
+.cmp-row.pend{color:var(--ink-2)}
+.stk-row{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 64px;gap:14px;align-items:center}
+.stk{height:22px;background:var(--paper-2);display:flex;overflow:hidden}
+.stk i{display:block;height:100%}.sR{background:var(--gop)}.sO{background:var(--lean)}.sG{background:var(--slate);opacity:.45}
+.stk-lg{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-2)}.stk-lg i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+@media (max-width:560px){.stk-row{grid-template-columns:1fr 64px}.stk{grid-column:1/-1;grid-row:2}}
+.cmp-grp{font-family:var(--f-data);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:8px;border-bottom:1px solid var(--rule);padding-bottom:4px}
+.cmp-row.zero .cmp-bar{background:transparent;border-bottom:2px solid var(--peacock);height:12px;align-self:center}
+.cmp-row.zero .cmp-val{color:var(--peacock)}.cmp-row.pend .cmp-bar{background:transparent;border:1.5px dashed var(--rule)}
+@media (max-width:560px){.cmp-row{grid-template-columns:1fr 64px}.cmp-bar{grid-column:1/-1;grid-row:2}}
+/* chamber */
+.chamber text{font-family:var(--f-data);font-size:15px;fill:var(--ink-2)}
+/* pairs */
+.pairs{display:grid}
+.pair-head,.pair{display:grid;grid-template-columns:minmax(0,1fr) 52px minmax(0,1fr);align-items:stretch}
+.pair-head span{font-family:var(--f-data);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.ph-gop{color:var(--gop)}.ph-slate{color:var(--slate)}
+.pair{border-bottom:1px solid var(--rule)}
+.side{padding:16px 4px 16px 14px;display:grid;gap:6px;align-content:start}
+.side.gop{border-left:4px solid var(--gop);background:var(--gop-wash)}
+.side.slate{border-left:4px solid var(--slate);background:var(--slate-wash)}
+.side p{margin:0;font-size:16px}
+.side q{font-weight:700}
+.theme{font-family:var(--f-display);font-weight:800;font-size:21px;line-height:1}
+.src{font-family:var(--f-data);font-size:12px;color:var(--ink-2)}
+.eq{display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:38px}
+@media (max-width:700px){.pair-head{display:none}.pair{grid-template-columns:1fr}.eq{font-size:26px;padding-block:2px}}
+.pending{border:1.5px dashed var(--rule);padding:16px;color:var(--ink-2);font-size:15px}
+.pending b{font-family:var(--f-data);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:4px}
+.method{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+@media (max-width:820px){.method{grid-template-columns:1fr}}
+.method div{border-top:2px solid var(--ink);padding-top:12px}
+.method p{margin:8px 0 0;font-size:15px;color:var(--ink-2)}
+.act{background:var(--ink);color:var(--paper);margin-top:64px}
+.act .wrap{padding-block:52px;display:grid;gap:20px}
+.act h2{color:var(--paper)}
+.act p{max-width:60ch;margin:0;opacity:.85}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font:700 15px var(--f-body);padding:13px 20px;border:2px solid var(--paper);background:var(--paper);color:var(--ink);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--paper)}
+footer{padding-block:28px 40px;font-size:13px;color:var(--ink-2);display:grid;gap:6px}
+@media (prefers-reduced-motion:no-preference){
+  #web path.e.draw{animation:draw 1.1s cubic-bezier(.3,.6,.3,1) both;animation-delay:var(--d)}
+  #web path.e.draw.rev{animation-name:drawrev}
+  @keyframes drawrev{from{stroke-dashoffset:-1}}
+  @keyframes draw{from{stroke-dashoffset:1}}
+}
+.stk-none .sm{display:none}
+.cap-d{margin-top:10px}.cap-d summary{cursor:pointer;font-family:var(--f-data);font-size:12.5px;color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;list-style:none}
+.cap-d summary::-webkit-details-marker{display:none}.cap-d summary::before{content:"+ ";}.cap-d[open] summary::before{content:"– "}
+.cap-d .cap{margin-top:8px}
+@media (max-width:640px){
+  body{font-size:16.5px;line-height:1.6}
+  section.ch{padding-block:72px 12px;gap:30px}
+  .ch-head{gap:14px;padding-top:20px}
+  .lede{font-size:18px;line-height:1.55}
+  .stk-none .lg{display:none}.stk-none .sm{display:inline}
+  .stk-row{row-gap:6px;padding-block:6px}
+  .cmp-grp{margin-top:18px}
+  .rcpt{padding-block:16px}
+  .cards{gap:4px}
+  .line .wrap{padding-block:56px}
+  .defn{padding:20px 16px}
+  .defn-row{padding:22px 0}
+  .stat{padding-block:20px 22px}
+  .wc{gap:24px}
+  .cap{font-size:12px;line-height:1.6}
+}
+.ch-list{display:none}
+@media (max-width:640px){.chamber .nm{display:none}.ch-list{display:grid;gap:8px;font-size:14.5px;margin-top:4px}.ch-list div{display:grid;grid-template-columns:44px 1fr;gap:8px}.ch-list u{text-decoration-thickness:2px;text-underline-offset:3px}.ch-list small{color:var(--ink-2);font-size:12.5px}}
+.wc-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:32px;align-items:center}
+.pcard{margin:0;width:170px;aspect-ratio:5/7;background:#FBFAF6;border-radius:12px;border:1px solid #CFCBBF;box-shadow:0 10px 24px rgba(0,0,0,.18);position:relative;padding:30px 14px 32px;display:grid;grid-template-rows:1fr auto;gap:8px;transform:rotate(-5deg);color:#13171D}
+.pc-i{position:absolute;font-family:var(--f-display);font-weight:800;font-size:22px;line-height:.9;display:grid;justify-items:center;color:#C8213A}
+.pc-i b{font-size:15px}.pc-i.tl{top:8px;left:10px}.pc-i.br{bottom:8px;right:10px;transform:rotate(180deg)}
+.pc-photo{border:2px solid #13171D;border-radius:6px;overflow:hidden;background:#E8E4D8 center/cover no-repeat;display:grid;place-items:center}
+.pc-ph{font-family:var(--f-data);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#6B6F73;text-align:center}
+.pcard figcaption{font-family:var(--f-display);font-weight:800;font-size:19px;text-align:center;letter-spacing:.02em;text-transform:uppercase;color:#C8213A;padding-bottom:6px}
+@media (max-width:640px){.wc-top{grid-template-columns:1fr;justify-items:center;gap:20px}.wc-top .wc-head{justify-self:stretch}.pcard{width:150px}}
+.pc-wrap{display:grid;gap:14px;justify-items:center}.pc-credit{font-family:var(--f-data);font-size:11px;color:var(--ink-2)}
+#web path.e{stroke-dasharray:1;stroke-dashoffset:0;transition:opacity .3s}
+#web.focus path.e{opacity:.05}#web.focus path.e.on{opacity:1}
+#web circle.dn{transition:opacity .3s}#web.focus circle.dn{opacity:.12}#web.focus circle.dn.on{opacity:1}
+#web .cand{cursor:pointer}#web.focus .cand{opacity:.45}#web.focus .cand.on{opacity:1}
+#web .cand:focus{outline:none}#web .cand:focus-visible rect{stroke:var(--gop);stroke-width:2}
+#web .hit{cursor:help}
+.web-box{position:relative}
+.web-status{margin:0;font-size:14.5px;color:var(--ink-2);min-height:1.5em}
+.web-status b{color:var(--ink)}
+.web-reset{margin-left:6px;font:inherit;font-size:13px;background:none;border:1px solid var(--rule);color:var(--ink);padding:2px 8px;cursor:pointer;border-radius:4px}
+.web-tip{position:absolute;z-index:5;width:280px;background:var(--ink);color:var(--paper);padding:10px 12px;border-radius:6px;font-size:13.5px;line-height:1.4;display:grid;gap:4px;box-shadow:0 8px 20px rgba(0,0,0,.25);pointer-events:none}
+.web-tip[hidden]{display:none}.web-tip .tt-h{font-family:var(--f-data);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}.web-tip small{opacity:.65;font-size:11.5px}
+.ec-quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ec-quotes figure{margin:0;border-top:3px solid var(--slate);padding-top:12px;display:grid;gap:10px;align-content:start}
+.ec-quotes q{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,2vw,23px);line-height:1.25}
+.ec-quotes figcaption{font-size:13px;color:var(--ink-2)}
+@media (max-width:820px){.ec-quotes{grid-template-columns:1fr}}
+.ec-sub{margin:4px 0 14px;color:var(--ink-2);font-size:14.5px}
+.ec-bars{display:grid;gap:14px}
+.ec-b{display:grid;grid-template-columns:84px minmax(0,1fr) 64px;gap:12px;align-items:center}
+.ec-b span{font-family:var(--f-data);font-size:13px;color:var(--ink-2)}
+.ec-b i{display:block;height:28px;background:var(--ink-2);opacity:.45}
+.ec-b.hot i{background:var(--gop);opacity:1}
+.ec-b b{font-family:var(--f-display);font-size:24px;font-weight:800}.ec-b.hot b{color:var(--gop)}
+.ec-ev h3,.figure h3{margin-bottom:6px}
+.ec-ev p{margin:0 0 14px}.ec-ev a,.ec-data a{font-family:var(--f-data);font-size:12.5px;color:var(--ink-2);white-space:nowrap}
+.ec-flight{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:0;border:2px solid var(--ink)}
+.ec-claim{padding:22px;background:var(--paper-2);display:grid;gap:10px;align-content:start}
+.ec-big{font-family:var(--f-display);font-weight:700;font-size:clamp(22px,2.6vw,30px);line-height:1.2;margin:0}
+.ec-data{padding:22px;display:grid;gap:16px}.ec-data p{margin:0}
+.ec-flight{grid-template-columns:1fr}
+.ec-claim{padding:22px 24px}
+.ec-nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.ec-n{display:grid;gap:6px;align-content:start;border-top:3px solid var(--peacock);padding-top:12px}
+.ec-n b{font-family:var(--f-display);font-weight:900;font-size:clamp(46px,5.6vw,68px);line-height:.9;color:var(--peacock);font-variant-numeric:tabular-nums}
+.ec-n h4{font-family:var(--f-display);font-size:21px;line-height:1.15;margin:4px 0 0}
+.ec-n p{font-size:15px;color:var(--ink-2);line-height:1.5}
+.ec-culture{font-size:16px;border-top:1px solid var(--rule);padding-top:14px}
+.ec-culture a,.ec-notes a{font-family:var(--f-data);font-size:12.5px;color:var(--ink-2)}
+.ec-notes{display:grid;gap:10px;max-width:72ch;margin-top:4px}.ec-notes p{margin:0;font-size:14.5px;color:var(--ink-2)}.ec-notes b{color:var(--ink)}
+@media (max-width:820px){.ec-nums{grid-template-columns:1fr;gap:20px}}
+.ec-fair{font-size:14.5px;color:var(--ink-2);max-width:72ch;margin:0}
+.dl-chart{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;align-items:end;height:220px;padding-top:24px}
+.dl-col{display:grid;grid-template-rows:auto 1fr auto;align-items:end;justify-items:center;height:100%;gap:6px}
+.dl-col i{display:block;width:100%;background:var(--ink-2);opacity:.45;align-self:end}
+.dl-col.hot i{background:var(--peacock);opacity:1}
+.dl-col b{font-family:var(--f-display);font-size:18px;font-weight:800}.dl-col.hot b{color:var(--peacock)}
+.dl-col span{font-family:var(--f-data);font-size:12px;color:var(--ink-2)}
+.dl-score{display:grid;gap:22px}
+.dl-score p{margin:0 0 10px;font-size:15.5px}.dl-score a{font-family:var(--f-data);font-size:12px;color:var(--ink-2);white-space:nowrap}
+.dl-good{color:var(--peacock)}.dl-bad{color:var(--gop)}
+.dl-close{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,2.2vw,26px);line-height:1.3;max-width:44ch;margin:0}
+
+/* ---- hub layout + mobile header (2026-10-18) ---- */
+.logo a{text-decoration:none}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;font:700 14px var(--f-body);padding:8px 14px;border:1.5px solid var(--ink);border-radius:999px}
+.menu summary::-webkit-details-marker{display:none}
+.menu[open] summary{background:var(--ink);color:var(--paper)}
+.menu nav{position:absolute;right:0;top:calc(100% + 8px);z-index:20;background:var(--paper);border:1.5px solid var(--ink);min-width:220px;display:grid;padding:6px 0;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.menu nav a{padding:11px 18px;text-decoration:none;font-weight:600;font-size:16px}
+.menu nav a[aria-current]{color:var(--gop)}
+nav.toc a[aria-current]{color:var(--ink)}
+h1 .nw{white-space:nowrap}
+.cgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}
+.cg{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;align-items:center;text-decoration:none;color:inherit}
+.cg-ph{width:96px;aspect-ratio:4/5;border-radius:8px;background:var(--paper-2) center/cover no-repeat;border:1px solid var(--rule)}
+.cg h3{font-size:22px;line-height:1.1}
+.cg .race{font-family:var(--f-data);font-size:11.5px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em;display:block;margin-top:4px}
+.cg p{margin:8px 0 0;font-size:14.5px;color:var(--ink-2);line-height:1.4}
+.cg p b{color:var(--gop);font-family:var(--f-display);font-size:20px}
+.cg .wildtag{color:var(--slate);font-weight:700}
+.cg:hover h3{text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.deep{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.dcard{display:grid;gap:10px;align-content:start;padding:22px 20px 20px;border:1px solid var(--rule);background:var(--paper-2);text-decoration:none;color:inherit;border-top:3px solid var(--ink)}
+.dcard h3{font-size:clamp(22px,2.2vw,27px);line-height:1.08}
+.dcard p{margin:0;font-size:15.5px;color:var(--ink-2);line-height:1.5}
+.dcard .go{font:700 14px var(--f-body);color:var(--gop);margin-top:4px}
+.dcard:hover{border-top-color:var(--gop)}
+.dcard.wide{grid-column:1/-1}
+.pnext{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-block:48px 8px}
+.pnext a{display:grid;gap:6px;padding:20px;border:1px solid var(--rule);text-decoration:none;background:var(--paper-2)}
+.pnext a.nx{text-align:right}
+.pnext b{font-family:var(--f-display);font-size:24px}
+.page-top{padding-top:8px}
+section.ch:first-child{padding-top:24px}
+@media (max-width:860px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.deep{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){
+  header.mast{flex-wrap:nowrap;padding-block:12px}
+  .logo{font-size:21px}
+  nav.toc{display:none}
+  .menu{display:block}
+  .band-in{justify-items:center;text-align:center;padding:40px 18px 36px;gap:14px}
+  .band .eyebrow{justify-self:center;font-size:10.5px}
+  h1{font-size:clamp(30px,10vw,60px);line-height:.98}
+  .sub-h{font-size:21px}
+  .hero-p{font-size:16.5px;line-height:1.6;max-width:34ch}
+  .hero{padding-top:20px}
+  .legend{flex-direction:column;align-items:flex-start;gap:6px;font-size:13px}
+  .cgrid{grid-template-columns:1fr;gap:18px}
+  .cg{grid-template-columns:76px minmax(0,1fr)}.cg-ph{width:76px}
+  .deep{grid-template-columns:1fr;gap:12px}
+  .pnext{grid-template-columns:1fr}
+  .pnext a.nx{text-align:left}
+}
+</style>
+<link rel="stylesheet" href="indigo.css">
+</head><body>
+<div class="topbar"><div class="wrap">
+  <header class="mast">
+    <div class="logo"><a href="./"><span aria-hidden="true">Who's Buy<span class="lamp">ı</span>ng PDX</span><span class="vh">Who's Buying PDX</span></a></div>
+    <nav class="toc" aria-label="Sections"><a href="index.html#slate">The candidates</a><a href="why.html">Why it matters</a><a href="donors.html" aria-current=page>The donors</a><a href="votes.html">The votes</a><a href="story.html">The story</a><a href="economics.html">The economics</a><a href="doom.html">The doom loop</a><a href="receipts.html">Receipts</a><a href="share.html">Share</a></nav>
+    <details class="menu"><summary>Menu</summary><nav aria-label="Sections"><a href="./">Home</a><a href="index.html#slate">The candidates</a><a href="why.html">Why it matters</a><a href="donors.html" aria-current=page>The donors</a><a href="votes.html">The votes</a><a href="story.html">The story</a><a href="economics.html">The economics</a><a href="doom.html">The doom loop</a><a href="receipts.html">Receipts</a><a href="share.html">Share</a></nav></details>
+  </header>
+</div></div>
+<div class="wrap page-top">
+  <section class="ch" id="money">
+    <div class="ch-head"><span class="ch-no">Who's buying</span><h2>Much of the outside money runs through one pipe.</h2></div>
+    <div class="two">
+      <div class="figure">
+        <div class="flow" role="group" aria-label="Money into and out of the Chamber's PAC">
+          <div class="fl-col"><span class="fl-h">Money in</span>
+            <div class="fl-row"><div class="fl-lab"><b>United for Portland</b><small>the Chamber's political arm</small></div><div class="fl-track"><i class="fl-in" style="width:40.5%"></i><span>$676K</span></div></div>
+            <div class="fl-row"><div class="fl-lab"><b>Realtors PAC</b><small>Portland Metro Assn. of Realtors</small></div><div class="fl-track"><i class="fl-in" style="width:20.1%"></i><span>$335K</span></div></div>
+            <div class="fl-row"><div class="fl-lab"><b>Jeff Swickard</b><small>developer, Sept 2026</small></div><div class="fl-track"><i class="fl-in" style="width:9.0%"></i><span>$150K</span></div></div>
+            <div class="fl-row"><div class="fl-lab"><b>Alliance PAC</b></div><div class="fl-track"><i class="fl-in" style="width:6.0%"></i><span>$100K</span></div></div>
+          </div>
+          <div class="fl-hub"><span class="fl-arrow" aria-hidden="true">→</span><div class="fl-box"><b>Chamber PAC</b><small>United for Portland Action Fund</small><em>~$1.9M raised</em></div><span class="fl-arrow" aria-hidden="true">→</span></div>
+          <div class="fl-col"><span class="fl-h">Money out</span>
+            <div class="fl-row"><div class="fl-lab"><b>Coalition for Portland's Future</b><small>total spent, all cycles</small></div><div class="fl-track"><i class="fl-out" style="width:72.0%"></i><span>$1.2M</span></div></div>
+            <div class="fl-row"><div class="fl-lab"><b>"DitchMitch" billboards</b><small>against Mitch Green, via goPDX</small></div><div class="fl-track"><i class="fl-out" style="width:4.5%"></i><span>about $75K</span></div></div>
+            <div class="fl-row"><div class="fl-lab"><b>"fix multCo" billboards</b><small>for Brim-Edwards, via goPDX</small></div><div class="fl-track"><i class="fl-out" style="width:4.5%"></i><span>about $75K</span></div></div>
+          </div>
+        </div>
+        <details class="cap-d"><summary>Sources and method</summary><span class="cap">All bars on one scale. PAC totals are cumulative through Apr 27, 2026 and may cover more than one election cycle (BallotBase, republishing state filings). Swickard's gift and the billboard money are September 2026 (WWeek; Portland Mercury).</span></details>
+      </div>
+      <div class="prose">
+        <h3>Who's buying</h3>
+        <p>Much of their outside support runs through one pipe: the <b>United for Portland Action Fund</b>, the Chamber's PAC. Realtors' and developers' money goes in. It comes out as the Coalition for Portland's Future and as billboard committees with neighborhood-sounding names.</p>
+        <p>A complaint filed Oct 5 says the billboard setup hid where the money came from. That's an allegation; no one has ruled on it.</p>
+      </div>
+    </div>
+  </section>
+<section class="ch" id="donors">
+    <div class="ch-head"><span class="ch-no">The donors</span><h2>Their donors include Republican and conservative money.</h2>
+      <p class="lede">We checked every itemized individual donor to ten candidates against up to 20 years of contributors to 26 Republican campaigns, caucus and party committees, and to six other Portland conservative campaigns and committees (Gonzalez, Vasquez, Mozyrsky, Adams, Treece, and a 2022 PAC backing Gonzalez). We count a local campaign as Portland conservative only if its donors overlap the business-backed candidates and not the progressive councilors running against them. A gift counts only when its own street address (same street, quadrant and city or ZIP), or ZIP code and employer, matches the donor's. Some matches were confirmed by hand from filing records instead: 12 of the 129 people with Republican gifts, including 11 of Torres's 31.</p></div>
+    <div class="cmp" aria-label="Share of each candidate's donors who also gave to Republicans or other Portland conservatives">
+      <h3>Where each candidate's donors also give</h3>
+      <div class="stk-lg"><span><i class="sR"></i>Republican campaigns</span><span><i class="sO"></i>Other Portland conservatives</span><span><i class="sG"></i>Only the aligned campaigns</span><span>% = red + orange</span></div>
+      <div class="cmp-grp">Business-backed candidates</div>
+      <div class="stk-row"><span class="cmp-name">Eric Zimmerman<small>288 individual donors</small></span><span class="stk"><i class="sR" style="width:12.5%" title="36 Republican"></i><i class="sO" style="width:36.5%" title="105 other Portland conservatives"></i><i class="sG" style="width:20.8%" title="60 aligned campaigns"></i></span><span class="cmp-val">49%</span></div>
+      <div class="stk-row"><span class="cmp-name">Eli Arnold<small>239 individual donors</small></span><span class="stk"><i class="sR" style="width:14.6%" title="35 Republican"></i><i class="sO" style="width:29.7%" title="71 other Portland conservatives"></i><i class="sG" style="width:10.0%" title="24 aligned campaigns"></i></span><span class="cmp-val">44%</span></div>
+      <div class="stk-row"><span class="cmp-name">Kellie Torres<small>219 individual donors</small></span><span class="stk"><i class="sR" style="width:14.2%" title="31 Republican"></i><i class="sO" style="width:27.9%" title="61 other Portland conservatives"></i><i class="sG" style="width:16.0%" title="35 aligned campaigns"></i></span><span class="cmp-val">42%</span></div>
+      <div class="stk-row"><span class="cmp-name">Julia Brim-Edwards<small>489 individual donors</small></span><span class="stk"><i class="sR" style="width:15.7%" title="77 Republican"></i><i class="sO" style="width:25.6%" title="125 other Portland conservatives"></i><i class="sG" style="width:9.4%" title="46 aligned campaigns"></i></span><span class="cmp-val">41%</span></div>
+      <div class="stk-row"><span class="cmp-name">Olivia Clark<small>320 individual donors</small></span><span class="stk"><i class="sR" style="width:10.9%" title="35 Republican"></i><i class="sO" style="width:22.2%" title="71 other Portland conservatives"></i><i class="sG" style="width:17.5%" title="56 aligned campaigns"></i></span><span class="cmp-val">33%</span></div>
+      <div class="cmp-grp">The wild card</div>
+      <div class="stk-row"><span class="cmp-name">Steve Novick<small>334 individual donors · <a href="donors.html#wildcard">his new donors jumped</a></small></span><span class="stk"><i class="sR" style="width:7.2%" title="24 Republican"></i><i class="sO" style="width:17.7%" title="59 other Portland conservatives"></i><i class="sG" style="width:13.8%" title="46 aligned campaigns"></i></span><span class="cmp-val">25%</span></div>
+      <div class="cmp-grp">Progressive candidates on this ballot</div>
+      <div class="stk-row"><span class="cmp-name">Mitch Green<small>227 individual donors</small></span><span class="stk stk-none"><span class="lg">No Republican or Portland conservative donors found</span><span class="sm">None found</span></span><span class="cmp-val">0%</span></div>
+      <div class="stk-row"><span class="cmp-name">Shannon Singleton<small>172 individual donors · County Chair</small></span><span class="stk"><i class="sO" style="width:1.2%" title="2 other Portland conservatives"></i></span><span class="cmp-val">1%</span></div>
+      <div class="stk-row"><span class="cmp-name">Angelita Morillo<small>203 individual donors</small></span><span class="stk stk-none"><span class="lg">No Republican or Portland conservative donors found</span><span class="sm">None found</span></span><span class="cmp-val">0%</span></div>
+      <div class="stk-row"><span class="cmp-name">Tiffany Koyama Lane<small>269 individual donors</small></span><span class="stk stk-none"><span class="lg">No Republican or Portland conservative donors found</span><span class="sm">None found</span></span><span class="cmp-val">0%</span></div>
+      <details class="cap-d"><summary>Sources and method</summary><span class="cap">Individual donors since Jan 2023; each counted once, in the first color that applies (red, then orange, then gold). Gold shows donors shared with the other five; it isn't drawn for the progressive candidates. Republican campaigns 2006–2026: Drazan, Buehler, Dudley (2010, 2026), Alley, Pierce, Richardson, Linthicum, Thatcher, Boquist, Starr, Hicks, Bangs, Scharf, Helfrich, Knopp, Tootie Smith; the House and Senate Republican caucus committees; the Multnomah, Washington and Clackamas County Republican parties; and since 2024, Lathrop, the Oregon Republican Party and Bring Balance to Salem. Other Portland conservatives: Gonzalez (and the 2022 Portland Accountability PAC backing him), Vasquez, Mozyrsky, Sam Adams and Pam Treece. Each passed one test: their donors overlap the business-backed candidates but not the donors of the progressive councilors running against them (Morillo and Koyama Lane in District 3, Green in District 4). Shannon Singleton, running against Brim-Edwards for County Chair: 2 of 172 donors, through Adams and Treece. Aligned campaigns: the other five business-backed candidates. Unions and PACs are left out because many give to every candidate. Source: ORESTAR exports, Oct 17–18, 2026.</span></details>
+    </div>
+    <div class="two">
+      <div class="figure">
+        <svg id="gopbars" viewBox="0 0 520 270" role="img" aria-labelledby="gb-t"><title id="gb-t">Which Republican campaigns their donors fund</title></svg>
+        <span class="cap">The 129 people from the network above, by where else they gave. A person can appear in more than one row.</span>
+      </div>
+      <div class="prose">
+        <p><b>It isn't old history.</b> 57 of the 129 have given to a Republican since 2024, and 39 gave to Christine Drazan.</p>
+        <p><b>57 of them gave to more than one of the six.</b> Separate campaigns, shared donors.</p>
+        <p><b>Same city, same ballot, different donors.</b> Run the same test on the progressive councilors running against them (Morillo and Koyama Lane in District 3, Green in District 4) and the count is zero.</p>
+      </div>
+    </div>
+    <div class="wc" id="wildcard">
+      <div class="wc-top"><div class="pc-wrap"><figure class="pcard" aria-label="Steve Novick as a wild card">
+        <span class="pc-i tl">W<b>♦</b></span><span class="pc-i br">W<b>♦</b></span>
+        <div class="pc-photo" style="background-image:url(img/novick.jpg);background-position:center 40%" role="img" aria-label="Steve Novick, official City of Portland portrait"></div>
+        <figcaption>Wild card</figcaption></figure><small class="pc-credit">Photo: City of Portland</small></div>
+      <div class="wc-head"><span class="eyebrow">The wild card</span><h3>Steve Novick's votes haven't moved right. His new donors lean that way.</h3>
+        <p>On the council record, Novick hasn't drifted right. But the people who gave to him for the first time in 2025–26 were more than twice as likely to have backed Republicans or Portland conservatives as the people who first gave in his 2023–24 campaign. We can't say why: 2025–26 is also when the Chamber's committees and Go Portland Go endorsed him.</p></div></div>
+      <div class="wc-cols">
+        <div class="wc-col"><span class="fl-h">His votes: share of split votes with the conservative bloc</span>
+          <div class="wc-row"><span class="wc-l">2025<small>13 of 16 votes</small></span><span class="wc-t"><i style="width:81%;background:var(--ink-2)"></i></span><b>81%</b></div>
+          <div class="wc-row"><span class="wc-l">2026<small>39 of 63 votes</small></span><span class="wc-t"><i style="width:62%;background:var(--ink-2)"></i></span><b>62%</b></div>
+          <p class="wc-k">Not a move to the right. 2025 had few split votes, so read the drop with care.</p></div>
+        <div class="wc-col"><span class="fl-h">His first-time donors who had given to Republicans or Portland conservatives</span>
+          <div class="wc-row"><span class="wc-l">First gave 2023–24<small>14 of 105</small></span><span class="wc-t"><i style="width:13%;background:var(--gop);opacity:.55"></i></span><b>13%</b></div>
+          <div class="wc-row"><span class="wc-l">First gave 2025–26<small>33 of 103</small></span><span class="wc-t"><i style="width:32%;background:var(--gop)"></i></span><b>32%</b></div>
+          <p class="wc-k">More than double. A jump this big is very unlikely to be random.</p></div>
+      </div>
+      <details class="cap-d"><summary>Sources and method</summary><span class="cap">Votes: bloc splits on the City Council, 2025 through Oct 15, 2026 (see The votes). Donors: individual donors to Novick since Jan 2023, grouped by their first gift to any Novick campaign since 2011, matched by the same method as above. The 13% to 32% jump is statistically significant (Fisher's exact test, p ≈ 0.002): if nothing had really changed, a gap this large would turn up by chance about twice in 1,000 tries. Counting Republican donors alone, it's 3% to 9%, a rise that could be chance. Donors who first backed him before 2023, in his earlier career, were 29%. For comparison, 33% of Clark's donors and 49% of Zimmerman's have given to Republicans or Portland conservatives; among the progressive councilors running against them, none have.</span></details>
+    </div>
+  </section>
+<nav class="pnext" aria-label="More"><a href="why.html"><span class="eyebrow">← Previous</span><b>Why it matters</b></a><a class="nx" href="votes.html"><span class="eyebrow">Next →</span><b>The votes</b></a></nav>
+</div>
+<section class="act">
+  <div class="wrap">
+    <h2>Your ballot is already here.</h2>
+    <p>Portland uses ranked-choice voting. Anyone you rank can end up with your vote, so only rank candidates you'd want to win.</p>
+    <div class="btns"><a class="btn" href="https://multco.us/info/official-ballot-drop-sites" target="_blank" rel="noopener">Find a drop box</a><a class="btn ghost" href="share.html">Get the share kit</a><button class="btn ghost" id="share" type="button">Copy link to share</button></div>
+    <span id="share-msg" class="cap" style="color:var(--paper);opacity:.85" aria-live="polite"></span>
+  </div>
+</section>
+
+<div class="wrap"><footer>
+  <span>Who&#x27;s Buying PDX is an independent citizen project. Not paid for or authorized by any candidate, campaign or committee. Built for under $20.</span>
+  <span>Corrections are posted here with the date.</span>
+</footer></div>
+
+
+<script src="app.js"></script>
+</body></html>
