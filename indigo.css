@@ -1,0 +1,156 @@
+/* Who's Buying PDX: Night Indigo theme (dark only).
+   Loads after each page's own <style>, so it only re-skins: same layout, same markup, same chart code.
+
+   Color rules:
+   - Near-black page. Indigo "night" panels for the header, the home hero, the chart, the 0 and the ballot section.
+   - Marigold means one thing: the conservative side. Portland conservatives in the data (chart lines, the 340,
+     the bars on the donors page), the candidates' percentages, and "Against" in "Partners Against Progress".
+   - Red is Republican money only.
+   - The progressive side, the 0 and "none", is the one light: a warm paper-white glow.
+   - Lavender is the business-backed candidates in charts; it is also the quiet UI accent (links, hovers).
+   - The "That's the problem" band flips to a light card: the one bright surface on the page. */
+
+/* The pages' own styles switch tokens on prefers-color-scheme. These selectors match theirs (and every
+   theme setting), and load later, so this one dark palette always wins. */
+:root,:root:not([data-theme="light"]),:root[data-theme="dark"],:root[data-theme="light"]{
+  --paper:#0C0E15; --paper-2:#161A26; --ink:#F1ECE1; --ink-2:#AAB0C4; --rule:#2B3142;
+  --gop:#FF5A66; --gop-wash:rgba(255,90,102,.13);
+  --slate:#A9B4F0; --slate-wash:rgba(169,180,240,.14);   /* business-backed: moonlight lavender */
+  --lean:#FFB627;                                         /* the conservative side: marigold */
+  --peacock:#FFF6E2;                                      /* progressive: the paper-white light */
+  --night:#141C40; --dot:#2E3A78; --mist:#C9CEEA; --glow:#FFF6E2;
+  --card:#F3EDE0; --card-ink:#0F1631; --card-em:#2E3A78; --card-sub:#4B5373;
+  --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --f-serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-data:"Martian Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+
+body{margin:0;font-size:17px;line-height:1.55;font-optical-sizing:auto;font-stretch:100%;background:var(--paper);color:var(--ink)}
+.lede,.hero-p,.line span,.act p{font-family:var(--f-serif)}
+:focus-visible{outline-color:var(--slate)}
+.vh{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ---------- type ---------- */
+h1,h2,h3{font-family:var(--f-display);font-weight:800;font-stretch:78%;letter-spacing:-.012em}
+h2{font-size:clamp(34px,5vw,60px);line-height:.98}
+h3{font-weight:700;font-stretch:85%}
+.eyebrow,.ch-no,.cap,.race{font-family:var(--f-data);font-stretch:85%}
+.lede{font-size:clamp(18px,2vw,21px)}
+.ch-head{border-top-width:4px}
+
+/* ---------- header: a night bar on every page ---------- */
+.topbar{background:var(--night);color:#F3EDE0}
+.topbar header.mast{padding-block:20px}
+.logo{font-family:var(--f-display);font-weight:800;font-stretch:75%;font-size:30px;letter-spacing:-.01em;line-height:1}
+.logo,.logo a,.topbar a.logo{color:#F3EDE0;text-decoration:none}
+.logo span{color:inherit}
+.logo .lamp{position:relative;display:inline-block}
+.logo .lamp::after{content:"";position:absolute;left:50%;top:.02em;width:.24em;height:.24em;margin-left:-.12em;border-radius:50%;background:var(--glow);box-shadow:0 0 .4em rgba(255,236,190,.75)}
+.topbar nav.toc{font-family:var(--f-display);font-stretch:90%;font-weight:600;font-size:15px}
+.topbar nav.toc a{color:var(--mist)}
+.topbar nav.toc a:hover,.topbar nav.toc a[aria-current]{color:#F3EDE0}
+.topbar .menu summary{border-color:#F3EDE0;color:#F3EDE0;font-family:var(--f-display)}
+.topbar .menu[open] summary{background:#F3EDE0;color:var(--night)}
+.menu nav{background:var(--paper-2);color:var(--ink);border-color:var(--rule)}
+.menu nav a{font-family:var(--f-display);font-weight:600}
+.menu nav a[aria-current]{color:var(--slate)}
+
+/* ---------- home hero ---------- */
+.band{background:var(--night);color:#F3EDE0;border:0;position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle,var(--dot) 1.7px,transparent 1.95px);background-size:9px 9px;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 15%,#000 100%);mask-image:linear-gradient(to bottom,transparent 15%,#000 100%)}
+.band-in{position:relative;padding-block:clamp(40px,7vw,104px) clamp(48px,8vw,112px)}
+.band .eyebrow{color:var(--mist)}
+.band h1{color:#F3EDE0;font-size:clamp(46px,9vw,138px);font-stretch:72%;letter-spacing:-.02em;word-spacing:0;line-height:.9}
+.band h1 .r{font-family:var(--f-serif);font-style:italic;font-weight:500;font-stretch:100%;color:var(--lean);letter-spacing:-.03em}
+.band .sub-h{font-family:var(--f-serif);font-style:italic;font-weight:500;color:#F3EDE0;font-size:clamp(23px,3vw,38px)}
+.band .hero-p{color:var(--mist)}
+.band .hero-p b{color:var(--glow);text-shadow:0 0 18px rgba(255,236,190,.45)}
+
+/* ---------- the chart lives in the night, right under the hero ---------- */
+.web-box{--paper:var(--night);--paper-2:#1B2450;--ink:#F3EDE0;--ink-2:#B4BBDA;--rule:#2E3866;--gop:#FF4D5E;
+  background:var(--night);color:var(--ink);border-top:0;padding-block:8px 36px;
+  box-shadow:0 0 0 100vmax var(--night);clip-path:inset(0 -100vmax)}
+.hero{padding-top:0}
+.web-box a{text-decoration-color:var(--rule)}
+
+/* ---------- stats: 125 in shadow, 340 marigold, 0 in light ---------- */
+.stats{border-color:var(--ink);border-top-width:2px;margin-top:28px}
+.stat b{font-family:var(--f-display);font-stretch:72%;font-weight:800;font-size:clamp(60px,8vw,104px);line-height:.85}
+.stats .stat:first-child b{color:transparent!important;
+  background-image:radial-gradient(circle,var(--ink) 1.7px,transparent 1.95px);background-size:4px 4px;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-stroke:.6px var(--ink)}
+.stats .stat:last-child{background:var(--night);padding-left:22px;padding-right:16px;border-left-color:var(--night)}
+.stats .stat:last-child b{color:var(--glow)!important;text-shadow:0 0 26px rgba(255,236,190,.55),0 0 2px rgba(255,246,226,.6)}
+.stats .stat:last-child span{color:var(--mist)}
+.stat span{font-size:15.5px}
+
+/* ---------- "That's the problem": the one light card ---------- */
+.line{background:var(--card);color:var(--card-ink)}
+.line p{max-width:16em;text-wrap:balance;font-family:var(--f-display);font-stretch:75%;font-size:clamp(34px,5vw,62px);line-height:.95}
+.line p em{font-family:var(--f-serif);font-style:italic;font-weight:500;font-stretch:100%;color:var(--card-em)}
+.line span{color:var(--card-sub);opacity:1;font-size:17px}
+
+/* ---------- candidates ---------- */
+.cg-ph{position:relative;overflow:hidden;border-radius:4px;border-color:var(--rule)}
+.cg-ph::after{content:"";position:absolute;inset:0;background:#3B4893;mix-blend-mode:color;opacity:.6}
+.cg h3{font-size:24px}
+.cg h3 [aria-hidden]{color:var(--slate)!important}
+.cg p b{color:var(--lean);font-family:var(--f-display);font-stretch:78%;font-weight:800;font-size:27px}
+.cg .wildtag{color:var(--ink);font-style:italic;font-weight:600}
+
+/* ---------- cards and page-to-page links ---------- */
+.dcard{background:var(--paper-2);border:1px solid var(--rule);border-top:4px solid var(--ink);transition:border-color .15s}
+.dcard .go{font-family:var(--f-display);font-weight:700;color:var(--ink);text-decoration:underline;text-decoration-color:var(--slate);text-decoration-thickness:2px;text-underline-offset:5px}
+.dcard:hover{border-top-color:var(--slate)}
+.dcard:hover h3{color:var(--slate)}
+.pnext a{background:var(--paper-2);border-color:var(--rule)}
+.pnext a:hover b{color:var(--slate)}
+
+/* ---------- the wild card playing card (donors page) ---------- */
+.pcard{background:var(--card);border-color:#CFC7B5;color:var(--card-ink)}
+.pc-i,.pcard figcaption{color:var(--card-em)}
+.pc-photo{border-color:var(--card-ink)}
+
+/* ---------- call to action: the last night ---------- */
+.act{background:var(--night);color:#F3EDE0;position:relative;overflow:hidden}
+.act::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle,var(--dot) 1.7px,transparent 1.95px);background-size:9px 9px;
+  -webkit-mask-image:linear-gradient(to top,transparent 10%,#000 100%);mask-image:linear-gradient(to top,transparent 10%,#000 100%)}
+.act .wrap{position:relative}
+.act h2{color:#F3EDE0}
+.act p{color:var(--mist);opacity:1}
+.btn{font-family:var(--f-display);font-weight:700;border-radius:3px}
+.act .btn{background:var(--glow);border-color:var(--glow);color:#0F1631}
+.act .btn.ghost{background:transparent;border-color:#F3EDE0;color:#F3EDE0}
+.act .cap,.act [aria-live]{color:var(--mist)!important}
+
+footer{font-family:var(--f-data);font-stretch:85%;font-size:12.5px}
+
+@media (max-width:700px){
+  .logo{font-size:24px}
+  .band h1{font-size:clamp(40px,12.5vw,70px)}
+  .band .sub-h{font-size:23px}
+}
+
+/* ---------- inner pages: same color rules ---------- */
+.vs i{color:var(--lean)}                                   /* why: "over" is the conservative choice */
+.ec-b.hot i{background:var(--lean)} .ec-b.hot b{color:var(--lean)}   /* economics: the trickle-down result */
+.pf-money{border-top-color:var(--lean)}
+.pf-big{color:var(--lean)}                                 /* profiles: share of donors who also gave right */
+.pf-money b[style*="--gop"],.wc b[style*="--gop"]{color:var(--lean)!important}
+.wc-t i[style*="--gop"]{background:var(--lean)!important}  /* Novick's first-time donors, same measure */
+.pf-q{border-left-color:var(--slate)}
+.pf-case sup a{color:var(--slate)}
+.pf-tl li::before{background:var(--slate);border-color:var(--slate)}
+.pf-chip{border-color:var(--rule)}
+.pf-shot{position:relative;overflow:hidden;border-color:var(--rule)}
+.pf-shot::after{content:"";position:absolute;inset:0;background:#3B4893;mix-blend-mode:color;opacity:.6;pointer-events:none}
+.pc-photo{position:relative}
+.pc-photo::after{content:"";position:absolute;inset:0;background:#3B4893;mix-blend-mode:color;opacity:.6;pointer-events:none}
+/* donors: "where else they gave" bars start at a fixed x; condensed labels fit before them */
+#gopbars text{font-stretch:76%}
+#gopbars text[font-size="11"]{font-size:10px;letter-spacing:-.04em;font-stretch:75%}
