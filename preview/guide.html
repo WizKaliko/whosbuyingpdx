@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Voter guide · Who's Buying PDX</title>
+<meta name="description" content="Who we'd rank for Portland City Council Districts 3 and 4 and Multnomah County Chair, with the record and the donor numbers behind each pick.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Who's Buying PDX">
+<meta property="og:title" content="The Who's Buying PDX voter guide"><meta property="og:description" content="They aren't Republicans. Some of their donors are. 128 donors to Portland's business-backed candidates also gave to Republicans. Among the progressive councilors running against them: zero.">
+<meta property="og:image" content="https://whosbuyingpdx.com/toolkit/og.png?v=receipt2"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Partners Against Progress. They aren't Republicans. Some of their donors are. whosbuyingpdx.com">
+<meta property="og:url" content="https://whosbuyingpdx.com/guide.html"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://whosbuyingpdx.com/toolkit/og.png?v=receipt2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101417'/%3E%3Ctext x='32' y='46' font-family='Georgia' font-weight='900' font-size='40' text-anchor='middle' fill='%23EF5168'%3E%3F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&family=Martian+Mono:wdth,wght@75..112.5,400..600&display=swap">
+<style>
+/* Layout: one long scroll, four short chapters. Each chapter = one sentence + one graphic.
+   Two colors carry meaning everywhere: gold = the conservative candidates, red = Republican campaigns.
+   Teal appears only for the progressive caucus on the council chart. */
+:root{
+  --paper:#EDEFEA; --paper-2:#E2E5DF; --ink:#13171D; --ink-2:#4B545C; --rule:#BCC3C1;
+  --gop:#C8213A; --slate:#B07F14; --peacock:#147A74; --lean:#D9741C;
+  --gop-wash:rgba(200,33,58,.09); --slate-wash:rgba(176,127,20,.12);
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-data:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#101417; --paper-2:#181D21; --ink:#E6E9E4; --ink-2:#A4ADB1; --rule:#38424A;
+  --gop:#EF5168; --slate:#D9A73E; --peacock:#3CB3A9; --lean:#F0A04B;
+  --gop-wash:rgba(239,81,104,.13); --slate-wash:rgba(217,167,62,.13); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#101417; --paper-2:#181D21; --ink:#E6E9E4; --ink-2:#A4ADB1; --rule:#38424A;
+  --gop:#EF5168; --slate:#D9A73E; --peacock:#3CB3A9; --lean:#F0A04B;
+  --gop-wash:rgba(239,81,104,.13); --slate-wash:rgba(217,167,62,.13); color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55}
+.wrap{max-width:1060px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-decoration-color:var(--rule);text-underline-offset:3px}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--gop);outline-offset:3px}
+.draft{background:var(--slate-wash);border-bottom:1px solid var(--rule);font-family:var(--f-data);font-size:12.5px}
+.draft .wrap{padding-block:8px}
+header.mast{padding-block:18px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-family:var(--f-display);font-weight:900;font-size:26px}
+.logo span{color:var(--gop)}
+nav.toc{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;font-weight:600}
+nav.toc a{text-decoration:none;color:var(--ink-2)}
+nav.toc a:hover{color:var(--ink)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1;margin:0;letter-spacing:-.015em}
+h1{font-size:clamp(46px,8.4vw,128px);font-weight:800;letter-spacing:-.02em;word-spacing:.08em;line-height:.95}
+h1 .r{color:var(--gop);font-style:italic}
+h2{font-size:clamp(32px,4.6vw,54px);font-weight:800}
+h3{font-size:23px;font-weight:700}
+.ladder{display:grid;gap:0;max-width:820px;border-top:1px solid var(--rule);margin-top:6px}
+.rung{display:grid;grid-template-columns:130px minmax(0,1fr);gap:20px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.rung .tag{font-family:var(--f-data);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.rung p{margin:0;font-size:clamp(17px,1.9vw,20px);line-height:1.45;max-width:60ch}
+.rung.hot p{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,2.6vw,30px);line-height:1.05;color:var(--peacock)}
+.rung.hot .tag{color:var(--peacock)}
+@media (max-width:600px){.rung{grid-template-columns:1fr;gap:4px}}
+.sub-h{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,3vw,38px);line-height:1.1;margin:0;color:var(--ink-2);letter-spacing:-.01em}
+.lede{font-size:clamp(18px,2.1vw,21px);max-width:60ch;color:var(--ink-2);margin:0}
+.lede b{color:var(--ink)}
+.eyebrow{font-family:var(--f-data);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.band{background:var(--paper-2);border-block:1px solid var(--rule)}
+.band-in{max-width:1400px;margin:0 auto;padding:clamp(40px,7vw,96px) max(16px,4vw);display:grid;gap:clamp(14px,2vw,24px);justify-items:center;text-align:center}
+.band .eyebrow{justify-self:center}
+.hero-p{font-size:clamp(18px,1.6vw,21px);line-height:1.75;max-width:58ch;margin:clamp(8px,1.2vw,16px) 0 0;letter-spacing:.005em;text-wrap:pretty}
+.hero-p b{color:var(--peacock)}
+@media (max-width:700px){.band-in{justify-items:start;text-align:left}.band .eyebrow{justify-self:start}}
+.defn{border:2px solid var(--ink);padding:clamp(18px,3vw,32px);display:grid;gap:0;margin-top:8px;background:var(--paper)}
+.defn-head{display:grid;gap:8px;padding-bottom:16px}
+.defn-head h3{font-size:clamp(24px,3vw,34px)}
+.defn-head p{margin:0;color:var(--ink-2);max-width:60ch}
+.defn-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 40px;padding:20px 0;border-top:1px solid var(--rule);align-items:start}
+.vs{margin:0;font-family:var(--f-display);line-height:1.1;letter-spacing:-.01em;display:grid;gap:4px}
+.vs b{font-weight:800;font-size:clamp(26px,3vw,36px)}.vs span{font-weight:600;font-size:clamp(18px,2vw,23px);color:var(--ink-2)}
+.vs i{font-style:italic;font-weight:500;color:var(--gop)}
+.ev{margin:0;font-size:16px;line-height:1.6;padding-top:6px}
+.ev a{display:block;font-family:var(--f-data);font-size:12.5px;color:var(--ink-2);margin-top:2px}
+.defn-note{padding-top:18px;border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 40px;font-size:15px;color:var(--ink-2)}
+.defn-note .eyebrow{grid-column:1/-1}.defn-note p{margin:0;line-height:1.55}.defn-note b{color:var(--ink)}
+@media (max-width:700px){.defn-note{grid-template-columns:1fr}}
+@media (max-width:700px){.defn-row{grid-template-columns:1fr}}
+.wc{border-top:3px solid var(--ink);padding-top:16px;display:grid;gap:18px;margin-top:12px}
+.wc-head{display:grid;gap:8px}.wc-head h3{font-size:clamp(24px,3vw,34px);max-width:26ch}.wc-head p{margin:0;max-width:64ch;color:var(--ink-2)}
+.wc-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 40px}
+.wc-col{display:grid;gap:12px;align-content:start}
+.wc-row{display:grid;grid-template-columns:150px minmax(0,1fr) 48px;gap:12px;align-items:center}
+.wc-l{font-weight:600;font-size:14.5px;line-height:1.2}.wc-l small{display:block;font-weight:400;font-size:12px;color:var(--ink-2)}
+.wc-t{height:22px;background:var(--paper-2)}.wc-t i{display:block;height:100%}
+.wc-row b{font-family:var(--f-data);font-size:15px;font-variant-numeric:tabular-nums;text-align:right}
+.wc-k{margin:0;font-size:14.5px}
+@media (max-width:760px){.wc-cols{grid-template-columns:1fr}.wc-row{grid-template-columns:118px minmax(0,1fr) 44px}}
+.stk-none{display:flex;align-items:center;padding:0 12px;font-family:var(--f-data);font-size:12.5px;color:var(--ink-2);background:transparent;border:1px dashed var(--rule)}
+.hero{padding-block:28px 0;display:grid;gap:20px}
+.web-box{border-top:3px solid var(--ink);padding-top:12px;display:grid;gap:10px}
+.web-box svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-2);align-items:center}
+.ln{display:inline-block;width:22px;height:0;border-top:3px solid;margin-right:6px;vertical-align:middle}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.stat{padding:16px 16px 18px 0;display:grid;gap:4px;align-content:start}
+.stat+.stat{border-left:1px solid var(--rule);padding-left:16px}
+.stat b{font-family:var(--f-display);font-size:clamp(42px,6vw,64px);line-height:.9;font-weight:900;font-variant-numeric:tabular-nums}
+.stat span{font-size:15px;color:var(--ink-2);max-width:32ch}
+@media (max-width:640px){.stats{grid-template-columns:1fr}.stat+.stat{border-left:0;border-top:1px solid var(--rule);padding-left:0}}
+section.ch{padding-block:56px 8px;display:grid;gap:24px}
+.ch-head{display:grid;gap:12px;border-top:3px solid var(--ink);padding-top:16px}
+.ch-no{font-family:var(--f-data);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.two{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.prose p{margin:0 0 14px;max-width:60ch}
+.figure{display:grid;gap:10px;min-width:0}
+.figure svg{width:100%;height:auto;display:block}
+.cap{font-size:12.5px;color:var(--ink-2);font-family:var(--f-data);line-height:1.5}
+.scroll-x{overflow-x:auto}
+/* the line */
+.line{background:var(--ink);color:var(--paper);margin-top:40px}
+.line .wrap{padding-block:44px;display:grid;gap:14px}
+.line p{margin:0;font-family:var(--f-display);font-weight:800;font-size:clamp(28px,4.2vw,48px);line-height:1;max-width:22ch;text-wrap:balance}
+.line p em{font-style:normal;color:var(--gop)}
+.line span{font-size:16px;max-width:62ch;opacity:.85}
+/* slate cards */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--rule)}
+@media (max-width:820px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.cards{grid-template-columns:1fr}}
+.card{padding:16px 16px 18px 0;border-bottom:1px solid var(--rule);display:grid;gap:8px;align-content:start}
+.card h3{font-size:26px}
+.card .race{font-family:var(--f-data);font-size:12px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12.5px;font-weight:600;padding:3px 8px;border:1.5px solid var(--slate);color:var(--ink);background:var(--slate-wash);border-radius:2px}
+/* money flow */
+.flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:14px;align-items:center}
+.fl-col{display:grid;gap:12px;min-width:0}
+.fl-h{font-family:var(--f-data);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--rule);padding-bottom:4px}
+.fl-row{display:grid;gap:4px}
+.fl-lab b{font-size:14.5px;display:block;line-height:1.2}.fl-lab small{font-size:12px;color:var(--ink-2)}
+.fl-track{display:flex;align-items:center;gap:8px;height:16px;min-width:0}
+.fl-track i{display:block;height:100%;flex:none;max-width:calc(100% - 90px)}.fl-in{background:var(--slate)}.fl-out{background:var(--slate);opacity:.6}
+.fl-track span{font-family:var(--f-data);font-size:13px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.fl-hub{display:flex;align-items:center;gap:8px}
+.fl-box{border:2px solid var(--ink);padding:12px 14px;display:grid;gap:3px;text-align:center;max-width:160px}
+.fl-box b{font-family:var(--f-display);font-weight:800;font-size:22px;line-height:1}
+.fl-box small{font-size:11.5px;color:var(--ink-2)}.fl-box em{font-style:normal;font-family:var(--f-data);font-size:13px;font-weight:600}
+.fl-arrow{font-size:26px;color:var(--ink-2)}
+.flow+.cap{display:block;margin-top:16px}
+@media (max-width:820px){.flow{grid-template-columns:1fr}.fl-hub{flex-direction:column;gap:4px}.fl-arrow{transform:rotate(90deg)}}
+/* compare bars */
+.cmp{display:grid;gap:12px}
+.cmp-row{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 64px;gap:14px;align-items:center}
+.cmp-name{font-weight:700;font-size:15px}.cmp-name small{display:block;font-weight:400;font-family:var(--f-data);font-size:11.5px;color:var(--ink-2)}
+.cmp-bar{height:22px;background:var(--paper-2);position:relative}.cmp-bar i{position:absolute;inset:0 auto 0 0;background:var(--gop)}
+.cmp-val{font-family:var(--f-data);font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+.cmp-bar i.gold{background:var(--slate)}
+.rcpts{display:grid;gap:0;border-top:2px solid var(--ink);padding-top:12px}
+.rcpts h3{margin-bottom:6px}
+.rcpt{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:16px;padding:12px 0;border-bottom:1px dashed var(--rule);align-items:baseline}
+.rcpt time{font-family:var(--f-data);font-size:12.5px;color:var(--ink-2)}
+.rcpt p{margin:0;font-size:15.5px}
+.tl{font-family:var(--f-data);font-size:12.5px;white-space:nowrap;text-align:right}
+@media (max-width:640px){.rcpt{grid-template-columns:1fr;gap:4px}.tl{text-align:left}}
+.rcpts .cap{margin-top:10px}
+.cmp-row.pend{color:var(--ink-2)}
+.stk-row{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 64px;gap:14px;align-items:center}
+.stk{height:22px;background:var(--paper-2);display:flex;overflow:hidden}
+.stk i{display:block;height:100%}.sR{background:var(--gop)}.sO{background:var(--lean)}.sG{background:var(--slate);opacity:.45}
+.stk-lg{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-2)}.stk-lg i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+@media (max-width:560px){.stk-row{grid-template-columns:1fr 64px}.stk{grid-column:1/-1;grid-row:2}}
+.cmp-grp{font-family:var(--f-data);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:8px;border-bottom:1px solid var(--rule);padding-bottom:4px}
+.cmp-row.zero .cmp-bar{background:transparent;border-bottom:2px solid var(--peacock);height:12px;align-self:center}
+.cmp-row.zero .cmp-val{color:var(--peacock)}.cmp-row.pend .cmp-bar{background:transparent;border:1.5px dashed var(--rule)}
+@media (max-width:560px){.cmp-row{grid-template-columns:1fr 64px}.cmp-bar{grid-column:1/-1;grid-row:2}}
+/* chamber */
+.chamber text{font-family:var(--f-data);font-size:15px;fill:var(--ink-2)}
+/* pairs */
+.pairs{display:grid}
+.pair-head,.pair{display:grid;grid-template-columns:minmax(0,1fr) 52px minmax(0,1fr);align-items:stretch}
+.pair-head span{font-family:var(--f-data);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.ph-gop{color:var(--gop)}.ph-slate{color:var(--slate)}
+.pair{border-bottom:1px solid var(--rule)}
+.side{padding:16px 4px 16px 14px;display:grid;gap:6px;align-content:start}
+.side.gop{border-left:4px solid var(--gop);background:var(--gop-wash)}
+.side.slate{border-left:4px solid var(--slate);background:var(--slate-wash)}
+.side p{margin:0;font-size:16px}
+.side q{font-weight:700}
+.theme{font-family:var(--f-display);font-weight:800;font-size:21px;line-height:1}
+.src{font-family:var(--f-data);font-size:12px;color:var(--ink-2)}
+.eq{display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:38px}
+@media (max-width:700px){.pair-head{display:none}.pair{grid-template-columns:1fr}.eq{font-size:26px;padding-block:2px}}
+.pending{border:1.5px dashed var(--rule);padding:16px;color:var(--ink-2);font-size:15px}
+.pending b{font-family:var(--f-data);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:4px}
+.method{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+@media (max-width:820px){.method{grid-template-columns:1fr}}
+.method div{border-top:2px solid var(--ink);padding-top:12px}
+.method p{margin:8px 0 0;font-size:15px;color:var(--ink-2)}
+.act{background:var(--ink);color:var(--paper);margin-top:64px}
+.act .wrap{padding-block:52px;display:grid;gap:20px}
+.act h2{color:var(--paper)}
+.act p{max-width:60ch;margin:0;opacity:.85}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font:700 15px var(--f-body);padding:13px 20px;border:2px solid var(--paper);background:var(--paper);color:var(--ink);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--paper)}
+footer{padding-block:28px 40px;font-size:13px;color:var(--ink-2);display:grid;gap:6px}
+@media (prefers-reduced-motion:no-preference){
+  #web path.e.draw{animation:draw 1.1s cubic-bezier(.3,.6,.3,1) both;animation-delay:var(--d)}
+  #web path.e.draw.rev{animation-name:drawrev}
+  @keyframes drawrev{from{stroke-dashoffset:-1}}
+  @keyframes draw{from{stroke-dashoffset:1}}
+}
+.stk-none .sm{display:none}
+.cap-d{margin-top:10px}.cap-d summary{cursor:pointer;font-family:var(--f-data);font-size:12.5px;color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;list-style:none}
+.cap-d summary::-webkit-details-marker{display:none}.cap-d summary::before{content:"+ ";}.cap-d[open] summary::before{content:"– "}
+.cap-d .cap{margin-top:8px}
+@media (max-width:640px){
+  body{font-size:16.5px;line-height:1.6}
+  section.ch{padding-block:72px 12px;gap:30px}
+  .ch-head{gap:14px;padding-top:20px}
+  .lede{font-size:18px;line-height:1.55}
+  .stk-none .lg{display:none}.stk-none .sm{display:inline}
+  .stk-row{row-gap:6px;padding-block:6px}
+  .cmp-grp{margin-top:18px}
+  .rcpt{padding-block:16px}
+  .cards{gap:4px}
+  .line .wrap{padding-block:56px}
+  .defn{padding:20px 16px}
+  .defn-row{padding:22px 0}
+  .stat{padding-block:20px 22px}
+  .wc{gap:24px}
+  .cap{font-size:12px;line-height:1.6}
+}
+.ch-list{display:none}
+@media (max-width:640px){.chamber .nm{display:none}.ch-list{display:grid;gap:8px;font-size:14.5px;margin-top:4px}.ch-list div{display:grid;grid-template-columns:44px 1fr;gap:8px}.ch-list u{text-decoration-thickness:2px;text-underline-offset:3px}.ch-list small{color:var(--ink-2);font-size:12.5px}}
+.wc-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:32px;align-items:center}
+.pcard{margin:0;width:170px;aspect-ratio:5/7;background:#FBFAF6;border-radius:12px;border:1px solid #CFCBBF;box-shadow:0 10px 24px rgba(0,0,0,.18);position:relative;padding:30px 14px 32px;display:grid;grid-template-rows:1fr auto;gap:8px;transform:rotate(-5deg);color:#13171D}
+.pc-i{position:absolute;font-family:var(--f-display);font-weight:800;font-size:22px;line-height:.9;display:grid;justify-items:center;color:#C8213A}
+.pc-i b{font-size:15px}.pc-i.tl{top:8px;left:10px}.pc-i.br{bottom:8px;right:10px;transform:rotate(180deg)}
+.pc-photo{border:2px solid #13171D;border-radius:6px;overflow:hidden;background:#E8E4D8 center/cover no-repeat;display:grid;place-items:center}
+.pc-ph{font-family:var(--f-data);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#6B6F73;text-align:center}
+.pcard figcaption{font-family:var(--f-display);font-weight:800;font-size:19px;text-align:center;letter-spacing:.02em;text-transform:uppercase;color:#C8213A;padding-bottom:6px}
+@media (max-width:640px){.wc-top{grid-template-columns:1fr;justify-items:center;gap:20px}.wc-top .wc-head{justify-self:stretch}.pcard{width:150px}}
+.pc-wrap{display:grid;gap:14px;justify-items:center}.pc-credit{font-family:var(--f-data);font-size:11px;color:var(--ink-2)}
+#web path.e{stroke-dasharray:1;stroke-dashoffset:0;transition:opacity .3s}
+#web.focus path.e{opacity:.05}#web.focus path.e.on{opacity:1}
+#web circle.dn{transition:opacity .3s}#web.focus circle.dn{opacity:.12}#web.focus circle.dn.on{opacity:1}
+#web .cand{cursor:pointer}#web.focus .cand{opacity:.45}#web.focus .cand.on{opacity:1}
+#web .cand:focus{outline:none}#web .cand:focus-visible rect{stroke:var(--gop);stroke-width:2}
+#web .hit{cursor:help}
+.web-box{position:relative}
+.web-status{margin:0;font-size:14.5px;color:var(--ink-2);min-height:1.5em}
+.web-status b{color:var(--ink)}
+.web-reset{margin-left:6px;font:inherit;font-size:13px;background:none;border:1px solid var(--rule);color:var(--ink);padding:2px 8px;cursor:pointer;border-radius:4px}
+.web-tip{position:absolute;z-index:5;width:280px;background:var(--ink);color:var(--paper);padding:10px 12px;border-radius:6px;font-size:13.5px;line-height:1.4;display:grid;gap:4px;box-shadow:0 8px 20px rgba(0,0,0,.25);pointer-events:none}
+.web-tip[hidden]{display:none}.web-tip .tt-h{font-family:var(--f-data);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}.web-tip small{opacity:.65;font-size:11.5px}
+.ec-quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ec-quotes figure{margin:0;border-top:3px solid var(--slate);padding-top:12px;display:grid;gap:10px;align-content:start}
+.ec-quotes q{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,2vw,23px);line-height:1.25}
+.ec-quotes figcaption{font-size:13px;color:var(--ink-2)}
+@media (max-width:820px){.ec-quotes{grid-template-columns:1fr}}
+.ec-sub{margin:4px 0 14px;color:var(--ink-2);font-size:14.5px}
+.ec-bars{display:grid;gap:14px}
+.ec-b{display:grid;grid-template-columns:84px minmax(0,1fr) 64px;gap:12px;align-items:center}
+.ec-b span{font-family:var(--f-data);font-size:13px;color:var(--ink-2)}
+.ec-b i{display:block;height:28px;background:var(--ink-2);opacity:.45}
+.ec-b.hot i{background:var(--gop);opacity:1}
+.ec-b b{font-family:var(--f-display);font-size:24px;font-weight:800}.ec-b.hot b{color:var(--gop)}
+.ec-ev h3,.figure h3{margin-bottom:6px}
+.ec-ev p{margin:0 0 14px}.ec-ev a,.ec-data a{font-family:var(--f-data);font-size:12.5px;color:var(--ink-2);white-space:nowrap}
+.ec-flight{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:0;border:2px solid var(--ink)}
+.ec-claim{padding:22px;background:var(--paper-2);display:grid;gap:10px;align-content:start}
+.ec-big{font-family:var(--f-display);font-weight:700;font-size:clamp(22px,2.6vw,30px);line-height:1.2;margin:0}
+.ec-data{padding:22px;display:grid;gap:16px}.ec-data p{margin:0}
+.ec-flight{grid-template-columns:1fr}
+.ec-claim{padding:22px 24px}
+.ec-nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.ec-n{display:grid;gap:6px;align-content:start;border-top:3px solid var(--peacock);padding-top:12px}
+.ec-n b{font-family:var(--f-display);font-weight:900;font-size:clamp(46px,5.6vw,68px);line-height:.9;color:var(--peacock);font-variant-numeric:tabular-nums}
+.ec-n h4{font-family:var(--f-display);font-size:21px;line-height:1.15;margin:4px 0 0}
+.ec-n p{font-size:15px;color:var(--ink-2);line-height:1.5}
+.ec-culture{font-size:16px;border-top:1px solid var(--rule);padding-top:14px}
+.ec-culture a,.ec-notes a{font-family:var(--f-data);font-size:12.5px;color:var(--ink-2)}
+.ec-notes{display:grid;gap:10px;max-width:72ch;margin-top:4px}.ec-notes p{margin:0;font-size:14.5px;color:var(--ink-2)}.ec-notes b{color:var(--ink)}
+@media (max-width:820px){.ec-nums{grid-template-columns:1fr;gap:20px}}
+.ec-fair{font-size:14.5px;color:var(--ink-2);max-width:72ch;margin:0}
+.dl-chart{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;align-items:end;height:220px;padding-top:24px}
+.dl-col{display:grid;grid-template-rows:auto 1fr auto;align-items:end;justify-items:center;height:100%;gap:6px}
+.dl-col i{display:block;width:100%;background:var(--ink-2);opacity:.45;align-self:end}
+.dl-col.hot i{background:var(--peacock);opacity:1}
+.dl-col b{font-family:var(--f-display);font-size:18px;font-weight:800}.dl-col.hot b{color:var(--peacock)}
+.dl-col span{font-family:var(--f-data);font-size:12px;color:var(--ink-2)}
+.dl-score{display:grid;gap:22px}
+.dl-score p{margin:0 0 10px;font-size:15.5px}.dl-score a{font-family:var(--f-data);font-size:12px;color:var(--ink-2);white-space:nowrap}
+.dl-good{color:var(--peacock)}.dl-bad{color:var(--gop)}
+.dl-close{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,2.2vw,26px);line-height:1.3;max-width:44ch;margin:0}
+
+/* ---- hub layout + mobile header (2026-10-18) ---- */
+.logo a{text-decoration:none}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;font:700 14px var(--f-body);padding:8px 14px;border:1.5px solid var(--ink);border-radius:999px}
+.menu summary::-webkit-details-marker{display:none}
+.menu[open] summary{background:var(--ink);color:var(--paper)}
+.menu nav{position:absolute;right:0;top:calc(100% + 8px);z-index:20;background:var(--paper);border:1.5px solid var(--ink);min-width:220px;display:grid;padding:6px 0;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.menu nav a{padding:11px 18px;text-decoration:none;font-weight:600;font-size:16px}
+.menu nav a[aria-current]{color:var(--gop)}
+nav.toc a[aria-current]{color:var(--ink)}
+h1 .nw{white-space:nowrap}
+.cgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}
+.cg{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;align-items:center;text-decoration:none;color:inherit}
+.cg-ph{width:96px;aspect-ratio:4/5;border-radius:8px;background:var(--paper-2) center/cover no-repeat;border:1px solid var(--rule)}
+.cg h3{font-size:22px;line-height:1.1}
+.cg .race{font-family:var(--f-data);font-size:11.5px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em;display:block;margin-top:4px}
+.cg p{margin:8px 0 0;font-size:14.5px;color:var(--ink-2);line-height:1.4}
+.cg p b{color:var(--gop);font-family:var(--f-display);font-size:20px}
+.cg .wildtag{color:var(--slate);font-weight:700}
+.cg:hover h3{text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.deep{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.dcard{display:grid;gap:10px;align-content:start;padding:22px 20px 20px;border:1px solid var(--rule);background:var(--paper-2);text-decoration:none;color:inherit;border-top:3px solid var(--ink)}
+.dcard h3{font-size:clamp(22px,2.2vw,27px);line-height:1.08}
+.dcard p{margin:0;font-size:15.5px;color:var(--ink-2);line-height:1.5}
+.dcard .go{font:700 14px var(--f-body);color:var(--gop);margin-top:4px}
+.dcard:hover{border-top-color:var(--gop)}
+.dcard.wide{grid-column:1/-1}
+.pnext{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-block:48px 8px}
+.pnext a{display:grid;gap:6px;padding:20px;border:1px solid var(--rule);text-decoration:none;background:var(--paper-2)}
+.pnext a.nx{text-align:right}
+.pnext b{font-family:var(--f-display);font-size:24px}
+.page-top{padding-top:8px}
+section.ch:first-child{padding-top:24px}
+@media (max-width:860px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.deep{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){
+  header.mast{flex-wrap:nowrap;padding-block:12px}
+  .logo{font-size:21px}
+  nav.toc{display:none}
+  .menu{display:block}
+  .band-in{justify-items:center;text-align:center;padding:40px 18px 36px;gap:14px}
+  .band .eyebrow{justify-self:center;font-size:10.5px}
+  h1{font-size:clamp(30px,10vw,60px);line-height:.98}
+  .sub-h{font-size:21px}
+  .hero-p{font-size:16.5px;line-height:1.6;max-width:34ch}
+  .hero{padding-top:20px}
+  .legend{flex-direction:column;align-items:flex-start;gap:6px;font-size:13px}
+  .cgrid{grid-template-columns:1fr;gap:18px}
+  .cg{grid-template-columns:76px minmax(0,1fr)}.cg-ph{width:76px}
+  .deep{grid-template-columns:1fr;gap:12px}
+  .pnext{grid-template-columns:1fr}
+  .pnext a.nx{text-align:left}
+}
+
+/* ---- voter guide ---- */
+.g-hero{display:grid;gap:14px;padding-top:28px}
+.g-hero h1{font-family:var(--f-display);font-size:clamp(44px,8vw,88px);line-height:.95;margin:0;letter-spacing:-.02em}
+.g-hero h1 em{color:var(--slate)}
+.g-hero .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.gbtn{font:700 15px var(--f-body);padding:12px 18px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none;display:inline-block}
+.gbtn.ghost{background:transparent;color:var(--ink)}
+.slip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:2px solid var(--ink);margin-top:26px}
+.slip div{padding:14px 16px;border-right:1px solid var(--rule)}
+.slip div:last-child{border-right:0}
+.slip .eyebrow{display:block;margin-bottom:6px}
+.slip b{font-family:var(--f-display);font-size:22px;line-height:1.15;display:block}
+.slip small{display:block;color:var(--ink-2);font-size:14px;margin-top:4px}
+.rcv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;margin:18px 0 0;padding:0;list-style:none}
+.rcv li{border-left:3px solid var(--slate);padding-left:12px}
+.rcv b{display:block}
+.race-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.race-h .seats{font-family:var(--f-data);font-size:13px;color:var(--ink-2)}
+.verdict{font-family:var(--f-display);font-size:clamp(26px,3.4vw,36px);line-height:1.1;margin:6px 0 0}
+.verdict u{text-decoration-color:var(--peacock);text-decoration-thickness:4px;text-underline-offset:5px}
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:22px}
+.pick{border:1px solid var(--rule);border-top:5px solid var(--peacock);padding:18px 18px 16px;display:grid;gap:10px;align-content:start;background:var(--paper)}
+.pick h3{font-family:var(--f-display);font-size:28px;margin:0;line-height:1.05}
+.pick .who{margin:0;color:var(--ink-2);font-size:15.5px}
+.pick ul{margin:0;padding-left:18px;display:grid;gap:7px;font-size:15.5px}
+.pick .q{font-family:var(--f-serif,Georgia);font-style:italic;font-size:17px;margin:0}
+.pick .zero{font-family:var(--f-data);font-size:13px;background:var(--paper-2);padding:7px 10px}
+.pick .zero b{color:var(--peacock)}
+.pick .end{font-size:14px;color:var(--ink-2);margin:0}
+.pick details{font-size:14.5px;color:var(--ink-2)}
+.pick summary{cursor:pointer;font-family:var(--f-data);font-size:12.5px;text-transform:uppercase;letter-spacing:.06em}
+.pick details p{margin:8px 0 0}
+.others{margin-top:22px;border-top:1px solid var(--rule);padding-top:14px}
+.others h4{margin:0 0 8px;font-size:16px}
+.otab{width:100%;border-collapse:collapse;font-size:15px}
+.otab td{padding:8px 6px;border-bottom:1px solid var(--rule);vertical-align:top}
+.otab td.n{font-family:var(--f-data);font-size:18px;color:var(--gop);white-space:nowrap;width:70px;text-align:right}
+.otab td.c{width:180px;font-weight:700}
+.otab a{white-space:nowrap}
+.note{font-size:14.5px;color:var(--ink-2);max-width:72ch}
+.ret{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
+.ret div{border:1px solid var(--rule);padding:14px}
+.ret b{font-family:var(--f-display);font-size:22px;display:block;margin-bottom:4px}
+.signup{border:2px solid var(--ink);padding:20px;display:grid;gap:10px;margin-top:22px;background:var(--paper-2)}
+.signup h3{font-family:var(--f-display);font-size:26px;margin:0}
+.signup form{display:flex;gap:8px;flex-wrap:wrap}
+.signup input{font:16px var(--f-body);padding:11px 12px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);flex:1 1 220px;min-width:0}
+.signup button{font:700 15px var(--f-body);padding:11px 18px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+.signup .cap{margin:0}
+.srcs{font-size:13px;color:var(--ink-2)}
+.srcs ol{padding-left:20px;margin:6px 0 0;display:grid;gap:3px}
+.srcs a{word-break:break-word}
+@media (max-width:700px){
+  .slip{grid-template-columns:1fr}.slip div{border-right:0;border-bottom:1px solid var(--rule)}.slip div:last-child{border-bottom:0}
+  .rcv,.ret{grid-template-columns:1fr}
+  .otab td.c{width:auto}
+}
+@media print{
+  @page{size:letter;margin:.5in}
+  :root{--paper:#fff;--paper-2:#F3F3EF;--ink:#111;--ink-2:#444;--rule:#BBB;--gop:#B3122E;--slate:#9A6B00;--peacock:#0F6B65;color-scheme:light}
+  body{font-size:11pt;background:#fff}
+  .topbar,.act,.no-print,.pnext,.signup,.pick details,.g-hero .row{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .g-hero{padding-top:0}.g-hero h1{font-size:40pt}
+  .ch{margin-top:18pt!important;break-inside:auto}
+  .pick,.otab tr,.ret div,.slip{break-inside:avoid}
+  .picks{grid-template-columns:repeat(2,minmax(0,1fr));gap:12pt}
+  .pick{padding:10pt;gap:6pt}.pick h3{font-size:18pt}.pick ul,.pick .who{font-size:10pt}
+  .verdict{font-size:18pt}
+  a{text-decoration:none}
+  .print-only{display:block!important}
+  .srcs{font-size:8pt}
+}
+.print-only{display:none}
+</style>
+<link rel="stylesheet" href="indigo.css">
+</head><body>
+<div class="topbar"><div class="wrap">
+  <header class="mast">
+    <div class="logo"><a href="./"><span aria-hidden="true">Who's Buy<span class="lamp">ı</span>ng PDX</span><span class="vh">Who's Buying PDX</span></a></div>
+    <nav class="toc" aria-label="Sections"><a href="index.html#slate">The candidates</a><a href="why.html">Why it matters</a><a href="donors.html">The donors</a><a href="votes.html">The votes</a><a href="story.html">The story</a><a href="economics.html">The economics</a><a href="doom.html">The doom loop</a><a href="receipts.html">Receipts</a><a href="guide.html" aria-current=page>Voter guide</a><a href="share.html">Share</a></nav>
+    <details class="menu"><summary>Menu</summary><nav aria-label="Sections"><a href="./">Home</a><a href="index.html#slate">The candidates</a><a href="why.html">Why it matters</a><a href="donors.html">The donors</a><a href="votes.html">The votes</a><a href="story.html">The story</a><a href="economics.html">The economics</a><a href="doom.html">The doom loop</a><a href="receipts.html">Receipts</a><a href="guide.html" aria-current=page>Voter guide</a><a href="share.html">Share</a></nav></details>
+  </header>
+</div></div>
+
+<div class="wrap page-top">
+<section class="g-hero">
+  <span class="eyebrow">Voter guide · Nov 3, 2026 election</span>
+  <h1>Who we&rsquo;d <em>rank.</em></h1>
+  <p class="lede">Our picks for Portland City Council in Districts 3 and 4 and for Multnomah County Chair. Each one stands up for renters, city services and police accountability, and almost none of their named donors also fund Republicans.</p>
+  <div class="row"><a class="gbtn" href="toolkit/whos-buying-pdx-voter-guide.pdf" download>Download the PDF</a><a class="gbtn ghost" href="#signup">Get it by email</a><a class="gbtn ghost" href="https://multco.us/info/official-ballot-drop-sites" target="_blank" rel="noopener">Find a drop box</a></div>
+  <div class="slip">
+    <div><span class="eyebrow">City Council · District 3</span><b>1 Angelita Morillo<br>2 Tiffany Koyama Lane<br>3 Esther León</b><small>3 seats. Rank up to 6.</small></div>
+    <div><span class="eyebrow">City Council · District 4</span><b>1 Mitch Green<br>2 Jamey Evenstar<br>3 Jeremy Beausoleil Smith</b><small>3 seats. Rank up to 6.</small></div>
+    <div><span class="eyebrow">Multnomah County Chair</span><b>Shannon Singleton</b><small>1 seat. Rank up to 6.</small></div>
+  </div>
+  <p class="print-only cap">whosbuyingpdx.com/guide.html · Every number and claim is sourced on the site.</p>
+</section>
+
+<section class="ch" id="ranking">
+  <div class="ch-head"><span class="ch-no">How ranking works</span><h2>Rank only people you&rsquo;d want to win.</h2></div>
+  <ul class="rcv">
+    <li><b>Your first choice comes first.</b> Ranking someone second never hurts your first choice.</li>
+    <li><b>Anyone you rank can end up with your vote.</b> If your first choice wins or is eliminated, your vote can move to your next choice.</li>
+    <li><b>You don&rsquo;t have to fill every column.</b> It&rsquo;s fine to rank one or two people and stop.</li>
+    <li><b>One bubble per column.</b> Don&rsquo;t give two candidates the same rank, or one candidate two ranks.</li>
+  </ul>
+  <p class="note">Council districts elect three people each. A candidate wins with more than 25% of the vote after rankings are counted. County Chair elects one person, by majority.</p>
+</section>
+
+<section class="ch" id="d3">
+  <div class="ch-head"><div class="race-h"><span class="ch-no">Portland City Council · District 3</span><span class="seats">3 seats · 21 candidates</span></div>
+  <p class="verdict">Rank <u>Angelita Morillo</u> 1st, <u>Tiffany Koyama Lane</u> 2nd and <u>Esther León</u> 3rd.</p></div>
+  <div class="picks"><article class="pick"><h3>Angelita Morillo</h3><p class="who">Renter, immigrant and former policy advocate at Partners for a Hunger-Free Oregon. Worked three years in Commissioner Jo Ann Hardesty&rsquo;s office.<sup><a href="#src-1">1</a></sup></p><ul><li>Wrote Portland&rsquo;s ban on rent-setting software that lets landlords coordinate prices. Passed 8&ndash;2, Nov 2025.<sup><a href="#src-2">2</a></sup></li><li>With Mitch Green, passed an impact fee on landlords who lease to immigration detention facilities. 9&ndash;2, Dec 2025.<sup><a href="#src-3">3</a></sup></li><li>Voted no on moving $10M out of the police accountability office voters created. Failed 6&ndash;6, May 2026.<sup><a href="#src-4">4</a></sup></li><li>Led the plan to restore 55 frontline city jobs. Tied 6&ndash;6; the mayor broke the tie against it, July 2026.<sup><a href="#src-5">5</a></sup></li></ul>
+<p class="zero"><b>2,398</b> small-donor gifts, 95% of them $100 or less.<sup><a href="#src-6">6</a></sup> <b>0 of 203</b> named donors also gave to Republicans or Portland conservatives.</p><p class="end"><b>Endorsed by</b> the Portland Mercury (#1 in District 3),<sup><a href="#src-7">7</a></sup> Sierra Club, SEIU Oregon, Working Families Party, Basic Rights Oregon PAC and Portland DSA.</p>
+<details><summary>What critics say</summary><p>Willamette Week ranks her fifth and calls her style divisive.<sup><a href="#src-8">8</a></sup> Even the Mercury, which ranks her first, says she could pick her battles more carefully.<sup><a href="#src-7">7</a></sup> Several of her budget proposals failed.</p></details></article><article class="pick"><h3>Tiffany Koyama Lane</h3><p class="who">Former Sunnyside Environmental School teacher and Portland Association of Teachers organizer. The council&rsquo;s first-ever vice president.<sup><a href="#src-9">9</a></sup></p><ul><li>Led Vision Zero work on traffic deaths, and co-sponsored dedicating 12.5% of the transportation utility fee to it, spring 2026.<sup><a href="#src-10">10</a></sup></li><li>Updated the city&rsquo;s civil rights code to protect family structure, including nontraditional families. Passed 11&ndash;0, Mar 2026.<sup><a href="#src-11">11</a></sup></li><li>Voted no on the $10M police-oversight cut, and restored 14 urban forestry jobs in the May 2026 budget.<sup><a href="#src-12">12</a></sup></li><li>Voted no on the Blazers arena deal; says the city shouldn&rsquo;t pay unless the team&rsquo;s owners do.<sup><a href="#src-13">13</a></sup></li></ul><p class="q">&ldquo;every traffic death is preventable&rdquo;<sup><a href="#src-15">15</a></sup></p>
+<p class="zero"><b>2,509</b> small-donor gifts, 95% of them $100 or less.<sup><a href="#src-6">6</a></sup> <b>0 of 269</b> named donors also gave to Republicans or Portland conservatives.</p><p class="end"><b>Endorsed by</b> the Portland Mercury (#2),<sup><a href="#src-7">7</a></sup> Willamette Week (#2),<sup><a href="#src-8">8</a></sup> Sierra Club, Portland Association of Teachers, SEIU Oregon and Basic Rights Oregon.</p>
+<details><summary>What critics say</summary><p>A former aide filed complaints in February 2026 alleging retaliation; she declined to comment, citing personnel rules.<sup><a href="#src-14">14</a></sup> The Mercury reports the city investigated and dismissed it.<sup><a href="#src-7">7</a></sup> Several of her priorities failed on 6&ndash;6 votes.</p></details></article><article class="pick"><h3>Esther León</h3><p class="who">Doctor of physical therapy who works with people in Oregon prisons, and a community college teacher. Has lived in District 3 since 2020. First run for office.<sup><a href="#src-32">32</a></sup></p><ul><li>Wants Portland Street Response running 24/7 citywide.<sup><a href="#src-33">33</a></sup></li><li>Backs social housing and a vacancy tax on corporate landlords, and prefers supportive housing to overnight-only shelters.<sup><a href="#src-33">33</a></sup></li><li>Would revoke the ICE facility&rsquo;s permit and pause new AI data centers.<sup><a href="#src-34">34</a></sup></li><li>On the Blazers arena: no clean-energy fund money, and a guaranteed return for the public.<sup><a href="#src-34">34</a></sup></li></ul><p class="q">&ldquo;life doesn&rsquo;t have to be this way&rdquo;<sup><a href="#src-36">36</a></sup></p>
+<p class="zero"><b>383</b> small-donor gifts, 98% of them $100 or less.<sup><a href="#src-6">6</a></sup> <b>0 of 6</b> named donors also gave to Republicans or Portland conservatives.</p><p class="end"><b>Endorsed by</b> Sierra Club<sup><a href="#src-20">20</a></sup> and Portland for All (#3 in District 3).<sup><a href="#src-35">35</a></sup> The Mercury gives her an honorable mention.<sup><a href="#src-7">7</a></sup></p>
+<details><summary>What critics say</summary><p>She has no political or civic experience. The Mercury called one idea, bringing back public payphones, &ldquo;admirable but perhaps lofty.&rdquo;<sup><a href="#src-36">36</a></sup> Portland Civic Lab notes her housing and utility plans don&rsquo;t list costs.<sup><a href="#src-34">34</a></sup></p></details></article></div>
+  <div class="others"><h4>Before you rank anyone else</h4><table class="otab"><tr><td class="c">Kellie Torres</td><td class="n">42%</td><td>No record in office yet. Backed by the Chamber&rsquo;s committees and endorsed by Mayor Wilson. <a href="profiles/torres.html">Profile →</a></td></tr><tr><td class="c">Steve Novick</td><td class="n">25%</td><td>Sided with the business bloc on 52 of 79 split votes, including all 18 on homelessness, labor and housing. Co-sponsored the $10M police-oversight cut. He votes with progressives on policing rules like officer masks and ID, and the Mercury and Willamette Week both endorse him. <a href="profiles/novick.html">Profile →</a></td></tr></table><p class="note">Percent = share of each candidate&rsquo;s named individual donors since 2023 who also gave to Republican campaigns or Portland conservatives. Gifts of $100 or less are filed without names, so this check covers named donors only, for every candidate. Small-donor gifts of $100 or less: Morillo and Koyama Lane 95%, León 98%, Novick 84%, Torres 82%. <a href="receipts.html">How we count</a>.</p></div>
+</section>
+
+<section class="ch" id="d4">
+  <div class="ch-head"><div class="race-h"><span class="ch-no">Portland City Council · District 4</span><span class="seats">3 seats · 12 candidates</span></div>
+  <p class="verdict">Rank <u>Mitch Green</u> 1st, <u>Jamey Evenstar</u> 2nd and <u>Jeremy Beausoleil Smith</u> 3rd.</p></div>
+  <div class="picks"><article class="pick"><h3>Mitch Green</h3><p class="who">Economist and Army veteran. Spent over a decade as an energy-economics analyst at the Bonneville Power Administration and taught at PSU.<sup><a href="#src-16">16</a></sup></p><ul><li>Co-sponsored &ldquo;Keep Portland Housed&rdquo;: $17.5M to start a social housing loan fund and about $20.5M for eviction prevention, April 2026.<sup><a href="#src-17">17</a></sup></li><li>Co-wrote the rent-setting software ban and the detention-facility impact fee with Morillo.<sup><a href="#src-18">18</a></sup></li><li>Voted no on the $10M police-oversight cut. Failed 6&ndash;6.<sup><a href="#src-4">4</a></sup></li><li>Pushed &ldquo;Save Our Services&rdquo; to keep 55 city jobs. It tied 6&ndash;6 and the mayor broke the tie against it; a smaller package saving about 30 jobs then passed.<sup><a href="#src-19">19</a></sup></li></ul><p class="q">&ldquo;permanently affordable housing built for people, not portfolios&rdquo;<sup><a href="#src-24">24</a></sup></p>
+<p class="zero"><b>2,533</b> small-donor gifts, 95% of them $100 or less.<sup><a href="#src-6">6</a></sup> <b>0 of 227</b> named donors also gave to Republicans or Portland conservatives.</p><p class="end"><b>Endorsed by</b> the Portland Mercury (#1 in District 4),<sup><a href="#src-18">18</a></sup> Sierra Club,<sup><a href="#src-20">20</a></sup> SEIU Oregon, AFSCME, Portland Association of Teachers and Basic Rights Oregon PAC.</p>
+<details><summary>What critics say</summary><p>He paid a $7,328 property tax installment late, after a reporter asked about it.<sup><a href="#src-18">18</a></sup> He burned a brush pile during a burn ban in July and called it &ldquo;a profoundly stupid thing to do.&rdquo;<sup><a href="#src-21">21</a></sup> The police union called for him to resign over 2020&ndash;21 tweets; he declined.<sup><a href="#src-22">22</a></sup> Billboards attacking him are funded through a Chamber-aligned committee; a complaint says the funding was hidden, which the Secretary of State is reviewing.<sup><a href="#src-23">23</a></sup></p></details></article><article class="pick"><h3>Jamey Evenstar</h3><p class="who">Ten years on City Hall staff, most recently chief of staff to Councilor Candace Avalos. Mother of five who rides transit every day.<sup><a href="#src-18">18</a></sup></p><ul><li>As policy director for Commissioner Chloe Eudaly, worked on tenant protections and the Rose Lane bus projects.<sup><a href="#src-37">37</a></sup></li><li>Served on the team that set up Portland&rsquo;s new form of government.<sup><a href="#src-18">18</a></sup></li><li>Wants a city housing fund and a housing impact fee on homes that aren&rsquo;t anyone&rsquo;s primary residence.<sup><a href="#src-38">38</a></sup></li><li>Called the original Blazers arena deal &ldquo;a terrible deal.&rdquo;<sup><a href="#src-38">38</a></sup></li></ul><p class="q">&ldquo;I believe Portland can do hard things.&rdquo;<sup><a href="#src-37">37</a></sup></p>
+<p class="zero"><b>662</b> small-donor gifts, 95% of them $100 or less.<sup><a href="#src-6">6</a></sup> <b>0 of 35</b> named donors also gave to Republicans or Portland conservatives.</p><p class="end"><b>Endorsed by</b> the Portland Mercury (#2 in District 4),<sup><a href="#src-18">18</a></sup> Portland for All,<sup><a href="#src-39">39</a></sup> Sierra Club,<sup><a href="#src-20">20</a></sup> Street Trust Action Fund<sup><a href="#src-40">40</a></sup> and Building Power for Communities of Color.<sup><a href="#src-41">41</a></sup></p>
+<details><summary>What critics say</summary><p>Critics point to her years working for Eudaly and Avalos. A text from her Eudaly years, released through a records request, said neighborhood associations &ldquo;get too much power and voice.&rdquo;<sup><a href="#src-42">42</a></sup> Civic Lab found no stated position on hiring more officers or funding camp removals.<sup><a href="#src-38">38</a></sup></p></details></article><article class="pick"><h3>Jeremy Beausoleil Smith</h3><p class="who">Construction manager for capital projects at Portland State University and former project engineer. Democratic Party precinct committee person.<sup><a href="#src-43">43</a></sup></p><ul><li>Proposes a renters&rsquo; bill of rights: no rent increases while code violations go unfixed, six months&rsquo; notice, and a right to a lawyer in eviction.<sup><a href="#src-44">44</a></sup></li><li>Wants Portland Street Response running 24/7 citywide, and an auditor&rsquo;s review of police overtime before more police money.<sup><a href="#src-45">45</a></sup></li><li>Would pause new AI data centers and stop expansion of the riverside fuel-tank farm.<sup><a href="#src-44">44</a></sup></li><li>Organized against a PGE project in Forest Park.<sup><a href="#src-37">37</a></sup></li></ul><p class="q">&ldquo;I&rsquo;ll fight to lower costs and make life easier.&rdquo;<sup><a href="#src-43">43</a></sup></p>
+<p class="zero"><b>1,115</b> small-donor gifts, 98% of them $100 or less.<sup><a href="#src-6">6</a></sup> <b>1 of 17</b> named donors also gave to Portland conservatives (Vasquez, Adams); none to Republicans.</p><p class="end"><b>Endorsed by</b> Portland for All (#3 in District 4)<sup><a href="#src-39">39</a></sup> and PSU&rsquo;s faculty union.<sup><a href="#src-45">45</a></sup> The Mercury gives him an honorable mention.<sup><a href="#src-18">18</a></sup></p>
+<details><summary>What critics say</summary><p>The Mercury says he&rsquo;d face a learning curve.<sup><a href="#src-18">18</a></sup> He dropped out of the 2024 council race.<sup><a href="#src-37">37</a></sup> Civic Lab notes his plans don&rsquo;t name a funding source.<sup><a href="#src-44">44</a></sup></p></details></article></div>
+  <div class="others"><h4>Before you rank anyone else</h4><table class="otab"><tr><td class="c">Eric Zimmerman</td><td class="n">49%</td><td>Sided with the business bloc on 73 of 77 split votes. Voted yes on the $10M police-oversight cut. <a href="profiles/zimmerman.html">Profile →</a></td></tr><tr><td class="c">Eli Arnold</td><td class="n">44%</td><td>No votes yet. A sitting Portland police officer who makes police staffing his priority. <a href="profiles/arnold.html">Profile →</a></td></tr><tr><td class="c">Olivia Clark</td><td class="n">33%</td><td>Sided with the business bloc on 74 of 77 split votes. Led the $10M police-oversight cut. <a href="profiles/clark.html">Profile →</a></td></tr></table><p class="note">Small-donor gifts of $100 or less: Green and Evenstar 95%, Beausoleil Smith 98%, Arnold 93%, Clark 83%, Zimmerman 78%.</p></div>
+</section>
+
+<section class="ch" id="chair">
+  <div class="ch-head"><div class="race-h"><span class="ch-no">Multnomah County Chair</span><span class="seats">1 seat · 3 candidates</span></div>
+  <p class="verdict">Rank <u>Shannon Singleton</u> first.</p></div>
+  <div class="picks"><article class="pick"><h3>Shannon Singleton</h3><p class="who">Social worker and sitting county commissioner (District 2). Led the nonprofit JOIN, was interim director of the Joint Office of Homeless Services, and was Gov. Kate Brown&rsquo;s housing advisor. Won her seat in 2024 over Sam Adams.<sup><a href="#src-25">25</a></sup></p><ul><li>Won a county eviction-prevention and legal-aid package in the 2025 budget, including eviction defense lawyers and courthouse legal help.<sup><a href="#src-26">26</a></sup></li><li>Added money for lobbying transparency and fair housing investigations in East County (same budget).<sup><a href="#src-26">26</a></sup></li><li>Got the stalled Walnut Park redevelopment in Albina moving.<sup><a href="#src-27">27</a></sup></li><li>Convened the county&rsquo;s Eviction Prevention Table, Feb 2026.<sup><a href="#src-28">28</a></sup></li></ul><p class="q">&ldquo;I want to serve where I can make the most change.&rdquo;<sup><a href="#src-25">25</a></sup></p>
+<p class="zero"><b>2 of 172</b> of Singleton&rsquo;s individual donors also gave to Republicans or Portland conservatives. Brim-Edwards: <b style="color:var(--gop)">202 of 489</b>.</p><p class="end"><b>Endorsed by</b> the Portland Mercury,<sup><a href="#src-27">27</a></sup> Portland for All, Portland Association of Teachers, Working Families Party, Sierra Club and Basic Rights Oregon PAC.<sup><a href="#src-29">29</a></sup></p>
+<details><summary>What critics say</summary><p>She has raised far less money than Brim-Edwards.<sup><a href="#src-30">30</a></sup> She led the Joint Office of Homeless Services in 2022, and opponents may tie her to its record. SEIU Oregon endorsed both, ranking Brim-Edwards first.<sup><a href="#src-31">31</a></sup></p></details></article></div>
+  <div class="others"><h4>Before you rank anyone else</h4><table class="otab"><tr><td class="c">Julia Brim-Edwards</td><td class="n">41%</td><td>Voted for $101.6M in county money for the Blazers arena. 76 of her donors also gave to Republican campaigns. Basic Rights Oregon PAC withdrew its endorsement of her on Oct 6.<sup><a href="#src-46">46</a></sup> <a href="profiles/brimedwards.html">Profile →</a></td></tr></table><p class="note">Sharon Meieran is also running. We don&rsquo;t make a recommendation on her. If you rank anyone after Singleton, rank only someone you&rsquo;d want to win.</p></div>
+</section>
+
+<section class="ch" id="return">
+  <div class="ch-head"><span class="ch-no">Return your ballot</span><h2>Due by 8 pm, Tuesday, Nov 3.</h2></div>
+  <div class="ret">
+    <div><b>Drop it off</b>Any official drop box until 8 pm on Nov 3. <a href="https://multco.us/info/official-ballot-drop-sites" target="_blank" rel="noopener">Find one</a></div>
+    <div><b>Or mail it</b>No stamp needed. Mail by Tuesday, Oct 27 to be safe. Ballots postmarked by Nov 3 count if they arrive within 7 days.</div>
+    <div><b>Check it counted</b>Track your ballot online. <a href="https://multco.us/info/track-your-ballot" target="_blank" rel="noopener">Track it</a></div>
+  </div>
+</section>
+
+<section class="ch" id="how">
+  <div class="ch-head"><span class="ch-no">How we picked</span><h2>The record and the receipts.</h2></div>
+  <p class="note" style="font-size:16.5px">We recommend candidates who have voted, or pledge to vote, for renters, city services and the police accountability office voters created, and whose donors don&rsquo;t overlap with Republican campaigns. Small-donor numbers come from the city&rsquo;s Small Donor Elections data. Donor numbers come from Oregon&rsquo;s campaign finance records; <a href="receipts.html">Receipts</a> shows exactly how we count. Records and endorsements are linked to their sources below. We list what critics say too, so nothing here surprises you.</p>
+  <p class="note">This guide is independent. No candidate, campaign or committee asked for it, paid for it or reviewed it.</p>
+  <div class="signup no-print" id="signup">
+    <h3>Get all the facts from this site delivered to your inbox.</h3>
+    <p class="cap">The guide, plus any updates or corrections before Nov 3. No texts. Unsubscribe anytime.</p>
+    <form id="signup-form" data-kit-action="" novalidate><label class="vh" for="em">Email</label><input id="em" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required><button type="submit">Sign up</button></form>
+    <span class="cap" id="signup-msg" aria-live="polite"></span>
+  </div>
+</section>
+
+<section class="ch srcs" id="sources">
+  <div class="ch-head"><span class="ch-no">Sources</span></div>
+  <ol><li id="src-1"><a href="https://www.wweek.com/news/2024/07/24/city-council-entrance-interview-angelita-morillo/" target="_blank" rel="noopener">https://www.wweek.com/news/2024/07/24/city-council-entrance-interview-angelita-morillo/</a></li><li id="src-2"><a href="https://www.portlandmercury.com/?p=3917" target="_blank" rel="noopener">https://www.portlandmercury.com/?p=3917</a></li><li id="src-3"><a href="https://www.kptv.com/2025/12/03/portland-city-council-approves-new-fee-buildings-used-detention-facilities/" target="_blank" rel="noopener">https://www.kptv.com/2025/12/03/portland-city-council-approves-new-fee-buildings-used-detention-facilities/</a></li><li id="src-4"><a href="https://www.wweek.com/news/city/2026/05/20/controversial-proposal-to-reroute-10-million-from-new-police-accountability-body-fails/" target="_blank" rel="noopener">https://www.wweek.com/news/city/2026/05/20/controversial-proposal-to-reroute-10-million-from-new-police-accountability-body-fails/</a></li><li id="src-5"><a href="https://www.portland.gov/council/documents/ordinance/failed-pass/2026-222" target="_blank" rel="noopener">https://www.portland.gov/council/documents/ordinance/failed-pass/2026-222</a></li><li id="src-6"><a href="https://openelectionsportland.org/" target="_blank" rel="noopener">https://openelectionsportland.org/</a></li><li id="src-7"><a href="https://www.portlandmercury.com/election-2026/mercury-i-endorsements-vote-morillo-koyama-lane-novick-in-district-3/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/mercury-i-endorsements-vote-morillo-koyama-lane-novick-in-district-3/</a></li><li id="src-8"><a href="https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-portland-city-council/" target="_blank" rel="noopener">https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-portland-city-council/</a></li><li id="src-9"><a href="https://www.opb.org/article/2025/01/02/portland-city-council-pirtle-guiney-president/" target="_blank" rel="noopener">https://www.opb.org/article/2025/01/02/portland-city-council-pirtle-guiney-president/</a></li><li id="src-10"><a href="https://www.portland.gov/council/districts/3/tiffany-koyama-lane/news/2026/5/21/councilor-koyama-lane-delivers-vision-zero" target="_blank" rel="noopener">https://www.portland.gov/council/districts/3/tiffany-koyama-lane/news/2026/5/21/councilor-koyama-lane-delivers-vision-zero</a></li><li id="src-11"><a href="https://www.portland.gov/council/documents/ordinance/passed/192153" target="_blank" rel="noopener">https://www.portland.gov/council/documents/ordinance/passed/192153</a></li><li id="src-12"><a href="https://www.portlandmercury.com/news/reporting-live-continued-city-councils-contentious-budget-meeting/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/reporting-live-continued-city-councils-contentious-budget-meeting/</a></li><li id="src-13"><a href="https://www.opb.org/article/2026/08/12/portland-city-council-approves-moda-center-renovations-term-sheet/" target="_blank" rel="noopener">https://www.opb.org/article/2026/08/12/portland-city-council-approves-moda-center-renovations-term-sheet/</a></li><li id="src-14"><a href="https://www.portlandmercury.com/news/former-city-hall-staffer-files-discrimination-complaints-against-councilors-office-48309948/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/former-city-hall-staffer-files-discrimination-complaints-against-councilors-office-48309948/</a></li><li id="src-15"><a href="https://www.portland.gov/council/districts/3/tiffany-koyama-lane/news/2025/9/15/councilor-koyama-lane-brings-vision-zero" target="_blank" rel="noopener">https://www.portland.gov/council/districts/3/tiffany-koyama-lane/news/2025/9/15/councilor-koyama-lane-brings-vision-zero</a></li><li id="src-16"><a href="https://multco.us/file/portland_dist_4_mitch_green/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_4_mitch_green/download</a></li><li id="src-17"><a href="https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/16/councilor-mitch-green-colleagues-pass-historic-keep" target="_blank" rel="noopener">https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/16/councilor-mitch-green-colleagues-pass-historic-keep</a></li><li id="src-18"><a href="https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-green-evenstar-in-district-4/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-green-evenstar-in-district-4/</a></li><li id="src-19"><a href="https://www.opb.org/article/2026/07/22/portland-city-council-job-cuts-budget/" target="_blank" rel="noopener">https://www.opb.org/article/2026/07/22/portland-city-council-job-cuts-budget/</a></li><li id="src-20"><a href="https://www.sierraclub.org/oregon/2026-general-election-candidate-endorsements" target="_blank" rel="noopener">https://www.sierraclub.org/oregon/2026-general-election-candidate-endorsements</a></li><li id="src-21"><a href="https://wweek.com/news/city/2026/08/04/backyard-brush-fire-at-city-councilor-mitch-greens-home-violated-burn-ban" target="_blank" rel="noopener">https://wweek.com/news/city/2026/08/04/backyard-brush-fire-at-city-councilor-mitch-greens-home-violated-burn-ban</a></li><li id="src-22"><a href="https://kptv.com/2026/09/17/police-union-calls-portland-city-councilors-resignation-over-resurfaced-social-media-posts" target="_blank" rel="noopener">https://kptv.com/2026/09/17/police-union-calls-portland-city-councilors-resignation-over-resurfaced-social-media-posts</a></li><li id="src-23"><a href="https://www.portlandmercury.com/news/will-billboard-attacks-be-enough-to-oust-portlands-progressives/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/will-billboard-attacks-be-enough-to-oust-portlands-progressives/</a></li><li id="src-24"><a href="https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/17/newsletter-social-housing-coming-portland-major-win" target="_blank" rel="noopener">https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/17/newsletter-social-housing-coming-portland-major-win</a></li><li id="src-25"><a href="https://www.opb.org/article/2026/02/04/shannon-singleton-multnomah-county-chair/" target="_blank" rel="noopener">https://www.opb.org/article/2026/02/04/shannon-singleton-multnomah-county-chair/</a></li><li id="src-26"><a href="https://multco.us/file/fy_2026_summary_of_board_amendments_as_adopted_on_june_12%2C_2025/download" target="_blank" rel="noopener">https://multco.us/file/fy_2026_summary_of_board_amendments_as_adopted_on_june_12%2C_2025/download</a></li><li id="src-27"><a href="https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-singleton-for-multnomah-county-chair-ong-norris-williams-and-cruz-for-d2-commissioner/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-singleton-for-multnomah-county-chair-ong-norris-williams-and-cruz-for-d2-commissioner/</a></li><li id="src-28"><a href="https://multco.us/file/agenda-eviction-prevention-table-02_24_26.pdf/download" target="_blank" rel="noopener">https://multco.us/file/agenda-eviction-prevention-table-02_24_26.pdf/download</a></li><li id="src-29"><a href="https://www.portlandforall.org/county" target="_blank" rel="noopener">https://www.portlandforall.org/county</a></li><li id="src-30"><a href="https://www.wweek.com/news/county/2026/07/16/julia-brim-edwards-has-significantly-outraised-opponents-for-county-chair/" target="_blank" rel="noopener">https://www.wweek.com/news/county/2026/07/16/julia-brim-edwards-has-significantly-outraised-opponents-for-county-chair/</a></li><li id="src-31"><a href="https://www.wweek.com/news/county/2026/08/24/shannon-singleton-notches-some-labor-endorsements-with-a-catch/" target="_blank" rel="noopener">https://www.wweek.com/news/county/2026/08/24/shannon-singleton-notches-some-labor-endorsements-with-a-catch/</a></li><li id="src-32"><a href="https://www.opb.org/article/2026/10/07/what-to-know-about-portland-district-3-council-race/" target="_blank" rel="noopener">https://www.opb.org/article/2026/10/07/what-to-know-about-portland-district-3-council-race/</a></li><li id="src-33"><a href="https://multco.us/file/portland_dist_3_esther_leon/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_3_esther_leon/download</a></li><li id="src-34"><a href="https://www.portlandciviclab.org/voters-guide/portland-district-3/esther-leon" target="_blank" rel="noopener">https://www.portlandciviclab.org/voters-guide/portland-district-3/esther-leon</a></li><li id="src-35"><a href="https://www.portlandforall.org/district3" target="_blank" rel="noopener">https://www.portlandforall.org/district3</a></li><li id="src-36"><a href="https://www.portlandmercury.com/election-2026/meet-the-candidates-for-city-council-district-3/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/meet-the-candidates-for-city-council-district-3/</a></li><li id="src-37"><a href="https://www.portlandmercury.com/news/meet-the-candidates-for-city-council-district-4/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/meet-the-candidates-for-city-council-district-4/</a></li><li id="src-38"><a href="https://www.portlandciviclab.org/voters-guide/portland-district-4/jamey-evenstar" target="_blank" rel="noopener">https://www.portlandciviclab.org/voters-guide/portland-district-4/jamey-evenstar</a></li><li id="src-39"><a href="https://www.portlandforall.org/district4" target="_blank" rel="noopener">https://www.portlandforall.org/district4</a></li><li id="src-40"><a href="https://www.thestreettrust.org/actionfund/candidate-endorsements/endorsements-2026-general-election/" target="_blank" rel="noopener">https://www.thestreettrust.org/actionfund/candidate-endorsements/endorsements-2026-general-election/</a></li><li id="src-41"><a href="https://www.colororegon.org/endorsements-1" target="_blank" rel="noopener">https://www.colororegon.org/endorsements-1</a></li><li id="src-42"><a href="https://nwexaminer.com/p/council-candidate-jamey-evenstar" target="_blank" rel="noopener">https://nwexaminer.com/p/council-candidate-jamey-evenstar</a></li><li id="src-43"><a href="https://multco.us/file/portland_dist_4_jeremy_beausoleil_smith/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_4_jeremy_beausoleil_smith/download</a></li><li id="src-44"><a href="https://www.portlandciviclab.org/voters-guide/portland-district-4/jeremy-beausoleil-smith" target="_blank" rel="noopener">https://www.portlandciviclab.org/voters-guide/portland-district-4/jeremy-beausoleil-smith</a></li><li id="src-45"><a href="https://www.opb.org/article/2026/10/07/portland-city-council-race-district-4/" target="_blank" rel="noopener">https://www.opb.org/article/2026/10/07/portland-city-council-race-district-4/</a></li><li id="src-46"><a href="https://www.basicrights.org/news/bro-pac-rescinds-endorsement-of-julia-brim-edwards-for-multnomah-county-chair" target="_blank" rel="noopener">https://www.basicrights.org/news/bro-pac-rescinds-endorsement-of-julia-brim-edwards-for-multnomah-county-chair</a></li></ol>
+</section>
+<nav class="pnext" aria-label="More"><a href="./"><span class="eyebrow">← Home</span><b>The overview</b></a><a class="nx" href="share.html"><span class="eyebrow">Next →</span><b>Share the guide</b></a></nav>
+</div>
+<section class="act">
+  <div class="wrap">
+    <h2>Your ballot is already here.</h2>
+    <p>Portland uses ranked-choice voting. Anyone you rank can end up with your vote, so only rank candidates you&rsquo;d want to win.</p>
+    <div class="btns"><a class="btn" href="https://multco.us/info/official-ballot-drop-sites" target="_blank" rel="noopener">Find a drop box</a><a class="btn ghost" href="toolkit/whos-buying-pdx-voter-guide.pdf" download>Download the guide</a><button class="btn ghost" id="share" type="button">Copy link to share</button></div>
+    <span id="share-msg" class="cap" style="color:var(--paper);opacity:.85" aria-live="polite"></span>
+  </div>
+</section>
+<div class="wrap"><footer>
+  <span>Who&#x27;s Buying PDX is an independent citizen project. Not paid for or authorized by any candidate, campaign or committee. Built for under $20.</span>
+  <span>Corrections are posted here with the date.</span>
+</footer></div>
+<script src="app.js"></script>
+<script>
+(function(){var f=document.getElementById('signup-form'),m=document.getElementById('signup-msg');if(!f)return;
+f.addEventListener('submit',function(e){var a=f.getAttribute('data-kit-action');if(!a){e.preventDefault();m.textContent='Email sign-up opens soon. In the meantime, download the PDF above.';return;}
+f.action=a;f.method='post';});})();
+</script>
+</body></html>
