@@ -2,7 +2,7 @@
    Graphics and the guide stay visible; downloading asks for an email once per browser.
    Sign-ups go to a Google Sheet through a Google Apps Script web app (GATE_URL). */
 (function () {
-  var GATE_URL = ''; // paste the Apps Script /exec URL here
+  var GATE_URL = 'https://script.google.com/macros/s/AKfycbwHZdQaE4RJPdgfGQrR3dM8EdYycf2NWjjWpF3paCUf3e3mw1ugWMe-aRnlIYBvQ0yLfw/exec';
   var KEY = 'wbp_signed_up';
   function unlocked() { try { return localStorage.getItem(KEY) === '1'; } catch (e) { return false; } }
   function remember() { try { localStorage.setItem(KEY, '1'); } catch (e) {} }
