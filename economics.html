@@ -266,8 +266,18 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--ink-2);display:grid;ga
 .ec-flight{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:0;border:2px solid var(--ink)}
 .ec-claim{padding:22px;background:var(--paper-2);display:grid;gap:10px;align-content:start}
 .ec-big{font-family:var(--f-display);font-weight:700;font-size:clamp(22px,2.6vw,30px);line-height:1.2;margin:0}
-.ec-data{padding:22px;display:grid;gap:12px}.ec-data p{margin:0}
-@media (max-width:820px){.ec-flight{grid-template-columns:1fr}}
+.ec-data{padding:22px;display:grid;gap:16px}.ec-data p{margin:0}
+.ec-flight{grid-template-columns:1fr}
+.ec-claim{padding:22px 24px}
+.ec-nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.ec-n{display:grid;gap:6px;align-content:start;border-top:3px solid var(--peacock);padding-top:12px}
+.ec-n b{font-family:var(--f-display);font-weight:900;font-size:clamp(46px,5.6vw,68px);line-height:.9;color:var(--peacock);font-variant-numeric:tabular-nums}
+.ec-n h4{font-family:var(--f-display);font-size:21px;line-height:1.15;margin:4px 0 0}
+.ec-n p{font-size:15px;color:var(--ink-2);line-height:1.5}
+.ec-culture{font-size:16px;border-top:1px solid var(--rule);padding-top:14px}
+.ec-culture a,.ec-notes a{font-family:var(--f-data);font-size:12.5px;color:var(--ink-2)}
+.ec-notes{display:grid;gap:10px;max-width:72ch;margin-top:4px}.ec-notes p{margin:0;font-size:14.5px;color:var(--ink-2)}.ec-notes b{color:var(--ink)}
+@media (max-width:820px){.ec-nums{grid-template-columns:1fr;gap:20px}}
 .ec-fair{font-size:14.5px;color:var(--ink-2);max-width:72ch;margin:0}
 .dl-chart{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;align-items:end;height:220px;padding-top:24px}
 .dl-col{display:grid;grid-template-rows:auto 1fr auto;align-items:end;justify-items:center;height:100%;gap:6px}
@@ -375,11 +385,17 @@ section.ch:first-child{padding-top:24px}
     <div class="ec-flight">
       <div class="ec-claim"><span class="eyebrow">The Chamber says</span><p class="ec-big">"Portland has lost approximately $1 billion in taxable income annually since 2020."</p><a class="src" href="https://portlandmetrochamber.com/?p=6070" target="_blank" rel="noopener">2026 regional policy agenda</a></div>
       <div class="ec-data"><span class="eyebrow">What the data shows</span>
-        <p><b>High-earning households grew.</b> Census survey data show Multnomah households earning $500,000+ rose from about 2,500 in 2019 to about 7,700 in 2024 (small samples). <a href="https://www.pdx.edu/economics/sites/economics.web.wdt.pdx.edu/files/2026-07/Affluent_Households_Multnomah_County_updated2_MPH.pdf" target="_blank" rel="noopener">Portland State University</a></p>
-        <p><b>Green's office: the leavers' income jump tracked pandemic market gains.</b> An analysis by Councilor Mitch Green's senior policy analyst, released ahead of a county vote, tied it to investment gains seen nationwide, including in Seattle, which has no state income tax. <a href="https://www.portland.gov/council/districts/4/mitch-green/documents/illusion-preschool-tax-flight/download" target="_blank" rel="noopener">Green's office</a></p>
-        <p><b>Millionaires rarely move for taxes.</b> <a href="https://taxpolicycenter.org/taxvox/do-high-state-taxes-drive-away-millionaires-not-really" target="_blank" rel="noopener">Tax Policy Center</a></p>
-        <p><b>The honest caveat.</b> An independent 2026 working paper did find some extra departures after Preschool for All, costing about 8.5% of its revenue (the authors' estimate; not yet peer reviewed). Some people left; the revenue effect was modest. <a href="https://www.reed.edu/newsroom/press-releases/2026/reed-college-economist-co-authors-study-on-migration-effects-of-multnomah-county-preschool-for-all-tax.html" target="_blank" rel="noopener">Reed College</a></p>
+        <div class="ec-nums">
+          <div class="ec-n"><b>3×</b><h4>More high earners, not fewer.</h4><p>Multnomah households earning $500,000 or more went from about 2,500 in 2019 to about 7,700 in 2024 (Census survey data; small samples). <a href="https://www.pdx.edu/economics/sites/economics.web.wdt.pdx.edu/files/2026-07/Affluent_Households_Multnomah_County_updated2_MPH.pdf" target="_blank" rel="noopener">Portland State University</a></p></div>
+          <div class="ec-n"><b>No. 1</b><h4>People are moving in.</h4><p>Oregon was the top state for inbound moves in 2025, and nearly half of new arrivals reported incomes of $150,000 or more (one moving company's data). <a href="https://oregoncapitalchronicle.com/2026/01/13/new-study-says-oregon-tops-nation-for-inbound-out-of-state-movers-will-economic-growth-follow/" target="_blank" rel="noopener">Oregon Capital Chronicle</a></p></div>
+          <div class="ec-n"><b>97%</b><h4>Families like what the tax pays for.</h4><p>That's the share of Preschool for All families who say they're satisfied or highly satisfied, in a survey by the county's outside research partners. <a href="https://multco.us/news/news-release-preschool-all-serve-3800-children-2025-2026-school-year" target="_blank" rel="noopener">Multnomah County</a></p></div>
+        </div>
+        <p class="ec-culture"><b>And people still want to be here.</b> Condé Nast Traveler readers ranked Portland the No. 4 big city in the U.S. (<a href="https://www.timeout.com/usa/news/these-are-the-best-big-cities-in-america-according-to-conde-nast-readers-and-l-a-and-nyc-didnt-even-crack-the-top-5-101025" target="_blank" rel="noopener">2025</a>), and the New York Times put it on its 52 Places to Go in 2026 (<a href="https://www.koin.com/news/portland/one-of-the-most-culturally-dynamic-cities-new-york-times-ranks-portland-on-2026-travel-list/" target="_blank" rel="noopener">KOIN</a>).</p>
       </div>
+    </div>
+    <div class="ec-notes">
+      <p><b>So where did the "lost income" go?</b> An analysis by Councilor Mitch Green's office tied the jump in leavers' income to pandemic-era investment gains seen nationwide, including in Seattle, which has no state income tax (<a href="https://www.portland.gov/council/districts/4/mitch-green/documents/illusion-preschool-tax-flight/download" target="_blank" rel="noopener">Green's office</a>). Research finds millionaires rarely move for taxes (<a href="https://taxpolicycenter.org/taxvox/do-high-state-taxes-drive-away-millionaires-not-really" target="_blank" rel="noopener">Tax Policy Center</a>).</p>
+      <p><b>The honest caveat.</b> An independent 2026 working paper found some extra departures after Preschool for All, costing about 8.5% of its revenue (the authors' estimate; not yet peer reviewed). Some people left; the revenue effect was modest (<a href="https://www.reed.edu/newsroom/press-releases/2026/reed-college-economist-co-authors-study-on-migration-effects-of-multnomah-county-preschool-for-all-tax.html" target="_blank" rel="noopener">Reed College</a>).</p>
     </div>
     <p class="ec-fair">To be fair: the Chamber backs some public spending, including the parks levy (<a href="https://portlandmetrochamber.com/resources/portland-metro-chamber-and-city-come-to-an-agreement-on-parks-levy-rate/" target="_blank" rel="noopener">Chamber</a>) and, as a top 2026 priority, public money for the Moda Center renovation (<a href="https://portlandmetrochamber.com/?p=6064" target="_blank" rel="noopener">Chamber</a>). It doesn't use the words "trickle-down"; that's our description of an agenda built on cutting and capping taxes at the top. Inequality has many causes, and tax policy is one that research ties to it.</p>
   </section>
