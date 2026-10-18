@@ -34,8 +34,11 @@
 
   function open(a) { pending = a; lastFocus = document.activeElement; err.textContent = ''; back.classList.add('on'); setTimeout(function () { form.email.focus(); }, 30); }
   function close() { back.classList.remove('on'); pending = null; if (lastFocus) lastFocus.focus(); }
+  function fileOf(a) { return a.getAttribute('data-gated') || a.getAttribute('href'); }
   function download(a) {
-    var x = document.createElement('a'); x.href = a.href; x.setAttribute('download', a.getAttribute('download') || '');
+    var url = fileOf(a);
+    if (a.getAttribute('data-view')) { window.open(url, '_blank', 'noopener'); return; }
+    var x = document.createElement('a'); x.href = url; x.setAttribute('download', (url.split('?')[0].split('/').pop()) || '');
     document.body.appendChild(x); x.click(); x.remove();
   }
   function send(data) {
@@ -53,17 +56,21 @@
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { err.textContent = 'Please enter a valid email.'; form.email.focus(); return; }
     var a = pending;
     send({ email: email, zip: form.zip.value, website: form.website.value, updates: form.updates.checked ? 'yes' : 'no',
-           file: a ? a.getAttribute('href') : 'signup', page: location.pathname }).then(function () {
+           file: a ? fileOf(a) : 'signup', page: location.pathname }).then(function () {
       remember(); close(); if (a) download(a);
     });
   });
 
-  // Gate every download link on the page (images and pages stay viewable).
+  // Gate every download (data-gated buttons carry no file address; plain a[download] as a fallback).
   document.addEventListener('click', function (e) {
-    var a = e.target.closest && e.target.closest('a[download]');
-    if (!a || unlocked()) return;
-    e.preventDefault(); open(a);
+    var a = e.target.closest && e.target.closest('[data-gated], a[download]');
+    if (!a) return;
+    e.preventDefault();
+    if (unlocked()) { download(a); return; }
+    open(a);
   }, true);
+  // No right-click "save link" on gated buttons.
+  document.addEventListener('contextmenu', function (e) { if (e.target.closest && e.target.closest('[data-gated]')) e.preventDefault(); }, true);
 
   // Inline sign-up forms (e.g. the guide page) post to the same sheet.
   window.wbpSignup = function (email, updates) {
