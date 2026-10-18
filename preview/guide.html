@@ -723,8 +723,10 @@ section.ch:first-child{padding-top:24px}
   <span>Corrections are posted here with the date.</span>
 </footer></div>
 <script src="app.js"></script>
+<script src="gate.js?v=1"></script>
 <script>
 (function(){var f=document.getElementById('signup-form'),m=document.getElementById('signup-msg');if(!f)return;
-f.addEventListener('submit',function(e){var a=f.getAttribute('data-kit-action');if(!a){e.preventDefault();m.textContent='Email sign-up opens soon. In the meantime, download the PDF above.';return;}f.action=a;f.method='post';});})();
+f.addEventListener('submit',function(e){e.preventDefault();var v=f.email_address.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){m.textContent='Please enter a valid email.';return;}
+window.wbpSignup(v,true).then(function(){m.textContent="You're signed up. Downloads on this page are unlocked.";f.reset();});});})();
 </script>
 </body></html>
