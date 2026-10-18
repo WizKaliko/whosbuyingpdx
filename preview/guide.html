@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Voter guide · Who's Buying PDX</title>
-<meta name="description" content="Who we'd rank for Portland City Council Districts 3 and 4 and Multnomah County Chair, with the record and the donor numbers behind each pick.">
+<meta name="description" content="Who we&#x27;d rank in Portland on Nov 3, 2026: Koyama Lane and Morillo, León, Green, Evenstar, Beausoleil Smith, and Shannon Singleton for County Chair.">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Who's Buying PDX">
-<meta property="og:title" content="The Who's Buying PDX voter guide"><meta property="og:description" content="They aren't Republicans. Some of their donors are. 128 donors to Portland's business-backed candidates also gave to Republicans. Among the progressive councilors running against them: zero.">
-<meta property="og:image" content="https://whosbuyingpdx.com/toolkit/og.png?v=receipt2"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:title" content="Who we&#x27;d rank: the Who&#x27;s Buying PDX voter guide"><meta property="og:description" content="They aren't Republicans. Some of their donors are. 128 donors to Portland's business-backed candidates also gave to Republicans. Among the progressive councilors running against them: zero.">
+<meta property="og:image" content="https://whosbuyingpdx.com/toolkit/guide/guide-01.png"><meta property="og:image:width" content="1080"><meta property="og:image:height" content="1350">
 <meta property="og:image:alt" content="Partners Against Progress. They aren't Republicans. Some of their donors are. whosbuyingpdx.com">
 <meta property="og:url" content="https://whosbuyingpdx.com/guide.html"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://whosbuyingpdx.com/toolkit/og.png?v=receipt2">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101417'/%3E%3Ctext x='32' y='46' font-family='Georgia' font-weight='900' font-size='40' text-anchor='middle' fill='%23EF5168'%3E%3F%3C/text%3E%3C/svg%3E">
@@ -342,187 +342,329 @@ section.ch:first-child{padding-top:24px}
   .pnext{grid-template-columns:1fr}
   .pnext a.nx{text-align:left}
 }
-
-/* ---- voter guide ---- */
-.g-hero{display:grid;gap:14px;padding-top:28px}
-.g-hero h1{font-family:var(--f-display);font-size:clamp(44px,8vw,88px);line-height:.95;margin:0;letter-spacing:-.02em}
-.g-hero h1 em{color:var(--slate)}
-.g-hero .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+@font-face{font-family:'Bricolage Grotesque';src:url(guide/fonts/bricolage-grotesque-latin-standard-normal.woff2);font-weight:200 800;font-stretch:75% 100%}
+@font-face{font-family:'Martian Mono';src:url(guide/fonts/martian-mono-latin-standard-normal.woff2);font-weight:100 800;font-stretch:75% 112.5%}
+@font-face{font-family:Newsreader;src:url(guide/fonts/newsreader-latin-standard-normal.woff2);font-weight:200 800}
+@font-face{font-family:Newsreader;font-style:italic;src:url(guide/fonts/newsreader-latin-standard-italic.woff2);font-weight:200 800}
+.g-top{display:grid;gap:12px;padding:26px 0 18px;justify-items:start}
+.g-top h1{font-family:var(--f-display);font-size:clamp(40px,7vw,72px);line-height:.95;margin:0}
+.g-top .row{display:flex;gap:10px;flex-wrap:wrap}
 .gbtn{font:700 15px var(--f-body);padding:12px 18px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none;display:inline-block}
 .gbtn.ghost{background:transparent;color:var(--ink)}
-.slip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:2px solid var(--ink);margin-top:26px}
-.slip div{padding:14px 16px;border-right:1px solid var(--rule)}
-.slip div:last-child{border-right:0}
-.slip .eyebrow{display:block;margin-bottom:6px}
-.slip b{font-family:var(--f-display);font-size:22px;line-height:1.15;display:block}
-.slip small{display:block;color:var(--ink-2);font-size:14px;margin-top:4px}
-.rcv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;margin:18px 0 0;padding:0;list-style:none}
-.rcv li{border-left:3px solid var(--slate);padding-left:12px}
-.rcv b{display:block}
-.race-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
-.race-h .seats{font-family:var(--f-data);font-size:13px;color:var(--ink-2)}
-.verdict{font-family:var(--f-display);font-size:clamp(26px,3.4vw,36px);line-height:1.1;margin:6px 0 0}
-.verdict u{text-decoration-color:var(--peacock);text-decoration-thickness:4px;text-underline-offset:5px}
-.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:22px}
-.pick{border:1px solid var(--rule);border-top:5px solid var(--peacock);padding:18px 18px 16px;display:grid;gap:10px;align-content:start;background:var(--paper)}
-.pick h3{font-family:var(--f-display);font-size:28px;margin:0;line-height:1.05}
-.pick .who{margin:0;color:var(--ink-2);font-size:15.5px}
-.pick ul{margin:0;padding-left:18px;display:grid;gap:7px;font-size:15.5px}
-.pick .q{font-family:var(--f-serif,Georgia);font-style:italic;font-size:17px;margin:0}
-.pick .zero{font-family:var(--f-data);font-size:13px;background:var(--paper-2);padding:7px 10px}
-.pick .zero b{color:var(--peacock)}
-.pick .end{font-size:14px;color:var(--ink-2);margin:0}
-.pick details{font-size:14.5px;color:var(--ink-2)}
-.pick summary{cursor:pointer;font-family:var(--f-data);font-size:12.5px;text-transform:uppercase;letter-spacing:.06em}
-.pick details p{margin:8px 0 0}
-.others{margin-top:22px;border-top:1px solid var(--rule);padding-top:14px}
-.others h4{margin:0 0 8px;font-size:16px}
-.otab{width:100%;border-collapse:collapse;font-size:15px}
-.otab td{padding:8px 6px;border-bottom:1px solid var(--rule);vertical-align:top}
-.otab td.n{font-family:var(--f-data);font-size:18px;color:var(--gop);white-space:nowrap;width:70px;text-align:right}
-.otab td.c{width:180px;font-weight:700}
-.otab a{white-space:nowrap}
-.note{font-size:14.5px;color:var(--ink-2);max-width:72ch}
-.ret{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
-.ret div{border:1px solid var(--rule);padding:14px}
-.ret b{font-family:var(--f-display);font-size:22px;display:block;margin-bottom:4px}
-.signup{border:2px solid var(--ink);padding:20px;display:grid;gap:10px;margin-top:22px;background:var(--paper-2)}
-.signup h3{font-family:var(--f-display);font-size:26px;margin:0}
-.signup form{display:flex;gap:8px;flex-wrap:wrap}
-.signup input{font:16px var(--f-body);padding:11px 12px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);flex:1 1 220px;min-width:0}
-.signup button{font:700 15px var(--f-body);padding:11px 18px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
-.signup .cap{margin:0}
-.srcs{font-size:13px;color:var(--ink-2)}
-.srcs ol{padding-left:20px;margin:6px 0 0;display:grid;gap:3px}
-.srcs a{word-break:break-word}
-@media (max-width:700px){
-  .slip{grid-template-columns:1fr}.slip div{border-right:0;border-bottom:1px solid var(--rule)}.slip div:last-child{border-bottom:0}
-  .rcv,.ret{grid-template-columns:1fr}
-  .otab td.c{width:auto}
-}
-@media print{
-  @page{size:letter;margin:.5in}
-  :root{--paper:#fff;--paper-2:#F3F3EF;--ink:#111;--ink-2:#444;--rule:#BBB;--gop:#B3122E;--slate:#9A6B00;--peacock:#0F6B65;color-scheme:light}
-  body{font-size:11pt;background:#fff}
-  .topbar,.act,.no-print,.pnext,.signup,.pick details,.g-hero .row{display:none!important}
-  .wrap{max-width:none;padding:0}
-  .g-hero{padding-top:0}.g-hero h1{font-size:40pt}
-  .ch{margin-top:18pt!important;break-inside:auto}
-  .pick,.otab tr,.ret div,.slip{break-inside:avoid}
-  .picks{grid-template-columns:repeat(2,minmax(0,1fr));gap:12pt}
-  .pick{padding:10pt;gap:6pt}.pick h3{font-size:18pt}.pick ul,.pick .who{font-size:10pt}
-  .verdict{font-size:18pt}
-  a{text-decoration:none}
-  .print-only{display:block!important}
-  .srcs{font-size:8pt}
-}
-.print-only{display:none}
+.g-jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.g-jump a{display:inline-flex;align-items:center;gap:8px;font:600 14px var(--f-body);padding:6px 12px 6px 6px;border:1px solid var(--rule);border-radius:40px;text-decoration:none}
+.g-jump img{width:30px;height:30px;border-radius:50%;object-fit:cover;background:#E6DFCF}
+@media (min-width:1000px){.deck{grid-template-columns:1fr 1fr;align-items:start}.deck .vg{width:100%;max-width:520px}}
+.g-signup{border:2px solid var(--ink);padding:20px;display:grid;gap:10px;margin:34px auto 0;max-width:1060px;background:var(--paper-2)}
+.g-signup h2{font-family:var(--f-display);font-size:26px;margin:0}
+.g-signup form{display:flex;gap:8px;flex-wrap:wrap}
+.g-signup input{font:16px var(--f-body);padding:11px 12px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);flex:1 1 220px;min-width:0}
+.g-signup button{font:700 15px var(--f-body);padding:11px 18px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+@media (max-width:600px){.vg-cand .vg-body>*:not(.vg-cut){margin-bottom:1.3cqw!important}.vg-cand .vg-why{font-size:2.7cqw!important}.vg-did li{font-size:2.6cqw!important}.vg-chips li{font-size:2.4cqw!important}.vg-cand .vg-end,.vg-cand .vg-about{font-size:2.2cqw!important}}
+.g-src{font-size:13px;color:var(--ink-2);margin-top:30px}.g-src ol{padding-left:22px;display:grid;gap:3px}.g-src a{word-break:break-word}
+
+.deck{--night:#0C0E15;--ink:#1B1D24;--cream:#F4EFE3;--paper:#FBF8F1;--gold:#FFB627;--teal:#1F8A82;--teal2:#3CB3A9;--mute:#5B6170;
+  display:grid;gap:28px;justify-items:center}
+.vg{container-type:inline-size;position:relative;width:min(100%,560px);aspect-ratio:4/5;overflow:hidden;box-sizing:border-box;
+  background:var(--cream);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;border-radius:2px}
+.vg *{box-sizing:border-box}
+.vg .vg-kick{position:absolute;left:6cqw;top:5.5cqw;font:600 2.1cqw/1 "Martian Mono",monospace;font-stretch:85%;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.vg .vg-pg{position:absolute;right:4.5cqw;bottom:3.5cqw;font:600 1.8cqw "Martian Mono",monospace;opacity:.55}
+.vg h2{margin:0}
+.vg sup.vg-fn{font:600 .5em/0 "Martian Mono",monospace;color:var(--teal);vertical-align:.7em;margin-left:.1em}
+/* cover */
+.vg-cover{background:radial-gradient(120% 80% at 50% 0%,#1E2454 0%,var(--night) 62%);color:var(--cream)}
+.vg-cover .vg-kick{color:#AAB0C4}
+.vg-cover h1{position:absolute;left:6cqw;top:10cqw;margin:0;font:800 15cqw/.9 "Bricolage Grotesque";letter-spacing:-.03em}
+.vg-cover h1 em{font:italic 500 15.5cqw/1 Newsreader,serif;color:var(--gold);letter-spacing:-.01em}
+.vg-cover .vg-sub{position:absolute;left:6cqw;top:42cqw;width:72cqw;margin:0;font:400 3.5cqw/1.3 Newsreader,serif;color:#D9D4C8}
+.vg-cover .vg-crew{position:absolute;left:0;right:0;bottom:9cqw;height:68cqw}
+.vg-cover .vg-crew img{position:absolute;bottom:0;height:auto;filter:drop-shadow(0 1.2cqw 1.6cqw rgba(0,0,0,.45))}
+.vg-cover .vg-c1{left:-2cqw;width:29cqw;bottom:16cqw!important}.vg-cover .vg-c2{left:20cqw;width:25cqw;bottom:22cqw!important}
+.vg-cover .vg-c3{right:-1cqw;width:28cqw;bottom:16cqw!important}.vg-cover .vg-c4{right:20cqw;width:25cqw;bottom:22cqw!important}
+.vg-cover .vg-c5{left:6cqw;width:27cqw}.vg-cover .vg-c6{right:5cqw;width:27cqw}
+.vg-cover .vg-c7{left:27cqw;width:46cqw;z-index:3}
+.vg-cover .vg-foot{position:absolute;left:0;right:0;bottom:0;height:9cqw;background:var(--gold);color:var(--night);display:flex;justify-content:space-between;align-items:center;padding:0 6cqw;font:700 3cqw "Bricolage Grotesque"}
+/* cheat sheet */
+.vg-cheat h2{position:absolute;left:6cqw;top:9cqw;font:800 6.4cqw/1 "Bricolage Grotesque";letter-spacing:-.02em}
+.vg-cheat .vg-races{position:absolute;left:6cqw;right:6cqw;top:18cqw;display:grid;gap:2.2cqw}
+.vg-cheat .vg-vgrace{border-top:.6cqw solid var(--ink);padding-top:1.4cqw}
+.vg-cheat .vg-rh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1.2cqw}
+.vg-cheat .vg-rh b{font:700 3.1cqw "Bricolage Grotesque"}.vg-cheat .vg-rh span{font:600 1.9cqw "Martian Mono",monospace;color:var(--mute);text-transform:uppercase;letter-spacing:.08em}
+.vg-brow{display:grid;grid-template-columns:8.6cqw 1fr auto;align-items:center;gap:2.4cqw;padding:.6cqw 0;border-bottom:.2cqw solid #D5CDBB}
+.vg-brow img{width:8.6cqw;height:8.6cqw;border-radius:50%;background:#E6DFCF;object-fit:cover;border:.5cqw solid var(--gold)}
+.vg-brow .vg-bn{font:700 3.5cqw/1.1 "Bricolage Grotesque"}.vg-brow .vg-bn small{display:block;font:500 2.2cqw "Bricolage Grotesque";color:var(--teal);margin-top:.4cqw}
+.vg-brow .vg-dots{display:flex;gap:1.1cqw}
+.vg-brow .vg-dots i{width:4.6cqw;height:4.6cqw;border-radius:50%;border:.35cqw solid #9B9482;display:grid;place-items:center;font:600 1.9cqw "Martian Mono",monospace;font-style:normal;color:#9B9482}
+.vg-brow .vg-dots i.vg-on{background:var(--ink);border-color:var(--ink);color:var(--gold)}
+.vg-brow .vg-dots i.vg-on.vg-alt{background:var(--teal);border-color:var(--teal);color:#fff}
+.vg-cheat .vg-tip{margin:1.4cqw 0 0;font:italic 400 2.6cqw/1.3 Newsreader,serif;color:var(--ink)}
+/* ranked choice */
+.vg-rcv{background:var(--night);color:var(--cream)}.vg-rcv .vg-kick{color:#AAB0C4}
+.vg-rcv h2{position:absolute;left:6cqw;right:6cqw;top:10cqw;font:800 8.2cqw/1 "Bricolage Grotesque";letter-spacing:-.02em}
+.vg-steps{position:absolute;left:6cqw;right:6cqw;top:42cqw;margin:0;padding:0;list-style:none;display:grid;gap:4.6cqw}
+.vg-steps li{display:grid;grid-template-columns:11cqw 1fr;gap:3cqw;align-items:start}
+.vg-steps li>b{width:11cqw;height:11cqw;border-radius:50%;background:var(--gold);color:var(--night);display:grid;place-items:center;font:800 6cqw "Bricolage Grotesque"}
+.vg-steps h3{margin:.6cqw 0 .8cqw;font:700 4.2cqw/1.1 "Bricolage Grotesque"}.vg-steps p{margin:0;font:400 3.1cqw/1.35 Newsreader,serif;color:#D9D4C8}
+/* candidate */
+.vg-cand .vg-top{position:absolute;left:6cqw;right:5cqw;top:4.5cqw;display:flex;justify-content:space-between;align-items:center}
+.vg-cand .vg-pill{background:var(--ink);color:var(--cream);font:600 1.95cqw/1 "Martian Mono",monospace;font-stretch:85%;letter-spacing:.1em;text-transform:uppercase;padding:1.3cqw 1.8cqw;border-radius:5cqw}
+.vg-badge{width:16cqw;height:16cqw;border-radius:50%;background:var(--gold);color:var(--night);display:grid;place-content:center;text-align:center;z-index:4;box-shadow:0 .6cqw 0 var(--night)}
+.vg-badge small{font:700 2cqw "Martian Mono",monospace;text-transform:uppercase;letter-spacing:.12em}
+.vg-badge b{font:800 8cqw/1 "Bricolage Grotesque";letter-spacing:-.03em}.vg-badge b sup{font-size:.42em;vertical-align:.9em}
+.vg-badge.vg-two b{font-size:6.4cqw}.vg-badge.vg-two i{font:italic 500 .5em Newsreader,serif;margin:0 .2em;vertical-align:.25em}
+.vg-cand h2.vg-nm{margin:0 0 2.4cqw;font:800 8.4cqw/.92 "Bricolage Grotesque";letter-spacing:-.025em}
+.vg-cand h2.vg-nm.vg-long{font-size:7cqw}
+.vg-cand .vg-cut{float:right;width:41cqw;height:auto;margin:-1cqw -3cqw 1.5cqw 2.5cqw;filter:drop-shadow(0 1cqw 1.4cqw rgba(0,0,0,.18))}
+.vg-cand .vg-body{position:absolute;left:6cqw;right:6cqw;top:24cqw;bottom:12.5cqw;overflow:hidden}
+.vg-cand .vg-body>*:not(.vg-cut){margin-top:0;margin-bottom:1.7cqw}
+.vg-cand .vg-lbl{display:block;font:700 1.9cqw/1 "Martian Mono",monospace;font-stretch:85%;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:1cqw}
+.vg-cand .vg-why{font:400 2.9cqw/1.32 Newsreader,serif}
+.vg-cand blockquote{margin-left:0;margin-right:0;padding-left:2.2cqw;border-left:.8cqw solid var(--gold);font:italic 500 3.4cqw/1.22 Newsreader,serif}
+.vg-cand blockquote cite{display:block;font:600 1.8cqw "Martian Mono",monospace;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-top:1cqw}
+.vg-chips{padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:1.4cqw 2.4cqw;clear:both}
+.vg-chips li{display:flex;align-items:center;gap:1.6cqw;font:700 2.6cqw/1.1 "Bricolage Grotesque"}
+.vg-chips .vg-ic{flex:none;width:5.6cqw;height:5.6cqw;padding:1.1cqw;border-radius:50%;background:var(--teal);color:#fff}
+.vg-cand .vg-about{font:400 2.35cqw/1.35 "Bricolage Grotesque";color:#3B404C}
+.vg-cand .vg-end{font:400 2.3cqw/1.35 "Bricolage Grotesque";color:#3B404C}
+.vg-strip{position:absolute;left:0;right:0;bottom:0;min-height:11cqw;background:var(--ink);color:var(--cream);display:flex;flex-wrap:wrap;align-items:center;gap:.6cqw 3cqw;padding:2cqw 12cqw 2cqw 6cqw;font:500 2.2cqw/1.3 "Bricolage Grotesque";z-index:3}
+.vg-strip b{color:var(--gold);font-weight:800}
+.vg-strip sup.vg-fn{color:var(--teal2)}
+.vg-cand .vg-pg{color:var(--cream);z-index:4}
+/* featured: Koyama Lane gets the bigger treatment */
+.vg-cand.vg-feature{background:linear-gradient(180deg,var(--cream) 0 70%,#EADFC6 100%)}
+.vg-cand.vg-feature .vg-cut{width:44cqw}
+.vg-kl1 .vg-cut{width:50cqw;margin-right:-5cqw}
+.vg-kl1 h2.vg-nm{font-size:10.5cqw}
+.vg-kl1 .vg-why{font-size:3.35cqw}
+.vg-kl1 blockquote{font-size:4.2cqw;clear:both}
+.vg-kl2{background:var(--paper)}
+.vg-kl2 .vg-cut.vg-small{width:20cqw;border-radius:50%;border:.9cqw solid var(--gold);margin:0 0 1cqw 2cqw;filter:none}
+.vg-kl2 h2.vg-nm{font-size:7.4cqw}
+.vg-did{padding:0;list-style:none;display:grid;gap:1.8cqw;clear:both}
+.vg-did li{font:400 2.85cqw/1.3 Newsreader,serif;padding-left:3cqw;border-left:.7cqw solid var(--teal)}
+.vg-did b{font-family:"Bricolage Grotesque";font-weight:800}
+.vg-kl2 .vg-body{bottom:6cqw}
+.vg-cand.vg-feature h2.vg-nm{font-size:9cqw}
+/* return */
+.vg-ret{background:var(--night);color:var(--cream)}.vg-ret .vg-kick{color:#AAB0C4}
+.vg-ret h2{position:absolute;left:6cqw;right:6cqw;top:10cqw;font:800 9cqw/1 "Bricolage Grotesque";letter-spacing:-.02em}
+.vg-ret h2 em{font:italic 500 1.04em Newsreader,serif;color:var(--gold)}
+.vg-ret .vg-tiles{position:absolute;left:6cqw;right:6cqw;top:42cqw;display:grid;gap:3cqw}
+.vg-ret .vg-tiles div{display:grid;grid-template-columns:10cqw 1fr;column-gap:3cqw;align-items:center;border-top:.3cqw solid #343947;padding-top:3cqw}
+.vg-ret .vg-big{grid-row:span 2;width:10cqw;height:10cqw;padding:2cqw;border-radius:50%;background:var(--gold);color:var(--night)}
+.vg-ret h3{margin:0;font:700 4.2cqw "Bricolage Grotesque"}.vg-ret p{margin:.6cqw 0 0;font:400 3cqw/1.3 Newsreader,serif;color:#D9D4C8}
+.vg-ret .vg-share{position:absolute;left:6cqw;right:6cqw;bottom:8cqw;display:grid;grid-template-columns:20cqw 1fr;gap:4cqw;align-items:center}
+.vg-ret .vg-share img{width:20cqw;height:20cqw}.vg-ret .vg-share p{margin:0;font:400 3.2cqw/1.3 Newsreader,serif}.vg-ret .vg-share b{font-family:"Bricolage Grotesque";color:var(--gold)}
+/* back */
+.vg-back h2{position:absolute;left:6cqw;right:6cqw;top:10cqw;font:800 8cqw/1 "Bricolage Grotesque";letter-spacing:-.02em}
+.vg-back p{position:relative;margin:0}
+.vg-back .vg-lead,.vg-back>p{position:absolute;left:6cqw;right:8cqw}
+.vg-back .vg-lead{top:31cqw;font:500 4cqw/1.3 Newsreader,serif}
+.vg-back .vg-lead+p{top:53cqw;font:400 3cqw/1.4 Newsreader,serif}
+.vg-back .vg-lead+p+p{top:73cqw;font:400 3cqw/1.4 Newsreader,serif}
+.vg-back .vg-mail{position:absolute;left:6cqw;right:6cqw;top:88cqw;background:var(--gold);padding:3cqw 4cqw;display:grid;gap:1cqw}
+.vg-back .vg-mail b{font:800 4cqw/1.1 "Bricolage Grotesque"}.vg-back .vg-mail span{font:600 2.2cqw "Martian Mono",monospace}
+.vg-back .vg-fine{top:108cqw;font:400 2.1cqw/1.4 "Bricolage Grotesque";color:var(--mute)}
 </style>
 <link rel="stylesheet" href="indigo.css">
 </head><body>
 <div class="topbar"><div class="wrap">
   <header class="mast">
     <div class="logo"><a href="./"><span aria-hidden="true">Who's Buy<span class="lamp">ı</span>ng PDX</span><span class="vh">Who's Buying PDX</span></a></div>
-    <nav class="toc" aria-label="Sections"><a href="index.html#slate">The candidates</a><a href="why.html">Why it matters</a><a href="donors.html">The donors</a><a href="votes.html">The votes</a><a href="story.html">The story</a><a href="economics.html">The economics</a><a href="doom.html">The doom loop</a><a href="receipts.html">Receipts</a><a href="guide.html">Voter guide</a><a href="guide.html" aria-current=page>Voter guide</a><a href="share.html">Share</a></nav>
-    <details class="menu"><summary>Menu</summary><nav aria-label="Sections"><a href="./">Home</a><a href="index.html#slate">The candidates</a><a href="why.html">Why it matters</a><a href="donors.html">The donors</a><a href="votes.html">The votes</a><a href="story.html">The story</a><a href="economics.html">The economics</a><a href="doom.html">The doom loop</a><a href="receipts.html">Receipts</a><a href="guide.html">Voter guide</a><a href="guide.html" aria-current=page>Voter guide</a><a href="share.html">Share</a></nav></details>
+    <nav class="toc" aria-label="Sections"><a href="index.html#slate">The candidates</a><a href="why.html">Why it matters</a><a href="donors.html">The donors</a><a href="votes.html">The votes</a><a href="story.html">The story</a><a href="economics.html">The economics</a><a href="doom.html">The doom loop</a><a href="receipts.html">Receipts</a><a href="guide.html" aria-current=page>Voter guide</a><a href="share.html">Share</a></nav>
+    <details class="menu"><summary>Menu</summary><nav aria-label="Sections"><a href="./">Home</a><a href="index.html#slate">The candidates</a><a href="why.html">Why it matters</a><a href="donors.html">The donors</a><a href="votes.html">The votes</a><a href="story.html">The story</a><a href="economics.html">The economics</a><a href="doom.html">The doom loop</a><a href="receipts.html">Receipts</a><a href="guide.html" aria-current=page>Voter guide</a><a href="share.html">Share</a></nav></details>
   </header>
 </div></div>
 
 <div class="wrap page-top">
-<section class="g-hero">
-  <span class="eyebrow">Voter guide · Nov 3, 2026 election</span>
+<section class="g-top">
+  <span class="eyebrow">Voter guide · Nov 3, 2026</span>
+  <h1>Who we&rsquo;d rank.</h1>
+  <div class="row"><a class="gbtn" href="toolkit/whos-buying-pdx-voter-guide.pdf" download>Download the PDF</a><a class="gbtn ghost" href="#cheatsheet">Cheat sheet</a><a class="gbtn ghost" href="#signup">Get it by email</a></div>
+</section>
+<ul class="g-jump"><li><a href="#koyama"><img src="guide/heads/koyama.png" alt="">Tiffany</a></li><li><a href="#morillo"><img src="guide/heads/morillo.png" alt="">Angelita</a></li><li><a href="#leon"><img src="guide/heads/leon.png" alt="">Esther</a></li><li><a href="#green"><img src="guide/heads/green.png" alt="">Mitch</a></li><li><a href="#evenstar"><img src="guide/heads/evenstar.png" alt="">Jamey</a></li><li><a href="#beausoleil"><img src="guide/heads/beausoleil.png" alt="">Jeremy</a></li><li><a href="#singleton"><img src="guide/heads/singleton.png" alt="">Shannon</a></li></ul>
+<div class="deck"><section class="vg vg-cover" id="cover" aria-label="Cover">
+  <span class="vg-kick">Voter guide · Portland · Nov 3, 2026</span>
   <h1>Who we&rsquo;d <em>rank.</em></h1>
-  <p class="lede">Our picks for Portland City Council in Districts 3 and 4 and for Multnomah County Chair. Each one stands up for renters, city services and police accountability, and almost none of their named donors also fund Republicans.</p>
-  <div class="row"><a class="gbtn" href="toolkit/whos-buying-pdx-voter-guide.pdf" download>Download the PDF</a><a class="gbtn ghost" href="#signup">Get it by email</a><a class="gbtn ghost" href="https://multco.us/info/official-ballot-drop-sites" target="_blank" rel="noopener">Find a drop box</a></div>
-  <div class="slip">
-    <div><span class="eyebrow">City Council · District 3</span><b>1 Angelita Morillo<br>2 Tiffany Koyama Lane<br>3 Esther León</b><small>3 seats. Rank up to 6.</small></div>
-    <div><span class="eyebrow">City Council · District 4</span><b>1 Mitch Green<br>2 Jamey Evenstar<br>3 Jeremy Beausoleil Smith</b><small>3 seats. Rank up to 6.</small></div>
-    <div><span class="eyebrow">Multnomah County Chair</span><b>Shannon Singleton</b><small>1 seat. Rank up to 6.</small></div>
+  <p class="vg-sub">Seven people who stand up for renters, city services and police accountability, and whose donors don&rsquo;t fund Republicans.</p>
+  <div class="vg-crew">
+    <img class="vg-c1" src="guide/cut/green.png" alt=""><img class="vg-c2" src="guide/cut/morillo.png" alt=""><img class="vg-c3" src="guide/cut/singleton.png" alt="">
+    <img class="vg-c4" src="guide/cut/evenstar.png" alt=""><img class="vg-c5" src="guide/cut/leon.png" alt=""><img class="vg-c6" src="guide/cut/beausoleil.png" alt="">
+    <img class="vg-c7" src="guide/cut/koyama.png" alt="">
   </div>
-  <p class="print-only cap">whosbuyingpdx.com/guide.html · Every number and claim is sourced on the site.</p>
+  <div class="vg-foot"><span>Ballots due 8 pm Tuesday, Nov 3</span><span>whosbuyingpdx.com</span></div>
 </section>
-
-<section class="ch" id="ranking">
-  <div class="ch-head"><span class="ch-no">How ranking works</span><h2>Rank only people you&rsquo;d want to win.</h2></div>
-  <ul class="rcv">
-    <li><b>Your first choice comes first.</b> Ranking someone second never hurts your first choice.</li>
-    <li><b>Anyone you rank can end up with your vote.</b> If your first choice wins or is eliminated, your vote can move to your next choice.</li>
-    <li><b>You don&rsquo;t have to fill every column.</b> It&rsquo;s fine to rank one or two people and stop.</li>
-    <li><b>One bubble per column.</b> Don&rsquo;t give two candidates the same rank, or one candidate two ranks.</li>
-  </ul>
-  <p class="note">Council districts elect three people each. A candidate wins with more than 25% of the vote after rankings are counted. County Chair elects one person, by majority.</p>
+<section class="vg vg-cheat" id="cheatsheet" aria-label="Cheat sheet">
+  <span class="vg-kick">Your cheat sheet</span>
+  <h2>Fill in your ballot like this.</h2>
+  <div class="vg-races"><div class="vg-vgrace"><div class="vg-rh"><b>City Council · District 3</b><span>3 seats · rank up to 6</span></div>
+    <div class="vg-brow"><img src="guide/heads/koyama.png" alt=""><span class="vg-bn">Tiffany Koyama Lane<small>Rank 1st or 2nd, either order</small></span><span class="vg-dots"><i class="vg-on vg-alt">1</i><i class="vg-on vg-alt">2</i><i class="">3</i><i class="">4</i><i class="">5</i><i class="">6</i></span></div><div class="vg-brow"><img src="guide/heads/morillo.png" alt=""><span class="vg-bn">Angelita Morillo<small>Rank 1st or 2nd, either order</small></span><span class="vg-dots"><i class="vg-on vg-alt">1</i><i class="vg-on vg-alt">2</i><i class="">3</i><i class="">4</i><i class="">5</i><i class="">6</i></span></div><div class="vg-brow"><img src="guide/heads/leon.png" alt=""><span class="vg-bn">Esther León<small>Rank 3rd</small></span><span class="vg-dots"><i class="">1</i><i class="">2</i><i class="vg-on">3</i><i class="">4</i><i class="">5</i><i class="">6</i></span></div>
+    <p class="vg-tip">Koyama Lane and Morillo: give one your 1st and the other your 2nd. Either order helps both.</p></div>
+  <div class="vg-vgrace"><div class="vg-rh"><b>City Council · District 4</b><span>3 seats · rank up to 6</span></div>
+    <div class="vg-brow"><img src="guide/heads/green.png" alt=""><span class="vg-bn">Mitch Green<small>Rank 1st</small></span><span class="vg-dots"><i class="vg-on">1</i><i class="">2</i><i class="">3</i><i class="">4</i><i class="">5</i><i class="">6</i></span></div><div class="vg-brow"><img src="guide/heads/evenstar.png" alt=""><span class="vg-bn">Jamey Evenstar<small>Rank 2nd</small></span><span class="vg-dots"><i class="">1</i><i class="vg-on">2</i><i class="">3</i><i class="">4</i><i class="">5</i><i class="">6</i></span></div><div class="vg-brow"><img src="guide/heads/beausoleil.png" alt=""><span class="vg-bn">Jeremy Beausoleil Smith<small>Rank 3rd</small></span><span class="vg-dots"><i class="">1</i><i class="">2</i><i class="vg-on">3</i><i class="">4</i><i class="">5</i><i class="">6</i></span></div></div>
+  <div class="vg-vgrace"><div class="vg-rh"><b>Multnomah County Chair</b><span>1 seat · rank up to 6</span></div>
+    <div class="vg-brow"><img src="guide/heads/singleton.png" alt=""><span class="vg-bn">Shannon Singleton<small>Rank 1st</small></span><span class="vg-dots"><i class="vg-on">1</i><i class="">2</i><i class="">3</i><i class="">4</i><i class="">5</i><i class="">6</i></span></div></div></div>
+  <span class="vg-pg">2</span>
 </section>
-
-<section class="ch" id="d3">
-  <div class="ch-head"><div class="race-h"><span class="ch-no">Portland City Council · District 3</span><span class="seats">3 seats · 21 candidates</span></div>
-  <p class="verdict">Rank <u>Angelita Morillo</u> 1st, <u>Tiffany Koyama Lane</u> 2nd and <u>Esther León</u> 3rd.</p></div>
-  <div class="picks"><article class="pick"><h3>Angelita Morillo</h3><p class="who">Former policy advocate at Partners for a Hunger-Free Oregon. Worked three years in Commissioner Jo Ann Hardesty&rsquo;s office.<sup><a href="#src-1">1</a></sup> An immigrant and a renter.<sup><a href="#src-2">2</a></sup></p><ul><li>Wrote Portland&rsquo;s ban on rent-setting software that lets landlords coordinate prices. Passed 8&ndash;2, Nov 2025.<sup><a href="#src-3">3</a></sup></li><li>With Mitch Green, passed an impact fee on landlords who lease to immigration detention facilities. 9&ndash;2, Dec 2025.<sup><a href="#src-4">4</a></sup></li><li>Voted no on moving $10M out of the police accountability office voters created. Failed 6&ndash;6, May 2026.<sup><a href="#src-5">5</a></sup></li><li>Co-led, with Green, Koyama Lane and two colleagues, a plan to restore 55 frontline city jobs. Tied 6&ndash;6; the mayor broke the tie against it, July 2026.<sup><a href="#src-6">6</a></sup></li></ul>
-<p class="zero"><b>2,398</b> small-donor gifts, 95% of them $100 or less.<sup><a href="#src-7">7</a></sup> <b>0 of 203</b> named donors also gave to Republicans or Portland conservatives.</p><p class="end"><b>Endorsed by</b> the Portland Mercury (#1 in District 3),<sup><a href="#src-8">8</a></sup> Sierra Club,<sup><a href="#src-9">9</a></sup> Portland DSA,<sup><a href="#src-10">10</a></sup> SEIU Oregon, Working Families Party and Basic Rights Oregon PAC.<sup><a href="#src-11">11</a></sup></p>
-<details><summary>What critics say</summary><p>Willamette Week ranks her fifth.<sup><a href="#src-12">12</a></sup> Even the Mercury, which ranks her first, says she could pick her battles more deftly.<sup><a href="#src-8">8</a></sup> Several of her budget proposals failed.</p></details></article><article class="pick"><h3>Tiffany Koyama Lane</h3><p class="who">Former Sunnyside Environmental School teacher and Portland Association of Teachers organizer.<sup><a href="#src-13">13</a></sup> The council&rsquo;s first-ever vice president.<sup><a href="#src-8">8</a></sup></p><ul><li>Led Vision Zero work on traffic deaths, and co-sponsored dedicating 12.5% of the transportation utility fee to it, spring 2026.<sup><a href="#src-14">14</a></sup></li><li>Updated the city&rsquo;s civil rights code to protect family structure, including nontraditional families. Passed 11&ndash;0, Mar 2026.<sup><a href="#src-15">15</a></sup></li><li>Voted no on the $10M police-oversight cut,<sup><a href="#src-5">5</a></sup> and restored 14 urban forestry jobs in the May 2026 budget.<sup><a href="#src-16">16</a></sup></li><li>Voted no on the Blazers arena term sheet, which passed 8&ndash;4 in August 2026.<sup><a href="#src-17">17</a></sup></li></ul><p class="q">&ldquo;every traffic death is preventable&rdquo;<sup><a href="#src-20">20</a></sup></p>
-<p class="zero"><b>2,509</b> small-donor gifts, 95% of them $100 or less.<sup><a href="#src-7">7</a></sup> <b>0 of 269</b> named donors also gave to Republicans or Portland conservatives.</p><p class="end"><b>Endorsed by</b> the Portland Mercury (#2),<sup><a href="#src-8">8</a></sup> Willamette Week (#2),<sup><a href="#src-12">12</a></sup> Sierra Club<sup><a href="#src-9">9</a></sup> and Portland DSA.<sup><a href="#src-10">10</a></sup> Her campaign also lists the Portland Association of Teachers, SEIU Oregon and Basic Rights Oregon.<sup><a href="#src-18">18</a></sup></p>
-<details><summary>What critics say</summary><p>A former aide filed complaints in February 2026 alleging retaliation; she said she can&rsquo;t comment on personnel issues.<sup><a href="#src-19">19</a></sup> The Mercury reports the city investigated and dismissed it.<sup><a href="#src-8">8</a></sup> Several of her priorities failed on 6&ndash;6 votes.</p></details></article><article class="pick"><h3>Esther León</h3><p class="who">Physical therapist who works with people in Oregon prisons.<sup><a href="#src-38">38</a></sup> Holds a doctorate in physical therapy and teaches at the community college level. First run for office.<sup><a href="#src-39">39</a></sup></p><ul><li>Wants Portland Street Response running 24/7 citywide.<sup><a href="#src-39">39</a></sup></li><li>Backs social housing and a vacancy tax on corporate landlords, and prefers supportive housing to overnight-only shelters.<sup><a href="#src-39">39</a></sup></li><li>Would raise the annual impact fee on the ICE facility&rsquo;s owner and pause new AI data centers.<sup><a href="#src-40">40</a></sup></li><li>On the Blazers arena: no clean-energy fund money, and a guaranteed return for the public.<sup><a href="#src-40">40</a></sup></li></ul><p class="q">&ldquo;life doesn&rsquo;t have to be this way&rdquo;<sup><a href="#src-13">13</a></sup></p>
-<p class="zero"><b>383</b> small-donor gifts, 98% of them $100 or less.<sup><a href="#src-7">7</a></sup> <b>0 of 6</b> named donors also gave to Republicans or Portland conservatives.</p><p class="end"><b>Endorsed by</b> Sierra Club<sup><a href="#src-9">9</a></sup> and Portland for All (#3 in District 3).<sup><a href="#src-41">41</a></sup> The Mercury gives her an honorable mention.<sup><a href="#src-8">8</a></sup></p>
-<details><summary>What critics say</summary><p>This is her first run for office, with no prior government experience. The Mercury called one idea, bringing back public payphones, admirable but possibly lofty.<sup><a href="#src-13">13</a></sup> Portland Civic Lab notes her housing and utility plans don&rsquo;t list costs.<sup><a href="#src-40">40</a></sup></p></details></article></div>
-  <div class="others"><h4>Before you rank anyone else</h4><table class="otab"><tr><td class="c">Kellie Torres</td><td class="n">42%</td><td>No record in office yet. Endorsed by Mayor Wilson.<sup><a href="#src-38">38</a></sup> <a href="profiles/torres.html">Profile →</a></td></tr><tr><td class="c">Steve Novick</td><td class="n">25%</td><td>Sided with the business bloc on 52 of 79 split votes, including all 18 on homelessness, labor and housing. Co-sponsored the $10M police-oversight cut. He votes with progressives on the officer mask ban, and the Mercury and Willamette Week both endorse him. <a href="profiles/novick.html">Profile →</a></td></tr></table><p class="note">Percent = share of each candidate&rsquo;s named individual donors since 2023 who also gave to Republican campaigns or Portland conservatives. Gifts of $100 or less are filed without names, so this check covers named donors only, for every candidate. Small-donor gifts of $100 or less: Morillo and Koyama Lane 95%, León 98%, Novick 84%, Torres 82%. <a href="receipts.html">How we count</a>.</p></div>
+<section class="vg vg-rcv" id="ranking" aria-label="How ranking works">
+  <span class="vg-kick">How ranked choice works</span>
+  <h2>Rank the people you want to win. Then stop.</h2>
+  <ol class="vg-steps">
+    <li><b>1</b><div><h3>Your first choice comes first.</h3><p>Ranking someone 2nd or 3rd never hurts your 1st choice.</p></div></li>
+    <li><b>2</b><div><h3>Your vote keeps working.</h3><p>If your first choice wins or is knocked out, your vote moves to your next choice.</p></div></li>
+    <li><b>3</b><div><h3>Leave the rest blank.</h3><p>Anyone you rank can end up with your vote. It&rsquo;s fine to rank one, two or three people.</p></div></li>
+    <li><b>4</b><div><h3>One bubble per column.</h3><p>Don&rsquo;t give two people the same rank. Council districts elect three people; the Chair race elects one.</p></div></li>
+  </ol>
+  <span class="vg-pg">3</span>
 </section>
-
-<section class="ch" id="d4">
-  <div class="ch-head"><div class="race-h"><span class="ch-no">Portland City Council · District 4</span><span class="seats">3 seats · 12 candidates</span></div>
-  <p class="verdict">Rank <u>Mitch Green</u> 1st, <u>Jamey Evenstar</u> 2nd and <u>Jeremy Beausoleil Smith</u> 3rd.</p></div>
-  <div class="picks"><article class="pick"><h3>Mitch Green</h3><p class="who">PhD economist and Army veteran who worked at the Bonneville Power Administration.<sup><a href="#src-21">21</a></sup></p><ul><li>Co-sponsored &ldquo;Keep Portland Housed&rdquo;: $17.5M to start a social housing loan fund, plus money for eviction prevention, April 2026.<sup><a href="#src-22">22</a></sup></li><li>Co-sponsored the rent-setting software ban<sup><a href="#src-3">3</a></sup> and, with Morillo, the detention-facility impact fee.<sup><a href="#src-4">4</a></sup></li><li>Voted no on the $10M police-oversight cut. Failed 6&ndash;6.<sup><a href="#src-5">5</a></sup></li><li>Pushed to keep 55 city jobs. It tied 6&ndash;6 and the mayor broke the tie against it; a smaller package saving about 30 jobs then passed.<sup><a href="#src-23">23</a></sup></li></ul><p class="q">&ldquo;permanently affordable housing built for people, not portfolios&rdquo;<sup><a href="#src-29">29</a></sup></p>
-<p class="zero"><b>2,533</b> small-donor gifts, 95% of them $100 or less.<sup><a href="#src-7">7</a></sup> <b>0 of 227</b> named donors also gave to Republicans or Portland conservatives.</p><p class="end"><b>Endorsed by</b> the Portland Mercury (#1 in District 4),<sup><a href="#src-24">24</a></sup> Sierra Club<sup><a href="#src-9">9</a></sup> and Portland DSA.<sup><a href="#src-10">10</a></sup> His voters&rsquo; pamphlet statement also lists SEIU Oregon, AFSCME, the Portland Association of Teachers and Basic Rights Oregon PAC.<sup><a href="#src-21">21</a></sup></p>
-<details><summary>What critics say</summary><p>He paid an overdue $7,328 property tax balance in June 2026 after it drew media attention.<sup><a href="#src-25">25</a></sup> He burned a brush pile during a July burn ban; his office said he was unaware of the ban.<sup><a href="#src-26">26</a></sup> The police union called for him to resign over posts from 2020&ndash;21, before he ran for office; he declined.<sup><a href="#src-27">27</a></sup> Billboards attacking him are funded through a Chamber-aligned committee.<sup><a href="#src-28">28</a></sup></p></details></article><article class="pick"><h3>Jamey Evenstar</h3><p class="who">Ten years on City Hall staff,<sup><a href="#src-42">42</a></sup> most recently chief of staff to Councilor Candace Avalos. Mother of five who rides transit every day.<sup><a href="#src-24">24</a></sup></p><ul><li>As policy director for Commissioner Chloe Eudaly, worked on tenant protections and the Rose Lane bus projects.<sup><a href="#src-42">42</a></sup></li><li>Served on the team that set up Portland&rsquo;s new form of government.<sup><a href="#src-24">24</a></sup></li><li>Wants a city housing fund and a housing impact fee on homes that aren&rsquo;t anyone&rsquo;s primary residence.<sup><a href="#src-43">43</a></sup></li><li>Called the original Blazers arena term sheet a terrible deal.<sup><a href="#src-43">43</a></sup></li></ul><p class="q">&ldquo;I believe Portland can do hard things.&rdquo;<sup><a href="#src-42">42</a></sup></p>
-<p class="zero"><b>662</b> small-donor gifts, 95% of them $100 or less.<sup><a href="#src-7">7</a></sup> <b>0 of 35</b> named donors also gave to Republicans or Portland conservatives.</p><p class="end"><b>Endorsed by</b> the Portland Mercury (#2 in District 4),<sup><a href="#src-24">24</a></sup> Portland for All,<sup><a href="#src-44">44</a></sup> Sierra Club,<sup><a href="#src-9">9</a></sup> Street Trust Action Fund<sup><a href="#src-45">45</a></sup> and Building Power for Communities of Color.<sup><a href="#src-46">46</a></sup></p>
-<details><summary>What critics say</summary><p>Critics point to her years working for Eudaly and Avalos. A local columnist reported a text from her Eudaly years, released through a records request, saying neighborhood associations &ldquo;get too much power and voice.&rdquo;<sup><a href="#src-47">47</a></sup> Civic Lab found no stated position on hiring more officers or funding camp removals.<sup><a href="#src-43">43</a></sup></p></details></article><article class="pick"><h3>Jeremy Beausoleil Smith</h3><p class="who">Construction manager for capital projects at Portland State University and former project engineer. Democratic Party precinct committee person.<sup><a href="#src-48">48</a></sup></p><ul><li>Proposes a renters&rsquo; bill of rights: no rent increases while code violations go unfixed, six months&rsquo; notice, and a right to a lawyer in eviction.<sup><a href="#src-49">49</a></sup></li><li>Wants Portland Street Response running 24/7 citywide, and an auditor&rsquo;s review of police response times and overtime.<sup><a href="#src-49">49</a></sup></li><li>Would pause new AI data centers and stop expansion of the riverside fuel-tank farm.<sup><a href="#src-49">49</a></sup></li><li>Organized against a PGE project in Forest Park.<sup><a href="#src-42">42</a></sup></li></ul><p class="q">&ldquo;I&rsquo;ll fight to lower costs and make life easier.&rdquo;<sup><a href="#src-48">48</a></sup></p>
-<p class="zero"><b>1,115</b> small-donor gifts, 98% of them $100 or less.<sup><a href="#src-7">7</a></sup> <b>1 of 17</b> named donors also gave to Portland conservatives (Vasquez, Adams); none to Republicans.</p><p class="end"><b>Endorsed by</b> Portland for All (#3 in District 4)<sup><a href="#src-44">44</a></sup> and PSU&rsquo;s faculty union.<sup><a href="#src-50">50</a></sup> The Mercury gives him an honorable mention.<sup><a href="#src-24">24</a></sup></p>
-<details><summary>What critics say</summary><p>The Mercury says he&rsquo;d face a learning curve.<sup><a href="#src-24">24</a></sup> He dropped out of the 2024 council race.<sup><a href="#src-42">42</a></sup> Civic Lab notes his plans don&rsquo;t name a funding source.<sup><a href="#src-49">49</a></sup></p></details></article></div>
-  <div class="others"><h4>Before you rank anyone else</h4><table class="otab"><tr><td class="c">Eric Zimmerman</td><td class="n">49%</td><td>Sided with the business bloc on 73 of 77 split votes. Voted yes on the $10M police-oversight cut. <a href="profiles/zimmerman.html">Profile →</a></td></tr><tr><td class="c">Eli Arnold</td><td class="n">44%</td><td>No votes yet. A sitting Portland police officer.<sup><a href="#src-51">51</a></sup> <a href="profiles/arnold.html">Profile →</a></td></tr><tr><td class="c">Olivia Clark</td><td class="n">33%</td><td>Sided with the business bloc on 74 of 77 split votes. Led the $10M police-oversight cut. <a href="profiles/clark.html">Profile →</a></td></tr></table><p class="note">Small-donor gifts of $100 or less: Green and Evenstar 95%, Beausoleil Smith 98%, Arnold 93%, Clark 83%, Zimmerman 78%.</p></div>
-</section>
-
-<section class="ch" id="chair">
-  <div class="ch-head"><div class="race-h"><span class="ch-no">Multnomah County Chair</span><span class="seats">1 seat · 3 candidates</span></div>
-  <p class="verdict">Rank <u>Shannon Singleton</u> first.</p></div>
-  <div class="picks"><article class="pick"><h3>Shannon Singleton</h3><p class="who">Social worker and sitting county commissioner (District 2). Led the nonprofit JOIN and worked for Gov. Kate Brown as her equity director. Won her seat in 2024 over Sam Adams.<sup><a href="#src-30">30</a></sup> Was interim director of the Joint Office of Homeless Services.<sup><a href="#src-31">31</a></sup></p><ul><li>Won a county eviction-prevention and legal-aid package in the 2025 budget, including eviction defense lawyers and courthouse legal help.<sup><a href="#src-32">32</a></sup></li><li>Won $128,000 for fair housing investigations in East County, and co-sponsored a lobbying-transparency earmark with Brim-Edwards (same budget).<sup><a href="#src-32">32</a></sup></li><li>Got the stalled Walnut Park redevelopment in Albina moving.<sup><a href="#src-33">33</a></sup></li><li>Hosts the county&rsquo;s Eviction Prevention Table, which met in February 2026.<sup><a href="#src-34">34</a></sup></li></ul><p class="q">&ldquo;I want to serve where I can make the most change.&rdquo;<sup><a href="#src-30">30</a></sup></p>
-<p class="zero"><b>2 of 172</b> of Singleton&rsquo;s individual donors also gave to Republicans or Portland conservatives. Brim-Edwards: <b style="color:var(--gop)">202 of 489</b>.</p><p class="end"><b>Endorsed by</b> the Portland Mercury,<sup><a href="#src-33">33</a></sup> Portland for All, Portland Association of Teachers, Working Families Party, Sierra Club and Basic Rights Oregon PAC.<sup><a href="#src-35">35</a></sup></p>
-<details><summary>What critics say</summary><p>She has raised far less money than Brim-Edwards.<sup><a href="#src-36">36</a></sup> She led the Joint Office of Homeless Services in 2022, and opponents may tie her to its record. SEIU Oregon endorsed both, ranking Brim-Edwards first.<sup><a href="#src-37">37</a></sup></p></details></article></div>
-  <div class="others"><h4>Before you rank anyone else</h4><table class="otab"><tr><td class="c">Julia Brim-Edwards</td><td class="n">41%</td><td>76 of her named donors also gave to Republican campaigns. Basic Rights Oregon PAC withdrew its endorsement of her on Oct 6.<sup><a href="#src-52">52</a></sup> <a href="profiles/brimedwards.html">Profile →</a></td></tr></table><p class="note">Sharon Meieran is also running. We don&rsquo;t make a recommendation on her. If you rank anyone after Singleton, rank only someone you&rsquo;d want to win.</p></div>
-</section>
-
-<section class="ch" id="return">
-  <div class="ch-head"><span class="ch-no">Return your ballot</span><h2>Due by 8 pm, Tuesday, Nov 3.</h2></div>
-  <div class="ret">
-    <div><b>Drop it off</b>Any official drop box until 8 pm on Nov 3. <a href="https://multco.us/info/official-ballot-drop-sites" target="_blank" rel="noopener">Find one</a></div>
-    <div><b>Or mail it</b>No stamp needed. Mail by Tuesday, Oct 27 to be safe. Ballots postmarked by Nov 3 count if they arrive within 7 days.</div>
-    <div><b>Check it counted</b>Track your ballot online. <a href="https://multco.us/info/track-your-ballot" target="_blank" rel="noopener">Track it</a></div>
+<section class="vg vg-cand vg-feature vg-kl1" id="koyama" aria-label="Tiffany Koyama Lane">
+  <div class="vg-top"><span class="vg-pill">Portland City Council · District 3</span><div class="vg-badge vg-two"><small>Rank</small><b>1<i>or</i>2</b></div></div>
+  <div class="vg-body">
+    <img class="vg-cut" src="guide/cut/koyama.png" alt="Tiffany Koyama Lane">
+    <h2 class="vg-nm">Tiffany Koyama Lane</h2>
+    <p class="vg-why"><span class="vg-lbl">Why rank her</span>A Portland public school teacher for 16 years, Tiffany was elected the council&rsquo;s vice president by a unanimous vote of her colleagues.<sup class="vg-fn">1</sup> She led the city&rsquo;s Vision Zero work to end traffic deaths,<sup class="vg-fn">2</sup> wrote protections for every kind of family into Portland&rsquo;s civil rights code,<sup class="vg-fn">3</sup> and went through the budget line by line to save 14 tree-care jobs.<sup class="vg-fn">1</sup></p>
+    <blockquote>&ldquo;the socialist councilor we most trust to reach across whatever constitutes an aisle&rdquo;<cite>— Willamette Week<sup class="vg-fn">1</sup></cite></blockquote>
   </div>
+  <div class="vg-strip"><span><b>2,509</b> small-donor gifts</span><span><b>95%</b> were $100 or less<sup class="vg-fn">31</sup></span><span><b>0 of 269</b> named donors also gave to Republicans or Portland conservatives<sup class="vg-fn">32</sup></span></div>
+  <span class="vg-pg">4</span>
 </section>
-
-<section class="ch" id="how">
-  <div class="ch-head"><span class="ch-no">How we picked</span><h2>The record and the receipts.</h2></div>
-  <p class="note" style="font-size:16.5px">We recommend candidates who have voted, or pledge to vote, for renters, city services and the police accountability office voters created, and whose donors don&rsquo;t overlap with Republican campaigns. Small-donor numbers come from the city&rsquo;s Small Donor Elections data. Donor numbers come from Oregon&rsquo;s campaign finance records; <a href="receipts.html">Receipts</a> shows exactly how we count. Records and endorsements are linked to their sources below. We list what critics say too, so nothing here surprises you.</p>
-  <p class="note">This guide is independent. No candidate, campaign or committee asked for it, paid for it or reviewed it.</p>
-  <div class="signup no-print" id="signup">
-    <h3>Get all the facts from this site delivered to your inbox.</h3>
-    <p class="cap">The guide, plus any updates or corrections before Nov 3. No texts. Unsubscribe anytime.</p>
-    <form id="signup-form" data-kit-action="" novalidate><label class="vh" for="em">Email</label><input id="em" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required><button type="submit">Sign up</button></form>
-    <span class="cap" id="signup-msg" aria-live="polite"></span>
+<section class="vg vg-cand vg-kl2" id="koyama-more" aria-label="More on Tiffany Koyama Lane">
+  <div class="vg-top"><span class="vg-pill">Portland City Council · District 3</span><div class="vg-badge vg-two"><small>Rank</small><b>1<i>or</i>2</b></div></div>
+  <div class="vg-body">
+    <img class="vg-cut vg-small" src="guide/heads/koyama.png" alt="">
+    <h2 class="vg-nm">What Tiffany has done</h2>
+    <ul class="vg-did">
+      <li><b>Vision Zero.</b> Led the city&rsquo;s work to end traffic deaths, and co-sponsored dedicating 12.5% of the transportation utility fee to it.<sup class="vg-fn">2</sup></li>
+      <li><b>Every family.</b> Added family and relationship structure to Portland&rsquo;s civil rights protections. Passed 11&ndash;0.<sup class="vg-fn">3</sup></li>
+      <li><b>Trees and parks.</b> Restored $3.2 million to keep 14 tree permitting staff in the 2026 budget.<sup class="vg-fn">1</sup></li>
+      <li><b>Police accountability.</b> Voted to keep $10 million in the oversight office voters created.<sup class="vg-fn">12</sup></li>
+      <li><b>Steady hands.</b> Helped guide the council when the Trump administration tried to send National Guard troops to Portland.<sup class="vg-fn">1</sup></li>
+    </ul>
+    <ul class="vg-chips"><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a4.8 4.8 0 0 1 9-3 4.8 4.8 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg><span>Safe streets for everyone</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c0-4 3-6.5 7-6.5s7 2.5 7 6.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.5c3 0 5 2 5 5"/></svg><span>Every family protected</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-6M12 3l6 8h-3l4 5H5l4-5H6z"/></svg><span>Parks and urban trees</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg><span>A teacher&rsquo;s eye on the budget</span></li></ul>
+    <p class="vg-end"><span class="vg-lbl">Endorsed by</span>Willamette Week (#2) and the Portland Mercury (#2)<sup class="vg-fn">4</sup>, Sierra Club<sup class="vg-fn">5</sup>, Portland DSA<sup class="vg-fn">6</sup> and Portland for All<sup class="vg-fn">7</sup></p>
   </div>
+  <span class="vg-pg">5</span>
 </section>
-
-<section class="ch srcs" id="sources">
-  <div class="ch-head"><span class="ch-no">Sources</span></div>
-  <ol><li id="src-1"><a href="https://www.wweek.com/news/2024/07/24/city-council-entrance-interview-angelita-morillo/" target="_blank" rel="noopener">https://www.wweek.com/news/2024/07/24/city-council-entrance-interview-angelita-morillo/</a></li><li id="src-2"><a href="https://multco.us/file/portland_dist_3_angelita_morillo/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_3_angelita_morillo/download</a></li><li id="src-3"><a href="https://www.portlandmercury.com/?p=3917" target="_blank" rel="noopener">https://www.portlandmercury.com/?p=3917</a></li><li id="src-4"><a href="https://www.kptv.com/2025/12/03/portland-city-council-approves-new-fee-buildings-used-detention-facilities/" target="_blank" rel="noopener">https://www.kptv.com/2025/12/03/portland-city-council-approves-new-fee-buildings-used-detention-facilities/</a></li><li id="src-5"><a href="https://www.portlandmercury.com/news/reporting-live-city-councils-contentious-budget-meeting/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/reporting-live-city-councils-contentious-budget-meeting/</a></li><li id="src-6"><a href="https://www.portland.gov/council/documents/ordinance/failed-pass/2026-222" target="_blank" rel="noopener">https://www.portland.gov/council/documents/ordinance/failed-pass/2026-222</a></li><li id="src-7"><a href="https://openelectionsportland.org/" target="_blank" rel="noopener">https://openelectionsportland.org/</a></li><li id="src-8"><a href="https://www.portlandmercury.com/election-2026/mercury-i-endorsements-vote-morillo-koyama-lane-novick-in-district-3/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/mercury-i-endorsements-vote-morillo-koyama-lane-novick-in-district-3/</a></li><li id="src-9"><a href="https://www.sierraclub.org/oregon/2026-general-election-candidate-endorsements" target="_blank" rel="noopener">https://www.sierraclub.org/oregon/2026-general-election-candidate-endorsements</a></li><li id="src-10"><a href="https://portlanddsa.org/endorsed-candidates/" target="_blank" rel="noopener">https://portlanddsa.org/endorsed-candidates/</a></li><li id="src-11"><a href="https://bluevoterguide.org/district/OR/Portland_City_Council_District_3/56668/792" target="_blank" rel="noopener">https://bluevoterguide.org/district/OR/Portland_City_Council_District_3/56668/792</a></li><li id="src-12"><a href="https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-portland-city-council/" target="_blank" rel="noopener">https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-portland-city-council/</a></li><li id="src-13"><a href="https://www.portlandmercury.com/election-2026/meet-the-candidates-for-city-council-district-3/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/meet-the-candidates-for-city-council-district-3/</a></li><li id="src-14"><a href="https://www.portland.gov/council/districts/3/tiffany-koyama-lane/news/2026/5/21/councilor-koyama-lane-delivers-vision-zero" target="_blank" rel="noopener">https://www.portland.gov/council/districts/3/tiffany-koyama-lane/news/2026/5/21/councilor-koyama-lane-delivers-vision-zero</a></li><li id="src-15"><a href="https://www.portland.gov/council/documents/ordinance/passed/192153" target="_blank" rel="noopener">https://www.portland.gov/council/documents/ordinance/passed/192153</a></li><li id="src-16"><a href="https://www.portlandmercury.com/news/reporting-live-continued-city-councils-contentious-budget-meeting/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/reporting-live-continued-city-councils-contentious-budget-meeting/</a></li><li id="src-17"><a href="https://www.opb.org/article/2026/08/12/portland-city-council-approves-moda-center-renovations-term-sheet/" target="_blank" rel="noopener">https://www.opb.org/article/2026/08/12/portland-city-council-approves-moda-center-renovations-term-sheet/</a></li><li id="src-18"><a href="https://teachertiffanyforthepeople.com/2026-endorsements/" target="_blank" rel="noopener">https://teachertiffanyforthepeople.com/2026-endorsements/</a></li><li id="src-19"><a href="https://www.portlandmercury.com/news/former-city-hall-staffer-files-discrimination-complaints-against-councilors-office-48309948/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/former-city-hall-staffer-files-discrimination-complaints-against-councilors-office-48309948/</a></li><li id="src-20"><a href="https://www.portland.gov/council/districts/3/tiffany-koyama-lane/news/2025/9/15/councilor-koyama-lane-brings-vision-zero" target="_blank" rel="noopener">https://www.portland.gov/council/districts/3/tiffany-koyama-lane/news/2025/9/15/councilor-koyama-lane-brings-vision-zero</a></li><li id="src-21"><a href="https://multco.us/file/portland_dist_4_mitch_green/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_4_mitch_green/download</a></li><li id="src-22"><a href="https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/16/councilor-mitch-green-colleagues-pass-historic-keep" target="_blank" rel="noopener">https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/16/councilor-mitch-green-colleagues-pass-historic-keep</a></li><li id="src-23"><a href="https://www.opb.org/article/2026/07/22/portland-city-council-job-cuts-budget/" target="_blank" rel="noopener">https://www.opb.org/article/2026/07/22/portland-city-council-job-cuts-budget/</a></li><li id="src-24"><a href="https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-green-evenstar-in-district-4/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-green-evenstar-in-district-4/</a></li><li id="src-25"><a href="https://hoodline.com/2026/06/portland-pol-scrambles-to-wipe-out-7-300-tax-tab-after-county-warnings/" target="_blank" rel="noopener">https://hoodline.com/2026/06/portland-pol-scrambles-to-wipe-out-7-300-tax-tab-after-county-warnings/</a></li><li id="src-26"><a href="https://wweek.com/news/city/2026/08/04/backyard-brush-fire-at-city-councilor-mitch-greens-home-violated-burn-ban" target="_blank" rel="noopener">https://wweek.com/news/city/2026/08/04/backyard-brush-fire-at-city-councilor-mitch-greens-home-violated-burn-ban</a></li><li id="src-27"><a href="https://kptv.com/2026/09/17/police-union-calls-portland-city-councilors-resignation-over-resurfaced-social-media-posts" target="_blank" rel="noopener">https://kptv.com/2026/09/17/police-union-calls-portland-city-councilors-resignation-over-resurfaced-social-media-posts</a></li><li id="src-28"><a href="https://www.portlandmercury.com/news/will-billboard-attacks-be-enough-to-oust-portlands-progressives/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/will-billboard-attacks-be-enough-to-oust-portlands-progressives/</a></li><li id="src-29"><a href="https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/17/newsletter-social-housing-coming-portland-major-win" target="_blank" rel="noopener">https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/17/newsletter-social-housing-coming-portland-major-win</a></li><li id="src-30"><a href="https://www.opb.org/article/2026/02/04/shannon-singleton-multnomah-county-chair/" target="_blank" rel="noopener">https://www.opb.org/article/2026/02/04/shannon-singleton-multnomah-county-chair/</a></li><li id="src-31"><a href="https://wweek.com/news/2022/03/01/shannon-singleton-replaces-longtime-director-of-homeless-services-marc-jolin" target="_blank" rel="noopener">https://wweek.com/news/2022/03/01/shannon-singleton-replaces-longtime-director-of-homeless-services-marc-jolin</a></li><li id="src-32"><a href="https://multco.us/file/fy_2026_summary_of_board_amendments_as_adopted_on_june_12%2C_2025/download" target="_blank" rel="noopener">https://multco.us/file/fy_2026_summary_of_board_amendments_as_adopted_on_june_12%2C_2025/download</a></li><li id="src-33"><a href="https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-singleton-for-multnomah-county-chair-ong-norris-williams-and-cruz-for-d2-commissioner/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-singleton-for-multnomah-county-chair-ong-norris-williams-and-cruz-for-d2-commissioner/</a></li><li id="src-34"><a href="https://multco.us/file/agenda-eviction-prevention-table-02_24_26.pdf/download" target="_blank" rel="noopener">https://multco.us/file/agenda-eviction-prevention-table-02_24_26.pdf/download</a></li><li id="src-35"><a href="https://www.portlandforall.org/county" target="_blank" rel="noopener">https://www.portlandforall.org/county</a></li><li id="src-36"><a href="https://www.wweek.com/news/county/2026/07/16/julia-brim-edwards-has-significantly-outraised-opponents-for-county-chair/" target="_blank" rel="noopener">https://www.wweek.com/news/county/2026/07/16/julia-brim-edwards-has-significantly-outraised-opponents-for-county-chair/</a></li><li id="src-37"><a href="https://www.wweek.com/news/county/2026/08/24/shannon-singleton-notches-some-labor-endorsements-with-a-catch/" target="_blank" rel="noopener">https://www.wweek.com/news/county/2026/08/24/shannon-singleton-notches-some-labor-endorsements-with-a-catch/</a></li><li id="src-38"><a href="https://www.opb.org/article/2026/10/07/what-to-know-about-portland-district-3-council-race/" target="_blank" rel="noopener">https://www.opb.org/article/2026/10/07/what-to-know-about-portland-district-3-council-race/</a></li><li id="src-39"><a href="https://multco.us/file/portland_dist_3_esther_leon/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_3_esther_leon/download</a></li><li id="src-40"><a href="https://www.portlandciviclab.org/voters-guide/portland-district-3/esther-leon" target="_blank" rel="noopener">https://www.portlandciviclab.org/voters-guide/portland-district-3/esther-leon</a></li><li id="src-41"><a href="https://www.portlandforall.org/district3" target="_blank" rel="noopener">https://www.portlandforall.org/district3</a></li><li id="src-42"><a href="https://www.portlandmercury.com/news/meet-the-candidates-for-city-council-district-4/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/meet-the-candidates-for-city-council-district-4/</a></li><li id="src-43"><a href="https://www.portlandciviclab.org/voters-guide/portland-district-4/jamey-evenstar" target="_blank" rel="noopener">https://www.portlandciviclab.org/voters-guide/portland-district-4/jamey-evenstar</a></li><li id="src-44"><a href="https://www.portlandforall.org/district4" target="_blank" rel="noopener">https://www.portlandforall.org/district4</a></li><li id="src-45"><a href="https://www.thestreettrust.org/actionfund/candidate-endorsements/endorsements-2026-general-election/" target="_blank" rel="noopener">https://www.thestreettrust.org/actionfund/candidate-endorsements/endorsements-2026-general-election/</a></li><li id="src-46"><a href="https://www.colororegon.org/endorsements-1" target="_blank" rel="noopener">https://www.colororegon.org/endorsements-1</a></li><li id="src-47"><a href="https://nwexaminer.com/p/council-candidate-jamey-evenstar" target="_blank" rel="noopener">https://nwexaminer.com/p/council-candidate-jamey-evenstar</a></li><li id="src-48"><a href="https://multco.us/file/portland_dist_4_jeremy_beausoleil_smith/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_4_jeremy_beausoleil_smith/download</a></li><li id="src-49"><a href="https://www.portlandciviclab.org/voters-guide/portland-district-4/jeremy-beausoleil-smith" target="_blank" rel="noopener">https://www.portlandciviclab.org/voters-guide/portland-district-4/jeremy-beausoleil-smith</a></li><li id="src-50"><a href="https://www.opb.org/article/2026/10/07/portland-city-council-race-district-4/" target="_blank" rel="noopener">https://www.opb.org/article/2026/10/07/portland-city-council-race-district-4/</a></li><li id="src-51"><a href="https://opb.org/article/2026/10/07/portland-city-council-race-district-4" target="_blank" rel="noopener">https://opb.org/article/2026/10/07/portland-city-council-race-district-4</a></li><li id="src-52"><a href="https://www.basicrights.org/news/bro-pac-rescinds-endorsement-of-julia-brim-edwards-for-multnomah-county-chair" target="_blank" rel="noopener">https://www.basicrights.org/news/bro-pac-rescinds-endorsement-of-julia-brim-edwards-for-multnomah-county-chair</a></li></ol>
+<section class="vg vg-cand" id="morillo" aria-label="Angelita Morillo">
+  <div class="vg-top"><span class="vg-pill">Portland City Council · District 3</span><div class="vg-badge vg-two"><small>Rank</small><b>1<i>or</i>2</b></div></div>
+  <div class="vg-body">
+    <img class="vg-cut" src="guide/cut/morillo.png" alt="Angelita Morillo">
+    <h2 class="vg-nm">Angelita Morillo</h2>
+    <p class="vg-why"><span class="vg-lbl">Why rank her</span>Angelita got her start answering Portlanders&rsquo; calls in Commissioner Jo Ann Hardesty&rsquo;s office.<sup class="vg-fn">8</sup> On the council she wrote the ban on rent-setting software that lets landlords coordinate prices,<sup class="vg-fn">9</sup> passed a fee on landlords who lease to immigration detention facilities,<sup class="vg-fn">10</sup> and restored $2.3 million for non-police crisis response and violence prevention.<sup class="vg-fn">1</sup></p>
+    
+    <ul class="vg-chips"><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="14" r="4"/><path d="M11 11l9-9M16 6l3 3M14 8l2 2"/></svg><span>Renters first</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Crisis help without police</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span>Protecting immigrant neighbors</span></li></ul>
+    <p class="vg-about">An immigrant and a renter.<sup class="vg-fn">11</sup> Voted to keep $10 million in the police accountability office voters created.<sup class="vg-fn">12</sup></p>
+    <p class="vg-end"><span class="vg-lbl">Endorsed by</span>the Portland Mercury (#1)<sup class="vg-fn">4</sup>, Sierra Club<sup class="vg-fn">5</sup>, Portland DSA<sup class="vg-fn">6</sup> and Portland for All<sup class="vg-fn">7</sup></p>
+  </div>
+  <div class="vg-strip"><span><b>2,398</b> small-donor gifts</span><span><b>95%</b> were $100 or less<sup class="vg-fn">31</sup></span><span><b>0 of 203</b> named donors also gave to Republicans or Portland conservatives<sup class="vg-fn">32</sup></span></div>
+  <span class="vg-pg">6</span>
 </section>
-<nav class="pnext" aria-label="More"><a href="./"><span class="eyebrow">← Home</span><b>The overview</b></a><a class="nx" href="share.html"><span class="eyebrow">Next →</span><b>Share the guide</b></a></nav>
+<section class="vg vg-cand" id="leon" aria-label="Esther León">
+  <div class="vg-top"><span class="vg-pill">Portland City Council · District 3</span><div class="vg-badge"><small>Rank</small><b>3<sup>rd</sup></b></div></div>
+  <div class="vg-body">
+    <img class="vg-cut" src="guide/cut/leon.png" alt="Esther León">
+    <h2 class="vg-nm">Esther León</h2>
+    <p class="vg-why"><span class="vg-lbl">Why rank her</span>A physical therapist who works with people in Oregon&rsquo;s prisons,<sup class="vg-fn">13</sup> Esther is running to make Portland Street Response a 24/7 service, build social housing, and favor supportive housing over overnight-only shelters.<sup class="vg-fn">14</sup></p>
+    <blockquote>&ldquo;life doesn&rsquo;t have to be this way&rdquo;<cite>— Esther León<sup class="vg-fn">33</sup></cite></blockquote>
+    <ul class="vg-chips"><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>24/7 Street Response</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><span>Social housing</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-9 6-14 15-14 0 9-5 15-14 15"/><path d="M5 19l8-8"/></svg><span>Clean energy money for clean energy</span></li></ul>
+    <p class="vg-about">Holds a doctorate in physical therapy and teaches at the community college level.<sup class="vg-fn">14</sup> Wants Blazers arena money to come with a guaranteed return for the public.<sup class="vg-fn">15</sup></p>
+    <p class="vg-end"><span class="vg-lbl">Endorsed by</span>Sierra Club<sup class="vg-fn">5</sup> and Portland for All (#3)<sup class="vg-fn">7</sup>; honorable mention from the Portland Mercury<sup class="vg-fn">4</sup></p>
+  </div>
+  <div class="vg-strip"><span><b>383</b> small-donor gifts</span><span><b>98%</b> were $100 or less<sup class="vg-fn">31</sup></span><span><b>0 of 6</b> named donors also gave to Republicans or Portland conservatives<sup class="vg-fn">32</sup></span></div>
+  <span class="vg-pg">7</span>
+</section>
+<section class="vg vg-cand" id="green" aria-label="Mitch Green">
+  <div class="vg-top"><span class="vg-pill">Portland City Council · District 4</span><div class="vg-badge"><small>Rank</small><b>1<sup>st</sup></b></div></div>
+  <div class="vg-body">
+    <img class="vg-cut" src="guide/cut/green.png" alt="Mitch Green">
+    <h2 class="vg-nm">Mitch Green</h2>
+    <p class="vg-why"><span class="vg-lbl">Why rank him</span>An economist and Army veteran,<sup class="vg-fn">16</sup> Mitch put $17.5 million in unspent housing money toward Portland&rsquo;s first social housing loan fund,<sup class="vg-fn">17</sup> fought to keep 55 city jobs,<sup class="vg-fn">18</sup> and stood up for the voter-approved Preschool for All tax.<sup class="vg-fn">1</sup></p>
+    <blockquote>&ldquo;permanently affordable housing built for people, not portfolios&rdquo;<cite>— Mitch Green<sup class="vg-fn">34</sup></cite></blockquote>
+    <ul class="vg-chips"><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><span>Social housing</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8-1.5-1.5a4 4 0 0 1-5-5L13 2"/></svg><span>Keeping city services</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg><span>Preschool for All</span></li></ul>
+    <p class="vg-about">Co-sponsored the rent-setting software ban and the detention-facility fee.<sup class="vg-fn">9</sup> Voted to keep $10 million in the police accountability office voters created.<sup class="vg-fn">12</sup></p>
+    <p class="vg-end"><span class="vg-lbl">Endorsed by</span>the Portland Mercury (#1)<sup class="vg-fn">19</sup>, Sierra Club<sup class="vg-fn">5</sup>, Portland DSA<sup class="vg-fn">6</sup> and Portland for All<sup class="vg-fn">20</sup></p>
+  </div>
+  <div class="vg-strip"><span><b>2,533</b> small-donor gifts</span><span><b>95%</b> were $100 or less<sup class="vg-fn">31</sup></span><span><b>0 of 227</b> named donors also gave to Republicans or Portland conservatives<sup class="vg-fn">32</sup></span></div>
+  <span class="vg-pg">8</span>
+</section>
+<section class="vg vg-cand" id="evenstar" aria-label="Jamey Evenstar">
+  <div class="vg-top"><span class="vg-pill">Portland City Council · District 4</span><div class="vg-badge"><small>Rank</small><b>2<sup>nd</sup></b></div></div>
+  <div class="vg-body">
+    <img class="vg-cut" src="guide/cut/evenstar.png" alt="Jamey Evenstar">
+    <h2 class="vg-nm">Jamey Evenstar</h2>
+    <p class="vg-why"><span class="vg-lbl">Why rank her</span>Jamey spent a decade on City Hall staff,<sup class="vg-fn">21</sup> working on tenant protections and the Rose Lane bus projects for Commissioner Chloe Eudaly and helping set up Portland&rsquo;s new form of government. A mother of five who rides transit every day.<sup class="vg-fn">19</sup></p>
+    <blockquote>&ldquo;could hit the ground running right away&rdquo;<cite>— Portland Mercury<sup class="vg-fn">19</sup></cite></blockquote>
+    <ul class="vg-chips"><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="14" r="4"/><path d="M11 11l9-9M16 6l3 3M14 8l2 2"/></svg><span>Tenant protections</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="14" rx="3"/><path d="M4 11h16M8 21v-4M16 21v-4"/><circle cx="8" cy="14" r=".6"/><circle cx="16" cy="14" r=".6"/></svg><span>Faster, cheaper transit</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8-1.5-1.5a4 4 0 0 1-5-5L13 2"/></svg><span>Making the new government work</span></li></ul>
+    <p class="vg-about">Most recently chief of staff to Councilor Candace Avalos.<sup class="vg-fn">19</sup></p>
+    <p class="vg-end"><span class="vg-lbl">Endorsed by</span>the Portland Mercury (#2)<sup class="vg-fn">19</sup>, Portland for All<sup class="vg-fn">20</sup>, Sierra Club<sup class="vg-fn">5</sup>, Street Trust Action Fund<sup class="vg-fn">22</sup> and Building Power for Communities of Color<sup class="vg-fn">23</sup></p>
+  </div>
+  <div class="vg-strip"><span><b>662</b> small-donor gifts</span><span><b>95%</b> were $100 or less<sup class="vg-fn">31</sup></span><span><b>0 of 35</b> named donors also gave to Republicans or Portland conservatives<sup class="vg-fn">32</sup></span></div>
+  <span class="vg-pg">9</span>
+</section>
+<section class="vg vg-cand" id="beausoleil" aria-label="Jeremy Beausoleil Smith">
+  <div class="vg-top"><span class="vg-pill">Portland City Council · District 4</span><div class="vg-badge"><small>Rank</small><b>3<sup>rd</sup></b></div></div>
+  <div class="vg-body">
+    <img class="vg-cut" src="guide/cut/beausoleil.png" alt="Jeremy Beausoleil Smith">
+    <h2 class="vg-nm vg-long">Jeremy Beausoleil Smith</h2>
+    <p class="vg-why"><span class="vg-lbl">Why rank him</span>A construction manager who builds projects for Portland State University,<sup class="vg-fn">24</sup> Jeremy is running on a renters&rsquo; bill of rights, Portland Street Response around the clock, and a publicly controlled power grid.<sup class="vg-fn">25</sup></p>
+    <blockquote>&ldquo;I&rsquo;ll fight to lower costs and make life easier.&rdquo;<cite>— Jeremy Beausoleil Smith<sup class="vg-fn">24</sup></cite></blockquote>
+    <ul class="vg-chips"><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="14" r="4"/><path d="M11 11l9-9M16 6l3 3M14 8l2 2"/></svg><span>Renters&rsquo; bill of rights</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>24/7 Street Response</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><span>Public power</span></li></ul>
+    <p class="vg-about">The Mercury praised his &ldquo;passion and clear values.&rdquo;<sup class="vg-fn">19</sup></p>
+    <p class="vg-end"><span class="vg-lbl">Endorsed by</span>Portland for All (#3)<sup class="vg-fn">20</sup> and PSU&rsquo;s faculty union<sup class="vg-fn">26</sup>; honorable mention from the Portland Mercury<sup class="vg-fn">19</sup></p>
+  </div>
+  <div class="vg-strip"><span><b>1,115</b> small-donor gifts</span><span><b>98%</b> were $100 or less<sup class="vg-fn">31</sup></span><span><b>1 of 17</b> named donors also gave to Portland conservative campaigns; <b>none</b> to Republicans.<sup class="vg-fn">32</sup></span></div>
+  <span class="vg-pg">10</span>
+</section>
+<section class="vg vg-cand" id="singleton" aria-label="Shannon Singleton">
+  <div class="vg-top"><span class="vg-pill">Multnomah County Chair</span><div class="vg-badge"><small>Rank</small><b>1<sup>st</sup></b></div></div>
+  <div class="vg-body">
+    <img class="vg-cut" src="guide/cut/singleton.png" alt="Shannon Singleton">
+    <h2 class="vg-nm">Shannon Singleton</h2>
+    <p class="vg-why"><span class="vg-lbl">Why rank her</span>A social worker who has spent her career on housing, Shannon led the nonprofit JOIN and was interim director of the county&rsquo;s homeless services office.<sup class="vg-fn">27</sup> As a commissioner she won money for eviction defense lawyers and fair-housing investigations,<sup class="vg-fn">28</sup> and got the stalled Walnut Park redevelopment moving.<sup class="vg-fn">29</sup></p>
+    <blockquote>&ldquo;I want to serve where I can make the most change.&rdquo;<cite>— Shannon Singleton<sup class="vg-fn">35</sup></cite></blockquote>
+    <ul class="vg-chips"><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><span>Keeping people housed</span></li><li><svg class="vg-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 21h14M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg><span>Fair housing</span></li></ul>
+    
+    <p class="vg-end"><span class="vg-lbl">Endorsed by</span>the Portland Mercury<sup class="vg-fn">29</sup>, Portland for All, Portland Association of Teachers and Sierra Club<sup class="vg-fn">30</sup></p>
+  </div>
+  <div class="vg-strip"><span>Only <b>2 of 172</b> named donors also gave to Republicans or Portland conservatives.<sup class="vg-fn">32</sup></span></div>
+  <span class="vg-pg">11</span>
+</section>
+<section class="vg vg-ret" id="return" aria-label="Return your ballot">
+  <span class="vg-kick">Return your ballot</span>
+  <h2>Due by <em>8 pm</em>, Tuesday, Nov 3.</h2>
+  <div class="vg-tiles">
+    <div><svg class="vg-big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><h3>Drop it off</h3><p>Any official drop box until 8 pm on election night. Find one at multco.us/dropsites.</p></div>
+    <div><svg class="vg-big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><h3>Or mail it by Oct 27</h3><p>No stamp needed. Ballots postmarked by Nov 3 count if they arrive within 7 days.</p></div>
+    <div><svg class="vg-big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><h3>Check it counted</h3><p>Track your ballot at multco.us/info/track-your-ballot.</p></div>
+  </div>
+  <div class="vg-share"><img src="guide/qr_guide_light.png" alt="QR code to whosbuyingpdx.com/guide.html"><p><b>Share this guide.</b> Text it to three friends in Portland. Scan or visit whosbuyingpdx.com/guide.html</p></div>
+  <span class="vg-pg">12</span>
+</section>
+<section class="vg vg-back" id="about" aria-label="About this guide">
+  <span class="vg-kick">How we picked</span>
+  <h2>People-powered, not donor-powered.</h2>
+  <p class="vg-lead">We recommend candidates who stand up for renters, city services and the police accountability office voters created, and whose donors don&rsquo;t overlap with Republican campaigns.</p>
+  <p>Our council picks run on small gifts: 95&ndash;98% of their small-donor gifts were $100 or less, through the city&rsquo;s Small Donor Elections program. We checked every named donor against Oregon campaign finance records. The method is on our Receipts page.</p>
+  <p>This guide is independent. No candidate, campaign or committee asked for it, paid for it or reviewed it.</p>
+  <div class="vg-mail"><b>Get all the facts from this site delivered to your inbox.</b><span>whosbuyingpdx.com/guide.html</span></div>
+  <p class="vg-fine">Who&rsquo;s Buying PDX is an independent citizen project. Not paid for or authorized by any candidate, campaign or committee. Built for under $20. Every claim in this guide is sourced at whosbuyingpdx.com/guide.html.</p>
+  <span class="vg-pg">13</span>
+</section></div>
+<section class="g-signup" id="signup">
+  <h2>Get all the facts from this site delivered to your inbox.</h2>
+  <p class="cap">The guide, plus any updates before Nov 3. No texts. Unsubscribe anytime.</p>
+  <form id="signup-form" data-kit-action="" novalidate><label class="vh" for="em">Email</label><input id="em" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required><button type="submit">Sign up</button></form>
+  <span class="cap" id="signup-msg" aria-live="polite"></span>
+</section>
+<section class="g-src" id="sources"><span class="eyebrow">Sources</span><ol><li id="src-1"><a href="https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-portland-city-council/" target="_blank" rel="noopener">https://www.wweek.com/news/2026/10/14/wws-fall-2026-endorsements-portland-city-council/</a></li><li id="src-2"><a href="https://www.portland.gov/council/districts/3/tiffany-koyama-lane/news/2026/5/21/councilor-koyama-lane-delivers-vision-zero" target="_blank" rel="noopener">https://www.portland.gov/council/districts/3/tiffany-koyama-lane/news/2026/5/21/councilor-koyama-lane-delivers-vision-zero</a></li><li id="src-3"><a href="https://www.portland.gov/council/documents/ordinance/passed/192153" target="_blank" rel="noopener">https://www.portland.gov/council/documents/ordinance/passed/192153</a></li><li id="src-4"><a href="https://www.portlandmercury.com/election-2026/mercury-i-endorsements-vote-morillo-koyama-lane-novick-in-district-3/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/mercury-i-endorsements-vote-morillo-koyama-lane-novick-in-district-3/</a></li><li id="src-5"><a href="https://www.sierraclub.org/oregon/2026-general-election-candidate-endorsements" target="_blank" rel="noopener">https://www.sierraclub.org/oregon/2026-general-election-candidate-endorsements</a></li><li id="src-6"><a href="https://portlanddsa.org/endorsed-candidates/" target="_blank" rel="noopener">https://portlanddsa.org/endorsed-candidates/</a></li><li id="src-7"><a href="https://www.portlandforall.org/district3" target="_blank" rel="noopener">https://www.portlandforall.org/district3</a></li><li id="src-8"><a href="https://www.wweek.com/news/2024/07/24/city-council-entrance-interview-angelita-morillo/" target="_blank" rel="noopener">https://www.wweek.com/news/2024/07/24/city-council-entrance-interview-angelita-morillo/</a></li><li id="src-9"><a href="https://www.portlandmercury.com/?p=3917" target="_blank" rel="noopener">https://www.portlandmercury.com/?p=3917</a></li><li id="src-10"><a href="https://www.kptv.com/2025/12/03/portland-city-council-approves-new-fee-buildings-used-detention-facilities/" target="_blank" rel="noopener">https://www.kptv.com/2025/12/03/portland-city-council-approves-new-fee-buildings-used-detention-facilities/</a></li><li id="src-11"><a href="https://multco.us/file/portland_dist_3_angelita_morillo/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_3_angelita_morillo/download</a></li><li id="src-12"><a href="https://www.portlandmercury.com/news/reporting-live-city-councils-contentious-budget-meeting/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/reporting-live-city-councils-contentious-budget-meeting/</a></li><li id="src-13"><a href="https://www.opb.org/article/2026/10/07/what-to-know-about-portland-district-3-council-race/" target="_blank" rel="noopener">https://www.opb.org/article/2026/10/07/what-to-know-about-portland-district-3-council-race/</a></li><li id="src-14"><a href="https://multco.us/file/portland_dist_3_esther_leon/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_3_esther_leon/download</a></li><li id="src-15"><a href="https://www.portlandciviclab.org/voters-guide/portland-district-3/esther-leon" target="_blank" rel="noopener">https://www.portlandciviclab.org/voters-guide/portland-district-3/esther-leon</a></li><li id="src-16"><a href="https://multco.us/file/portland_dist_4_mitch_green/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_4_mitch_green/download</a></li><li id="src-17"><a href="https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/16/councilor-mitch-green-colleagues-pass-historic-keep" target="_blank" rel="noopener">https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/16/councilor-mitch-green-colleagues-pass-historic-keep</a></li><li id="src-18"><a href="https://www.opb.org/article/2026/07/22/portland-city-council-job-cuts-budget/" target="_blank" rel="noopener">https://www.opb.org/article/2026/07/22/portland-city-council-job-cuts-budget/</a></li><li id="src-19"><a href="https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-green-evenstar-in-district-4/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-green-evenstar-in-district-4/</a></li><li id="src-20"><a href="https://www.portlandforall.org/district4" target="_blank" rel="noopener">https://www.portlandforall.org/district4</a></li><li id="src-21"><a href="https://www.portlandmercury.com/news/meet-the-candidates-for-city-council-district-4/" target="_blank" rel="noopener">https://www.portlandmercury.com/news/meet-the-candidates-for-city-council-district-4/</a></li><li id="src-22"><a href="https://www.thestreettrust.org/actionfund/candidate-endorsements/endorsements-2026-general-election/" target="_blank" rel="noopener">https://www.thestreettrust.org/actionfund/candidate-endorsements/endorsements-2026-general-election/</a></li><li id="src-23"><a href="https://www.colororegon.org/endorsements-1" target="_blank" rel="noopener">https://www.colororegon.org/endorsements-1</a></li><li id="src-24"><a href="https://multco.us/file/portland_dist_4_jeremy_beausoleil_smith/download" target="_blank" rel="noopener">https://multco.us/file/portland_dist_4_jeremy_beausoleil_smith/download</a></li><li id="src-25"><a href="https://www.portlandciviclab.org/voters-guide/portland-district-4/jeremy-beausoleil-smith" target="_blank" rel="noopener">https://www.portlandciviclab.org/voters-guide/portland-district-4/jeremy-beausoleil-smith</a></li><li id="src-26"><a href="https://www.opb.org/article/2026/10/07/portland-city-council-race-district-4/" target="_blank" rel="noopener">https://www.opb.org/article/2026/10/07/portland-city-council-race-district-4/</a></li><li id="src-27"><a href="https://wweek.com/news/2022/03/01/shannon-singleton-replaces-longtime-director-of-homeless-services-marc-jolin" target="_blank" rel="noopener">https://wweek.com/news/2022/03/01/shannon-singleton-replaces-longtime-director-of-homeless-services-marc-jolin</a></li><li id="src-28"><a href="https://multco.us/file/fy_2026_summary_of_board_amendments_as_adopted_on_june_12%2C_2025/download" target="_blank" rel="noopener">https://multco.us/file/fy_2026_summary_of_board_amendments_as_adopted_on_june_12%2C_2025/download</a></li><li id="src-29"><a href="https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-singleton-for-multnomah-county-chair-ong-norris-williams-and-cruz-for-d2-commissioner/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/mercury-endorsements-vote-singleton-for-multnomah-county-chair-ong-norris-williams-and-cruz-for-d2-commissioner/</a></li><li id="src-30"><a href="https://www.portlandforall.org/county" target="_blank" rel="noopener">https://www.portlandforall.org/county</a></li><li id="src-31"><a href="https://openelectionsportland.org/" target="_blank" rel="noopener">https://openelectionsportland.org/</a></li><li id="src-32"><a href="https://whosbuyingpdx.com/receipts.html" target="_blank" rel="noopener">https://whosbuyingpdx.com/receipts.html</a></li><li id="src-33"><a href="https://www.portlandmercury.com/election-2026/meet-the-candidates-for-city-council-district-3/" target="_blank" rel="noopener">https://www.portlandmercury.com/election-2026/meet-the-candidates-for-city-council-district-3/</a></li><li id="src-34"><a href="https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/17/newsletter-social-housing-coming-portland-major-win" target="_blank" rel="noopener">https://www.portland.gov/council/districts/4/mitch-green/news/2026/4/17/newsletter-social-housing-coming-portland-major-win</a></li><li id="src-35"><a href="https://www.opb.org/article/2026/02/04/shannon-singleton-multnomah-county-chair/" target="_blank" rel="noopener">https://www.opb.org/article/2026/02/04/shannon-singleton-multnomah-county-chair/</a></li></ol></section>
 </div>
-<section class="act">
-  <div class="wrap">
-    <h2>Your ballot is already here.</h2>
-    <p>Portland uses ranked-choice voting. Anyone you rank can end up with your vote, so only rank candidates you&rsquo;d want to win.</p>
-    <div class="btns"><a class="btn" href="https://multco.us/info/official-ballot-drop-sites" target="_blank" rel="noopener">Find a drop box</a><a class="btn ghost" href="toolkit/whos-buying-pdx-voter-guide.pdf" download>Download the guide</a><button class="btn ghost" id="share" type="button">Copy link to share</button></div>
-    <span id="share-msg" class="cap" style="color:var(--paper);opacity:.85" aria-live="polite"></span>
-  </div>
-</section>
+<section class="act"><div class="wrap">
+  <h2>Your ballot is already here.</h2>
+  <p>Portland uses ranked-choice voting. Anyone you rank can end up with your vote, so only rank candidates you&rsquo;d want to win.</p>
+  <div class="btns"><a class="btn" href="https://multco.us/info/official-ballot-drop-sites" target="_blank" rel="noopener">Find a drop box</a><a class="btn ghost" href="toolkit/whos-buying-pdx-voter-guide.pdf" download>Download the guide</a><button class="btn ghost" id="share" type="button">Copy link to share</button></div>
+  <span id="share-msg" class="cap" style="color:var(--paper);opacity:.85" aria-live="polite"></span>
+</div></section>
 <div class="wrap"><footer>
   <span>Who&#x27;s Buying PDX is an independent citizen project. Not paid for or authorized by any candidate, campaign or committee. Built for under $20.</span>
   <span>Corrections are posted here with the date.</span>
@@ -530,7 +672,6 @@ section.ch:first-child{padding-top:24px}
 <script src="app.js"></script>
 <script>
 (function(){var f=document.getElementById('signup-form'),m=document.getElementById('signup-msg');if(!f)return;
-f.addEventListener('submit',function(e){var a=f.getAttribute('data-kit-action');if(!a){e.preventDefault();m.textContent='Email sign-up opens soon. In the meantime, download the PDF above.';return;}
-f.action=a;f.method='post';});})();
+f.addEventListener('submit',function(e){var a=f.getAttribute('data-kit-action');if(!a){e.preventDefault();m.textContent='Email sign-up opens soon. In the meantime, download the PDF above.';return;}f.action=a;f.method='post';});})();
 </script>
 </body></html>
