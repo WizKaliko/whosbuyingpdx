@@ -342,6 +342,9 @@ section.ch:first-child{padding-top:24px}
   .pnext{grid-template-columns:1fr}
   .pnext a.nx{text-align:left}
 }
+.clist{margin-top:10px;font-size:15px}.clist summary{cursor:pointer;font-weight:700;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px}
+.clist ul{margin:10px 0 0;padding-left:20px}.clist li{break-inside:avoid;margin-bottom:4px}
+@media (max-width:700px){.clist ul{columns:1}}
 </style>
 <link rel="stylesheet" href="indigo.css">
 </head><body>
@@ -358,8 +361,11 @@ section.ch:first-child{padding-top:24px}
       <p class="lede">Every number traces to a public record. If we got something wrong, tell us and we'll correct it, with the date.</p></div>
     <div class="method">
       <div><h3>Where it comes from</h3><p>Oregon's ORESTAR campaign-finance filings, Portland's council voting records, and news coverage linked at each claim.</p></div>
-      <div><h3>What counts</h3><p>A person counts if they gave to the candidate and, since 2006, to one of 25 Republican campaigns, caucus or party committees, and the street address, or ZIP and employer, match. The same test runs on every candidate shown.</p></div>
-      <div><h3>Updates</h3><p><b>Oct 18, 2026:</b> We widened the comparison. Republican side: added the House and Senate Republican caucus committees, Tim Knopp and the Multnomah, Washington and Clackamas County Republican parties. Portland conservatives: added Sam Adams, Pam Treece and the 2022 Portland Accountability PAC, which backed Rene Gonzalez. A local campaign is added only if its donors overlap the business-backed candidates and not the progressive councilors running against them. Every candidate's share rose; the progressive councilors stayed at zero. <b>Later on Oct 18:</b> we removed Tootie Smith&#x27;s committee from the Republican list because it is filed as nonpartisan. That moved one Brim-Edwards donor from the Republican to the Portland-conservative count and the network total from 129 to 128. <a href="donors.html">Method</a></p></div>
+      <div><h3>Who counts as a GOP donor</h3><p>Someone who gave to the candidate and has given, since 2006, to one of 25 Republican candidate, caucus or party committees. We use the party each committee filed under. A gift counts only when the street address, or the ZIP code and employer, match.</p>
+        <details class="clist"><summary>See all 25 Republican committees</summary><ul><li>Christine Drazan (Friends of Christine Drazan)</li><li>Knute Buehler committees</li><li>Friends of Chris Dudley</li><li>Dudley for Oregon</li><li>Bud Pierce for a Better Oregon</li><li>Friends of Allen Alley</li><li>Citizens to Elect Dennis Richardson</li><li>Bruce Starr for State Senate</li><li>Friends of Kim Thatcher</li><li>Friends of Jeff Helfrich</li><li>Hicks for Senate</li><li>Committee to Elect Dennis Linthicum</li><li>Friends of Anna Scharf</li><li>Friends of Courtney Bangs / Courtney Bangs PAC</li><li>Tim Knopp for State Senate</li><li>Friends of Will Lathrop</li><li>Boquist Leadership Fund (Republican years only)</li><li>Bring Balance to Salem PAC</li><li>Evergreen Oregon PAC (House Republican caucus)</li><li>The Leadership Fund (Senate Republican caucus)</li><li>Senate Republican Leadership Fund</li><li>Oregon Republican Party</li><li>Multnomah County Republican Central Committee</li><li>Washington County Republican Central Committee</li><li>Clackamas County Republican Party</li></ul></details></div>
+      <div><h3>Who counts as a Portland conservative donor</h3><p>Someone who gave to the candidate and to one of six local campaigns on Portland&rsquo;s right. A campaign is on this list only if its donors overlap the business-backed candidates and none of the progressive councilors running against them.</p>
+        <details class="clist"><summary>See all 6 Portland conservative campaigns</summary><ul><li>Rene Gonzalez (Friends of Rene Gonzalez / Rene for Portland)</li><li>Vote Vasquez</li><li>Friends of Vadim (Mozyrsky)</li><li>Friends of Sam Adams</li><li>Friends of Pam Treece</li><li>Portland Accountability PAC (2022, backed Rene Gonzalez)</li></ul></details></div>
+      <div><h3>What we can&rsquo;t see</h3><p>Gifts of $100 or less are reported without names, so they can&rsquo;t be checked. Every candidate&rsquo;s numbers cover named donors only, and the same test runs on everyone shown. Last updated Oct 18, 2026.</p></div>
       <div><h3>What we don't claim</h3><p>The candidates are Democrats. Republicans aren't funding or endorsing them as a party, and many prominent Democrats back them. When we call them conservative, we mean where they stand in Portland politics, judged by their votes, their backers and their message, not their party registration.</p></div>
     </div>
   </section>
