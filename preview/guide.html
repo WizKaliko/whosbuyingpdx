@@ -378,12 +378,12 @@ section.ch:first-child{padding-top:24px}
 .vg-cover h1{position:absolute;left:6cqw;top:10cqw;margin:0;font:800 15cqw/.9 "Bricolage Grotesque";letter-spacing:-.03em}
 .vg-cover h1 em{font:italic 500 15.5cqw/1 Newsreader,serif;color:var(--gold);letter-spacing:-.01em}
 .vg-cover .vg-sub{position:absolute;left:6cqw;top:42cqw;width:72cqw;margin:0;font:400 3.5cqw/1.3 Newsreader,serif;color:#D9D4C8}
-.vg-cover .vg-crew{position:absolute;left:0;right:0;bottom:9cqw;height:68cqw}
-.vg-cover .vg-crew img{position:absolute;bottom:0;height:auto;filter:drop-shadow(0 1.2cqw 1.6cqw rgba(0,0,0,.45))}
-.vg-cover .vg-c1{left:-2cqw;width:29cqw;bottom:16cqw!important}.vg-cover .vg-c2{left:20cqw;width:25cqw;bottom:22cqw!important}
-.vg-cover .vg-c3{right:-1cqw;width:28cqw;bottom:16cqw!important}.vg-cover .vg-c4{right:20cqw;width:25cqw;bottom:22cqw!important}
-.vg-cover .vg-c5{left:6cqw;width:27cqw}.vg-cover .vg-c6{right:5cqw;width:27cqw}
-.vg-cover .vg-c7{left:27cqw;width:46cqw;z-index:3}
+.vg-cover .vg-crew{position:absolute;left:3cqw;right:3cqw;bottom:11cqw;display:grid;gap:2.5cqw}
+.vg-cover .vg-row{display:flex;justify-content:center;align-items:flex-end;gap:2.2cqw}
+.vg-cover .vg-crew img{display:block;width:auto;filter:drop-shadow(0 .8cqw 1.2cqw rgba(0,0,0,.4))}
+.vg-cover .vg-back img{height:21cqw}
+.vg-cover .vg-front img{height:27cqw}
+.vg-cover .vg-front img.vg-star{height:31cqw}
 .vg-cover .vg-foot{position:absolute;left:0;right:0;bottom:0;height:9cqw;background:var(--gold);color:var(--night);display:flex;justify-content:space-between;align-items:center;padding:0 6cqw;font:700 3cqw "Bricolage Grotesque"}
 /* cheat sheet */
 .vg-cheat h2{position:absolute;left:6cqw;top:9cqw;font:800 6.4cqw/1 "Bricolage Grotesque";letter-spacing:-.02em}
@@ -489,9 +489,8 @@ section.ch:first-child{padding-top:24px}
   <h1>Who we&rsquo;d <em>rank.</em></h1>
   <p class="vg-sub">Seven people who stand up for renters, city services and police accountability, and whose donors don&rsquo;t fund Republicans.</p>
   <div class="vg-crew">
-    <img class="vg-c1" src="guide/cut/green.png" alt=""><img class="vg-c2" src="guide/cut/morillo.png" alt=""><img class="vg-c3" src="guide/cut/singleton.png" alt="">
-    <img class="vg-c4" src="guide/cut/evenstar.png" alt=""><img class="vg-c5" src="guide/cut/leon.png" alt=""><img class="vg-c6" src="guide/cut/beausoleil.png" alt="">
-    <img class="vg-c7" src="guide/cut/koyama.png" alt="">
+    <div class="vg-row vg-back"><img src="guide/cut/green.png" alt="Mitch Green"><img src="guide/cut/evenstar.png" alt="Jamey Evenstar"><img src="guide/cut/beausoleil.png" alt="Jeremy Beausoleil Smith"><img src="guide/cut/singleton.png" alt="Shannon Singleton"></div>
+    <div class="vg-row vg-front"><img src="guide/cut/morillo.png" alt="Angelita Morillo"><img class="vg-star" src="guide/cut/koyama.png" alt="Tiffany Koyama Lane"><img src="guide/cut/leon.png" alt="Esther León"></div>
   </div>
   <div class="vg-foot"><span>Ballots due 8 pm Tuesday, Nov 3</span><span>whosbuyingpdx.com</span></div>
 </section>
