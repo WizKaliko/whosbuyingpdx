@@ -478,6 +478,89 @@ section.ch:first-child{padding-top:24px}
 .pop-n{margin:0;font-size:12.5px;color:var(--ink-2)}
 
 .r-pop[hidden]{display:none}
+
+/* case files */
+.cases{min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:22px}
+.case{grid-template-columns:minmax(0,1fr);min-width:0;border-top:3px solid var(--ink);padding-top:12px;display:grid;gap:10px;align-content:start;min-width:0}
+.case h4{margin:0;font-family:var(--f-display);font-size:26px;line-height:1}
+.case-who{margin:0;color:var(--ink-2);font-size:15px;max-width:56ch}.case-who b{color:var(--ink)}
+.ctl{grid-template-columns:minmax(0,1fr);list-style:none;margin:0;padding:0;display:grid;gap:0;border-left:2px solid var(--rule);margin-left:4px}
+.ctl li{min-width:0;display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding:7px 0 7px 14px;position:relative;font-size:15px;line-height:1.4}
+.ctl li::before{content:"";position:absolute;left:-6px;top:13px;width:10px;height:10px;border-radius:50%;background:var(--paper);border:2px solid var(--rule)}
+.ctl li.hot::before{background:var(--slate);border-color:var(--slate)}
+.ctl time{font-family:var(--f-data);font-size:12px;color:var(--ink-2);padding-top:2px}
+.ctl b{font-family:var(--f-data);font-size:14px}
+.ctl li.hot span{color:var(--ink);font-weight:600}
+.case-tie{margin:0;font-size:14px;color:var(--ink-2);border-left:3px solid var(--lean);padding-left:10px}
+@media (max-width:520px){.ctl li{grid-template-columns:1fr;gap:2px}}
+.ch>*{min-width:0}
+/* ---------- homepage-style web ---------- */
+#hweb{display:block;width:100%;min-width:860px;height:auto;overflow:visible}
+.h-key{display:flex;flex-wrap:wrap;gap:6px 22px;font:500 12px/1.4 'Martian Mono',monospace;color:var(--ink-2);margin:6px 0 10px}
+.h-key i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:7px;vertical-align:-1px}
+.h-key .k-both{background:var(--peacock)}.h-key .k-only{background:transparent;border:1.5px solid var(--slate)}
+.he{fill:none;stroke-linecap:round;transition:opacity .25s}
+.he-l{stroke:var(--slate);opacity:.5}.he-r{stroke:var(--peacock);opacity:.42}
+.he.fade{opacity:.05}
+.h-dot{fill:var(--night,#0f0d22);stroke:var(--slate);stroke-width:1.6}
+.h-dot.both{fill:var(--peacock);stroke:none}
+.h-f,.h-c{cursor:pointer;transition:opacity .25s;outline:none}
+.h-f:focus-visible .h-dot,.h-c:focus-visible circle{stroke:var(--lean);stroke-width:3}
+.h-f.fade,.h-c.fade{opacity:.18}
+.h-cl{fill:var(--slate)}.h-cr{fill:var(--peacock)}
+.h-n{font:600 15px 'Bricolage Grotesque',sans-serif;fill:var(--ink)}
+.h-s{font:400 11px 'Martian Mono',monospace;fill:var(--ink-2)}
+.h-hd{font:500 11px 'Martian Mono',monospace;letter-spacing:.1em;fill:var(--ink-2)}
+#hweb.anim .he{stroke-dasharray:1;stroke-dashoffset:1}
+#hweb.anim.go .he{animation:hdraw 1.1s ease-out forwards;animation-delay:var(--d)}
+@keyframes hdraw{to{stroke-dashoffset:0}}
+/* ---------- ranked list ---------- */
+.vl-sort{flex-wrap:wrap}
+.vl-head,.vrow>summary{display:grid;grid-template-columns:2.2em minmax(0,1.6fr) minmax(0,1.1fr) 7.5em 7.5em 6.5em;gap:12px;align-items:center}
+.vl-head{font:500 11px 'Martian Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);padding:0 12px 8px;border-bottom:1px solid var(--rule);margin-top:14px}
+.vl-head span:nth-child(n+4){text-align:right}
+.vl-head .b,.vr-num.b{color:var(--slate)}.vl-head .r,.vr-num.r{color:var(--peacock)}
+.vrow{border-bottom:1px solid var(--rule)}
+.vrow>summary{list-style:none;cursor:pointer;padding:12px}
+.vrow>summary::-webkit-details-marker{display:none}
+.vrow>summary:hover,.vrow[open]>summary{background:var(--paper-2)}
+.vrow>summary:focus-visible{outline:2px solid var(--lean);outline-offset:-2px}
+.vr-rank{font:500 12px 'Martian Mono',monospace;color:var(--ink-2)}
+.vr-name b{display:block;font:600 16px/1.25 'Bricolage Grotesque',sans-serif;color:var(--ink)}
+.vr-name small,.vr-num small{display:block;font:400 11px/1.4 'Martian Mono',monospace;color:var(--ink-2);margin-top:2px}
+.vr-bars{display:grid;gap:3px}
+.vr-bar{display:flex;height:7px;background:color-mix(in srgb,var(--ink) 6%,transparent);border-radius:2px;overflow:hidden}
+.vr-bar i{display:block;height:100%}
+.vr-bar .b{background:var(--slate)}.vr-bar .r{background:var(--peacock)}
+.vr-bar .ow{background:repeating-linear-gradient(90deg,var(--slate) 0 3px,transparent 3px 6px);opacity:.7}
+.vr-num{text-align:right;font:600 15px 'Martian Mono',monospace;color:var(--ink)}
+.vrow.agg .vr-name b{font-style:italic;color:var(--ink-2)}
+.vp{padding:4px 12px 22px 3.4em;font:400 16px/1.55 'Newsreader',serif;color:var(--ink)}
+.vp p{margin:10px 0;max-width:68ch}
+.vp-who{font-size:17px}
+.vp-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px 34px;margin:12px 0}
+.vp h5{font:500 11px 'Martian Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:0 0 6px}
+.vp ul{list-style:none;margin:0;padding:0}
+.vp li{display:flex;justify-content:space-between;gap:14px;padding:6px 0 6px 10px;border-bottom:1px dotted var(--rule);border-left:3px solid var(--rule)}
+.vp li span{min-width:0}
+.vp li small{display:block;font:400 11px 'Martian Mono',monospace;color:var(--ink-2)}
+.vp li b{font:600 14px 'Martian Mono',monospace;white-space:nowrap;text-align:right}
+.vp li b small{text-align:right}
+.vp li.c-b{border-left-color:var(--slate)}.vp li.c-r,.vp li.c-p{border-left-color:var(--peacock)}.vp li.c-c{border-left-color:var(--lean)}.vp li.c-m{border-left-color:var(--mist,#8a86a8)}
+.vp-none,.vp-early,.vp-src{color:var(--ink-2);font-size:14px}
+.vp-src a{color:inherit}
+@media (max-width:720px){
+  .vl-head{display:none}
+  .vrow>summary{grid-template-columns:1.6em minmax(0,1fr) auto;row-gap:6px}
+  .vr-bars{grid-column:2/4;grid-row:2}
+  .vr-num.r,.vr-num.a{display:none}
+  .vp{padding-left:12px}
+}
+.h-fn{font:500 12.5px 'Bricolage Grotesque',sans-serif;fill:var(--ink);paint-order:stroke;stroke:var(--night,#0b0d14);stroke-width:5px;stroke-linejoin:round;pointer-events:none}
+.h-f.fade .h-fn{opacity:.6}
+.vl-sort{width:auto;max-width:100%;border:0;gap:6px}
+.vl-sort button{border:1.5px solid var(--ink);text-align:left}
+@media (max-width:720px){.vl-sort button{font-size:13px;padding:7px 11px}}
 </style>
 </head><body>
 <div class="topbar"><div class="wrap">
@@ -499,20 +582,71 @@ section.ch:first-child{padding-top:24px}
     </div>
   </section>
 
+  <section class="ch" id="cases">
+    <div class="ch-head"><span class="ch-no">Case files</span>
+      <h3 class="sub-h">Four firms, in their own filings</h3>
+    </div>
+    <div class="cases">
+      <article class="case">
+        <h4>Springwater Partners</h4>
+        <p class="case-who">Paige Richardson&rsquo;s consulting firm. She sits on the board of Emerge Oregon, which trains Democratic women to run.</p>
+        <ol class="ctl">
+          <li><time>2020</time><span>Paid $66K by the police-oversight measure and $158K by Chloe Eudaly.</span></li>
+          <li><time>2022</time><span>Paid <b>$418K</b> by Jo Ann Hardesty&rsquo;s campaign.</span></li>
+          <li><time>Apr 2025</time><span>Helped design a poll on repealing Preschool for All, pitched to Tim Boyle and other business leaders. She told Willamette Week, &ldquo;I often don&rsquo;t agree with them on policy issues.&rdquo;</span></li>
+          <li><time>Aug 2026</time><span>Paid <b>$10K</b> by Community Safety Coalition, the PAC behind the failed initiative to move Clean Energy Fund money to police. Its big funders: the police union, Jeff Swickard ($250K) and Tim Boyle ($100K).</span></li>
+          <li class="hot"><time>Oct 2026</time><span>Paid <b>$103K</b> by Olivia Clark and <b>$99K</b> by Kellie Torres in one week.</span></li>
+        </ol>
+        <p class="case-tie">Swickard and Boyle also fund the Chamber&rsquo;s PAC ($150K from Swickard&rsquo;s company this cycle) and Go Portland Go ($25K each).</p>
+      </article>
+      <article class="case">
+        <h4>Untidy Origins</h4>
+        <p class="case-who">Portland ad and video shop. Clients this cycle include OEA, the Working Families Party, the Portland teachers&rsquo; PAC and Tobias Read.</p>
+        <ol class="ctl">
+          <li><time>Oct 1</time><span>Paid <b>$44K</b> by Steve Novick.</span></li>
+          <li><time>Oct 5</time><span>Paid <b>$49K</b> by Julia Brim-Edwards, with $34K more owed.</span></li>
+          <li class="hot"><time>Oct 6</time><span>Paid <b>$30K</b> by Mitch Green, the progressive councilor the Chamber&rsquo;s billboards attack.</span></li>
+          <li><time>Oct 8</time><span>Paid another <b>$36K</b> by Novick.</span></li>
+        </ol>
+      </article>
+      <article class="case">
+        <h4>The Rally Point</h4>
+        <p class="case-who">Run by Annie Ellison, who led Emerge Oregon until 2024 and left to consult on council races.</p>
+        <ol class="ctl">
+          <li><time>2026</time><span>Paid <b>$20K</b> by Oregon Prosperity Action Fund, which is funded by the corporate Portland Alliance PAC.</span></li>
+          <li class="hot"><time>Sept 25</time><span>Paid <b>$6K</b> by goPDX, the Chamber-funded committee behind the DitchMitch and fix multCo billboards.</span></li>
+        </ol>
+      </article>
+      <article class="case">
+        <h4>Mission Control</h4>
+        <p class="case-who">Connecticut direct-mail firm. Its biggest Oregon client this cycle is the Democratic Party of Oregon: <b>$277K</b>.</p>
+        <ol class="ctl">
+          <li class="hot"><time>Sept 29&ndash;Oct 15</time><span>Paid <b>$156K</b> by Eli Arnold, whose donors over $100 include 45% who also fund Republicans or Portland conservatives.</span></li>
+        </ol>
+      </article>
+    </div>
+    <details class="cap-d"><summary>Sources</summary><span class="cap">Payments: ORESTAR filings of each committee, pulled Oct 19, 2026; earlier Springwater payments from the same filings (2020&ndash;2022). Richardson and Emerge Oregon: <a href="https://or.emergeamerica.org/about/board-of-directors/" target="_blank" rel="noopener">Emerge Oregon board page</a>. Preschool for All poll and quote: <a href="https://www.wweek.com/news/city/2025/04/04/portland-business-moguls-discuss-poll-to-test-repeal-of-preschool-for-all/" target="_blank" rel="noopener">Willamette Week, Apr 4, 2025</a>. Community Safety Coalition donors: <a href="https://www.wweek.com/news/city/2026/07/01/police-union-has-donated-nearly-800000-to-pac-behind-police-hire-ballot-initiative/" target="_blank" rel="noopener">Willamette Week, July 2026</a>. The initiative: <a href="https://www.portlandmercury.com/news/elections-complaint-alleges-canvassers-are-intentionally-misleading-public-about-police-funding-initiative/" target="_blank" rel="noopener">Portland Mercury</a>; it failed to qualify for the ballot (<a href="https://www.wweek.com/news/city/2026/08/04/initiative-to-hire-cops-with-climate-dollars-fails-to-quality-for-november-ballot-backers-pledge-to-sue/" target="_blank" rel="noopener">Willamette Week, Aug 2026</a>). Annie Ellison: <a href="https://www.wweek.com/news/city/2024/06/23/emerge-oregon-executive-director-leaving-post-to-work-on-city-council-campaigns/" target="_blank" rel="noopener">Willamette Week, June 23, 2024</a>. Donor overlap: The donors page.</span></details>
+  </section>
+
   <section class="ch" id="who">
-    <div class="ch-head"><span class="ch-no">The firms</span>
-      <h3 class="sub-h">Who the city and county campaigns pay</h3>
-      <p class="lede">Business-backed candidates and the PACs supporting them are on the left. Progressive candidates are on the right. Firms sit between them, closer to the side that pays them. Firms in the middle are paid by both. Line width shows dollars paid since January 2025. Click a firm to see everyone who pays it, across Oregon.</p>
+    <div class="ch-head"><span class="ch-no">The web</span>
+      <h3 class="sub-h">The same firms work both sides</h3>
+      <p class="lede">The business-backed candidates and their PACs are on the left. The firms they paid since January 2025 are in the middle, sized by how much they got. On the right are the Democratic and progressive clients those same firms worked for this cycle. Tap any circle to follow its lines; tap a firm to open its profile below.</p>
     </div>
-    <div class="r-key">
-      <span><i class="k-b"></i>Business-backed side</span><span><i class="k-r"></i>Progressive side</span><span><i class="k-m"></i>County candidate on neither slate</span>
-      <span><i class="k-ow"></i>Bills reported, not yet paid</span><span><i class="k-agg"></i>Not a firm: staff and ads bought direct, added together</span><span><i class="k-ring"></i>Dashed ring: statewide client search still partial</span>
+    <div class="h-key"><span><i class="k-both"></i>Firm also paid by Democrats or progressives</span><span><i class="k-only"></i>No Democratic or progressive clients found</span></div>
+    <div class="scroll-x"><svg id="hweb" role="img" aria-labelledby="hw-t"><title id="hw-t">Business-backed Portland candidates and PACs on the left, the firms they paid in the middle, and those firms' Democratic and progressive clients on the right. Springwater Partners links Clark and Torres to Rep. Daniel Nguyen; Winning Mark links Novick and Brim-Edwards to the Democratic Party of Oregon and Gov. Kotek; Mission Control links Arnold to the Democratic Party of Oregon; Untidy Origins links Novick and Brim-Edwards to Mitch Green, OEA and Working Families.</title></svg></div>
+    <p class="cap" id="hweb-sum"></p>
+  </section>
+
+  <section class="ch" id="firms">
+    <div class="ch-head"><span class="ch-no">Every firm, ranked</span>
+      <h3 class="sub-h">Who got the most, and who else pays them</h3>
+      <p class="lede">Every firm paid by a 2026 Portland City Council or Multnomah County Chair campaign, or the PACs behind them. Open a row for the firm&rsquo;s profile: who runs it, every Portland race that paid it, and every other Oregon committee that paid it since January 2025.</p>
     </div>
-    <div class="r-wrap">
-      <div class="scroll-x"><svg id="rweb" viewBox="0 0 1180 1000" role="img" aria-labelledby="rw-t"><title id="rw-t">Payments from Portland city and county campaigns and PACs to the firms they hire. Springwater Partners is paid by Clark and Torres; Untidy Origins by Novick, Brim-Edwards and Mitch Green; Mission Control by Arnold; Hamburger Group Creative by Unity PAC; Ethos Campaigns by Koyama Lane.</title></svg></div>
-      <div class="r-pop" id="rweb-pop" hidden></div>
-    </div>
-    <details class="cap-d"><summary>Sources and method</summary><span class="cap">ORESTAR, pulled Oct 19, 2026. Lines show cash paid since Jan 1, 2025 by 2026 Portland City Council District 3 and 4 and Multnomah County Chair campaigns, and by the PACs backing the business-backed slate (Unity PAC, the DitchMitch and fix multCo billboard committees and goPDX, Go Portland Go, Portland Alliance PAC, Oregon Prosperity Action Fund, the Chamber&rsquo;s Coalition for Portland&rsquo;s Future). Dashed lines are bills reported as owed (accounts payable) and not yet shown as paid. Candidates covered: Torres, Novick, Morillo, Koyama Lane (D3); Clark, Zimmerman, Arnold, Green, part of Evenstar (D4); Brim-Edwards, Meieran, Singleton (County Chair). Not yet pulled: Le&oacute;n, Beausoleil Smith, Cronlund, and independent spending by labor, Realtors and other PACs. Payments to individual people are grouped and not named. Percentages beside candidates repeat their donor overlap from The donors page. Firms included were paid at least $5,000 by one of these committees, plus Purple State Strategies, CN4 Partners and Square Cap Media because they work for several. Gifts between committees (for example, the Chamber PAC to Unity PAC) aren&rsquo;t drawn here; they&rsquo;re in the diagrams below.</span></details>
+    <div class="yr vl-sort" role="group" aria-label="Sort by"><button type="button" data-sort="biz" aria-pressed="true">Most from the business-backed side</button><button type="button" data-sort="prog" aria-pressed="false">Most from the progressive side</button><button type="button" data-sort="all" aria-pressed="false">Most across Oregon</button></div>
+    <div class="vl-head" aria-hidden="true"><span></span><span>Firm</span><span></span><span class="b">Business side</span><span class="r">Progressive side</span><span>All Oregon</span></div>
+    <div class="vlist" id="vlist"></div>
+    <details class="cap-d"><summary>Sources and method</summary><span class="cap">ORESTAR, pulled Oct 19, 2026. &ldquo;Business side&rdquo; and &ldquo;Progressive side&rdquo; are cash paid since Jan 1, 2025 by the 2026 Portland City Council District 3 and 4 and Multnomah County Chair campaigns and the PACs backing the business-backed slate (Unity PAC, DitchMitch, fix multCo, goPDX, Go Portland Go, Portland Alliance PAC, Oregon Prosperity Action Fund, Coalition for Portland&rsquo;s Future); Meieran, on neither slate, is counted with the progressive column. &ldquo;All Oregon&rdquo; adds every other Oregon committee that paid the firm. Firms marked partial have Portland race payments from ORESTAR but other clients from Ballast&rsquo;s saved records through mid-September 2026. &ldquo;Owed&rdquo; is accounts payable reported but not yet paid, kept out of the totals. Spelling variants were combined after checking payee addresses; unrelated businesses with similar names were dropped. Payments to individual people are grouped and not named.</span></details>
   </section>
 
   <section class="ch" id="web">
@@ -532,16 +666,6 @@ section.ch:first-child{padding-top:24px}
     <div class="scroll-x"><svg class="vw" id="cweb" viewBox="0 0 1240 600" role="img" aria-labelledby="cw-t"><title id="cw-t">What the six business-backed candidates paid consulting firms. In 2025–26: Springwater Partners $202K from Clark and Torres; Mission Control $156K from Arnold; Untidy Origins $149K from Novick and Brim-Edwards.</title></svg></div>
     <p class="cap" id="vw-note"></p>
     <details class="cap-d"><summary>Sources and method</summary><span class="cap">Cash contributions and expenditures reported to ORESTAR, pulled Oct 19, 2026 from each committee&rsquo;s full transaction export: United for Portland Action Fund (#21023), Unity PAC (#25358), goPDX (#25330), DitchMitch (#25329), fix multCo (#25331), Coalition for Portland&rsquo;s Future (#23696), Portland Alliance PAC (#21819), Oregon Prosperity Action Fund (#24814), Go Portland Go (#24993), Jessie Burke&rsquo;s Positivity PAC (#23326), Keep Portland Safe PAC (#4167), Portland Metro Fire Fighters PAC (#223), and the candidate committees of Torres (#24897), Clark (#23199), Arnold (#23295), Brim-Edwards (#21206), Novick (#15109) and Zimmerman (#17629). 2025&ndash;26 runs Jan 1, 2025 through each committee&rsquo;s latest filing (Oct 8&ndash;16). Bills reported as owed (accounts payable) are left out of the bands so nothing counts twice. Candidates&rsquo; bands show what they spent; their own donors are on The donors page. &ldquo;Staff, fees and small vendors&rdquo; combines payments to individuals (not named here), compliance software, card fees, smaller ads and items under $100. Brim-Edwards&rsquo;s $58K to Patinkin Research was paid by the candidate personally and reported by her committee. Partnership for Progress gave Go Portland Go $32K; it is not a registered Oregon committee.</span></details>
-  </section>
-
-  <section class="ch" id="firms">
-    <div class="ch-head"><span class="ch-no">Who else pays them</span>
-      <h3 class="sub-h">Every Oregon committee that paid each firm this cycle</h3>
-      <p class="lede">We searched every Oregon campaign and PAC for payments to each firm since January 2025, not just the Portland races. Firms are ordered by how much they got from Portland&rsquo;s business-backed side.</p>
-      <div class="fm-key"><span><i class="kk t-b"></i>Business-backed side, 2026</span><span><i class="kk t-c"></i>Portland conservatives (as defined on The donors page)</span><span><i class="kk t-p"></i>Democratic party, officeholders, labor, progressive groups</span><span><i class="kk t-o"></i>Judges, local measures, industry PACs</span></div>
-    </div>
-    <div class="firms" id="firm-list"></div>
-    <details class="cap-d"><summary>Sources and method</summary><span class="cap">ORESTAR transaction searches by payee name (all committees, transactions dated Jan 1, 2025 or later), pulled Oct 19, 2026. Spelling variants were combined after checking the payee address (for example, Winning Mark, Winning Mark Strategies and WinningMark; Springwater Partners in Lake Oswego and Salt Lake City). Unrelated businesses with similar names were dropped. Amounts are cash payments; &ldquo;owed&rdquo; is accounts payable reported but not yet paid. &ldquo;Earlier&rdquo; lines come from the same filings before 2025.</span></details>
   </section>
 
   <section class="ch" id="missing">
@@ -570,6 +694,7 @@ section.ch:first-child{padding-top:24px}
 <script src="network.js?v=oct19c"></script>
 <script src="firms.js?v=oct19c"></script>
 <script src="vendors.js?v=oct19c"></script>
-<script src="universe.js?v=oct19d"></script>
-<script src="web-view.js?v=oct19e"></script>
+<script src="profiles.js?v=oct19f"></script>
+<script src="list.js?v=oct19f"></script>
+<script src="hweb.js?v=oct19f"></script>
 </body></html>
