@@ -20,7 +20,7 @@
         <span class="vr-bars"><span class="vr-bar"><i class="b" style="width:${(100*r.biz/M).toFixed(1)}%"></i>${r.owed?`<i class="ow" style="width:${(100*r.owed/M).toFixed(1)}%"></i>`:''}</span><span class="vr-bar"><i class="r" style="width:${(100*r.prog/M).toFixed(1)}%"></i></span></span>
         <span class="vr-num b">${r.biz?K(r.biz):'—'}${r.owed?`<small>+${K(r.owed)} owed</small>`:''}</span>
         <span class="vr-num r">${r.prog?K(r.prog):'—'}</span>
-        <span class="vr-num a">${p.agg?'':K(r.all)}${p.full||p.agg?'':'<small>partial</small>'}</span>
+        <span class="vr-num a">${p.agg?'':K(r.all)}${p.life?`<small>${K(p.life.total)} all years</small>`:''}</span>
       </summary>
       <div class="vp">
         ${p.people?`<p class="vp-who">${p.people}</p>`:''}
@@ -28,8 +28,9 @@
           <div><h5>Paid by Portland city and county races</h5><ul>${race.map(x=>`<li class="c-${x[1]}"><span>${x[0]}<small>${TAG[x[1]]}</small></span><b>${K(x[2])}${x[3]?`<small>+${K(x[3])} owed</small>`:''}</b></li>`).join('')}</ul></div>
           ${p.agg?'':`<div><h5>Who else paid them, Jan 2025 &ndash; Oct 2026</h5>${other.length?`<ul>${other.map(x=>`<li class="c-${x[1]}"><span>${x[0]}<small>${TAG[x[1]]}</small></span><b>${K(x[2])}${x[3]?`<small>+${K(x[3])} owed</small>`:''}</b></li>`).join('')}</ul>`:`<p class="vp-none">${p.full?'No other Oregon committee paid this firm since January 2025.':'Not yet searched statewide.'}</p>`}</div>`}
         </div>
+        ${p.life?`<div class="vp-life"><h5>Every Oregon committee, all years</h5><p class="vp-life-sum"><b>${K(p.life.total)}</b> from <b>${p.life.n}</b> committee${p.life.n===1?'':'s'}${p.life.since?` since ${p.life.since}`:''}${p.life.trunc?' <small>(at least: the search caps out on firms this busy)</small>':''}</p><ol>${p.life.top.map(x=>`<li><span>${x[0]}<small>${x[2]}</small></span><b>${K(x[1])}</b></li>`).join('')}</ol></div>`:''}
         ${p.extra?`<p>${p.extra}</p>`:''}${p.note?`<p>${p.note}</p>`:''}${p.earlier?`<p class="vp-early">${p.earlier}</p>`:''}
-        <p class="vp-src">${p.full?'Source: every Oregon committee searched for payments to this firm in ORESTAR, Oct 19, 2026.':p.agg?'Source: the campaigns’ own ORESTAR filings, Oct 19, 2026.':'Source: Portland race payments from ORESTAR, Oct 19, 2026; other clients from Ballast’s saved ORESTAR records through mid-September 2026.'}${p.src.length?' Also: '+p.src.filter(s=>s[1]).map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${s[0]}</a>`).join(', ')+'.':''}</p>
+        <p class="vp-src">${p.agg?'Source: the campaigns’ own ORESTAR filings, Oct 19, 2026.':'Sources: Portland race payments from the campaigns’ ORESTAR filings; other clients and all-years history from a Ballast vendor search of every Oregon committee in ORESTAR; both Oct 19, 2026.'}${p.src.length?' Also: '+p.src.filter(s=>s[1]).map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${s[0]}</a>`).join(', ')+'.':''}</p>
       </div></details>`}).join('');
   }
   const tabs=[...document.querySelectorAll('[data-sort]')];
