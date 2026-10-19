@@ -84,7 +84,7 @@
     replay(on);
     const PT={"D":{"T":7,"N":3,"B":23,"Z":9,"C":11,"A":15},"K":{"T":16,"N":12,"B":35,"Z":19,"C":18,"A":13},"U":{"T":6,"N":3,"B":12,"Z":5,"C":3,"A":2},"X":{"T":17,"N":15,"B":34,"Z":20,"C":17,"A":20},"O":{"T":83,"N":81,"B":189,"Z":131,"C":101,"A":99}}[tk];
     const br=corder.slice().sort((a,b)=>PT[b]-PT[a]).map(c=>`${NAMES[c]} ${PT[c]}`).join(' · ');
-    status.innerHTML=`<b>${G[tk].label}:</b> ${ps.length} of the ${D.length} donor households shown also gave here. Individual donors who did, by candidate: ${br}. <button type="button" class="web-reset">Show all</button>`;
+    status.innerHTML=`<b>${G[tk].label}:</b> ${ps.length} of the ${D.length} donor households shown also gave here. Donors over $100 who did, by candidate: ${br}. <button type="button" class="web-reset">Show all</button>`;
     status.querySelector('button').onclick=reset;
   }
   function reset(){cur=null;svg.classList.remove('focus');allE.forEach(e=>e.classList.remove('on'));pts.forEach(p=>p.dot.classList.remove('on'));corder.forEach(j=>C[j].g.classList.remove('on'));Object.values(G).forEach(t=>t.g.classList.remove('on'));restore();
