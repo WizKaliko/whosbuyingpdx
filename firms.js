@@ -45,7 +45,7 @@ window.FIRMS=[
    earlier:'Earlier: $739K from the Chamber’s Coalition for Portland’s Future in 2024, and about $470K from the Chamber PAC in 2020.'},
  {n:'The Rally Point', what:'Campaign management and compliance (Portland)', pay:[
    ['Oregon Prosperity Action Fund','b',20100,10100],['goPDX','b',6000],['Portland Alliance PAC','b',2705],['Oregon Realtors PAC','o',4000,8000],
-   ['Rep. Daniel Nguyen','p',3300,3300],['Judges, city and school races (11)','o',100242]]},
+   ['Rep. Daniel Nguyen','p',3300,3300],['Judges, city and school races (11)','o',100242]],note:'Run by Annie Ellison, who led Emerge Oregon (which trains Democratic women to run for office) until 2024, then left to consult on council races (Willamette Week, June 23, 2024). goPDX, the Chamber-funded committee behind the DitchMitch and fix multCo billboards, paid it $6K on Sept 25.'},
  {n:'City Wins', what:'Campaign management (Portland)', pay:[['Kellie Torres','b',11250]]},
  {n:'Square Cap Media', what:'Video (Portland)', pay:[['Go Portland Go','b',10000],['Kellie Torres','b',0,2000]]},
  {n:'CN4 Partners', what:'Mail and media (Seattle)', pay:[['Eric Zimmerman','b',3270]],

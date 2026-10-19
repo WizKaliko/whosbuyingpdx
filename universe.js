@@ -17,7 +17,7 @@ window.UNI=[
  {n:'Swift Public Affairs',full:true,pay:[['Julia Brim-Edwards','b',26000],['Portland Alliance PAC','b',10000],['Local measures and a legislative race','o',223630]]},
  {n:'Purple State Strategies',full:true,pay:[['Eli Arnold','b',18432],['Eric Zimmerman','b',5708],['Julia Brim-Edwards','b',4500],['Rene Gonzalez','c',1832],['Other','o',375]]},
  {n:'Elevated Campaigns',full:true,pay:[['Portland Alliance PAC','b',19700],['Pam Treece','c',2500],['Democratic Party of Lane County','p',30379],['Lane County races and measure','o',608031]]},
- {n:'The Rally Point',full:true,pay:[['Oregon Prosperity Action Fund','b',20100],['goPDX','b',6000],['Portland Alliance PAC','b',2705],['Rep. Daniel Nguyen','p',3300],['Judges, local races, Realtors PAC','o',104242]]},
+ {n:'The Rally Point',full:true,pay:[['Oregon Prosperity Action Fund','b',20100],['goPDX','b',6000],['Portland Alliance PAC','b',2705],['Rep. Daniel Nguyen','p',3300],['Judges, local races, Realtors PAC','o',104242]],note:'Run by Annie Ellison, who led Emerge Oregon (which trains Democratic women to run for office) until 2024, then left to consult on council races (Willamette Week, June 23, 2024). goPDX, the Chamber-funded committee behind the DitchMitch and fix multCo billboards, paid it $6K on Sept 25.'},
  {n:'City Wins',full:true,pay:[['Kellie Torres','b',11250]]},
  {n:'Square Cap Media',full:true,pay:[['Go Portland Go','b',10000]]},
  {n:'Morel Ink',full:false,pay:[['Kellie Torres','b',11362],['Julia Brim-Edwards','b',8782],['Eli Arnold','b',7402],['Steve Novick','b',3212],['Olivia Clark','b',2832],['Shannon Singleton','r',4608],['Tiffany Koyama Lane','r',3109],['Pam Treece','c',96096],['Democratic and labor committees','p',145855],['Other campaigns and measures','o',313587]]},
