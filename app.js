@@ -69,7 +69,7 @@
     ps.forEach(p=>{p.dot.classList.add('on');p.edges.forEach(e=>{if(!e.classList.contains('ein')||e.dataset.c===k){e.classList.add('on');on.push(e)}})});
     restore();replay(on);
     const RN={"T":[32,219,7],"N":[25,334,3],"B":[77,489,23],"Z":[37,288,9],"C":[38,320,11],"A":[37,239,15]}[k];
-    status.innerHTML=`<b>${C[k][0]}:</b> ${RN[0]} of ${RN[1]} individual donors also gave to Republican campaigns, ${RN[2]} of them to Christine Drazan. Highlighted dots are donor households. <button type="button" class="web-reset">Show all six</button>`;
+    status.innerHTML=`<b>${C[k][0]}:</b> ${RN[0]} of ${RN[1]} donors who gave over $100 also gave to Republican campaigns, ${RN[2]} of them to Christine Drazan. Highlighted dots are donor households. <button type="button" class="web-reset">Show all six</button>`;
     status.querySelector('button').onclick=reset;
   }
   function focusT(tk){
