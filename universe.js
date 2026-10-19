@@ -6,11 +6,11 @@
         m other candidate in those races (Meieran); c Portland conservatives (Treece, Gonzalez); p Democratic, labor, progressive elsewhere in Oregon; o other. */
 window.UNI=[
  {n:'Springwater Partners',full:true,pay:[['Olivia Clark','b',102739],['Kellie Torres','b',98816],['Rep. Daniel Nguyen','p',145886],['Rep. Lisa Reynolds','p',18880],['Judges, local races, a ballot committee','o',148106]]},
- {n:'Untidy Origins',full:true,pay:[['Steve Novick','b',80320],['Julia Brim-Edwards','b',68859],['Mitch Green','r',30000],['Nafisa Fai, OEA, Working Families, Tobias Read, PAT and others','p',227608],['Legislative races, measures, industry PACs','o',357255]]},
+ {n:'Untidy Origins',full:true,pay:[['Steve Novick','b',80320],['Julia Brim-Edwards','b',68859,33750],['Mitch Green','r',30000],['Nafisa Fai, OEA, Working Families, Tobias Read, PAT and others','p',227608],['Legislative races, measures, industry PACs','o',357255]]},
  {n:'Winning Mark',full:true,pay:[['Steve Novick','b',35902],['Julia Brim-Edwards','b',12500],['Rene Gonzalez','c',8000],['Democratic Party of Oregon','p',680976],['Gov. Tina Kotek','p',130400],['House Democrats, other Democrats, labor','p',28109],['Oregon Beverage PAC','o',148944]]},
  {n:'Mission Control',full:true,pay:[['Eli Arnold','b',155951],['Democratic Party of Oregon','p',277280],['Senate Democrats','p',4883],['Judges and a legislative race','o',73195]]},
- {n:'Hamburger Group Creative',full:true,pay:[['Unity PAC','b',219625]]},
- {n:'Affiliated Media',full:true,pay:[['DitchMitch','b',73673],['fix multCo','b',73673],['Suburban measure committees','o',45000]]},
+ {n:'Hamburger Group Creative',full:true,pay:[['Unity PAC','b',219625,139589]]},
+ {n:'Affiliated Media',full:true,pay:[['DitchMitch','b',73673,97346],['fix multCo','b',73673,97346],['Suburban measure committees','o',45000]]},
  {n:'Leverenz & Associates',full:true,pay:[['Go Portland Go','b',58989],['Oregon Hospital PAC','o',10400]]},
  {n:'Patinkin Research',full:true,pay:[['Julia Brim-Edwards','b',58300]]},
  {n:'Clean Sweep Campaigns',full:true,pay:[['Coalition for Portland’s Future','b',48118]]},
@@ -33,5 +33,9 @@ window.UNI=[
  {n:'Eyes & Ears',full:false,pay:[['Mitch Green','r',16145]]},
  {n:'Sprout Chinn',full:false,pay:[['Angelita Morillo','r',16007]]},
  {n:'Milne Inc',full:false,pay:[['Mitch Green','r',8500]]},
- {n:'Love Campaigns',full:false,pay:[['Shannon Singleton','r',7500]]}
+ {n:'Love Campaigns',full:false,pay:[['Shannon Singleton','r',7500]]},
+ {n:'Canvassing: Portland Clean Air Fund',full:true,pay:[['Eli Arnold','b',17000]],note:'Reported by the Arnold campaign as canvassing.'},
+ {n:'Ads bought direct: newspapers',agg:true,full:true,pay:[['Eli Arnold','b',23295],['Julia Brim-Edwards','b',6617],['Eric Zimmerman','b',3135],['Olivia Clark','b',2485],['Kellie Torres','b',1500],['Steve Novick','b',882],['Angelita Morillo','r',2458],['Mitch Green','r',1050]],note:'Willamette Week, Portland Mercury, Northwest Examiner, CMG papers, NW Labor Press and community papers, added together.'},
+ {n:'Ads bought direct: Meta, Google and others',agg:true,full:true,pay:[['Eli Arnold','b',14080],['Go Portland Go','b',11000],['Kellie Torres','b',3710],['Angelita Morillo','r',930]],note:'Facebook/Meta, Google Ads and StackAdapt, added together.'},
+ {n:'Campaign staff and individual contractors',agg:true,full:true,pay:[['Go Portland Go','b',59650],['Olivia Clark','b',20000],['Steve Novick','b',15650],['Kellie Torres','b',9430],['Eli Arnold','b',4850],['Tiffany Koyama Lane','r',101609],['Mitch Green','r',84744],['Angelita Morillo','r',4500]],note:'Payments to individual people for management, organizing, design and staff work, added together and not named here. Includes payroll services where a campaign ran staff wages through one.'},
 ];
