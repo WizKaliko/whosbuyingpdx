@@ -396,6 +396,46 @@ section.ch:first-child{padding-top:24px}
 .fm-key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2)}
 .kk{display:inline-block;width:14px;height:10px;margin-right:6px;vertical-align:middle}
 .todo{margin:0;padding-left:20px;display:grid;gap:8px;max-width:64ch;color:var(--ink-2)}
+
+/* dot universe */
+.u-key{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink-2)}
+.u-key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.u-key .d-ring{border:1.5px dashed var(--ink-2);background:transparent}
+.u-wrap{display:grid;gap:14px}
+#uni{width:100%;min-width:900px;height:auto;display:block}
+.u-d{stroke:none}
+.d-b{fill:var(--slate);background:var(--slate)}
+.d-r{fill:var(--peacock);background:var(--peacock)}
+.d-m{fill:var(--mist,#C9CEEA);background:var(--mist,#C9CEEA);opacity:.7}
+.d-c{fill:var(--lean);background:var(--lean)}
+.d-p{fill:var(--peacock);background:var(--peacock);opacity:.5}
+.d-o{fill:var(--ink-2);background:var(--ink-2);opacity:.38}
+#uni .d-r{filter:drop-shadow(0 0 2px rgba(255,236,190,.55))}
+.u-ring{fill:none;stroke:var(--ink-2);stroke-width:1;stroke-dasharray:3 3;opacity:.7}
+.u-firm{cursor:pointer;transition:opacity .15s}
+.u-firm.dim{opacity:.35}
+.u-firm:focus-visible{outline:none}.u-firm:focus-visible .u-n{text-decoration:underline}
+.u-n{font-family:var(--f-display);font-weight:700;font-size:13.5px;fill:var(--ink);paint-order:stroke;stroke:var(--paper);stroke-width:3px}
+.u-t{font-family:var(--f-data);font-weight:500;font-size:11px;fill:var(--ink-2)}
+.u-p{font-family:var(--f-data);font-size:10.5px;paint-order:stroke;stroke:var(--paper);stroke-width:3px}
+.u-p .p-b{fill:var(--slate)}.u-p .p-r{fill:var(--peacock)}.u-p .p-m{fill:var(--mist,#C9CEEA)}
+.u-axis{stroke:var(--rule);stroke-width:1.5}
+.u-mid{stroke:var(--rule);stroke-dasharray:2 5}
+.u-ax{font-family:var(--f-data);font-size:11px;fill:var(--ink-2)}
+@media (prefers-reduced-motion:reduce){.u-firm{transition:none}}
+.u-detail{border-top:3px solid var(--ink);padding-top:10px;display:grid;gap:8px;max-width:760px}
+.u-detail ul{columns:2 300px;column-gap:28px}.u-detail li{break-inside:avoid;margin-bottom:5px}
+.u-detail h4{margin:0;font-family:var(--f-display);font-size:22px;line-height:1.1}
+.u-detail h4 span{display:block;font-family:var(--f-data);font-size:12px;font-weight:400;color:var(--ink-2);margin-top:4px}
+.u-detail ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.u-detail li{display:grid;grid-template-columns:10px minmax(0,1fr) auto;gap:8px;align-items:baseline;font-size:13.5px;line-height:1.25}
+.u-detail li i{width:10px;height:10px;border-radius:50%;display:block}
+.u-detail li.c-b i{background:var(--slate)}.u-detail li.c-r i{background:var(--peacock)}.u-detail li.c-m i{background:var(--mist,#C9CEEA)}
+.u-detail li.c-c i{background:var(--lean)}.u-detail li.c-p i{background:var(--peacock);opacity:.5}.u-detail li.c-o i{background:var(--ink-2);opacity:.38}
+.u-detail li small{display:block;font-size:11px;color:var(--ink-2)}
+.u-detail li b{font-family:var(--f-data);font-size:12.5px;font-variant-numeric:tabular-nums}
+.u-detail li.c-b span,.u-detail li.c-r span,.u-detail li.c-m span{font-weight:700}
+.u-detail p{margin:0;font-size:13px;color:var(--ink-2)}
 </style>
 </head><body>
 <div class="topbar"><div class="wrap">
@@ -415,6 +455,27 @@ section.ch:first-child{padding-top:24px}
       <p><b>Springwater Partners</b> was paid <b>$418K</b> by Jo Ann Hardesty&rsquo;s 2022 campaign. This month Olivia Clark and Kellie Torres paid it <b>$202K</b>.</p>
       <p><b>Untidy Origins</b> made ads for Mitch Green, the progressive councilor in District 4. In the same weeks it was paid <b>$149K</b> by Steve Novick and Julia Brim-Edwards.</p>
     </div>
+  </section>
+
+  <section class="ch" id="universe">
+    <div class="ch-head"><span class="ch-no">The firms</span>
+      <h3 class="sub-h">Who gets the money, and from which side</h3>
+      <p class="lede">Each cluster is a firm. One dot is $2,500 it was paid by Oregon campaigns and PACs since January 2025. Dots at the center of each cluster are money from Portland&rsquo;s city and county races. A firm&rsquo;s place left to right shows its mix of clients.</p>
+    </div>
+    <div class="u-key">
+      <span><i class="d-b"></i>Business-backed side, Portland &amp; county races</span>
+      <span><i class="d-r"></i>Progressive side, Portland &amp; county races</span>
+      <span><i class="d-c"></i>Portland conservatives</span>
+      <span><i class="d-p"></i>Democratic, labor, progressive elsewhere in Oregon</span>
+      <span><i class="d-o"></i>Other campaigns and measures</span>
+      <span><i class="d-ring"></i>Dashed ring: statewide client search still partial</span>
+    </div>
+    <div class="u-wrap">
+      <div class="scroll-x"><svg id="uni" viewBox="0 0 1180 760" role="img" aria-labelledby="uni-t"><title id="uni-t">Firms paid by Portland city and county campaigns, sized by everything Oregon committees paid them since 2025 and placed by their client mix</title></svg></div>
+      <aside class="u-detail" id="uni-detail" aria-live="polite"></aside>
+    </div>
+    <p class="cap" id="uni-sum"></p>
+    <details class="cap-d"><summary>Sources and method</summary><span class="cap">ORESTAR, pulled Oct 19, 2026. Firms included: every firm paid at least $5,000 since Jan 1, 2025 by a 2026 Portland City Council District 3 or 4 or Multnomah County Chair campaign, or by a PAC backing the business-backed slate (Unity PAC, goPDX and its billboard committees, Go Portland Go, Portland Alliance PAC, Oregon Prosperity Action Fund, the Chamber&rsquo;s Coalition for Portland&rsquo;s Future). Portland race candidates covered so far: Torres, Novick, Morillo, Koyama Lane (D3); Clark, Zimmerman, Arnold, Green (D4); Brim-Edwards, Meieran, Singleton (County Chair); partial for Evenstar. Not yet pulled: Esther Le&oacute;n, Jeremy Beausoleil Smith, Cronlund. For firms without a dashed ring, every Oregon committee was searched for payments to that firm. For dashed firms, other clients come from Ballast&rsquo;s saved ORESTAR records through mid-September 2026 or are not yet searched. Left-to-right position is the business-backed and conservative share of the firm&rsquo;s money from the two sides (business-backed Portland races and Portland conservatives versus progressive Portland races and Democratic, labor and progressive committees); &ldquo;other&rdquo; money doesn&rsquo;t move it. Cash payments only; bills owed are left out.</span></details>
   </section>
 
   <section class="ch" id="web">
@@ -472,4 +533,6 @@ section.ch:first-child{padding-top:24px}
 <script src="network.js?v=oct19c"></script>
 <script src="firms.js?v=oct19c"></script>
 <script src="vendors.js?v=oct19c"></script>
+<script src="universe.js?v=oct19d"></script>
+<script src="universe-view.js?v=oct19d"></script>
 </body></html>
