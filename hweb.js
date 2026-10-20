@@ -27,8 +27,8 @@
   const eg=el('g',{fill:'none'},svg),ng=el('g',{},svg);
   const edges=[];
   firms.forEach((f,i)=>{
-    Object.entries(f.L).forEach(([k,v])=>{const y=ly[k];const e=el('path',{d:`M${cx+14},${y} C${cx+140},${y} ${f.x-140},${f.y} ${f.x},${f.y}`,class:'he he-l','stroke-width':(0.9+5*Math.sqrt(v/maxL)).toFixed(2)},eg);e._l=k;e._f=f.p.n;e.style.setProperty('--d',(0.05+i*0.03).toFixed(2)+'s');edges.push(e)});
-    Object.entries(f.R).forEach(([k,v])=>{const y=ry[k];const e=el('path',{d:`M${f.x},${f.y} C${f.x+150},${f.y} ${gx-150},${y} ${gx-14},${y}`,class:'he he-r','stroke-width':(0.9+5*Math.sqrt(Math.min(v,maxL)/maxL)).toFixed(2)},eg);e._r=k;e._f=f.p.n;e.style.setProperty('--d',(0.9+i*0.03).toFixed(2)+'s');edges.push(e)});
+    Object.entries(f.L).forEach(([k,v])=>{const y=ly[k];const e=el('path',{d:`M${cx+14},${y} C${cx+140},${y} ${f.x-140},${f.y} ${f.x},${f.y}`,class:'he he-l','stroke-width':(0.9+5*Math.sqrt(v/maxL)).toFixed(2)},eg);e._l=k;e._v=v;e._f=f.p.n;e.style.setProperty('--d',(0.05+i*0.03).toFixed(2)+'s');edges.push(e)});
+    Object.entries(f.R).forEach(([k,v])=>{const y=ry[k];const e=el('path',{d:`M${f.x},${f.y} C${f.x+150},${f.y} ${gx-150},${y} ${gx-14},${y}`,class:'he he-r','stroke-width':(0.9+5*Math.sqrt(Math.min(v,maxL)/maxL)).toFixed(2)},eg);e._r=k;e._v=v;e._f=f.p.n;e.style.setProperty('--d',(0.9+i*0.03).toFixed(2)+'s');edges.push(e)});
   });
   tx(svg,mx,20,firms.length+' FIRMS',{class:'h-hd','text-anchor':'middle'});
   const nodes=[];
@@ -42,19 +42,15 @@
     el('circle',{cx,cy:y,r:12,class:'h-cl'},g);tx(g,cx-22,y+2,n,{class:'h-n','text-anchor':'end'});tx(g,cx-22,y+19,s,{class:'h-s','text-anchor':'end'});g._l=n;nodes.push(g)});
   RIGHT.forEach(([k,n,s])=>{const g=el('g',{class:'h-c',tabindex:0,role:'button'},ng);const y=ry[k];
     el('circle',{cx:gx,cy:y,r:14,class:'h-cr'},g);tx(g,gx+26,y+2,n,{class:'h-n'});tx(g,gx+26,y+20,s,{class:'h-s'});g._r=k;nodes.push(g)});
-  const focus=(key,val)=>{
-    if(!key){edges.forEach(e=>e.classList.remove('fade'));nodes.forEach(n=>n.classList.remove('fade'));return}
-    const fs=new Set();edges.forEach(e=>{if(e['_'+key]===val)fs.add(e._f)});
-    const on=new Set();
-    edges.forEach(e=>{const vis=fs.has(e._f)&&(e['_'+key]===undefined||e['_'+key]===val);e.classList.toggle('fade',!vis);if(vis){on.add('f'+e._f);if(e._l)on.add('l'+e._l);if(e._r)on.add('r'+e._r)}});
-    nodes.forEach(n=>n.classList.toggle('fade',!on.has(n._f?'f'+n._f:n._l?'l'+n._l:'r'+n._r)))};
-  const pick=g=>{if(!g)return;if(g._f){focus('f',g._f);window.openProfile&&window.openProfile(g._f)}else if(g._l)focus('l',g._l);else focus('r',g._r)};
-  svg.addEventListener('click',e=>pick(e.target.closest('.h-f,.h-c')));
-  svg.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(e.target.closest('.h-f,.h-c'))}});
-  svg.addEventListener('pointerover',e=>{const g=e.target.closest('.h-f,.h-c');if(g&&matchMedia('(hover:hover)').matches){if(g._f)focus('f',g._f);else if(g._l)focus('l',g._l);else focus('r',g._r)}});
-  svg.addEventListener('pointerleave',()=>focus(null));
-  const s=document.getElementById('hweb-sum');
-  if(s){const both=firms.filter(f=>f.rt>0);s.textContent=`${both.length} of the ${firms.length} firms paid by the business-backed and conservative side also work for Democrats or progressives this cycle. Click a firm for its profile.`}
-  // draw-in like the homepage, unless reduced motion
-  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){svg.classList.add('anim');const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){svg.classList.add('go');io.disconnect()}})},{threshold:.25});io.observe(svg)}
+  const both=firms.filter(f=>f.rt>0);
+  const idle=`${both.length} of the ${firms.length} firms paid by the business-backed and conservative side also work for Democrats or progressives this cycle. Tap any name to trace its money.`;
+  const nameR=k=>RIGHT.find(r=>r[0]===k)[1];
+  const describe=(key,val,vis)=>{
+    if(key==='f'){const f=firms.find(x=>x.p.n===val);const ls=Object.entries(f.L).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${k} ${K(v)}`).join(', ');
+      return `<b>${val}:</b> paid ${K(f.lt)} by ${ls}.`+(f.rt?` Also paid ${K(f.rt)} by ${Object.keys(f.R).map(k=>({DPO:'the Democratic Party',KOT:'Gov. Tina Kotek',PRO:'progressive candidates',LAB:'labor and progressive groups',DEM:'other Democrats'})[k]).join(', ')} this cycle.`:' No Democratic or progressive clients found.')+` <button type="button" class="web-reset" data-open="${val}">Open profile</button>`}
+    if(key==='l'){const fs=vis.filter(e=>e._l===val);const tot=fs.reduce((s,e)=>s+e._v,0);const n=new Set(fs.map(e=>e._f));const dem=[...n].filter(x=>firms.find(f=>f.p.n===x).rt>0);
+      return `<b>${val}</b> paid ${n.size} firm${n.size===1?'':'s'} ${K(tot)}. ${dem.length?`${dem.length} of them also work for Democrats or progressives: ${dem.join(', ')}.`:'None of them has Democratic or progressive clients this cycle.'}`}
+    const fs=vis.filter(e=>e._r===val);const n=[...new Set(fs.map(e=>e._f))];
+    return `<b>${nameR(val)}:</b> ${n.length} of these firms also took money from this side this cycle (${K(fs.reduce((s,e)=>s+e._v,0))}): ${n.join(', ')}.`};
+  WebFX({svg,edges,nodes,status:document.getElementById('hweb-sum'),idle,describe,keys:['f','l','r'],revKey:'r'});
 })();

@@ -36,8 +36,8 @@
   const w=v=>(1+6*Math.sqrt(Math.min(v,300000)/300000)).toFixed(2);
   const eg=el('g',{fill:'none'},svg),ng=el('g',{},svg),edges=[],nodes=[];
   F.forEach(f=>{
-    f[2].forEach(([k,v,y])=>{const e=el('path',{d:`M${lx+14},${py[k]} C${lx+150},${py[k]} ${mx-150},${f.y} ${mx-8},${f.y}`,class:'de de-l','stroke-width':w(v)},eg);e._a=k;e._f=f[0];el('title',{},e).textContent=`${PACS.find(p=>p[0]===k)[1]} → ${f[0]}: ${K(v)} (${y})`;edges.push(e)});
-    f[3].forEach(([k,v,y])=>{const e=el('path',{d:`M${mx+8},${f.y} C${mx+150},${f.y} ${rx-150},${cy[k]} ${rx-14},${cy[k]}`,class:'de de-r','stroke-width':w(v)},eg);e._b=k;e._f=f[0];el('title',{},e).textContent=`${CANDS.find(c=>c[0]===k)[1]} → ${f[0]}: ${K(v)} (${y})`;edges.push(e)});
+    f[2].forEach(([k,v,y])=>{const e=el('path',{d:`M${lx+14},${py[k]} C${lx+150},${py[k]} ${mx-150},${f.y} ${mx-8},${f.y}`,class:'de de-l','stroke-width':w(v)},eg);e._a=k;e._v=v;e._f=f[0];e.style.setProperty('--d',(0.05+F.indexOf(f)*0.05).toFixed(2)+'s');el('title',{},e).textContent=`${PACS.find(p=>p[0]===k)[1]} → ${f[0]}: ${K(v)} (${y})`;edges.push(e)});
+    f[3].forEach(([k,v,y])=>{const e=el('path',{d:`M${mx+8},${f.y} C${mx+150},${f.y} ${rx-150},${cy[k]} ${rx-14},${cy[k]}`,class:'de de-r','stroke-width':w(v)},eg);e._b=k;e._v=v;e._f=f[0];e.style.setProperty('--d',(0.8+F.indexOf(f)*0.05).toFixed(2)+'s');el('title',{},e).textContent=`${CANDS.find(c=>c[0]===k)[1]} → ${f[0]}: ${K(v)} (${y})`;edges.push(e)});
   });
   tx(svg,lx,20,'PACS SELLING THE MESSAGE',{class:'h-hd','text-anchor':'end'});
   tx(svg,mx,20,'FIRMS',{class:'h-hd','text-anchor':'middle'});
@@ -45,17 +45,13 @@
   PACS.forEach(([k,n,s])=>{const g=el('g',{class:'h-c',tabindex:0,role:'button'},ng);el('circle',{cx:lx,cy:py[k],r:11,class:'d-pac'},g);tx(g,lx-20,py[k]+2,n,{class:'h-n','text-anchor':'end'});tx(g,lx-20,py[k]+18,s,{class:'h-s','text-anchor':'end'});g._a=k;nodes.push(g)});
   CANDS.forEach(([k,n,s])=>{const g=el('g',{class:'h-c',tabindex:0,role:'button'},ng);el('circle',{cx:rx,cy:cy[k],r:11,class:'h-cl'},g);tx(g,rx+20,cy[k]+2,n,{class:'h-n'});tx(g,rx+20,cy[k]+18,s,{class:'h-s'});g._b=k;nodes.push(g)});
   F.forEach(f=>{const g=el('g',{class:'h-f',tabindex:0,role:'button'},ng);el('circle',{cx:mx,cy:f.y,r:8,class:'d-firm'},g);el('rect',{x:mx-60,y:f.y-12,width:120,height:24,fill:'transparent'},g);tx(g,mx,f.y-13,f[0],{class:'h-fn','text-anchor':'middle'});g._f=f[0];nodes.push(g)});
-  const focus=(key,val)=>{
-    if(!key){edges.forEach(e=>e.classList.remove('fade'));nodes.forEach(n=>n.classList.remove('fade'));return}
-    const fs=new Set();edges.forEach(e=>{if(e['_'+key]===val)fs.add(e._f)});
-    const on=new Set();
-    edges.forEach(e=>{const vis=fs.has(e._f)&&(e['_'+key]===undefined||e['_'+key]===val);e.classList.toggle('fade',!vis);if(vis){on.add('f'+e._f);if(e._a)on.add('a'+e._a);if(e._b)on.add('b'+e._b)}});
-    nodes.forEach(n=>n.classList.toggle('fade',!on.has(n._f?'f'+n._f:n._a?'a'+n._a:'b'+n._b)))};
-  const keyOf=g=>g._f?['f',g._f]:g._a?['a',g._a]:['b',g._b];
-  svg.addEventListener('click',e=>{const g=e.target.closest('.h-f,.h-c');if(g)focus(...keyOf(g))});
-  svg.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const g=e.target.closest('.h-f,.h-c');if(g){e.preventDefault();focus(...keyOf(g))}}});
-  svg.addEventListener('pointerover',e=>{const g=e.target.closest('.h-f,.h-c');if(g&&matchMedia('(hover:hover)').matches)focus(...keyOf(g))});
-  svg.addEventListener('pointerleave',()=>focus(null));
+  const pn=k=>PACS.find(p=>p[0]===k)[1],cn=k=>CANDS.find(c=>c[0]===k)[1];
+  const describe=(key,val,vis)=>{
+    if(key==='f'){const f=F.find(x=>x[0]===val);const a=f[2].reduce((s,x)=>s+x[1],0),b=f[3].reduce((s,x)=>s+x[1],0);
+      return `<b>${val}:</b> ${K(a)} from ${f[2].map(x=>pn(x[0])).join(', ')}; ${K(b)} from ${f[3].map(x=>cn(x[0])).join(', ')}. <button type="button" class="web-reset" data-open="${val}">Open profile</button>`}
+    if(key==='a'){const fs=vis.filter(e=>e._a===val);return `<b>${pn(val)}</b> paid ${fs.length} of these firms ${K(fs.reduce((s,e)=>s+e._v,0))}: ${fs.map(e=>e._f).join(', ')}.`}
+    const fs=vis.filter(e=>e._b===val);return `<b>${cn(val)}</b> paid ${fs.length} of these firms ${K(fs.reduce((s,e)=>s+e._v,0))}: ${fs.map(e=>e._f).join(', ')}.`};
+  window.DOTSFX=WebFX({svg,edges,nodes,status:document.getElementById('dweb-sum'),idle:'Tap a PAC, a firm or a candidate to trace the money.',describe,keys:['f','a','b'],revKey:'b'});
   // plain-language list under the graphic
   const box=document.getElementById('dlist');
   if(box){const pn=k=>PACS.find(p=>p[0]===k)[1],cn=k=>{const c=CANDS.find(c=>c[0]===k);return c[1]+(/%/.test(c[2])?` (${c[2].replace(' GOP-linked donors','')})`:'')};
@@ -63,3 +59,8 @@
       <p><span class="dc-l">Paid by the PACs</span>${f[2].map(([k,v,y])=>`${pn(k)} ${K(v)} <small>${y}</small>`).join(' · ')}</p>
       <p><span class="dc-r">Paid by the candidates</span>${f[3].map(([k,v,y])=>`${cn(k)} ${K(v)} <small>${y}</small>`).join(' · ')}</p></div>`).join('')}
 })();
+/* tabs in the top section */
+(function(){const tabs=[...document.querySelectorAll('.vtabs [role=tab]')];if(!tabs.length)return;
+  const show=t=>{tabs.forEach(u=>{const on=u===t;u.setAttribute('aria-selected',on);u.tabIndex=on?0:-1;document.getElementById(u.getAttribute('aria-controls')).hidden=!on});
+    if(t.id==='t-dots'&&window.DOTSFX)window.DOTSFX.replayAll()};
+  tabs.forEach((t,i)=>{t.addEventListener('click',()=>show(t));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];show(n);n.focus()}})})})();
