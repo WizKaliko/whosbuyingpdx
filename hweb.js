@@ -8,7 +8,7 @@
   const K=v=>v>=999500?'$'+(v/1e6).toFixed(2).replace(/0$/,'')+'M':v>=1000?'$'+Math.round(v/1000)+'K':'$'+Math.round(v);
   const PAC=new Set(['Unity PAC','DitchMitch','fix multCo','Go Portland Go','Portland Alliance PAC','Oregon Prosperity Action Fund','goPDX','Coalition for Portland’s Future']);
   const LEFT=[['Kellie Torres','Council D3'],['Steve Novick','Council D3'],['Julia Brim-Edwards','County Chair'],['Eric Zimmerman','Council D4'],['Olivia Clark','Council D4'],['Eli Arnold','Council D4'],['Sharon Meieran','County Chair'],['Their PACs','Unity, goPDX, Go Portland Go…']];
-  const RIGHT=[['DPO','Democratic Party','state and county parties'],['KOT','Gov. Tina Kotek','2026 campaign'],['PRO','Progressive candidates','Green, Morillo, Koyama Lane, Singleton'],['LAB','Labor and progressive groups','OEA, Working Families, teachers'],['DEM','Other Democrats','legislators, statewide, caucuses']];
+  const RIGHT=[['DPO','Democratic Party','state and county parties'],['KOT','Gov. Tina Kotek','2026 campaign'],['PRO','Progressive candidates','Green, Koyama Lane, Singleton, Beausoleil Smith'],['LAB','Labor and progressive groups','OEA, Working Families, teachers'],['DEM','Other Democrats','legislators, statewide, caucuses']];
   const tgt=n=>/^Democratic Party of/.test(n)?'DPO':/Kotek/.test(n)?'KOT':/OEA|Working Families|Teachers PAC|labor\)|Nurses/.test(n)?'LAB':/^Rep\.|Nafisa|Tobias Read|Rayfield|House Democrats|Senate Democrat|Friends of Hoa|Ricki|House and Senate Democrats|Democratic and labor/.test(n)?'DEM':null;
   const firms=window.PROFILES.filter(p=>!p.agg&&p.race.some(r=>'bc'.includes(r[1]))).map(p=>{
     const L={};p.race.filter(r=>'bc'.includes(r[1])).forEach(([n,,v])=>{const k=PAC.has(n)?'Their PACs':n;L[k]=(L[k]||0)+v});

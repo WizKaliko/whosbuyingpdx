@@ -5,8 +5,8 @@
   const svg=document.getElementById('dweb'); if(!svg) return;
   const PACS=[
     ['CPF','Coalition for Portland’s Future','Chamber PAC for the 2024 council slate'],
-    ['PAL','Portland Alliance PAC','Chamber-run; Amazon, Intel, Nike money'],
-    ['OPA','Oregon Prosperity Action Fund','Chamber-run'],
+    ['PAL','Portland Alliance PAC','Chamber-affiliated; Amazon, Intel, Nike money'],
+    ['OPA','Oregon Prosperity Action Fund','Chamber-aligned'],
     ['GOP','goPDX','Funds the DitchMitch billboards'],
     ['CSC','Community Safety Coalition','Police-funding committee (2022, 2026)'],
     ['PAP','Portland Accountability PAC','Looper; backed Gonzalez, 2022'],
@@ -15,8 +15,8 @@
   // firm: [name, who runs it, pac edges [key, $, yrs], candidate edges [key, $, yrs]]
   const F=[
     ['Swift Public Affairs','Run by Amy Ruiz, ex-chief of staff to Mayor Sam Adams, and Jennifer Williamson, former Democratic House Majority Leader',[['CPF',173784,'2024'],['PAL',10000,'2025']],[['BRI',26000,'2026'],['CON',54709,'2024 (Mozyrsky)']]],
-    ['Morel Ink','Union print shop',[['CPF',116825,'2024'],['CSC',7933,'2026']],[['TOR',11362,'2026'],['BRI',8782,'2026'],['ARN',7402,'2026'],['NOV',3212,'2026'],['CLA',2832,'2026'],['CON',102163,'2024–26 (Treece, Mozyrsky)']]],
-    ['The Rally Point','The Portland Mercury says it is run by Annie Ellison, who led Emerge Oregon until 2024. An Oct 6 email from a Rally Point address rallied Go Portland Go’s block captains for Kellie Torres (screenshot posted on Bluesky by @deminlawrence)',[['OPA',20100,'2026'],['GOP',6000,'2026'],['PAL',2705,'2026']],[['ARN',2000,'2024'],['ZIM',500,'2024']]],
+    ['Morel Ink','Union print shop',[['CPF',80205,'2024'],['CSC',7933,'2026']],[['TOR',11362,'2026'],['BRI',8782,'2026'],['ARN',7402,'2026'],['NOV',3212,'2026'],['CLA',2832,'2026'],['CON',102163,'2024–26 (Treece, Mozyrsky)']]],
+    ['The Rally Point','The Portland Mercury says it is run by Annie Ellison, who led Emerge Oregon until 2024. An Oct 6 email from a Rally Point address rallied Go Portland Go’s block captains for Kellie Torres (per a screenshot posted on Bluesky by @deminlawrence, visible to signed-in users; we have not independently obtained the email)',[['OPA',20100,'2026'],['GOP',6000,'2026'],['PAL',2705,'2026']],[['ARN',2000,'2024'],['ZIM',500,'2024']]],
     ['Springwater Partners','Owner Paige Richardson sits on the Emerge Oregon board',[['CSC',10000,'2026']],[['CLA',217177,'2024–26'],['TOR',98816,'2026']]],
     ['CN4 Partners','Founder Dean Nielsen (Clinton ’92, Progressive Majority); files as Cerillion N4',[['CSC',11000,'2022 (before the 2026 initiative)']],[['ZIM',69243,'2024–26'],['CON',1773967,'2022–24 (Vasquez, Gonzalez, Mozyrsky)']]],
     ['Wheelhouse Northwest','Kevin Looper, co-founder of People for Portland',[['PAP',99500,'2022–24'],['FMC',24500,'2025–26'],['PAL',4117,'2022']],[['MEI',30000,'2020–26']]],

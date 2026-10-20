@@ -13,7 +13,7 @@
     'Mission Control':'mail, Connecticut','Untidy Origins':'digital and TV ads','Leverenz & Associates':'public relations','Patinkin Research':'polling','Winning Mark':'consultant',
     'Clean Sweep Campaigns':'mail, California','Swift Public Affairs':'consultant','Purple State Strategies':'texting, ads, data','The Rally Point':'campaign management',
     'Elevated Campaigns':'mail, ads, polls, Chicago','Bottled Lightning Collective':'mail and digital','CN4 Partners':'mail, Seattle','Berlin Rosen':'ads, New York',
-    'Other vendors and staff':'staff, small vendors, fees','Newspaper ads':'local papers','Pam Treece and Rene Gonzalez':'direct gifts','Partnership for Progress':'not a registered committee',
+    'Other vendors and staff':'staff, small vendors, fees','Newspaper ads':'local papers','Pam Treece and Juan Carlos González':'direct gifts','Partnership for Progress':'not a registered committee',
     'Hopkins + Sachs':'mail, Seattle','Eckrosh Marketing':'online ads','We Are PDX':'ads and web','Meta (Facebook ads)':'','Square Cap Media':'video','City Wins':'campaign management','Morel Ink':'printing'};
   function sankey(svg,E,o){
     while(svg.firstChild) svg.removeChild(svg.firstChild);
@@ -57,7 +57,7 @@
       lines.push([sub,'vw-s']);
       const y0=cy-((lines.length-1)*13)/2+4;
       lines.forEach((l,i)=>{const t=tx(svg,lx,y0+i*13,l[0],{class:l[1]+(x.d>0&&x.d<maxD?' halo':''),'text-anchor':anchor});t._n=x.n});
-      if(o.donorBars&&x.n in CAND){const bx=6;el('rect',{x:bx,y:cy-5,width:60,height:10,class:'d-bg'},svg);el('rect',{x:bx,y:cy-5,width:60*CAND[x.n]/100,height:10,class:'d-fg'},svg);tx(svg,bx+66,cy+4,CAND[x.n]+'%',{class:'vw-p'})}
+      if(o.donorBars&&x.n in CAND){const bx=6;el('rect',{x:bx,y:cy-5,width:60,height:10,class:'d-bg'},svg);el('rect',{x:bx,y:cy-5,width:60*CAND[x.n]/100,height:10,class:'d-fg'},svg);tx(svg,bx+66,cy+4,CAND[x.n]+'%'+(x.n==='Steve Novick'?' (all donors)':''),{class:'vw-p'})}
     });
     const focus=n=>ribs.forEach(r=>r.classList.toggle('fade',!!n&&r._a!==n&&r._b!==n));
     svg.onpointerover=e=>{const t=e.target;if(t._n)focus(t._n);else if(t.classList&&t.classList.contains('rib'))ribs.forEach(r=>r.classList.toggle('fade',r!==t))};

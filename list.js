@@ -11,8 +11,9 @@
   const M=Math.max(...rows.map(r=>Math.max(r.biz,r.prog)));
   function render(){
     const list=rows.filter(r=>sortKey==='biz'?r.biz>0:sortKey==='prog'?r.prog>0:true).sort((a,b)=>b[sortKey]-a[sortKey]);
-    box.innerHTML=list.map((r,i)=>{const p=r.p;
-      const inner=`<span class="vr-rank">${i+1}</span>
+    let n=0;
+    box.innerHTML=list.map(r=>{const p=r.p;
+      const inner=`<span class="vr-rank">${p.agg?'':++n}</span>
         <span class="vr-name"><b>${p.n}</b><small>${[p.what,p.where].filter(Boolean).join(' · ')}</small></span>
         <span class="vr-bars"><span class="vr-bar"><i class="b" style="width:${(100*r.biz/M).toFixed(1)}%"></i>${r.owed?`<i class="ow" style="width:${(100*r.owed/M).toFixed(1)}%"></i>`:''}</span><span class="vr-bar"><i class="r" style="width:${(100*r.prog/M).toFixed(1)}%"></i></span></span>
         <span class="vr-num b">${r.biz?K(r.biz):'—'}${r.owed?`<small>+${K(r.owed)} owed</small>`:''}</span>
