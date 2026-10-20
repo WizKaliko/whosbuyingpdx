@@ -11,7 +11,7 @@
     ['CSC','Community Safety Coalition','Police-funding committee (2022, 2026)'],
     ['PAP','Portland Accountability PAC','Looper; backed Gonzalez, 2022'],
     ['FMC','Fixing Multnomah County','Pays Looper’s firm, Wheelhouse']];
-  const CANDS=[['ZIM','Eric Zimmerman','49% donor overlap'],['ARN','Eli Arnold','45%'],['TOR','Kellie Torres','42%'],['BRI','Julia Brim-Edwards','42%'],['CLA','Olivia Clark','35%'],['NOV','Steve Novick','34% of new donors'],['MEI','Sharon Meieran','not measured'],['CON','Portland conservatives','Gonzalez, Vasquez, Treece, Mozyrsky']];
+  const CANDS=[['ZIM','Eric Zimmerman','52% donor overlap'],['ARN','Eli Arnold','49%'],['TOR','Kellie Torres','45%'],['BRI','Julia Brim-Edwards','46%'],['CLA','Olivia Clark','37%'],['NOV','Steve Novick','40% of new donors'],['MEI','Sharon Meieran','not measured'],['CON','Portland conservatives','Gonzalez, Vasquez, Treece, Mozyrsky']];
   // firm: [name, who runs it, pac edges [key, $, yrs], candidate edges [key, $, yrs]]
   const F=[
     ['Swift Public Affairs','Run by Amy Ruiz, ex-chief of staff to Mayor Sam Adams, and Jennifer Williamson, former Democratic House Majority Leader',[['CPF',173784,'2024'],['PAL',10000,'2025']],[['BRI',26000,'2026'],['CON',54709,'2024 (Mozyrsky)']]],
