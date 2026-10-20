@@ -5,7 +5,7 @@
   const K=v=>v>=999500?'$'+(v/1e6).toFixed(2).replace(/0$/,'')+'M':v>=1000?'$'+Math.round(v/1000)+'K':'$'+Math.round(v);
 
   /* ---------- the money chain: two linked diagrams ---------- */
-  const CAND={'Kellie Torres':42,'Olivia Clark':35,'Eli Arnold':45,'Julia Brim-Edwards':42,'Steve Novick':26,'Eric Zimmerman':49};
+  const CAND={'Kellie Torres':45,'Olivia Clark':37,'Eli Arnold':49,'Julia Brim-Edwards':46,'Steve Novick':31,'Eric Zimmerman':52};
   const RACE={'Kellie Torres':'Council D3','Steve Novick':'Council D3','Olivia Clark':'Council D4','Eli Arnold':'Council D4','Eric Zimmerman':'Council D4','Julia Brim-Edwards':'County Chair'};
   const SUB={'United for Portland':'the Chamber’s political arm','Chamber PAC':'United for Portland Action Fund','Unity PAC':'business + public-safety unions','goPDX':'Chamber-funded','Portland Alliance PAC':'corporate PAC',
     'DitchMitch / fix multCo':'billboard committees','Coalition for Portland’s Future':'Chamber-funded','Go Portland Go':'backs the council slate',

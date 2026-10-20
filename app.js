@@ -68,7 +68,7 @@
     const ps=byCand[k],on=[];
     ps.forEach(p=>{p.dot.classList.add('on');p.edges.forEach(e=>{if(!e.classList.contains('ein')||e.dataset.c===k){e.classList.add('on');on.push(e)}})});
     restore();replay(on);
-    const RN={"T":[32,219,7],"N":[25,334,3],"B":[77,489,23],"Z":[37,288,9],"C":[38,320,11],"A":[37,239,15]}[k];
+    const RN={"T":[35,201,8],"N":[30,279,9],"B":[81,468,28],"Z":[43,254,12],"C":[40,292,13],"A":[34,183,15]}[k];
     status.innerHTML=`<b>${C[k][0]}:</b> ${RN[0]} of ${RN[1]} donors who gave over $100 also gave to Republican campaigns, ${RN[2]} of them to Christine Drazan. Highlighted dots are donor households. <button type="button" class="web-reset">Show all six</button>`;
     status.querySelector('button').onclick=reset;
   }
@@ -82,7 +82,7 @@
       p.edges.forEach(e=>{if(e.classList.contains('ein')||e.dataset.t===tk){e.classList.add('on');on.push(e)}})});
     on.forEach(e=>{e.classList.add('rev');e.style.setProperty('--d',e.classList.contains('eout')?'0s':'0.7s')});
     replay(on);
-    const PT={"D":{"T":7,"N":3,"B":23,"Z":9,"C":11,"A":15},"K":{"T":16,"N":12,"B":35,"Z":19,"C":18,"A":13},"U":{"T":6,"N":3,"B":12,"Z":5,"C":3,"A":2},"X":{"T":17,"N":15,"B":34,"Z":20,"C":17,"A":20},"O":{"T":83,"N":81,"B":189,"Z":131,"C":101,"A":99}}[tk];
+    const PT={"D":{"T":8,"N":9,"B":28,"Z":12,"C":13,"A":15},"K":{"T":19,"N":14,"B":37,"Z":25,"C":19,"A":14},"U":{"T":7,"N":3,"B":14,"Z":5,"C":4,"A":2},"X":{"T":18,"N":18,"B":34,"Z":25,"C":18,"A":17},"O":{"T":81,"N":79,"B":198,"Z":124,"C":97,"A":81}}[tk];
     const br=corder.slice().sort((a,b)=>PT[b]-PT[a]).map(c=>`${NAMES[c]} ${PT[c]}`).join(' · ');
     status.innerHTML=`<b>${G[tk].label}:</b> ${ps.length} of the ${D.length} donor households shown also gave here. Donors over $100 who did, by candidate: ${br}. <button type="button" class="web-reset">Show all</button>`;
     status.querySelector('button').onclick=reset;
