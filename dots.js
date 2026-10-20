@@ -21,7 +21,7 @@
     ['Springwater Partners','Owner Paige Richardson sits on the Emerge Oregon board',[['CSC',10000,'2026']],[['CLA',217177,'2024–26'],['TOR',98816,'2026']]],
     ['CN4 Partners','Founder Dean Nielsen (Clinton ’92, Progressive Majority); files as Cerillion N4',[['CSC',11000,'2022']],[['ZIM',69243,'2024–26'],['CON',1773967,'2022–24 (Vasquez, Gonzalez, Mozyrsky)']]],
     ['Wheelhouse Northwest','Kevin Looper, co-founder of People for Portland',[['PAP',99500,'2022–24'],['FMC',24500,'2025–26'],['PAL',4117,'2022']],[['MEI',30000,'2020–26']]],
-    ['Polity Staffing','Campaign payroll',[['FMC',31292,'2025–26']],[['MEI',33271,'2026'],['BRI',16622,'2026']]],
+    ['Polity Staffing','Campaign payroll firm registered through C&E Systems, whose Jef Green is treasurer for 833 Oregon committees, including most campaigns on both sides of these races',[['FMC',31292,'2025–26']],[['MEI',33271,'2026'],['BRI',16622,'2026']]],
     ['Purple State Strategies','Texting, ads and voter data, Vancouver WA',[['FMC',375,'2026']],[['ARN',27903,'2024–26'],['ZIM',10093,'2024–26'],['BRI',4500,'2026'],['MEI',3900,'2022'],['CON',137503,'2022–25 (Gonzalez, Mozyrsky, Vasquez)']]],
     ['Elevated Campaigns','Mail, ads and polling, Chicago',[['CPF',739202,'2024'],['UFP',566866,'2020, 2024'],['PAL',19700,'2026']],[['CON',2500,'2026 (Treece)']]]];
   const K=v=>v>=999500?'$'+(v/1e6).toFixed(2).replace(/0$/,'')+'M':v>=1000?'$'+Math.round(v/1000)+'K':'$'+Math.round(v);
