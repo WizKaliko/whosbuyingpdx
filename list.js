@@ -4,7 +4,7 @@
   const K=v=>v>=999500?'$'+(v/1e6).toFixed(2).replace(/0$/,'')+'M':v>=1000?'$'+Math.round(v/1000)+'K':'$'+Math.round(v);
   const TAG={b:'Business-backed side',r:'Progressive side',m:'County candidate, neither slate',c:'Portland conservatives and allies',p:'Democratic, labor, progressive',o:'Other'};
   const rows=window.PROFILES.map(p=>{const s=t=>p.race.filter(r=>t.includes(r[1])).reduce((a,r)=>a+r[2],0);
-    const biz=s('b'),prog=s('r'),owed=p.race.reduce((a,r)=>a+(r[3]||0),0),oth=p.other.reduce((a,r)=>a+r[2],0);
+    const biz=s('bc'),prog=s('r'),owed=p.race.reduce((a,r)=>a+(r[3]||0),0),oth=p.other.reduce((a,r)=>a+r[2],0);
     return {p,biz,prog,owed,all:biz+prog+oth}});
   let sortKey='biz';
   const max=()=>Math.max(...rows.map(r=>Math.max(r.biz,r.prog)));
@@ -12,7 +12,7 @@
     const list=rows.filter(r=>sortKey==='biz'?r.biz>0:sortKey==='prog'?r.prog>0:true).sort((a,b)=>b[sortKey]-a[sortKey]);
     const M=max();
     box.innerHTML=list.map((r,i)=>{const p=r.p;const id='v-'+p.n.toLowerCase().replace(/[^a-z0-9]+/g,'-');
-      const race=p.race.slice().sort((a,b)=>'bmr'.indexOf(a[1])-'bmr'.indexOf(b[1])||b[2]-a[2]);
+      const race=p.race.slice().sort((a,b)=>'bcmr'.indexOf(a[1])-'bcmr'.indexOf(b[1])||b[2]-a[2]);
       const other=p.other.slice().sort((a,b)=>b[2]-a[2]);
       return `<details class="vrow${p.agg?' agg':''}" id="${id}"><summary>
         <span class="vr-rank">${i+1}</span>
