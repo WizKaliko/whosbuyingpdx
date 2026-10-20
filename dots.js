@@ -4,26 +4,23 @@
      Candidate side: 2026 business-backed candidates (share of donors over $100 who also gave to Republicans or Portland conservatives, from The donors page), Meieran, and Portland conservative candidates. */
   const svg=document.getElementById('dweb'); if(!svg) return;
   const PACS=[
-    ['UFP','Chamber PAC','United for Portland Action Fund'],
     ['CPF','Coalition for Portland’s Future','Chamber PAC for the 2024 council slate'],
     ['PAL','Portland Alliance PAC','Chamber-run; Amazon, Intel, Nike money'],
     ['OPA','Oregon Prosperity Action Fund','Chamber-run'],
     ['GOP','goPDX','Funds the DitchMitch billboards'],
-    ['CSC','Community Safety Coalition','Measure to move climate money to police'],
+    ['CSC','Community Safety Coalition','Police-funding committee (2022, 2026)'],
     ['PAP','Portland Accountability PAC','Looper; backed Gonzalez, 2022'],
     ['FMC','Fixing Multnomah County','Pays Looper’s firm, Wheelhouse']];
-  const CANDS=[['ZIM','Eric Zimmerman','49% GOP-linked donors'],['ARN','Eli Arnold','45%'],['TOR','Kellie Torres','42%'],['BRI','Julia Brim-Edwards','42%'],['CLA','Olivia Clark','35%'],['NOV','Steve Novick','26% of new donors'],['MEI','Sharon Meieran','not measured'],['CON','Portland conservatives','Gonzalez, Vasquez, Treece, Mozyrsky']];
+  const CANDS=[['ZIM','Eric Zimmerman','49% donor overlap'],['ARN','Eli Arnold','45%'],['TOR','Kellie Torres','42%'],['BRI','Julia Brim-Edwards','42%'],['CLA','Olivia Clark','35%'],['NOV','Steve Novick','34% of new donors'],['MEI','Sharon Meieran','not measured'],['CON','Portland conservatives','Gonzalez, Vasquez, Treece, Mozyrsky']];
   // firm: [name, who runs it, pac edges [key, $, yrs], candidate edges [key, $, yrs]]
   const F=[
     ['Swift Public Affairs','Run by Amy Ruiz, ex-chief of staff to Mayor Sam Adams, and Jennifer Williamson, former Democratic House Majority Leader',[['CPF',173784,'2024'],['PAL',10000,'2025']],[['BRI',26000,'2026'],['CON',54709,'2024 (Mozyrsky)']]],
-    ['Morel Ink','Union print shop (PPPWU District Council 2)',[['CPF',116825,'2024'],['CSC',7933,'2026']],[['TOR',11362,'2026'],['BRI',8782,'2026'],['ARN',7663,'2026'],['NOV',3212,'2026'],['CLA',2832,'2026'],['CON',102163,'2024–26 (Treece, Mozyrsky)']]],
+    ['Morel Ink','Union print shop',[['CPF',116825,'2024'],['CSC',7933,'2026']],[['TOR',11362,'2026'],['BRI',8782,'2026'],['ARN',7402,'2026'],['NOV',3212,'2026'],['CLA',2832,'2026'],['CON',102163,'2024–26 (Treece, Mozyrsky)']]],
     ['The Rally Point','The Portland Mercury says it is run by Annie Ellison, who led Emerge Oregon until 2024. An Oct 6 email from a Rally Point address rallied Go Portland Go’s block captains for Kellie Torres (screenshot posted on Bluesky); Go Portland Go reports no payment to the firm',[['OPA',20100,'2026'],['GOP',6000,'2026'],['PAL',2705,'2026']],[['ARN',2000,'2024'],['ZIM',500,'2024']]],
     ['Springwater Partners','Owner Paige Richardson sits on the Emerge Oregon board',[['CSC',10000,'2026']],[['CLA',217177,'2024–26'],['TOR',98816,'2026']]],
-    ['CN4 Partners','Founder Dean Nielsen (Clinton ’92, Progressive Majority); files as Cerillion N4',[['CSC',11000,'2022']],[['ZIM',69243,'2024–26'],['CON',1773967,'2022–24 (Vasquez, Gonzalez, Mozyrsky)']]],
+    ['CN4 Partners','Founder Dean Nielsen (Clinton ’92, Progressive Majority); files as Cerillion N4',[['CSC',11000,'2022 (before the 2026 initiative)']],[['ZIM',69243,'2024–26'],['CON',1773967,'2022–24 (Vasquez, Gonzalez, Mozyrsky)']]],
     ['Wheelhouse Northwest','Kevin Looper, co-founder of People for Portland',[['PAP',99500,'2022–24'],['FMC',24500,'2025–26'],['PAL',4117,'2022']],[['MEI',30000,'2020–26']]],
-    ['Polity Staffing','Campaign payroll firm registered through C&E Systems, whose Jef Green is treasurer for 833 Oregon committees, including most campaigns on both sides of these races',[['FMC',31292,'2025–26']],[['MEI',33271,'2026'],['BRI',16622,'2026']]],
-    ['Purple State Strategies','Texting, ads and voter data, Vancouver WA',[['FMC',375,'2026']],[['ARN',27903,'2024–26'],['ZIM',10093,'2024–26'],['BRI',4500,'2026'],['MEI',3900,'2022'],['CON',137503,'2022–25 (Gonzalez, Mozyrsky, Vasquez)']]],
-    ['Elevated Campaigns','Mail, ads and polling, Chicago',[['CPF',739202,'2024'],['UFP',566866,'2020, 2024'],['PAL',19700,'2026']],[['CON',2500,'2026 (Treece)']]]];
+    ['Polity Staffing','Campaign payroll firm whose registered agent is Polity Group LLC (C&E Systems). C&E’s Jef Green is treasurer for all six business-backed candidates and two progressive candidates in these races',[['FMC',31292,'2025–26']],[['MEI',33271,'2026'],['BRI',16622,'2026']]],];
   const K=v=>v>=999500?'$'+(v/1e6).toFixed(2).replace(/0$/,'')+'M':v>=1000?'$'+Math.round(v/1000)+'K':'$'+Math.round(v);
   const NS='http://www.w3.org/2000/svg';
   const el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e};
@@ -41,7 +38,7 @@
   });
   tx(svg,lx,20,'PACS SELLING THE MESSAGE',{class:'h-hd','text-anchor':'end'});
   tx(svg,mx,20,'FIRMS',{class:'h-hd','text-anchor':'middle'});
-  tx(svg,rx,20,'CANDIDATES, WITH GOP-LINKED DONOR SHARE',{class:'h-hd'});
+  tx(svg,rx,20,'CANDIDATES, WITH DONOR OVERLAP',{class:'h-hd'});
   PACS.forEach(([k,n,s])=>{const g=el('g',{class:'h-c',tabindex:0,role:'button'},ng);el('circle',{cx:lx,cy:py[k],r:11,class:'d-pac'},g);tx(g,lx-20,py[k]+2,n,{class:'h-n','text-anchor':'end'});tx(g,lx-20,py[k]+18,s,{class:'h-s','text-anchor':'end'});g._a=k;nodes.push(g)});
   CANDS.forEach(([k,n,s])=>{const g=el('g',{class:'h-c',tabindex:0,role:'button'},ng);el('circle',{cx:rx,cy:cy[k],r:11,class:'h-cl'},g);tx(g,rx+20,cy[k]+2,n,{class:'h-n'});tx(g,rx+20,cy[k]+18,s,{class:'h-s'});g._b=k;nodes.push(g)});
   F.forEach(f=>{const g=el('g',{class:'h-f',tabindex:0,role:'button'},ng);el('circle',{cx:mx,cy:f.y,r:8,class:'d-firm'},g);el('rect',{x:mx-60,y:f.y-12,width:120,height:24,fill:'transparent'},g);tx(g,mx,f.y-13,f[0],{class:'h-fn','text-anchor':'middle'});g._f=f[0];nodes.push(g)});
@@ -54,7 +51,7 @@
   window.DOTSFX=WebFX({svg,edges,nodes,status:document.getElementById('dweb-sum'),idle:'Tap a PAC, a firm or a candidate to trace the money.',describe,keys:['f','a','b'],revKey:'b'});
   // plain-language list under the graphic
   const box=document.getElementById('dlist');
-  if(box){const pn=k=>PACS.find(p=>p[0]===k)[1],cn=k=>{const c=CANDS.find(c=>c[0]===k);return c[1]+(/%/.test(c[2])?` (${c[2].replace(' GOP-linked donors','')})`:'')};
+  if(box){const pn=k=>PACS.find(p=>p[0]===k)[1],cn=k=>{const c=CANDS.find(c=>c[0]===k);return c[1]+(/%/.test(c[2])?` (${c[2]})`:'')};
     box.innerHTML=F.map(f=>`<div class="dcard"><h4>${f[0]}</h4><p class="dc-who">${f[1]}</p>
       <p><span class="dc-l">Paid by the PACs</span>${f[2].map(([k,v,y])=>`${pn(k)} ${K(v)} <small>${y}</small>`).join(' · ')}</p>
       <p><span class="dc-r">Paid by the candidates</span>${f[3].map(([k,v,y])=>`${cn(k)} ${K(v)} <small>${y}</small>`).join(' · ')}</p></div>`).join('')}

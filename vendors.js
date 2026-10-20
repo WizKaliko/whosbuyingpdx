@@ -79,7 +79,7 @@
     [svgP,svgC].forEach(s=>s&&tx(s,1000,14,'WHO GETS PAID',{class:'vw-h'}));
     const owedTot=Object.values(Y.owed||{}).reduce((s,v)=>s+v,0);
     const note=document.getElementById('vw-note');
-    if(note) note.textContent=`Both diagrams use the same scale. Named firms received ${K(a+b)} ${key==='y26'?'so far this cycle':'in 2024'}${owedTot?', plus '+K(owedTot)+' in bills reported but not yet paid':''}. Hover or tap a name to follow its money.`;
+    if(note) note.textContent=`Both diagrams use the same scale. Named firms received ${K(a+b-(key==='y26'?59000:0))} ${key==='y26'?'so far this cycle':'in 2024'}${owedTot?', plus '+K(owedTot)+' in bills reported but not yet paid':''}. Hover or tap a name to follow its money.`;
   }
   const tabs=[...document.querySelectorAll('[data-yr]')];
   tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(u=>u.setAttribute('aria-pressed',String(u===t)));draw(t.dataset.yr)}));
@@ -108,7 +108,7 @@
   if(todo){
     ['Every city and county candidate committee, so firms that work across many campaigns show up as hubs.',
      'Go Portland Go’s own donors, run through the same Republican-overlap test as the candidates.',
-     'Bills reported as owed (about $375K, mostly to Hamburger Group Creative and Affiliated Media) once they’re paid.',
+     'Bills still reported as owed (about $44K: Untidy Origins $34K from Brim-Edwards, Hamburger Group Creative $10K from Unity PAC) once they’re paid.',
      'Partnership for Progress, Go Portland Go’s biggest funder, isn’t a registered Oregon committee, so ORESTAR doesn’t show its donors.']
      .forEach(s=>{const li=document.createElement('li');li.textContent=s;todo.appendChild(li)});
   }
