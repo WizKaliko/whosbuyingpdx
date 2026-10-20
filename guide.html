@@ -729,10 +729,12 @@ section.ch:first-child{padding-top:24px}
   <span>Corrections are posted here with the date.</span>
 </footer></div>
 <script src="app.js?v=oct20c"></script>
-<script src="gate.js?v=5"></script>
+<script src="gate.js?v=6"></script>
 <script>
 (function(){var f=document.getElementById('signup-form'),m=document.getElementById('signup-msg');if(!f)return;
 f.addEventListener('submit',function(e){e.preventDefault();var v=f.email_address.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){m.textContent='Please enter a valid email.';return;}
 window.wbpSignup(v,true).then(function(){m.textContent="You're signed up. Downloads on this page are unlocked.";f.reset();});});})();
 </script>
+<!-- Visit counter (GoatCounter: no cookies, no personal data) -->
+<script data-goatcounter="https://whosbuyingpdx.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body></html>

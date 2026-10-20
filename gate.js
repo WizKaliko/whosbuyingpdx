@@ -118,6 +118,7 @@
   // On computers: download right away (fetched as a blob, falling back to a direct link).
   function deliver(a, fromForm) {
     var url = fileOf(a);
+    try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'download/' + nameOf(url), title: 'Download: ' + nameOf(url), event: true }); } catch (e) {}
     if (a.getAttribute('data-view')) {
       if (fromForm) { // popup blockers: show it in the panel with an Open button instead of window.open after async
         show('save'); save.querySelector('.wg-st').textContent = 'Here it is.';
