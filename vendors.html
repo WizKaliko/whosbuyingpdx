@@ -615,6 +615,18 @@ svg.focus .h-f.on,svg.focus .h-c.on{opacity:1}
 }
 @keyframes vdraw{from{stroke-dashoffset:1}}
 @keyframes vdrawrev{from{stroke-dashoffset:-1}}
+/* rows are links to firm pages */
+a.vrow,div.vrow{display:grid;grid-template-columns:2.2em minmax(0,1.6fr) minmax(0,1.1fr) 7.5em 7.5em 6.5em 1.2em;gap:12px;align-items:center;padding:12px;color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+.vl-head{grid-template-columns:2.2em minmax(0,1.6fr) minmax(0,1.1fr) 7.5em 7.5em 6.5em 1.2em !important}
+a.vrow:hover,a.vrow:focus-visible{background:var(--paper-2)}
+a.vrow:focus-visible{outline:2px solid var(--lean);outline-offset:-2px}
+.vr-go{font:500 15px 'Martian Mono',monospace;color:var(--ink-2)}
+div.vrow.agg .vr-name b{font-style:italic;color:var(--ink-2)}
+@media (max-width:720px){
+  a.vrow,div.vrow{grid-template-columns:1.6em minmax(0,1fr) auto 1em;row-gap:6px}
+  a.vrow .vr-bars,div.vrow .vr-bars{grid-column:2/4;grid-row:2}
+  a.vrow .vr-num.r,a.vrow .vr-num.a,div.vrow .vr-num.r,div.vrow .vr-num.a{display:none}
+}
 </style>
 </head><body>
 <div class="topbar"><div class="wrap">
@@ -704,7 +716,7 @@ svg.focus .h-f.on,svg.focus .h-c.on{opacity:1}
   <section class="ch" id="firms">
     <div class="ch-head"><span class="ch-no">Every firm, ranked</span>
       <h3 class="sub-h">Who got the most, and who else pays them</h3>
-      <p class="lede">Every firm paid by a 2026 Portland City Council or Multnomah County Chair campaign, or the PACs behind them. Open a row for the firm&rsquo;s profile: who runs it, every Portland race that paid it, and every other Oregon committee that paid it since January 2025.</p>
+      <p class="lede">Every firm paid by a 2026 Portland City Council or Multnomah County Chair campaign, or the PACs behind them. Tap a firm for its profile: who runs it, every Portland race that paid it, every other Oregon committee that paid it, and its history.</p>
     </div>
     <div class="yr vl-sort" role="group" aria-label="Sort by"><button type="button" data-sort="biz" aria-pressed="true">Most from the business-backed and conservative side</button><button type="button" data-sort="prog" aria-pressed="false">Most from the progressive side</button><button type="button" data-sort="all" aria-pressed="false">Most across Oregon, 2025–26</button></div>
     <div class="vl-head" aria-hidden="true"><span></span><span>Firm</span><span></span><span class="b">Business &amp; conservative</span><span class="r">Progressive side</span><span>All Oregon</span></div>
