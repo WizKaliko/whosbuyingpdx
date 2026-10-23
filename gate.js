@@ -32,6 +32,10 @@
   function extOf(url) { return (nameOf(url).split('.').pop() || '').toLowerCase(); }
   function isMedia(url) { return /^(png|jpe?g|gif|mp4)$/.test(extOf(url)); }
 
+  // Counts gate steps in GoatCounter (no personal data).
+  var gateOpen = false;
+  function gc(p) { try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: p, title: p, event: true }); } catch (e) {} }
+
   function send(data) {
     if (!GATE_URL) return;
     var body = new URLSearchParams(data);
@@ -83,6 +87,7 @@
     if (!back.classList.contains('on')) { lastFocus = document.activeElement; back.classList.add('on'); }
   }
   function close() {
+    if (gateOpen) { gc('gate/closed-without-email'); gateOpen = false; }
     back.classList.remove('on'); pending = null;
     if (ready && ready.obj) { try { URL.revokeObjectURL(ready.obj); } catch (e) {} }
     ready = null; pv.hidden = true; pv.removeAttribute('src');
@@ -184,6 +189,7 @@
     var email = form.email.value.trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { err.textContent = 'Please enter a valid email.'; form.email.focus(); return; }
     var a = pending;
+    if (gateOpen) { gc('gate/email-entered'); gateOpen = false; }
     send({ email: email, zip: form.zip.value, website: form.website.value, updates: form.updates.checked ? 'yes' : 'no',
            file: a ? fileOf(a) : 'signup', page: location.pathname });
     remember();
@@ -196,12 +202,14 @@
     e.preventDefault();
     if (unlocked()) { deliver(a, false); return; }
     pending = a; err.textContent = ''; show('form');
+    gateOpen = true; gc('gate/shown');
     setTimeout(function () { form.email.focus(); }, 30);
   }, true);
   document.addEventListener('contextmenu', function (e) { if (e.target.closest && e.target.closest('[data-gated]')) e.preventDefault(); }, true);
 
   // Inline sign-up forms (e.g. the guide page) post to the same sheet.
-  window.wbpSignup = function (email, updates) {
+  window.wbpSignup = function (email, updates, where) {
+    gc('signup/' + (where || 'guide-box'));
     send({ email: email, updates: updates ? 'yes' : 'no', file: 'signup', page: location.pathname });
     remember();
     return Promise.resolve();
